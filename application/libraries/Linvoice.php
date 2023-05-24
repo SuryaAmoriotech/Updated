@@ -1314,7 +1314,7 @@ public function ocean_export_tracking_details_data_print($purchase_id) {
                 'remarks' =>  $ocean_remarks[0]->remarks
         );
 
-        print_r(   $data);
+        // print_r(   $data);
 
 
         $invoiceForm = $CI->parser->parse('invoice/ocean_export_tracking', $data, true);

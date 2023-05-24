@@ -311,7 +311,7 @@ $today = date('Y-m-d');
 <th class="20 value" data-col="20" data-control-column="20" style="width: 190.011px; height: 44.0114px;">Grand Total</th>
 <th class="21 value" data-col="21" data-control-column="21" style="width: 190.011px; height: 44.0114px;">Grand Total(Preferred Currency)</th>
 <th class="22 value" data-col="22" data-control-column="22" style="width: 190.011px; height: 44.0114px;">Remarks / Details</th>
-        <th class="text-center 23" data-column-id="23" data-formatter="commands" data-sortable="false" style="    width: 450.011px; height: 49.0114px;" >Action</th>
+        <th class="text-center 23" data-column-id="23" data-formatter="commands" data-sortable="false" style="    width: 650.011px; height: 49.0114px;" >Action</th>
       </tr>
     </thead>
     <tbody class="sortableTable__body">

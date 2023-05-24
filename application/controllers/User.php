@@ -169,6 +169,45 @@ public function company_insert(){
     
     
 
+    public function company_insert_branch(){
+  
+        $uid=$_SESSION['user_id'];
+
+    $data = array(
+        'company_name'    =>$this->input->post('company_name',true),
+        'email' => $this->input->post('email',true),
+        'address'      => $this->input->post('address',true),
+        'mobile'   => $this->input->post('mobile',true),
+        'website'  => $this->input->post('website',true),
+
+        'create_by'     => $uid,
+        'status'     => 0
+    );
+
+    $insert=  $this->db->insert('company_information',$data);
+     if($insert)
+     {
+        redirect('Company_setup/manage_company');
+     }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public function add_user()
 {
 
