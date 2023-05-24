@@ -103,7 +103,7 @@
                         </div>
                         <div id="mask"></div>
                         <div class="form-group row">
-                            <label for="currency" class="col-sm-3 col-form-label">Notification Setting<i class="text-danger">*</i></label>
+                            <label for="currency" class="col-sm-3 col-form-label"><?php echo display('Notification_Setting');  ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                             <span style="padding-left:10px;font-size:20px;">Sales Setting</span>   <span class="open-modal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x"  aria-hidden="true" id="sale" data-toggle="modal" data-target="#basicModal"></span></i>
                             <span style="padding-left:10px;font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expense Setting</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-cog fa-2x" aria-hidden="true" id="expense" data-toggle="modal" data-target="#expensemodel"></i>

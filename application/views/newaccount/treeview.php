@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/js/jstree/themes/default/style.min.css" />
-<script src="<?php echo base_url() ?>my-assets/js/admin_js/custom.js" type="text/javascript"></script>
+<script src="<?php echo base_url() ?>my-assets/js/custom.js" type="text/javascript"></script>
 <style>
 .fa-folder {
     color: #D4AC0D;

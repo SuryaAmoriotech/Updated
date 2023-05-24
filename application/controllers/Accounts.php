@@ -331,7 +331,6 @@ else
             ->row();
             if(empty($upinfo)){
   $this->db->insert('acc_coa',$postData);
-
 }else{
 
 $hname =$this->input->post('HeadName',TRUE);
@@ -342,10 +341,8 @@ $updata = array(
             
   $this->db->where('HeadCode',$headcode)
       ->update('acc_coa',$postData);
-       
   $this->db->where('PHeadName',$hname)
       ->update('acc_coa',$updata);
-      
 }
     redirect($_SERVER['HTTP_REFERER']);
   }
