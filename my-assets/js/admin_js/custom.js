@@ -1110,6 +1110,7 @@ function loadCoaData(id){
         dataType: "json",
         success: function(data)
         {
+          console.log(data);
             $('#newform').html(data);
              $('#btnSave').hide();
         },
