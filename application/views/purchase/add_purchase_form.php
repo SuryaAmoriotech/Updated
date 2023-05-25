@@ -160,14 +160,14 @@
 <div id="block_container">
                                 <div id="bloc1" style="float:left;width:500px;">
                       
-        <label for="ISF" class="col-sm-4 col-form-label">Select Option
+        <label for="ISF" class="col-sm-5 col-form-label"><?php echo display('Select Option');?>
             <i class="text-danger">*</i>
         </label>
         <div class="col-sm-6">
         <select name="po" class="form-control"  id="po" tabindex="3" style="width: 136%;">
                                              <option value="Select PO Number" selected>Select the options</option> 
-                                              <option value="Not Available"> Add Expenses</option>
-                                              <option value=" ">Service Provider </option>
+                                              <option value="Not Available"> <?php echo display('add_purchase'); ?></option>
+                                              <option value=" "><?php echo display('Service Provider');?> </option>
                              </select>
         </div>
   
@@ -175,7 +175,7 @@
                              <div id="bloc2" style="float:right;">
                            
 
-                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Cpurchase/manage_purchase') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo "Manage Expense" ?> </a>
+                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Cpurchase/manage_purchase') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display('manage_expense'); ?> </a>
    <!-- <a style="background-color:#38469f;color:white;" href="<?php //echo base_url('Cpurchase/manage_purchase') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo "Manage Service Provider" ?> </a> -->
                     
                      </div>    </div>
@@ -201,7 +201,7 @@
                     <div class="row">
                          <div class="col-sm-6">
                             <div class="form-group row">
-                                <label for="service_provider_name" class="col-sm-4 col-form-label">Service Provider Name
+                                <label for="service_provider_name" class="col-sm-4 col-form-label"><?php  echo  display('Service Provider Name');?>
                                     <i class="text-danger">*</i>
                                 </label>
                                 <div class="col-sm-8">
@@ -211,7 +211,7 @@
                         </div>
                          <div class="col-sm-6">
                             <div class="form-group row">
-                                <label for="sp_address" class="col-sm-4 col-form-label">Service Provider complete address
+                                <label for="sp_address" class="col-sm-4 col-form-label"><?php  echo  display('Service Provider complete address');?>
                                     <i class="text-danger">*</i>
                                 </label>
                                 <div class="col-sm-8">
@@ -223,7 +223,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group row">
-                                <label for="payment_terms" class="col-sm-4 col-form-label">Payment Terms<i class="text-danger">*</i></label>
+                                <label for="payment_terms" class="col-sm-4 col-form-label"><?php  echo  display('Payment Terms');?><i class="text-danger">*</i></label>
                                 <div class="col-sm-8">
                                 <input type="text" required tabindex="2" class="form-control " name="pay_terms" id="payment_terms" required="" />
                             </div>
@@ -232,7 +232,7 @@
                         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
                         <div class="col-sm-6">
                            <div class="form-group row">
-                                <label for="bill_number" class="col-sm-4 col-form-label">Bill Number <i class="text-danger">*</i>
+                                <label for="bill_number" class="col-sm-4 col-form-label"><?php  echo  display('Bill Number');?> <i class="text-danger">*</i>
                                 </label>
                                 <div class="col-sm-8">
                                 <input type="text" required tabindex="2" class="form-control " name="bill_num"  id="bill_number" required="" />
@@ -243,7 +243,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group row">
-                            <label for="bill_date" class="col-sm-4 col-form-label">Bill Date
+                            <label for="bill_date" class="col-sm-4 col-form-label"><?php  echo  display('Bill Date');?>
                                     <i class="text-danger">*</i>
                                 </label>
                                                                     <div class="col-sm-8">
@@ -253,7 +253,7 @@
                         </div>
                         <div class="col-sm-6">
                            <div class="form-group row">
-                           <label for="due_date" class="col-sm-4 col-form-label">Due Date
+                           <label for="due_date" class="col-sm-4 col-form-label"><?php  echo  display('Due Date');?>
                                 </label>
                                                                     <div class="col-sm-8">
                                                                     <input type="date" tabindex="2" class="form-control" name="due_date"  id="due_date"  required/>
@@ -265,11 +265,11 @@
                         <table class="table table-bordered table-hover serviceprovider" id="service_1">
                             <thead>
                                  <tr>
-                                        <th class="text-center" width="15%">Account Category Name<i class="text-danger">*</i></th>
-                                        <th class="text-center">Account Category <i class="text-danger">*</i></th>
-                                        <th class="text-center">Account Sub category<i class="text-danger">*</i></th>
-                                        <th class="text-center" width="20%">Description<i class="text-danger">*</i></th>
-                                        <th class="text-center">Amount<i class="text-danger">*</i></th>
+                                        <th class="text-center" width="15%"><?php  echo  display('Account Category Name');?><i class="text-danger">*</i></th>
+                                        <th class="text-center"><?php  echo  display('Account Category'); ?><i class="text-danger">*</i></th>
+                                        <th class="text-center"><?php  echo  display('Account Sub category');?><i class="text-danger">*</i></th>
+                                        <th class="text-center" width="20%"><?php echo display('description'); ?><i class="text-danger">*</i></th>
+                                        <th class="text-center"><?php echo display('amount'); ?><i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('action') ?></th>
                                     </tr>
                             </thead>
@@ -296,7 +296,7 @@
                                             </tr>
 </tbody>
 <tfoot>
- <tr>
+ <tr style="height:50px;">
    <td style="text-align:right;" colspan="4" ><b><?php echo display('total') ?>:</b></td>
    <td style="text-align:left;">
 <span class="input-symbol-euro"><input type="text" id="Total" class="form-control text-right"  min="0"    name="total" value="<?php echo $total; ?>" /> </span>
@@ -306,7 +306,7 @@
 </table>
 </div>
                     <div class="form-group row">
-                        <label for="remarks" class="col-sm-2 col-form-label">Memo / Details</label>
+                        <label for="remarks" class="col-sm-2 col-form-label"><?php echo display('Memo / Details');?></label>
                         <div class="col-sm-8">
                             <textarea rows="4" cols="50" name="memo_details" class=" form-control" placeholder="Memo/Details" id=""></textarea>
                         </div>
@@ -323,7 +323,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Vendor
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Vendor');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-7">
@@ -341,7 +341,7 @@
                                <?php// }?> 
                                 </div>
                                 <div class="form-group row">
-<label for="" class="col-sm-4 col-form-label" >Vendor Type</label>
+<label for="" class="col-sm-4 col-form-label" ><?php echo display('Vendor Type');?></label>
 <div class="col-sm-8">
 <input type="vendor_type" tabindex="3" class="form-control" name="vendor_type"  style="WIDTH: 100%;" placeholder="" id="vendor_type_details" />
  </div>
@@ -350,7 +350,7 @@
                             <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="" class="col-sm-4 col-form-label"> Vendor Address
+                                    <label for="" class="col-sm-4 col-form-label"> <?php echo display('Vendor Address');?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -360,7 +360,7 @@
                             </div>
 <div class="col-sm-6" id="">
 <div class="form-group row">
-<label for="date" class="col-sm-4 col-form-label">Invoice No<i class="text-danger">*</i></label>
+<label for="date" class="col-sm-4 col-form-label"><?php echo display('invoice_no');  ?><i class="text-danger">*</i></label>
     <div class="col-sm-8">
     <input  class=" form-control" type="" size="50" name="invoice_no" id="" required value="" tabindex="4" />
                 </div>
@@ -368,7 +368,7 @@
 </div>
 <div class="col-sm-6" id="">
 <div class="form-group row">
-<label for="text" class="col-sm-4 col-form-label">Expenses / Bill date
+<label for="text" class="col-sm-4 col-form-label"><?php echo display('Expenses / Bill date');?>
                                         <i class="text-danger">*</i>
                                     </label>
 <div class="col-sm-5">
@@ -380,34 +380,34 @@
 <div class="row">
 <div class="col-sm-6">
 <div class="form-group row">
-    <label for="port_of_discharge" class="col-sm-4 col-form-label"> Port Of Discharge</label>
+    <label for="port_of_discharge" class="col-sm-4 col-form-label"> <?php echo display('Port Of Discharge');?></label>
     <div class="col-sm-8">
     <input class="form-control" type="" size="50" name="Port_of_discharge" id="date1"   tabindex="4" />
     </div>
 </div>
 <div class="form-group row">
-    <label for="date" class="col-sm-4 col-form-label">Payment Due Date <i class="text-danger">*</i></label>
+    <label for="date" class="col-sm-4 col-form-label"><?php echo display('Payment Due Date');?> <i class="text-danger">*</i></label>
     <div class="col-sm-8">
         <input class=" form-control" type="date" size="50" name="payment_due_date" id="payment_due_date" required value="" tabindex="4" />
     </div>
     </div>
     <input type="hidden" id="hidden_weight" name="hidden_weight"/>
 <div class="form-group row">
-    <label for="billing_address" class="col-sm-4     col-form-label">Payment Terms</label>
+    <label for="billing_address" class="col-sm-4     col-form-label"><?php echo display('Payment Terms');?></label>
     <div class="col-sm-7">
         <select   name="payment_terms" id="payment_terms" style="width:100%;" class=" form-control" placeholder='Payment Terms' id="payment_terms">
-         <option value="">Select Payment Terms</option>
+         <option value=""><?php echo display('Select Payment Terms');?></option>
         <option value="CAD">CAD</option>
         <option value="COD">COD</option>
-        <option value="ADVANCE">ADVANCE</option>
-        <option value="7DAYS">7DAYS</option>
-        <option value="15DAYS">15DAYS</option>
-        <option value="30DAYS">30DAYS</option>
-        <option value="45DAYS">45DAYS</option>
-        <option value="60DAYS">60DAYS</option>
-        <option value="75DAYS">75DAYS</option>
-        <option value="90DAYS">90DAYS</option>
-        <option value="180DAYS">180DAYS</option>
+        <option value="ADVANCE"><?php echo display('ADVANCE');?></option>
+        <option value="7DAYS">7<?php echo display('DAYS');?></option>
+        <option value="15DAYS">15<?php echo display('DAYS');?></option>
+        <option value="30DAYS">30<?php echo display('DAYS');?></option>
+        <option value="45DAYS">45<?php echo display('DAYS');?></option>
+        <option value="60DAYS">60<?php echo display('DAYS');?></option>
+        <option value="75DAYS">75<?php echo display('DAYS');?></option>
+        <option value="90DAYS">90<?php echo display('DAYS');?></option>
+        <option value="180DAYS">180<?php echo display('DAYS');?></option>
         <?php foreach($payment_terms as $inv){ ?>
           <option value="<?php echo $inv['payment_terms'] ; ?>"><?php echo $inv['payment_terms'] ; ?></option>
                                <?php    }?>
@@ -424,11 +424,11 @@
         ?> <i class="text-danger">*</i></label>
     <div class="col-sm-7">
         <select name="paytype_drop" id="paytype_drop" class="form-control" required=""  tabindex="3" style="width:100;">
-        <option value="">Select Payment Type</option>
-        <option value="CHECK">CHECK</option>
-    <option value="CASH">CASH</option>
-    <option value="CREDIT/DEBIT CARD">CREDIT/DEBIT CARD</option>
-    <option value="BANK TRANSFER">BANK TRANSFER</option>
+        <option value=""><?php echo display('Select Payment Type');?></option>
+        <option value="CHECK"><?php echo display('cheque'); ?></option>
+    <option value="CASH"><?php echo display('cash'); ?></option>
+    <option value="CREDIT/DEBIT CARD"><?php echo display('CREDIT/DEBIT CARD');?></option>
+    <option value="BANK TRANSFER"><?php echo display('BANK TRANSFER');?></option>
 <?php foreach($payment_type as $ptype){?>
     <option value="<?php echo $ptype['payment_type'];?>"><?php echo $ptype['payment_type'] ;?></option>
 <?php }?>
@@ -439,18 +439,18 @@
     </div>
                                 </div>
       <div class="form-group row">
-          <label for="invoice_no" class="col-sm-4 col-form-label"> ISF FIELD
+          <label for="invoice_no" class="col-sm-4 col-form-label"> <?php echo display('ISF FIELD');?>
               <i class="text-danger">*</i></label>
          <div class="col-sm-8">
        <select name="isf_field" class="form-control"  id="isf_dropdown1" tabindex="3" style="width400%;">
-                                          <option value=""selected>Select ISF NO</option>
+                                          <option value=""selected><?php echo display('Select ISF NO');?></option>
                                           <option value="1"><?php echo display('NO') ?></option>
                                           <option value="2"><?php echo display('YES') ?></option>
                                        </select>
                 </div>
 </div>
 <div class="form-group" id="isf_no1">
-    <label for="ISF" class="col-sm-4 col-form-label" >ISF NO
+    <label for="ISF" class="col-sm-4 col-form-label" ><?php echo display('ISF NO');?>
         <i class="text-danger">*</i>
     </label>
     <div class="col-sm-8">
@@ -460,7 +460,7 @@
 </div>
 <div class="col-sm-6">
       <div class="form-group row">
-    <label for="container_number" class="col-sm-4 col-form-label">Container Number <i class="text-danger">*</i></label>
+    <label for="container_number" class="col-sm-4 col-form-label"><?php echo display('Container Number');?> <i class="text-danger">*</i></label>
     <div class="col-sm-8">
         <input type="text" name="container_no" class="form-control"  placeholder="Container Number">
     </div>
@@ -468,13 +468,13 @@
 </div>
 <div class="col-sm-6">
 <div class="form-group row">
-    <label for="date" class="col-sm-4 col-form-label">B/L No<i class="text-danger">*</i></label>
+    <label for="date" class="col-sm-4 col-form-label"><?php echo display('B/L No');?><i class="text-danger">*</i></label>
     <div class="col-sm-8">
         <input type="text" name="bl_number" class="form-control"   placeholder="Bl Number">
     </div>
 </div>
 <div class="form-group row">
-<label for="invoice_no" class="col-sm-4 col-form-label">Estimated Time Of Arrival
+<label for="invoice_no" class="col-sm-4 col-form-label"><?php echo display('Estimated Time Of Arrival');?>
                                         <i class="text-danger"></i>
                                     </label>
                                        <div class="col-sm-8">
@@ -482,7 +482,7 @@
                                     </div>
 </div>
   <div class="form-group row">
-    <label for="supplier_sss" class="col-sm-4 col-form-label">Estimated Time Of Depature
+    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Estimated Time Of Depature');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                         <div class="col-sm-8">
@@ -490,7 +490,7 @@
                                     </div>
 </div>
 <div class="form-group row">
-<label for="ETA" class="col-sm-4 col-form-label">Attachments</label>
+<label for="ETA" class="col-sm-4 col-form-label"><?php echo display('Attachments');?></label>
 <div class="col-sm-8">
     <input type="file" name="file" class="form-control">
 </div>
@@ -506,35 +506,35 @@
                                 <thead>
                                      <tr>
 
-                                            <th rowspan="2" class="text-center" style="width:180px;" >Product Name<i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
-                                            <th rowspan="2" class="text-center" style="width:60px;">Bundle No<i class="text-danger">*</i></th>
-                                            <th rowspan="2"  class="text-center">Description</th>
-                                            <th rowspan="2" class="text-center" style="width:60px;">Thick ness<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center" style="width:180px;" ><?php echo display('product_name'); ?><i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Bundle No');?><i class="text-danger">*</i></th>
+                                            <th rowspan="2"  class="text-center"><?php echo  display('description'); ?></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Thick ness');?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>
 
-                                            <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th>
-                                            <th colspan="2"   style="width:150px;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th>
-                                            <th rowspan="2" class="text-center">Gross Sq. Ft</th>
+                                            <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th>
+                                            <th colspan="2"   style="width:150px;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>
                                            
-                                            <th rowspan="2" style="width:40px;" class="text-center">Slab No<i class="text-danger">*</i></th>
-                                            <th colspan="2"  style="width:150px;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Net Sq. Ft</th>
-                                            <th rowspan="2"  style="width:90px;" class="text-center">Cost per Sq.Ft</th>
-                                            <th rowspan="2"  style="width:90px;" class="text-center">Cost per Slab</th>
-                                            <th rowspan="2"  style="width:90px;" class="text-center">Sales<br/>Price per Sq.Ft</th>
-                                            <th rowspan="2"  style="width:90px;" class="text-center">Sales Slab Price</th>
-                                            <th rowspan="2" class="text-center">Weight</th>
-                                            <th rowspan="2" class="text-center">Origin</th>
+                                            <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th>
+                                            <th colspan="2"  style="width:150px;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Slab');?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Sales Slab Price');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Weight');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>
                                            
-                                            <th rowspan="2" style="width: 110px" class="text-center">Total</th>
-                                            <th rowspan="2" class="text-center">Action</th>
+                                            <th rowspan="2" style="width: 110px" class="text-center"><?php  echo  display('total'); ?></th>
+                                            <th rowspan="2" class="text-center"><?php  echo  display('action'); ?></th>
                                         </tr>
 
                                         <tr>
-                                             <th class="text-center">Width</th>
-                                            <th class="text-center">Height</th>  
-                                          <th class="text-center"  >Width</th>
-                                            <th class="text-center" >Height</th>  
+                                             <th class="text-center"><?php echo display('Width');?></th>
+                                            <th class="text-center"><?php echo display('Height');?></th>  
+                                          <th class="text-center"  ><?php echo display('Width');?></th>
+                                            <th class="text-center" ><?php echo display('Height');?></th>  
                                         </tr>
 
                                 </thead>
@@ -698,20 +698,20 @@ td {
 
 
                                     <tr>
-                                   <td style="text-align:right;" colspan="8"><b>Gross Sq.Ft :</b></td>
+                                   <td style="text-align:right;" colspan="8"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_1" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="3"><b>Net Sq.Ft :</b></td>
+             <td style="text-align:right;" colspan="3"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_1" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> 
             </td>
-              <td style="text-align:right;" colspan="4"><b>Weight :</b></td>
+              <td style="text-align:right;" colspan="4"><b><?php  echo display('Weight');?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_1" name="overall_weight[]"  class="overall_weight form-control"  style="width: 60px"  readonly="readonly"  /> 
             </td>
 
-                                        <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;" colspan="1"><b><?php  echo display('total'); ?> :</b></td>
                                         <td >
            <span class="input-symbol-euro">    <input type="text" id="Total_1" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span>
             </td>
@@ -728,7 +728,7 @@ td {
                              <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:28%;border:none;text-align:end;font-weight:bold;">
-                            Today's Rate : 
+                            <?php  echo display("Today's Rate");?> : 
                          </td>
                 
                                <!-- <td class="hiden" style="text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
@@ -747,11 +747,11 @@ td {
 </tr> -->
 <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width: 80px;text-align:center;color:black;padding:5px;" type="text" class="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                    <td style="border:none;text-align:right;font-weight:bold;">Tax : 
+                    <td style="border:none;text-align:right;font-weight:bold;"><?php  echo display('Tax');?> : 
                                  </td>
                                 <td style="width:15%">
 <select name="tx"  id="product_tax" class="form-control" >
-<option value="Select the Tax" selected="selected">Select the Tax</option>
+<option value="Select the Tax" selected="selected"><?php  echo display('Select the Tax');?></option>
 <?php foreach($tax as $tx){?>
   
     <option value="<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';?>">  <?php echo $tx['tax_id'].'-'.$tx['tax'].'%';  ?></option>
@@ -778,25 +778,25 @@ td {
          <td  style="text-align:right;border:none;"> </td>
 </tr>
   <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td>
         <td colspan="1" style="border:none;padding-bottom: 40px;"><span class="input-symbol-euro"><input type="text" id="Over_all_Total" name="Over_all_Total"  style="width:230px;" class="form-control" value="0.00"  readonly="readonly"  /> </span></td>
-         <td colspan="4" style="width:150px;text-align:right;border:none;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="0.00" name="tax_details"  readonly="readonly" /></span></td>
+         <td colspan="4" style="width:150px;text-align:right;border:none;"><b><?php  echo display('TAX DETAILS');?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="0.00" name="tax_details"  readonly="readonly" /></span></td>
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_gross" name="total_gross"   class="form-control"   readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="0.00"  readonly="readonly" /></td>
+         <td colspan="4" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="0.00"  readonly="readonly" /></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_net" name="total_net"  class="form-control"    readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/>(<b>Preferred Currency</b>)</td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="vendor_gtotal"     name="vendor_gtotal"  required   /></td></tr></table></td>
+         <td colspan="4" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b><br/>(<b><?php  echo display('Preferred Currency');?></b>)</td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="vendor_gtotal"     name="vendor_gtotal"  required   /></td></tr></table></td>
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight"   class="form-control"   readonly="readonly"  /></td>
+        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Weight');?> :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight"   class="form-control"   readonly="readonly"  /></td>
        
-   <td colspan="4" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td><td style="border:none;"> 
+   <td colspan="4" class="amt" style="text-align:right;border:none;"><b><?php  echo display('Amount Paid');?> :</b></td><td style="border:none;"> 
                                         <table border="0">
       <tr class="amt">
 
@@ -812,7 +812,7 @@ td {
                                           </tr> 
                                         <tr>
       <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+        <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('balance_ammount');  ?> :</b></td>
         <td class="amt" style="border:none;" colspan="1">
             <table border="0">
       <tr class="amt">
@@ -854,7 +854,7 @@ td {
                         <div class="row">
                         <div class="col-sm-12">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-2 col-form-label">Remarks / Details
+                                    <label for="adress" class="col-sm-2 col-form-label"><?php echo  display('Remarks / Details');?>
                                     </label>
                                     <div class="col-sm-10">
                                     <textarea class="form-control" rows="4" cols="50" id="remark" name="remark" placeholder="Remarks" rows="1"></textarea>
@@ -867,7 +867,7 @@ td {
                             <div class="row">
                         <div class="col-sm-12">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-2 col-form-label">Message on Invoice
+                                    <label for="adress" class="col-sm-2 col-form-label"><?php echo  display('Message on Invoice');?>
                                     </label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" rows="4" cols="50" id="adress" name="message_invoice" placeholder="Message on Invoice" rows="1"></textarea>
@@ -890,14 +890,14 @@ td {
 
                                             <td class="button_hide"> 
  
-                               <a    id="final_submit" style="color:white;background-color: #38469f;" class='final_submit btn'>Submit</a>
+                               <a    id="final_submit" style="color:white;background-color: #38469f;" class='final_submit btn'><?php echo display('submit'); ?></a>
                                             </td>
                                            
                                   <td class="button_hide">         
  <select name="download_select" id="download_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
-                                        <option value="Download" selected>Download</option>
-                                             <option value="Invoice" >New Invoice</option>
-                                                <option value="Packing" >Packing List</option>
+                                        <option value="Download" selected><?php echo display('download'); ?></option>
+                                             <option value="Invoice" ><?php echo  display('New Invoice');?></option>
+                                                <option value="Packing" ><?php echo  display('Packing List');?></option>
                                         </select>
                                         
 
@@ -906,9 +906,9 @@ td {
                    <td class="button_hide">
 
  <select name="print_select" id="print_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
-                                        <option value="Print" selected>Print</option>
-                                             <option value="Invoice" >New Invoice</option>
-                                                <option value="Packing" >Packing List</option>
+                                        <option value="Print" selected><?php echo display('print');  ?></option>
+                                            <option value="Invoice" ><?php echo  display('New Invoice');?></option>
+                                                <option value="Packing" ><?php echo  display('Packing List');?></option>
                                         </select>
 
 
@@ -945,7 +945,7 @@ td {
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Expenses</h4>
+          <h4 class="modal-title"><?php  echo display('purchase'); ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -1018,7 +1018,7 @@ td {
   <div class="modal-content">
       <div class="modal-header"  style="color:white;background-color:#38469f;">
           <a href="#" class="close" data-dismiss="modal" >&times;</a>
-          <h3 class="modal-title"  >Add New Vendor</h3>
+          <h3 class="modal-title"  ><?php echo  display('Add New Vendor');?></h3>
       </div>
       <div class="modal-body">
       <form id="insert_supplier"  method="post">
@@ -1026,48 +1026,48 @@ td {
   <div class="panel-body">
       <div class="col-sm-6">
       <div class="form-group row">
-      <label for="" class="col-sm-4  col-form-label">Vendor Type<i class="text-danger">*</i></label>
+      <label for="" class="col-sm-4  col-form-label"><?php echo  display('Vendor Type');?><i class="text-danger">*</i></label>
       <div class="col-sm-8">
                 <select   name="vendor_type"  class=" form-control" placeholder=''  required="" id="vendor_type" >
-                 <option value=""> Selected vendor type</option>
-                 <option value="productsupplier">Product Supplier</option>
-                 <option value="servicevendor"> Service Vendor</option>
-                 <option value="others"> Others</option>
+                 <option value=""> <?php echo  display('Selected vendor type');?></option>
+                 <option value="productsupplier"><?php echo  display('Product Supplier');?></option>
+                 <option value="servicevendor"> <?php echo  display('Service Vendor');?></option>
+                 <option value="others"> <?php echo  display('others');  ?></option>
                 </select>
                 </div>
                 </div>
                 <div class="form-group row">
-                            <label for="supplier_name" class="col-sm-4 col-form-label"> Company Name<i class="text-danger">*</i></label>
+                            <label for="supplier_name" class="col-sm-4 col-form-label"> <?php echo  display('Company Name');?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name ="supplier_name" id="supplier_name" type="text" placeholder="Company Name"  required="" tabindex="1">
                             </div>
                         </div>
       <div class="form-group row">
-          <label for="mobile" class="col-sm-4 col-form-label"> Mobile<i class="text-danger"></i></label>
+          <label for="mobile" class="col-sm-4 col-form-label"> <?php  echo display('mobile'); ?><i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="mobile" id="mobile" type="number" placeholder=" Mobile"  min="0" tabindex="2">
           </div>
       </div>
           <div class="form-group row">
-          <label for="phone" class="col-sm-4 col-form-label">Business Phone<i class="text-danger">*</i></label>
+          <label for="phone" class="col-sm-4 col-form-label"><?php echo  display('Business Phone');?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="phone" id="phone" type="number" placeholder="Business Phone"   required="" min="0" tabindex="2">
           </div>
       </div>
        <div class="form-group row">
-          <label for="email" class="col-sm-4 col-form-label">primary Email <i class="text-danger">*</i></label>
+          <label for="email" class="col-sm-4 col-form-label"><?php echo  display('primary Email');?> <i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="email" id="email" type="email" placeholder="primary Email"    required="" tabindex="2">
           </div>
       </div>
        <div class="form-group row">
-          <label for="emailaddress" class="col-sm-4 col-form-label">Secondary Email <i class="text-danger"></i></label>
+          <label for="emailaddress" class="col-sm-4 col-form-label"><?php echo  display('Secondary Email');?> <i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="emailaddress" id="emailaddress" type="email" placeholder="Secondary Email"  >
           </div>
       </div>
         <div class="form-group row">
-          <label for="contact" class="col-sm-4 col-form-label">Contact Person<i class="text-danger"></i></label>
+          <label for="contact" class="col-sm-4 col-form-label"><?php echo  display('Contact Person');?><i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="contact" id="contact" type="text" placeholder="Contact Person"  >
           </div>
@@ -1259,16 +1259,16 @@ td {
   </div>
   <div class="col-sm-6">
 <div class="form-group row">
-      <label for="" class="col-sm-4 col-form-label">Tax Collected<i class="text-danger">*</i></label>
+      <label for="" class="col-sm-4 col-form-label"><?php echo  display('Tax Collected');?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
              <select  style="width: 100%;"  class="form-control"   required="" name="service_provider">
-              <option value="1">Yes</option>
-              <option value="0" selected>No</option>
+              <option value="1"><?php  echo display('yes'); ?></option>
+              <option value="0" selected><?php  echo display('no'); ?></option>
              </select>
           </div>
         </div>
   <div class="form-group row">
-          <label for="state" class="col-sm-4 col-form-label">State <i class="text-danger">*</i></label>
+          <label for="state" class="col-sm-4 col-form-label"><?php  echo display('state'); ?> <i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="state" id="state" type="text"  placeholder="State"  >
           </div>
@@ -1280,13 +1280,13 @@ td {
           </div>
       </div>
       <div class="form-group row">
-                                    <label for="country" class="col-sm-4 col-form-label">Country<i class="text-danger">*</i></label>
+                                    <label for="country" class="col-sm-4 col-form-label"><?php echo display('country'); ?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
                                     <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country"    style="width: 100%;" ></select>
                                     </div>
                         </div>
       <div class="form-group row">
-          <label for="address " class="col-sm-4 col-form-label">Address</label>
+          <label for="address " class="col-sm-4 col-form-label"><?php echo display('address') ?></label>
           <div class="col-sm-8">
               <textarea class="form-control" name="address" id="address " rows="2" placeholder="Address" ></textarea>
           </div>
@@ -1310,15 +1310,15 @@ td {
           </div>
       </div>
   <div class="form-group row">
-                    <label for="billing_address" class="col-sm-4  col-form-label">Payment Terms <i class="text-danger">*</i></label>
+                    <label for="billing_address" class="col-sm-4  col-form-label"><?php echo  display('Payment Terms');?> <i class="text-danger">*</i></label>
                     <div class="col-sm-8">
                     <select name="payment_terms"  id="terms"  class="form-control "  placeholder="" style="width:100%;"  required="" tabindex="1" >
-                                        <option value="Select the Product" selected>Select the payment terms</option>
+                                        <option value="Select the Product" selected><?php echo  display('Select the payment terms');?></option>
     <option value="cod">COD</option>
-    <option value="30"> 30-Days</option>
-    <option value="60"> 60-Days</option>
-    <option value="90"> 90-Days</option>
-    <option value="45"> 45-Days</option>
+    <option value="30"> 30-<?php echo  display('Days');?></option>
+    <option value="60"> 60-<?php echo  display('Days');?></option>
+    <option value="90"> 90-<?php echo  display('Days');?></option>
+    <option value="45"> 45-<?php echo  display('Days');?></option>
                                          <?php
                                             foreach($paymentterms_add as $cn){?>
                                                 <option value="<?php echo $cn['paymentterms_add'];?>">  <?php echo $cn['paymentterms_add'];  ?></option>
@@ -1330,10 +1330,10 @@ td {
 
 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
 <!-- <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label> -->
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php //echo  display('currency');?> ?></label> -->
             
   <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Attachments
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo  display('Attachments');?>
                                     </label>
                                     <div class="col-sm-8">
                                        <input type="file" name="attachments"  style="width:96%;"   class="form-control">
@@ -1341,7 +1341,7 @@ td {
                                 </div>
                                 </div>
 <div class="modal-footer">
-                          <a href="#" class="btn" style="color:white;background-color:#38469f;"  data-dismiss="modal">Close</a>
+                          <a href="#" class="btn" style="color:white;background-color:#38469f;"  data-dismiss="modal"><?php echo  display('Close');?></a>
                           <input type="submit" id="add-supplier-from-expense" name="add-supplier-from-expense"  style="color:white;background-color:#38469f;"  class="btn" value="Submit">
                       </div>
                          </form>
@@ -1360,7 +1360,7 @@ td {
 <div class="modal-content" style="width: 150%; height: 140%;">
  <div class="modal-header" style="color:white;background-color:#38469f;">
      <a href="#" class="close" data-dismiss="modal">&times;</a>
-     <h3 class="modal-title">Add New Product</h3>
+     <h3 class="modal-title"><?php echo display('add_new_product');  ?></h3>
  </div>
  <div class="modal-body">
      <div id="customeMessage" class="alert hide"></div>
@@ -1397,7 +1397,7 @@ td {
                 
         <div class="col-sm-6">
                          <div class="form-group row">
-                             <label for="quantity" class="col-sm-4 col-form-label"><?php echo 'Quantity' ?> <i class="text-danger">*</i></label>
+                             <label for="quantity" class="col-sm-4 col-form-label"><?php echo  display('Quantity');?> <i class="text-danger">*</i></label>
                              <div class="col-sm-8">
                                  <input class="form-control" name="quantity" type="number" id="quantity" placeholder="Enter Product Quantity only" required tabindex="1" >
                              </div>
@@ -1442,7 +1442,7 @@ td {
                              <label for="" class="col-sm-4 col-form-label"><?php echo display('Supplier') ?> <i class="text-danger">*</i> </label>
                              <div class="col-sm-7">
                              <select name="supplier_id" id="supplier_id" class="form-control " style="width:118%;" required="" tabindex="1">
-                                     <option value=" ">Select Supplier</option>
+                                     <option value=" ">Select Vendor</option>
                                      {all_supplier}
                                      <option value="{supplier_id}">{supplier_name}</option>
                                      {/all_supplier}
@@ -1472,7 +1472,7 @@ td {
            <div class="col-sm-12">
                      <div class="col-sm-6">
                      <div class="form-group row">
-                             <label for="account_category_name" class="col-sm-4 col-form-label">Account Category Name</label>
+                             <label for="account_category_name" class="col-sm-4 col-form-label"><?php echo  display('Account Category Name');?></label>
                              <div class="col-sm-8">
                              <input class="form-control" name ="account_category_name" id="account_category_name" type="text" placeholder=" Account Category Name"   tabindex="1" >
                              </div>
@@ -1482,7 +1482,7 @@ td {
 
 <div class="col-sm-6">
                      <div class="form-group row">
-                             <label for="account_sub_category"  class="col-sm-4 col-form-label">Account Sub Category</label>
+                             <label for="account_sub_category"  class="col-sm-4 col-form-label"><?php echo  display('Account Sub Category');?></label>
                              <div class="col-sm-8">
                              <input class="form-control" name ="account_sub_category" id="account_sub_category" type="text" placeholder=" Account Sub Category"  tabindex="1" >
                              </div>
@@ -1496,28 +1496,28 @@ td {
                     <div class="col-sm-12">
                      <div class="col-sm-6">
                          <div class="form-group row">
-<label for="account_category" class="col-sm-4 col-form-label">Account Category</label>
+<label for="account_category" class="col-sm-4 col-form-label"><?php echo  display('Account Category');?></label>
 <div class="col-sm-8">
 <select id="ddl"  name="account_category" class="form-control" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
-<option value="">Select the Account Category</option>
-<option value="1000 ASSETS">1000 ASSETS</option>
-<option value="1200 RECEIVABLES">1200 RECEIVABLES</option>
-<option value="1300 INVENTORIES">1300 INVENTORIES</option>
-<option value="1400 PREPAID EXPENSES & OTHER CURRENT ASSETS">1400 PREPAID EXPENSES & OTHER CURRENT ASSETS</option>
-<option value="1500 PROPERTY PLANT & EQUIPMENT">1500 PROPERTY PLANT & EQUIPMENT</option>
-<option value="1600 ACCUMULATED DEPRECIATION & AMORTIZATION">1600 ACCUMULATED DEPRECIATION & AMORTIZATION</option>
-<option value="1700 NON – CURRENT RECEIVABLES">1700 NON – CURRENT RECEIVABLES</option>
-<option value="1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS">1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS</option>
-<option value="2000 LIABILITIES & 2100 PAYABLES">2000 LIABILITIES & 2100 PAYABLES</option>
-<option value="2200 ACCRUED COMPENSATION & RELATED ITEMS">2200 ACCRUED COMPENSATION & RELATED ITEMS</option>
-<option value="2300 OTHER ACCRUED EXPENSES">2300 OTHER ACCRUED EXPENSES</option>
-<option value="2500 ACCRUED TAXES">2500 ACCRUED TAXES</option>
-<option value="2600 DEFERRED TAXES">2600 DEFERRED TAXES</option>
-<option value="2700 LONG-TERM DEBT">2700 LONG-TERM DEBT</option>
-<option value="2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES">2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES</option>
-<option value="4000 REVENUE">4000 REVENUE</option>
-<option value="5000 COST OF GOODS SOLD">5000 COST OF GOODS SOLD</option>
-<option value="6000 – 7000 OPERATING EXPENSES">6000 – 7000 OPERATING EXPENSES</option>
+<option value=""><?php echo  display('Select the Account Category');?></option>
+<option value="1000 ASSETS">1000 <?php echo  display('ASSETS');?></option>
+<option value="1200 RECEIVABLES">1200 <?php echo  display('RECEIVABLES');?></option>
+<option value="1300 INVENTORIES">1300 <?php echo  display('INVENTORIES');?></option>
+<option value="1400 PREPAID EXPENSES & OTHER CURRENT ASSETS">1400 <?php echo  display('PREPAID EXPENSES & OTHER CURRENT ASSETS');?></option>
+<option value="1500 PROPERTY PLANT & EQUIPMENT">1500 <?php echo  display('PROPERTY PLANT & EQUIPMENT');?></option>
+<option value="1600 ACCUMULATED DEPRECIATION & AMORTIZATION">1600 <?php echo  display('ACCUMULATED DEPRECIATION & AMORTIZATION');?></option>
+<option value="1700 NON – CURRENT RECEIVABLES">1700 <?php echo  display('NON – CURRENT RECEIVABLES');?></option>
+<option value="1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS">1800 <?php echo  display('INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS');?></option>
+<option value="2000 LIABILITIES & 2100 PAYABLES">2000 <?php echo  display('LIABILITIES & PAYABLES');?></option>
+<option value="2200 ACCRUED COMPENSATION & RELATED ITEMS">2200 <?php echo  display('ACCRUED COMPENSATION & RELATED ITEMS');?></option>
+<option value="2300 OTHER ACCRUED EXPENSES">2300 <?php echo  display('OTHER ACCRUED EXPENSES');?></option>
+<option value="2500 ACCRUED TAXES">2500 <?php echo  display('ACCRUED TAXES');?></option>
+<option value="2600 DEFERRED TAXES">2600 <?php echo  display('DEFERRED TAXES');?></option>
+<option value="2700 LONG-TERM DEBT">2700 <?php echo  display('LONG-TERM DEBT');?></option>
+<option value="2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES">2800 <?php echo  display('INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES');?></option>
+<option value="4000 REVENUE">4000 <?php echo  display('REVENUE');?></option>
+<option value="5000 COST OF GOODS SOLD">5000 <?php echo  display('COST OF GOODS SOLD');?></option>
+<option value="6000 – 7000 OPERATING EXPENSES">6000 – 7000 <?php echo  display('OPERATING EXPENSES');?></option>
 </select>
 </div>
                      </div>
@@ -1529,18 +1529,18 @@ td {
 
                       <div class="col-sm-6">
                      <div class="form-group row">
-<label for="product_sub_category" class="col-sm-4 col-form-label">Product Sub Category<i class="text-danger">*</i></label>
+<label for="product_sub_category" class="col-sm-4 col-form-label"><?php echo  display('Product Sub Category');?><i class="text-danger">*</i></label>
 <div class="col-sm-8">
 <select   name="product_sub_category" id="product_sub_category" class=" form-control" placeholder="product_sub_category" style="width:100%;">
-<option value="">Select the Product Sub Category</option>
-<option value="Granite">Granite</option>
-<option value="Marble">Marble</option>
-<option value="Quartz">Quartz</option>
-<option value="Quartzite">Quartzite</option>
-<option value="Lime Stone">Lime Stone</option>
-<option value="Dolomite">Dolomite</option>
-<option value="Sand Stone">Sand Stone</option>
-<option value="Soap Stone">Soap Stone</option>
+<option value=""><?php echo  display('Select the Product Sub Category');?></option>
+<option value="Granite"><?php echo  display('Granite');?></option>
+<option value="Marble"><?php echo  display('Marble');?></option>
+<option value="Quartz"><?php echo  display('Quartz');?></option>
+<option value="Quartzite"><?php echo  display('Quartzite');?></option>
+<option value="Lime Stone"><?php echo  display('Lime Stone');?></option>
+<option value="Dolomite"><?php echo  display('Dolomite');?></option>
+<option value="Sand Stone"><?php echo  display('Sand Stone');?></option>
+<option value="Soap Stone"><?php echo  display('Soap Stone');?></option>
 </select>
 </div>
                      </div>
@@ -1552,18 +1552,18 @@ td {
 
 <div class="col-sm-6">
                      <div class="form-group row">
-                             <label for="sub_category"  class="col-sm-4 col-form-label">Account Sub Category</label>
+                             <label for="sub_category"  class="col-sm-4 col-form-label"><?php echo  display('Account Sub Category');?></label>
                              <div class="col-sm-8">
                              <!-- <input class="form-control" name ="sub_category" id="sub_category" type="text" placeholder=" Account Sub Category"  tabindex="1" > -->
                              <select class="form-control" name="sub_category" id="ddl2">
-                         <option value="Select Sub Category">Select Sub Category</option>
+                         <option value="Select Sub Category"><?php echo  display('Select Sub Category');?></option>
             </select>
                      </div>
               </div>
                      </div>
                      <div class="col-sm-6">
                          <div class="form-group row">
-                             <label for="image" class="col-sm-4 col-form-label">Product Image </label>
+                             <label for="image" class="col-sm-4 col-form-label"><?php echo  display('Product Image');?> </label>
                              <div class="col-sm-8">
                                  <input type="file" name="product_image" class="form-control" id="product_image"  tabindex="4">
                              </div>
@@ -1573,13 +1573,13 @@ td {
                          <div class="col-sm-12">
                          <div class="col-sm-6">
                          <div class="form-group row">
-                             <label for="cost_per_sqft" class="col-sm-4 col-form-label">Cost per Sq. Ft </label>
+                             <label for="cost_per_sqft" class="col-sm-4 col-form-label"><?php echo  display('Cost per Sq.Ft');?> </label>
                              <div class="col-sm-8">
                                  <input type="text" name="costpersqft" class="form-control" id="cost_per_sqft" tabindex="4" placeholder="cost persqft" />
                              </div>
                          </div>
                          <div class="form-group row">
-                             <label for="cost_per_slab" class="col-sm-4 col-form-label">Cost per Slab </label>
+                             <label for="cost_per_slab" class="col-sm-4 col-form-label"><?php echo  display('Cost per Slab');?> </label>
                              <div class="col-sm-8">
                                  <input type="text" name="costperslab" class="form-control" id="cost_per_slab" tabindex="4" placeholder="Cost per Slab" />
                              </div>
@@ -1588,13 +1588,13 @@ td {
                          <div class="col-sm-6">
                       <div class="form-group row">
                           <label for="sales_price" class="col-sm-4 col-form-label">Sales
-                             Price per Sq.Ft </label>
+                            <?php echo  display(' Price per Sq.Ft');?> </label>
                           <div class="col-sm-8">
                               <input type="text" name="salespricepersqft" class="form-control" id="sales_price_per_sqft" tabindex="4"  placeholder=" Sales Price perSq.Ft" />
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label for="sales_slab_price" class="col-sm-4 col-form-label">Sales Slab Price </label>
+                          <label for="sales_slab_price" class="col-sm-4 col-form-label"><?php echo  display('Sales Slab Price');?> </label>
                           <div class="col-sm-8">
                               <input type="text" name="salesslabprice" class="form-control" id="sales_slab_price" tabindex="4" placeholder=" Sales Slab Price"  />
                           </div>
@@ -1616,7 +1616,7 @@ td {
 
 <div class="col-sm-6">
 <div class="form-group row">
-                             <label for="country" class="col-sm-4 col-form-label">Country</label>
+                             <label for="country" class="col-sm-4 col-form-label"><?php echo display('country'); ?></label>
                              <div class="col-sm-8">
                              <!-- <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="US-United States"
 name="country" id="country" ></select> -->
@@ -1654,7 +1654,7 @@ name="country" id="country" ></select> -->
  <div class="form-group row">
  <div class="col-sm-6"></div>
      <div class="col-sm-6" style="text-align: -webkit-right;">
-     <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+     <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('close');  ?></a>
          <input type="submit" id="add-product" style="color:white;background-color:#38469f;" class="btn btn-primary btn-large" name="insert_product" value="<?php echo display('save') ?>" tabindex="10"/>
            </div>
         </div>
@@ -1721,7 +1721,7 @@ name="country" id="country" ></select> -->
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ADD PAYMENT</h4>
+          <h4 class="modal-title"><?php echo  display('add_payment'); ?></h4>
         </div>
         <div class="modal-body">
           
@@ -1732,7 +1732,7 @@ name="country" id="country" ></select> -->
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label">Payment Date <i class="text-danger">*</i></label>
+        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('payment_date'); ?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
 
@@ -1831,7 +1831,7 @@ name="country" id="country" ></select> -->
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label">Balance: </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php  echo display('balance'); ?>: </label>
 
 <div class="col-sm-5">
 
@@ -1845,7 +1845,7 @@ name="country" id="country" ></select> -->
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Payment Amount:<i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('payment_amount');  ?>:<i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1893,7 +1893,7 @@ name="country" id="country" ></select> -->
         <div class="modal-content">
             <div class="modal-header" style="color:white;background-color:#38469f;" >
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD BANK</h4>
+                	<h4 class="modal-title"><?php echo display('add_new_bank');  ?></h4>
 
             </div>
             <div class="container"></div>
@@ -1961,7 +1961,7 @@ name="country" id="country" ></select> -->
   </div>
 
   <div class="form-group row">
-  <label for="shipping_line" class="col-sm-4 col-form-label">Country
+  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('country');  ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
@@ -1971,7 +1971,7 @@ name="country" id="country" ></select> -->
 
 </div>
 <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency'); ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
     <option>Select currency</option>
@@ -2630,7 +2630,7 @@ $('#serviceprovider').submit(function (event) {
             $('#invoice_hdn1').val(split[0]);
          console.log(split[0]+"---"+split[1]);
             $('#invoice_hdn').val(split[1]);
-            $("#bodyModal1").html('Create Service Provider Successfully');
+            $("#bodyModal1").html('Service Provider created Successfully');
 $('.button_hide').show();
     $('#myModal1').modal('show');
     window.setTimeout(function(){

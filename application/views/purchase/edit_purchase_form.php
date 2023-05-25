@@ -3136,100 +3136,7 @@ gt(id);
 
 
 });
-// $(document).on('input', '.total_price', function(){
-//    var netheight = $(this).attr('id');
-// const indexLastDot = netheight.lastIndexOf('_');
-// var id = netheight.slice(indexLastDot + 1);
-// var tid=$(this).closest('table').attr('id');
-// const indexLast = tid.lastIndexOf('_');
-// var idt = tid.slice(indexLast + 1);
-//  var sum_net=0;
 
-//       $(this).closest('table').find('.net_sq_ft').each(function() {
-//         var v=$(this).val();
-       
-//     sum_net += parseFloat(v);
-    
-//     sum_net = isNaN(sum_net) ? 0 : sum_net;
-   
-// });
-// $('#overall_net_'+idt).val(sum_net.toFixed(3));
-//     var sum_gross=0;
-    
-//     $(this).closest('table').find('.gross_sq_ft').each(function() {
-//         var v=$(this).val();
-       
-//     sum_gross += parseFloat(v);
-     
-      
-//     sum_gross = isNaN(sum_gross) ? 0 : sum_gross;
-    
-// });
-// $('#overall_gross_'+idt).val(sum_gross.toFixed(3));
-// var total_net=0;
-//  $('.table').each(function() {
-//     $(this).find('.net_sq_ft').each(function() {
-//         var precio = $(this).val();
-//         if (!isNaN(precio) && precio.length !== 0) {
-//           total_net += parseFloat(precio);
-//         }
-//       });
-
-     
-//  //   });
-
-//   });
-// $('#total_net').val(total_net.toFixed(3)).trigger('change');
-//   var overall_gs=0;
-//  $('.table').each(function() {
-//     $(this).find('.gross_sq_ft').each(function() {
-//         var precio = $(this).val();
-//         if (!isNaN(precio) && precio.length !== 0) {
-//           overall_gs += parseFloat(precio);
-//         }
-//       });
-//  });
-
-// $('#total_gross').val(overall_gs).trigger('change');
-//   var sum=0;
-//  // var overall_sum=0;
-//      $(this).closest('table').find('.total_price').each(function() {
-// var v=$(this).val();
-//   sum += parseFloat(v);
-//  // overall_sum +=parseFloat(v);
-// });
-
-// var overall_sum=0;
-//  $('.table').each(function() {
-//     $(this).find('.total_price').each(function() {
-//         var precio = $(this).val();
-//         if (!isNaN(precio) && precio.length !== 0) {
-//           overall_sum += parseFloat(precio);
-//         }
-//       });
-
-     
-//  //   });
-
-//   });
-
-// // var overall_net=0;
-// //  $('.table').each(function() {
-// //     $(this).find('.overall_net').each(function() {
-// //         var precio = $(this).val();
-// //         if (!isNaN(precio) && precio.length !== 0) {
-// //           overall_net += parseFloat(precio);
-// //         }
-// //       });
-
-     
-// //  //   });
-
-// //   });
-// //   $('#total_net').val(overall_net.toFixed(3)).trigger('change');
-// $('#Over_all_Total').val(overall_sum).trigger('change');
-// $('#Total_'+idt).val(sum);
-// });
  
 $(document).on('input', '.gross_height,.gross_width', function(){
 
@@ -3274,39 +3181,7 @@ var overall_gs=0;
  });
 
 $('#total_gross').val(overall_gs).trigger('change');
-//     $('.normalinvoice .overall_gross').each(function() {
-//         var v=$(this).val();
-//        console.log(v);
-//     overall_gross += parseFloat(v);
 
-  
-// });
-
-
-//   var sum=0;
-// //  var overall_sum=0;
-//      $(this).closest('table').find('.total_price').each(function() {
-// var v=$(this).val();
-//   sum += parseFloat(v);
-//   //  overall_sum +=parseFloat(v);
-// });
-// var overall_sum=0;
-//  $('.table').each(function() {
-//     $(this).find('.total_price').each(function() {
-//         var precio = $(this).val();
-//         if (!isNaN(precio) && precio.length !== 0) {
-//           overall_sum += parseFloat(precio);
-//         }
-//       });
-
-     
-//  //   });
-
-//   });
-
-// $('#Over_all_Total').val(overall_sum);
-// $('#Total_'+idt).val(sum);
-//$('#total_gross').val(overall_gross.toFixed(3));
 gt(id);
 
 });
@@ -3318,16 +3193,7 @@ $('#Total').on('change textInput input', function (e) {
 $('#custocurrency_rate').on('change textInput input', function (e) {
     calculate();
 });
-// function calculate(){
-  
-//   var first=$("#gtotal").val();
-// var custo_amt=$('#custocurrency_rate').val();
-// var value=parseInt(first*custo_amt);
 
-// var custo_final = isNaN(parseInt(value)) ? 0 : parseInt(value)
-// $('#vendor_gtotal').val(custo_final);  
-// $('#balance').val(custo_final);
-// }
 $(document).on('change select','.product_name', function (e) {
 
  var netheight = $(this).attr('id');
