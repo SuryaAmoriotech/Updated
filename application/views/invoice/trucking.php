@@ -1,3 +1,4 @@
+
 <!-- Product Purchase js -->
 <script src="<?php echo base_url()?>my-assets/js/admin_js/json/product_purchase.js.php" ></script>
 <!-- Supplier Js -->
@@ -76,7 +77,7 @@ textarea:focus, input:focus{
     <section class="content">
         <!-- Alert Message -->
         <?php
-            $message = $this->session->userdata('message');
+            $message = $this->session->userdata('show');
             if (isset($message)) {
         ?>
         <div class="alert alert-info alert-dismissable">

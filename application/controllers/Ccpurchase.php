@@ -42,10 +42,11 @@ class Ccpurchase extends CI_Controller {
      $result = $this->db->delete('expense_trucking_details', array('expense_trucking_id' => $expense_trucking_id));
 
  
+     $this->session->set_flashdata('show', display('successfully_delete'));
 
-     if ($result == true) {
-        $this->session->set_userdata(array('message'=>display('successfully_delete')));
-     }
+    //  if ($result == true) {
+    //     $this->session->set_userdata(array('message'=>display('successfully_delete')));
+    //  }
      redirect('Ccpurchase/manage_trucking');
  }
 

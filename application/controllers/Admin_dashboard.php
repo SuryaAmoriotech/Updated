@@ -24,7 +24,7 @@ class Admin_dashboard extends CI_Controller {
             $this->output->set_header("Location: " . base_url() . 'Admin_dashboard/login', TRUE, 302);
         }
         $pageen=array();
-        $data['page_setting']=$page_setting=array(array("slug"=>"Sale","status"=>"enable"),array("slug"=>"Expense","status"=>"enable"),array("slug"=>"Sale_invoice","status"=>"enable"),array("slug"=>"Expense_invoice","status"=>"enable"),array("slug"=>"Product_sold","status"=>"enable"),array("slug"=>"Product_purchased","status"=>"enable"),array("slug"=>"best_sales_product","status"=>"enable"),array("slug"=>"todays_overview","status"=>"enable"),array("slug"=>"yearly_report","status"=>"enable"),array("slug"=>"todays_sales_report","status"=>"enable")); 
+        $data['page_setting']=$page_setting=array(array("slug"=>"TotalSale","status"=>"enable"),array("slug"=>"TotalExpense","status"=>"enable"),array("slug"=>"Profit","status"=>"enable"),array("slug"=>"NoofProduct","status"=>"enable"),array("slug"=>"Sale_Expense_Overview","status"=>"enable"),array("slug"=>"Pie_Chart","status"=>"enable"),array("slug"=>"No_of_Vendor","status"=>"enable"),array("slug"=>"No_of_Customer","status"=>"enable"),array("slug"=>"No_of_Employee","status"=>"enable"),array("slug"=>"Best 10 Sales Product","status"=>"enable")); 
    
 
         if($this->input->post('page_status')){
@@ -63,7 +63,7 @@ class Admin_dashboard extends CI_Controller {
        
          }
         $content = $CI->parser->parse('include/dashboard_setting', $data, true);
-//  print_r($data);// die();
+//  print_r($data);die();
        $this->template->full_admin_html_view($content);
     }
 

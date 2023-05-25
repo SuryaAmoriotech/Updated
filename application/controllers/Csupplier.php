@@ -44,10 +44,11 @@ class Csupplier extends CI_Controller {
         $result1 = $this->db->delete('supplier_information', array('supplier_id' => $supplier_id)); 
         $result2 = $this->db->delete('supplier_product', array('supplier_id' => $supplier_id)); 
 
-        if ($result == true) {
-           $this->session->set_userdata(array('message'=>display('successfully_delete')));
-        }
-   
+        // if ($result == true) {
+        //    $this->session->set_userdata(array('message'=>display('successfully_delete')));
+        // }
+        $this->session->set_flashdata('message', display('successfully_delete'));
+
         
         redirect('Csupplier/manage_supplier');
     }

@@ -66,7 +66,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
             ?>
 
-            <div class="alert alert-info alert-dismissable">
+            <div class="alert alert-info alert-dismissable" style="background-color:#38469f;color:white;font-weight:bold;">
 
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 

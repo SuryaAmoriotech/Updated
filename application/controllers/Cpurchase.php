@@ -40,9 +40,11 @@ class Cpurchase extends CI_Controller {
       $result1 = $this->db->delete('product_purchase_details', array('purchase_id' => $purchase_id)); 
 
     //   die();
-      if ($result == true) {
-         $this->session->set_userdata(array('message'=>display('successfully_delete')));
-      }
+    //   if ($result == true) {
+    //      $this->session->set_userdata(array('message'=>display('successfully_delete')));
+    //   }
+    $this->session->set_flashdata('show', display('successfully_delete'));
+
       redirect('Cpurchase/manage_purchase');
   }
 
@@ -90,9 +92,14 @@ class Cpurchase extends CI_Controller {
       $result = $this->db->delete('ocean_import_tracking', array('ocean_import_tracking_id' => $ocean_import_tracking_id)); 
      // print_r( $result);
 
-      if ($result == true) {
-         $this->session->set_userdata(array('message'=>display('successfully_delete')));
-      }
+    //   if ($result == true) {
+    //      $this->session->set_userdata(array('message'=>display('successfully_delete')));
+    //   }
+
+      $this->session->set_flashdata('show', display('successfully_delete'));
+
+
+
       redirect('Ccpurchase/manage_ocean_import_tracking');
   }
 
