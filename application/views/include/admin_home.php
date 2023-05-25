@@ -36,6 +36,7 @@
 
         <!-- Alert Message -->
      <style>
+
           .btn-success{
     background: transparent;
         color: white;
@@ -291,11 +292,11 @@ echo html_escape($currency).$string;
 
                       <div class="">
 
-                      <div style="<?php if($product_sold=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+                      <div>
 
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
+                        <div  style="<?php if($product_sold=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>"   class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-2" id="print">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row " style="font-size:12px;text-align:center;">
@@ -408,96 +409,19 @@ echo html_escape($currency).$string;
                             </div>
 
 
-                            <div style="<?php if($product_purchased=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
-
-                                <div class="col-xl-4 col-md-6 mb-4" style="height:100px;">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body" style="height: 50px;font-size: xx-large;">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <i class="fa fa-user-secret" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#4775d1;color:white;"></i>
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                               No. of Vendors</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo $total_suppliers ;  ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-
-                                
-                                 
-							 
-                        <div style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
-	  
-						
-							
-						   <div class="col-xl-4 col-md-6 mb-4" style="height:100px;">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body" style="height: 50px;font-size: xx-large;">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <i class="fa fa-users" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#53c68c;;color:white;"></i>
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                               No. of Customers</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo $total_customer ;  ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-
-                        <div style="<?php if($todays_overviewsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
-
-
-								   <div class="col-xl-4 col-md-6 mb-4" style="height:100px;">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body" style="height: 50px;font-size: xx-large;">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                          
-                                            <i class='fa fa-user-o'  style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#47d1d1;color:white;"></i>
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                               No. of Employees</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo "0" ;  ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-
-
                       
                                 
 
-                        <div style="<?php if($yearly_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+
+                        <div style="<?php if($product_purchased=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
 
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4" style="height: 520px;">
+                            <div class="card shadow mb-4" style="height: 460px;">
                                 <!-- Card Header - Dropdown -->
                                 <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height:50px;">
                                     <h6 class="m-0 font-weight-bold text-primary"> <?php echo form_open_multipart('Admin_dashboard/index',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
 
 <table><tr><td>
@@ -515,7 +439,7 @@ echo html_escape($currency).$string;
                                     <div class="chart-pie pt-1 pb-2">
                                       <div  style="<?php if($yearly_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">
 
-<div id="chartContainer" name="chartContainer"  class="pie chartcontainer"></div>
+<div id="chartContainer" name="chartContainer"  class="pie chartcontainer" style="height:370px;"></div>
 
 </div>
                                     </div>
@@ -524,8 +448,86 @@ echo html_escape($currency).$string;
                             </div>
                         </div>
                     </div>
-                    </div>
+                   
 
+
+                   
+                    <div style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+
+<div class="col-xl-4 col-md-6 mb-4" style="height:100px;  width :550px;">
+<div class="card border-left-primary shadow h-100 py-2">
+<div class="card-body" style="height: 50px;font-size: xx-large;">
+    <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+            <i class="fa fa-user-secret" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#4775d1;color:white;"></i>
+            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+               No. of Vendors</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">
+            <?php echo $total_suppliers ;  ?>
+            </div>
+        </div>
+        <div class="col-auto">
+            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+ 
+
+<div style="<?php if($todays_overviewsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+
+
+
+<div class="col-xl-4 col-md-6 mb-4" style="height:100px; width :550px;">
+<div class="card border-left-success shadow h-100 py-2">
+<div class="card-body" style="height: 50px;font-size: xx-large;">
+    <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+            <i class="fa fa-users" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#53c68c;;color:white;"></i>
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+               No. of Customers</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">
+            <?php echo $total_customer ;  ?>
+            </div>
+        </div>
+        <div class="col-auto">
+            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="<?php if($yearly_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+
+
+   <div class="col-xl-4 col-md-6 mb-4" style="height:100px; width :550px;">
+<div class="card border-left-info shadow h-100 py-2">
+<div class="card-body" style="height: 50px;font-size: xx-large;">
+    <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+          
+            <i class='fa fa-user-o'  style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#47d1d1;color:white;"></i>
+            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+               No. of Employees</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">
+            <?php echo "0" ;  ?>
+            </div>
+        </div>
+        <div class="col-auto">
+            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
 
                     <style>
                     .py-3    {
@@ -533,7 +535,7 @@ echo html_escape($currency).$string;
                         }
                     </style>
         <!-- First Counter -->
-	    <?php //if ($this->session->userdata('user_type') == '1') { ?>
+	    <?php //best_sales_product   if ($this->session->userdata('user_type') == '1') { ?>
 	             <div class="row" style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">
                <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
@@ -579,7 +581,7 @@ $searchdate =(!empty($s)?$s:$dat2);
                 <!-- Total Report -->
                 
 
-    <div style="<?php if($todays_sales_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+    <div style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
 
                    <!-- This today transaction progress -->
                 <div class="col-sm-12 col-md-12" style="<?php //if($todays_sales_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">

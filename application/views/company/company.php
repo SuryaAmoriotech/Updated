@@ -59,8 +59,10 @@
 		        <div class="panel panel-bd lobidrag">
 		            <div class="panel-heading">
 		                <div class="panel-title">
-		                   <a href="<?php echo base_url('User/manage_user'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> Add Company </a>
-		                </div>
+		                   <!-- <a href="<?php echo base_url('User/manage_user'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> Add Company </a> -->
+		               
+						   <a href="<?php echo base_url('company_setup/company_branch'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> Add Company  </a>
+</div>
 		            </div>
 		            <div class="panel-body">
 		                <div class="table-responsive">
@@ -76,29 +78,69 @@
 									</tr>
 								</thead>
 								<tbody>
-								<?php
-									if ($company_list) {
-								?>
-								{company_list}
-									<tr>
-										<td>{sl}</td>
-										<td>{company_name}</td>
-										<td>{address}</td>
-										<td>{mobile}</td>
-										<td>{website}</td>
-										<td>
+
+								<!-- <?php  // print_r($company_info); ?>  -->
+
+<tr>
+<td>
+	1
+</td>
+<td>
+     <?php  echo $company_info[0]['company_name'];   ?>
+</td>
+<td>
+     <?php  echo $company_info[0]["address"];   ?>
+</td>
+<td>
+     <?php   echo$company_info[0]["mobile"];   ?>
+</td><td>
+     <?php  echo $company_info[0]["website"];   ?>
+</td>
+
+		</tr>
+<?php 
+									if ($company_admin_info) {
+                                            
+										$i =2;
+
+										foreach($company_admin_info as $list){
+											echo $list["create_by"];
+											echo "<tr><td>".$i."</td><td>".$list["company_name"]."</td><td>".$list["address"]."</td><td>".$list["mobile"]."</td><td>".$list["website"]."</td>";
+								
+
+										
+										
+										?>
+									
+
+
+	 <td>
 											<center>
-											<?php echo form_open() ?>
-											<?php //if($this->permission1->method('manage_company','update')->access()){?>
-												<a href="<?php echo base_url().'Company_setup/company_update_form/{company_id}'; ?>" class="btnclr btn m-b-5 m-r-2" data-toggle="tooltip" data-placement="left" title="" data-original-title="<?php echo display('update') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-											<?php //}?>
+											<?php echo form_open()?>
+												<?php
+											
+												?>
+
+												<?php
+												  ?>
+														<a href="<?php echo base_url().'Company_setup/company_update_form/{company_id}'; ?>" class="btnclr btn m-b-5 m-r-2" data-toggle="tooltip" data-placement="left" title="" data-original-title="<?php echo display('update') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>	
+												<?php	
+												?>
 											<?php echo form_close()?>
 											</center>
 										</td>
+
+
+							
+
+
+
+										
 									</tr>
-								{/company_list}
+									<?php	 ?>
+								<!-- {/company_list} -->
 								<?php
-									}
+								$i++;	}		}
 								?>
 								</tbody>
 		                    </table>

@@ -25,6 +25,38 @@ class Company_setup extends CI_Controller {
         $content = $this->lcompany->company_search_item($company_id);
 		$this->template->full_admin_html_view($content);
 	}
+
+
+
+
+	
+	#===============Companybranch===========#
+	public function company_branch()
+	{	
+		// $company_id = $this->input->post('company_id');
+        $content = $this->lcompany->company_branch_total();
+		$this->template->full_admin_html_view($content);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	#================Manage Company==============#
 	public function manage_company()
 	{

@@ -1,3 +1,17 @@
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
+
+
+
+
+
+
+
+
 <!-- Edit Company start -->
 <div class="content-wrapper">
     <section class="content-header">
@@ -29,7 +43,7 @@
                     <div class="panel-body">
 
                         <div class="form-group row">
-                            <label for="bank_name" class="col-sm-3 col-form-label"><?php echo display('name') ?> <i class="text-danger">*</i></label>
+                        <label class="col-sm-3 col-form-label">CompanyName<i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <input type="text" tabindex="2" class="form-control" name="company_name" value="{company_name}"  placeholder="<?php echo display('company_name') ?>" required tabindex="1"/>
                             </div>
@@ -50,7 +64,7 @@
                         </div>
 
                          <div class="form-group row">
-                            <label for="bank_name" class="col-sm-3 col-form-label"><?php echo display('email') ?> <i class="text-danger">*</i></label>
+                         <label class="col-sm-3 col-form-label">CompanyEmail<i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <input type="email" tabindex="3" class="form-control" value="{email}" name="email" placeholder="<?php echo display('email') ?>" required tabindex="4"/>
                             </div>
@@ -68,7 +82,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-4 col-form-label"></label>
                             <div class="col-sm-6">
-                                <input type="submit" id="add-Customer" class="btn btn-success btn-large" name="add-Customer" value="<?php echo display('save_changes') ?>" tabindex="6"/>
+                                <input type="submit" id="add-Customer" class="btnclr btn m-b-5 m-r-2" name="add-Customer" value="<?php echo display('save_changes') ?>" tabindex="6"/>
                             </div>
                         </div>
                     </div>

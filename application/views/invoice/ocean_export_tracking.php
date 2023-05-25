@@ -47,7 +47,7 @@
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Sale</a></li>
+                <li><a href="#">Sale<?php echo display('home') ?></a></li>
                 <li class="active" style="color:orange;">Create Ocean Export Tracking</li>
             </ol>
         </div>

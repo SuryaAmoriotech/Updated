@@ -2404,7 +2404,7 @@ $data2 = array(
 //echo $this->db->last_query();
 
         if ($query->num_rows() > 0) {
-
+ 
             return $query->result_array();
 
         }

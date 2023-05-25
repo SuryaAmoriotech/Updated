@@ -40,6 +40,53 @@
 
     <section class="content">
   
+         <!-- Alert Message -->
+
+         <?php
+
+$message = $this->session->userdata('show');
+
+if (isset($message)) {
+
+    ?>
+
+    <div class="alert alert-info alert-dismissable" style="background-color:#38469f;color:white;font-weight:bold;">
+
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+        <?php echo $message; ?>                    
+
+    </div>
+
+    <?php
+
+    // $this->session->unset_userdata('message');
+
+}
+
+$error_message = $this->session->userdata('error_message');
+
+if (isset($error_message)) {
+
+    ?>
+
+    <div class="alert alert-danger alert-dismissable">
+
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+        <?php echo $error_message ?>                    
+
+    </div>
+
+    <?php
+
+    $this->session->unset_userdata('error_message');
+
+}
+
+?>
+                
+
       <!-- Alert Message -->
         <?php
              $message = $this->session->userdata('alert');
