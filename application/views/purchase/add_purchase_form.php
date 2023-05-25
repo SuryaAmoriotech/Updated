@@ -165,7 +165,7 @@
         </label>
         <div class="col-sm-6">
         <select name="po" class="form-control"  id="po" tabindex="3" style="width: 136%;">
-                                             <option value="Select PO Number" selected>Select the options</option> 
+                                             <option value="Select PO Number" selected><?php  echo display('Select Option');?></option> 
                                               <option value="Not Available"> <?php echo display('add_purchase'); ?></option>
                                               <option value=" "><?php echo display('Service Provider');?> </option>
                              </select>
@@ -425,7 +425,7 @@
     <div class="col-sm-7">
         <select name="paytype_drop" id="paytype_drop" class="form-control" required=""  tabindex="3" style="width:100;">
         <option value=""><?php echo display('Select Payment Type');?></option>
-        <option value="CHECK"><?php echo display('cheque'); ?></option>
+        <option value="CHEQUE"><?php echo display('cheque'); ?></option>
     <option value="CASH"><?php echo display('cash'); ?></option>
     <option value="CREDIT/DEBIT CARD"><?php echo display('CREDIT/DEBIT CARD');?></option>
     <option value="BANK TRANSFER"><?php echo display('BANK TRANSFER');?></option>
@@ -723,7 +723,7 @@ td {
                                             </tfoot>
                       
                             </table>
-                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); ">Bundle</i>    
+                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php  echo  display('Bundle');?></i>    
                          </div>
                              <table class="taxtab table table-bordered table-hover">
                         <tr>
@@ -1080,7 +1080,7 @@ td {
       </div>
     
                                         <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency'); ?></label>
 
             <div class="col-sm-8">
             <!-- <select id="currency" name="currency1" style="width: 100%;"     > -->
@@ -1298,7 +1298,7 @@ td {
           </div>
       </div>
       <div class="form-group row">
-          <label for="previous_balance" class="col-sm-4 col-form-label">Credit Limit</label>
+          <label for="previous_balance" class="col-sm-4 col-form-label"><?php  echo  display('Credit Limit');?></label>
           <div class="col-sm-8">
               <input class="form-control" name="previous_balance" id="previous_balance" type="text" min="0" placeholder="Credit Limit" tabindex="5">
           </div>
@@ -1419,7 +1419,7 @@ td {
                              <label for="category_id" class="col-sm-4 col-form-label"><?php echo display('category') ?></label>
                              <div class="col-sm-7">
                                  <select class="form-control" id="category_id" style="width: 250px;"  name="category_id" tabindex="3">
-                                     <option value="">Select the Category</option>
+                                     <option value=""><?php echo  display('Select the Category'); ?></option>
                                      <?php if ($category_list) { ?>
                                          {category_list}
                                          <option value="{category_name}">{category_name}</option>
@@ -1442,7 +1442,7 @@ td {
                              <label for="" class="col-sm-4 col-form-label"><?php echo display('Supplier') ?> <i class="text-danger">*</i> </label>
                              <div class="col-sm-7">
                              <select name="supplier_id" id="supplier_id" class="form-control " style="width:118%;" required="" tabindex="1">
-                                     <option value=" ">Select Vendor</option>
+                                     <option value=" "><?php echo  display('Select supplier');  ?></option>
                                      {all_supplier}
                                      <option value="{supplier_id}">{supplier_name}</option>
                                      {/all_supplier}
@@ -1455,7 +1455,7 @@ td {
                              <label for="unit" class="col-sm-4 col-form-label"><?php echo display('unit') ?></label>
                              <div class="col-sm-7">
                                  <select class="form-control" id="unit" name="unit"  style="width:250px;" tabindex="-1" aria-hidden="true">
-                                     <option value="">Select the Unit</option>
+                                     <option value=""><?php echo  display('Select the Unit');?></option>
                                      <?php if ($unit_list) { ?>
                                          {unit_list}
                                          <option value="{unit_name}">{unit_name}</option>
@@ -1507,14 +1507,14 @@ td {
 <option value="1500 PROPERTY PLANT & EQUIPMENT">1500 <?php echo  display('PROPERTY PLANT & EQUIPMENT');?></option>
 <option value="1600 ACCUMULATED DEPRECIATION & AMORTIZATION">1600 <?php echo  display('ACCUMULATED DEPRECIATION & AMORTIZATION');?></option>
 <option value="1700 NON – CURRENT RECEIVABLES">1700 <?php echo  display('NON – CURRENT RECEIVABLES');?></option>
-<option value="1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS">1800 <?php echo  display('INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS');?></option>
+<option value="1800 INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS">1800 <?php echo  display('INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS');?></option>
 <option value="2000 LIABILITIES & 2100 PAYABLES">2000 <?php echo  display('LIABILITIES & PAYABLES');?></option>
 <option value="2200 ACCRUED COMPENSATION & RELATED ITEMS">2200 <?php echo  display('ACCRUED COMPENSATION & RELATED ITEMS');?></option>
 <option value="2300 OTHER ACCRUED EXPENSES">2300 <?php echo  display('OTHER ACCRUED EXPENSES');?></option>
 <option value="2500 ACCRUED TAXES">2500 <?php echo  display('ACCRUED TAXES');?></option>
 <option value="2600 DEFERRED TAXES">2600 <?php echo  display('DEFERRED TAXES');?></option>
 <option value="2700 LONG-TERM DEBT">2700 <?php echo  display('LONG-TERM DEBT');?></option>
-<option value="2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES">2800 <?php echo  display('INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES');?></option>
+<option value="2800 INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES">2800 <?php echo  display('INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES');?></option>
 <option value="4000 REVENUE">4000 <?php echo  display('REVENUE');?></option>
 <option value="5000 COST OF GOODS SOLD">5000 <?php echo  display('COST OF GOODS SOLD');?></option>
 <option value="6000 – 7000 OPERATING EXPENSES">6000 – 7000 <?php echo  display('OPERATING EXPENSES');?></option>
@@ -1587,7 +1587,7 @@ td {
                          </div>
                          <div class="col-sm-6">
                       <div class="form-group row">
-                          <label for="sales_price" class="col-sm-4 col-form-label">Sales
+                          <label for="sales_price" class="col-sm-4 col-form-label"><?php echo display("sales");?>
                             <?php echo  display(' Price per Sq.Ft');?> </label>
                           <div class="col-sm-8">
                               <input type="text" name="salespricepersqft" class="form-control" id="sales_price_per_sqft" tabindex="4"  placeholder=" Sales Price perSq.Ft" />
@@ -1606,7 +1606,7 @@ td {
                     <div class="col-sm-12">
                      <div class="col-sm-6">
                        <div class="form-group row">
-                       <label for="tax_id" class="col-sm-4 col-form-label">Tax </label>
+                       <label for="tax_id" class="col-sm-4 col-form-label"><?php   echo  display('Taxes');?> </label>
 <div class="col-sm-8">
 <input type="text" name="tax" class="form-control" id="tax_id" tabindex="4" placeholder=" Tax" />
      </div>
@@ -1635,7 +1635,7 @@ name="country" id="country" ></select> -->
 
                      <div class="col-sm-6">
                      <div class="form-group row">
-                         <label for="serial_no" class="col-sm-4 col-form-label">Serial No</label>
+                         <label for="serial_no" class="col-sm-4 col-form-label"><?php  echo  display('Serial No');?></label>
                          <div class="col-sm-8">
                              <input type="text" tabindex="" class="form-control " id="serial_no" name="serial_no" placeholder="111,abc,XYz"   />
                          </div>
@@ -1696,18 +1696,18 @@ name="country" id="country" ></select> -->
 		<div class="modal-content">
 			<div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo  display('Confirmation');?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+				<p><?php echo  display('Your Invoice is not submitted. Would you like to submit or discard');?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't save, your changes will not be saved.</small>
+					<small><?php echo  display('If you dont save, your changes will not be saved.');?></small>
 				</p>
 			</div>
 			<div class="modal-footer">
             <input type="submit" id="ok" class="btn btn-primary pull-left final_submit" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger pull-left" onclick="discard()">Discard</button>
+                <button id="btdelete" type="button" class="btn btn-danger pull-left" onclick="discard()"><?php  echo  display('Discard');?></button>
 			</div>
 		</div>
 	</div>
@@ -1745,14 +1745,14 @@ name="country" id="country" ></select> -->
 <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
  <div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Reference No<i class="text-danger">*</i></label>
+        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('Reference No'); ?><i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
         <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
  </div> 
     <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label">Select Bank:<i class="text-danger">*</i></label>
+      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('Select Bank'); ?>:<i class="text-danger">*</i></label>
 <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
       <div class="col-sm-5">
   <select name="bank" id="bank"  class="form-control bankpayment" >
@@ -1799,7 +1799,7 @@ name="country" id="country" ></select> -->
       <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
       <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount to be paid : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo display('Amount to be paid'); ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1815,7 +1815,7 @@ name="country" id="country" ></select> -->
 </div> 
       <div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount Received:</label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo display('Amount Received'); ?>:</label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1861,7 +1861,7 @@ name="country" id="country" ></select> -->
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Additional Information : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo display('Additional Information');  ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1869,7 +1869,7 @@ name="country" id="country" ></select> -->
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Attachments : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo display('Attachments');  ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -1880,7 +1880,7 @@ name="country" id="country" ></select> -->
      <div class="col-sm-8"></div>
   
      <div class="col-sm-4">
-                 <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" >Close</a>
+                 <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php  echo display('Close');  ?></a>
      <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay"   value="submit"  required   />
 </div>
      </div>
@@ -1974,7 +1974,7 @@ name="country" id="country" ></select> -->
             <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency'); ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
-    <option>Select currency</option>
+    <option><?php echo display('Select currency'); ?></option>
     <option value="AFN">AFN - Afghan Afghani</option>
     <option value="ALL">ALL - Albanian Lek</option>
     <option value="DZD">DZD - Algerian Dinar</option>
@@ -2162,7 +2162,7 @@ name="country" id="country" ></select> -->
 </div>
     
 <div class="col-sm-4">
-          <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+          <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close'); ?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
      <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
@@ -2189,7 +2189,7 @@ name="country" id="country" ></select> -->
 
             <a href="#" class="close" data-dismiss="modal">&times;</a>
 
-            <h4 class="modal-title">Add New Payment Type</h4>
+            <h4 class="modal-title"><?php echo display('Add New Payment Type');?></h4>
 
         </div>
 
@@ -2207,7 +2207,7 @@ name="country" id="country" ></select> -->
 
 <div class="form-group row">
 
-<label for="customer_name"  class="col-sm-4 col-form-label">New Payment Type <i class="text-danger">*</i></label>
+<label for="customer_name"  class="col-sm-4 col-form-label"><?php echo display('New Payment Type');?> <i class="text-danger">*</i></label>
 
 <div class="col-sm-6">
 
@@ -2230,7 +2230,7 @@ name="country" id="country" ></select> -->
 
 
 
-<a href="#" class="btn" style="color:white;background-color:#38469f;"   data-dismiss="modal">Close</a>
+<a href="#" class="btn" style="color:white;background-color:#38469f;"   data-dismiss="modal"><?php echo display('Close');?></a>
 
 
 
@@ -2268,7 +2268,7 @@ name="country" id="country" ></select> -->
 
             <a href="#" class="close" data-dismiss="modal">&times;</a>
 
-            <h4 class="modal-title">Add New Payment Terms</h4>
+            <h4 class="modal-title"><?php echo display('Add New Payment Terms');?></h4>
 
         </div>
 
@@ -2286,7 +2286,7 @@ name="country" id="country" ></select> -->
 
         <div class="form-group row">
 
-            <label for="customer_name" class="col-sm-4 col-form-label">New Payment Terms <i class="text-danger">*</i></label>
+            <label for="customer_name" class="col-sm-4 col-form-label"><?php echo display('New Payment Terms');?> <i class="text-danger">*</i></label>
 
             <div class="col-sm-6">
 
@@ -2309,7 +2309,7 @@ name="country" id="country" ></select> -->
 
             
 
-            <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+            <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close');?></a>
 
             
 
@@ -2362,7 +2362,7 @@ $('#insert_product').submit(function (event) {
       //  $('.product_name').selectmenu();
       //  $('.product_name').append(result).selectmenu('refresh',true);
       // $('.product_name').show();
-      $("#bodyModal1").html("Product Added Successfully");
+      $("#bodyModal1").html("<?php echo display('Product Added Successfully');?>");
        
       $('#myModal1').modal('show');
 //  $('.product_name').css("display", "block");
@@ -2407,7 +2407,7 @@ $('#add_pay_type').submit(function(e){
       $('#new_payment_type').val('');
 
        $('#paytype_drop').show();
-      $("#bodyModal1").html("Payment Type Added Successfully");
+      $("#bodyModal1").html("<?php echo display('Payment Type Added Successfully');?>");
       $('#payment_type').modal('hide');
       
       
@@ -2453,7 +2453,7 @@ $('#add_pay_terms').submit(function(e){
         $select.append(option); // append new options
     }
     $('#new_payment_terms').val('');
-      $("#bodyModal1").html("Payment Terms Added Successfully");
+      $("#bodyModal1").html("<?php echo display('Payment Terms Added Successfully');?>");
       $('#payment_type').modal('hide');
       $('#payment_terms').show();
        $('#myModal1').modal('show');
@@ -2630,7 +2630,7 @@ $('#serviceprovider').submit(function (event) {
             $('#invoice_hdn1').val(split[0]);
          console.log(split[0]+"---"+split[1]);
             $('#invoice_hdn').val(split[1]);
-            $("#bodyModal1").html('Service Provider created Successfully');
+            $("#bodyModal1").html('<?php echo display('Service Provider created Successfully');?>');
 $('.button_hide').show();
     $('#myModal1').modal('show');
     window.setTimeout(function(){
@@ -2680,7 +2680,7 @@ $('#insert_purchase').submit(function (event) {
          console.log(split[0]+"---"+split[1]);
      
             $('#invoice_hdn').val(split[1]);
-            $("#bodyModal1").html('New Expense Created Successfully');
+            $("#bodyModal1").html('<?php echo display('New Expense Created Successfully');?>');
         
             $('.button_hide').show();
 $('.download').show();
@@ -2720,7 +2720,7 @@ $('#insert_purchase1').submit(function (event) {
          console.log(split[0]+"---"+split[1]);
      
             $('#invoice_hdn').val(split[1]);
-            $("#bodyModal1").html('New Expense Created Successfully');
+            $("#bodyModal1").html('<?php echo display('New Expense Created Successfully')?>');
         
 $('.button_hide').show();
     $('#myModal1').modal('show');
@@ -2792,7 +2792,7 @@ $('#s_hidden_id').val(result[0]['supplier_id']);
 '<option value="'+result[0]['tax_details']+'" selected>'+result[0]['tax_details']+'</option>'+
 '<?php foreach($tax as $tx){?> <option value="<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';?>"> '+
     '<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';  ?></option><?php } ?></select></td>');
-   $("#purchaseTable1 tbody").append('<tr>  <td style="text-align:right;" colspan="4"><b><?php echo "Total" ?>:</b></td>'+
+   $("#purchaseTable1 tbody").append('<tr>  <td style="text-align:right;" colspan="4"><b><?php echo display('total');?>:</b></td>'+
  '<td style="text-align:left;"> <table border="0"> <tr> <td><input type="text" id="Total" value="'+result[0]['total']+'" style="padding:5px;" alue="0.00" class="text-right" name="total" readonly="readonly"></td> <td>'+
 
  '  </tr> </table> </td>   </tr>  <tr>  <td style="text-align:right;" colspan="4"><b>Tax Details :</b></td> '+
@@ -2838,7 +2838,7 @@ $('#add_payment_info').submit(function (event) {
  $('.amt').show();
 
     $('#payment_modal').modal('hide');
-    $("#bodyModal1").html("Payment Successfully Completed");
+    $("#bodyModal1").html("<?php echo display('Payment Successfully Completed');?>");
        $('#myModal1').modal('show');
     
     window.setTimeout(function(){
@@ -2977,7 +2977,7 @@ $('#amount_to_pay').val($('#vendor_gtotal').val()-$('#amount_paid').val());
         });
         $('#bank').selectmenu();
         $('#bank').append(result).selectmenu('refresh',true);
-       $("#bodyModal1").html("Bank Added Successfully");
+       $("#bodyModal1").html("<?php echo display('Bank Added Successfully');?>");
        $('#myModal1').modal('show');
        $('#add_bank_info').modal('hide');
     //    $('.bank').(show);
@@ -3134,7 +3134,7 @@ function(data) {
 
        $('#add_vendor').modal('hide');  
      
-      $("#bodyModal1").html("New Vendor Added Successfully");
+      $("#bodyModal1").html("<?php echo display('New Vendor Added Successfully');?>");
       
        $('#myModal1').modal('show');
   
