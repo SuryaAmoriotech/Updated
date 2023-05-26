@@ -70,7 +70,7 @@ textarea:focus, input:focus{
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Expense</a></li>
+                <li><a href="#"><?php echo display('expense');  ?></a></li>
                 <li class="active" style="color:orange;">Purchase Order</li>
             </ol>
         </div>
@@ -274,7 +274,7 @@ textarea:focus, input:focus{
 
                                <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Payment Type
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php  echo display('payment_type'); ?>
                                     </label>
                                     <div class="col-sm-7">
                                     <select name="paytype_drop" id="paytype_drop" class="form-control" required=""  tabindex="3" style="width:90%;">
@@ -330,22 +330,22 @@ textarea:focus, input:focus{
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_1" style="width: -webkit-fill-available;">
                                 <thead>
                                      <tr>
-                                            <th rowspan="2" class="text-center" style="width: -moz-available;" >Product Name<i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
+                                            <th rowspan="2" class="text-center" style="width: -moz-available;" ><?php echo display('product_name'); ?><i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
                                             <th rowspan="2" class="text-center">Bundle No<i class="text-danger">*</i></th>
-                                            <th rowspan="2" style="width: max-content;" class="text-center">Description</th>
+                                            <th rowspan="2" style="width: max-content;" class="text-center"><?php echo  display('description'); ?></th>
                                             <th rowspan="2" class="text-center">Thick ness<i class="text-danger">*</i></th>
                                             <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>
 
                                             <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th>
                                             <th colspan="2" style="width: max-content;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th>
-                                            <th rowspan="2" class="text-center">Gross Sq. Ft</th>
+                                            <th rowspan="2" class="text-center">Gross Sq.Ft</th>
                                            
                                             <th rowspan="2" style="width: min-content;" class="text-center">Slab No<i class="text-danger">*</i></th>
                                             <th colspan="2" style="width: max-content;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Net Sq. Ft</th>
-                                            <th rowspan="2" style="width: max-content;" class="text-center">Cost per Sq. Ft</th>
+                                            <th rowspan="2" class="text-center">Net Sq.Ft</th>
+                                            <th rowspan="2" style="width: max-content;" class="text-center">Cost per Sq.Ft</th>
                                             <th rowspan="2" style="width: max-content;" class="text-center">Cost per Slab</th>
-                                            <th rowspan="2" style="width: max-content;" class="text-center">Sales<br/>Price per Sq. Ft</th>
+                                            <th rowspan="2" style="width: max-content;" class="text-center">Sales<br/>Price per Sq.Ft</th>
                                             <th rowspan="2"  class="text-center">Sales Slab Price</th>
                                             <th rowspan="2" style="weight:60px;"class="text-center">Weight</th>
                                             <th rowspan="2" class="text-center">Origin</th>
@@ -652,8 +652,8 @@ td {
                                 <input type="submit" id="add_purchase" class="btn btn-primary btn-large" style="color:white;background-color:#38469f;"
  name="add-purchase-order" value="Save" />
                                 <a   style="color:white;background-color:#38469f;" id="final_submit" class='final_submit btn btn-primary'>Submit</a>
-<a id="download"        style="color:white;background-color:#38469f;" class='btn btn-primary'>Download</a>
-<a id="print"        style="color:white;background-color:#38469f;" class='btn btn-primary'>Print</a>
+<a id="download"        style="color:white;background-color:#38469f;" class='btn btn-primary'><?php  echo  display('download'); ?></a>
+<a id="print"        style="color:white;background-color:#38469f;" class='btn btn-primary'><?php  echo  display('print'); ?></a>
                             </div>
                             </div>
                         </div>

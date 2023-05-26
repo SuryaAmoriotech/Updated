@@ -181,35 +181,35 @@ ul.dropdown-submenu>li>a:hover{
                   </div> -->
                   <div class="menuCol col-xl-3 col-lg-3 col-md-12">
                     <ul class="dropdown-submenu">
-                          <li class="menu-title" style="color:#17202a"><b>Role Permission</b></li>
-                        <li><a href=" <?php echo base_url('Permission/add_role') ?>"><i class="pe-7s-users"></i>Add Role</a></li>
-                        <li><a href="<?php echo base_url('Permission/role_list') ?>"><i class="ti-dashboard"></i>Role List</a></li>
-                        <li><a href=" <?php echo base_url('Permission/user_assign') ?>"><i class="pe-7s-settings"></i>User Assign Role</a></li>
+                          <li class="menu-title" style="color:#17202a"><b><?php echo display('role_permission');  ?></b></li>
+                        <li><a href=" <?php echo base_url('Permission/add_role') ?>"><i class="pe-7s-users"></i><?php echo display('add_role'); ?></a></li>
+                        <li><a href="<?php echo base_url('Permission/role_list') ?>"><i class="ti-dashboard"></i><?php echo display('role_list'); ?></a></li>
+                        <li><a href=" <?php echo base_url('Permission/user_assign') ?>"><i class="pe-7s-settings"></i><?php echo display('user_assign_role'); ?></a></li>
                     </ul>
                   </div>
                    <div class="menuCol col-xl-3 col-lg-3 col-md-12">
                     <ul class="dropdown-submenu">
                          <li class="menu-title" style="color:#17202a"><b>SMS</b></li>
-                        <li><a href=" <?php echo base_url('Csms/configure') ?>"><i class="pe-7s-users"></i>SMS Configure</a></li>
+                        <li><a href=" <?php echo base_url('Csms/configure') ?>"><i class="pe-7s-users"></i><?php echo display('sms_configure'); ?></a></li>
                     </ul>
                   </div>
                 
                   <div class="menuCol col-xl-3 col-lg-3 col-md-12">
                     <ul class="dropdown-submenu">
-                         <li class="menu-title" style="color:#17202a"><b>Admin Details</b></li>
-                        <li><a href="  <?php echo base_url('Admin_dashboard/edit_profile') ?>"><i class="pe-7s-users"></i>User Profile</a></li>
+                         <li class="menu-title" style="color:#17202a"><b><?php echo display('Admin Details');  ?></b></li>
+                        <li><a href="  <?php echo base_url('Admin_dashboard/edit_profile') ?>"><i class="pe-7s-users"></i> <?php  echo  display('user_profile'); ?></a></li>
                         <!-- <li><a href=" <?php echo base_url('Admin_dashboard/dashboardsetting') ?>"><i class="ti-dashboard"></i>Dashboard Settings</a></li> -->
-                        <li><a href=" <?php echo base_url('Admin_dashboard/change_password_form') ?>"><i class="pe-7s-settings"></i>Change Password</a></li>
-                        <li><a href="<?php echo base_url('Admin_dashboard/logout') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;Logout</a></li>
+                        <li><a href=" <?php echo base_url('Admin_dashboard/change_password_form') ?>"><i class="pe-7s-settings"></i><?php   echo display('Change Password'); ?></a></li>
+                        <li><a href="<?php echo base_url('Admin_dashboard/logout') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;<?php echo display('logout');  ?></a></li>
                     </ul>
                   </div>
                   <div class="menuCol col-xl-3 col-lg-3 col-md-12">
                     <ul class="dropdown-submenu">
-                         <li class="menu-title" style="color:#17202a"><b>User Setting</b></li>
+                         <li class="menu-title" style="color:#17202a"><b><?php echo display('User Setting');  ?> </b></li>
                          <!-- <li><a href="<?php echo base_url('Admin_dashboard/logout') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;Language </a></li> -->
-                         <li><a href="<?php echo base_url('Currency/currency_form') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;Currency</a></li>
-                         <li><a href="<?php echo base_url('Cweb_setting/mail_setting') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;Mail Setting </a></li>
-                        <li><a href=" <?php echo base_url('Admin_dashboard/dashboardsetting') ?>"><i class="ti-dashboard"></i>Dashboard Settings</a></li>
+                         <li><a href="<?php echo base_url('Currency/currency_form') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;<?php echo display('currency');  ?></a></li>
+                         <li><a href="<?php echo base_url('Cweb_setting/mail_setting') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;<?php echo display('mail_setting'); ?> </a></li>
+                        <li><a href=" <?php echo base_url('Admin_dashboard/dashboardsetting') ?>"><i class="ti-dashboard"></i><?php  echo  display('Dashboard Settings');?></a></li>
                     </ul>
                   </div>
               </div>
@@ -220,11 +220,11 @@ ul.dropdown-submenu>li>a:hover{
 
 <div class="menuCol col-xl-3 col-lg-3 col-md-12">
                     <ul class="dropdown-submenu">
-                         <li class="menu-title" style="color:#17202a"><b>Admin Details</b></li>
-                        <li><a href="  <?php echo base_url('Admin_dashboard/edit_profile') ?>"><i class="pe-7s-users"></i>User Profile</a></li>
+                         <li class="menu-title" style="color:#17202a"><b><?php echo display('Admin Details');  ?></b></li>
+                        <li><a href="  <?php echo base_url('Admin_dashboard/edit_profile') ?>"><i class="pe-7s-users"></i><?php echo  display('user_profile'); ?> </a></li>
                         <!-- <li><a href=" <?php echo base_url('Admin_dashboard/dashboardsetting') ?>"><i class="ti-dashboard"></i>Dashboard Settings</a></li> -->
-                        <li><a href=" <?php echo base_url('Admin_dashboard/change_password_form') ?>"><i class="pe-7s-settings"></i>Change Password</a></li>
-                        <li><a href="<?php echo base_url('Admin_dashboard/logout') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;Logout</a></li>
+                        <li><a href=" <?php echo base_url('Admin_dashboard/change_password_form') ?>"><i class="pe-7s-settings"></i><?php   echo display('Change Password'); ?> </a></li>
+                        <li><a href="<?php echo base_url('Admin_dashboard/logout') ?>"><i class="pe-7s-key"></i>&nbsp;&nbsp;<?php echo display('logout');  ?></a></li>
                     </ul>
                   </div>
                          <?php } ?>
@@ -310,7 +310,7 @@ if($_SESSION['u_type']==1)
 <ul class="sidebar-menu">
 
             <li class="active">
-                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span>Dashboard</span>
+                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span><?php echo  display('dashboard'); ?></span>
                     <span class="pull-right-container">
                         <span class="label label-success pull-right"></span>
                     </span>
@@ -324,14 +324,14 @@ if($_SESSION['u_type']==1)
                 </a>
             </li> -->
             <li >
-                <a href="<?php echo base_url(); ?>user/managecompany"><i class="ti-dashboard"></i> <span>Manage Company</span>
+                <a href="<?php echo base_url(); ?>user/managecompany"><i class="ti-dashboard"></i> <span><?php echo display('manage_company'); ?></span>
                     <span class="pull-right-container">
                         <span class="label label-success pull-right"></span>
                     </span>
                 </a>
             </li>
             <li >
-                <a href="<?php echo base_url(); ?>user/adadmin"><i class="ti-dashboard"></i> <span>Add Admin</span>
+                <a href="<?php echo base_url(); ?>user/adadmin"><i class="ti-dashboard"></i> <span><?php   echo  display('Add Admin');  ?></span>
                     <span class="pull-right-container">
                         <span class="label label-success pull-right"></span>
                     </span>
@@ -364,7 +364,7 @@ if($_SESSION['u_type']==2)
 <ul class="sidebar-menu">
 
             <li class="active">
-                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span>Dashboard</span>
+                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span><?php  echo display('dashboard'); ?></span>
                     <span class="pull-right-container">
                         <span class="label label-success pull-right"></span>
                     </span>
@@ -378,19 +378,19 @@ if($_SESSION['u_type']==2)
    
                         <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-balance-scale"></i><span>Sale</span>
+                    <i class="fa fa-balance-scale"></i><span><?php echo display('invoice');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_invoice">Create Invoice</a></li>
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_profarma_invoice">Quote</a></li>
-                                                     <!--       <li class="treeview  "><a href="<?php //echo base_url(); ?>/Cinvoice/manage_packing_list">Packing List</a></li>-->
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_ocean_export_tracking">Ocean Export Tracking</a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_invoice"><?php echo display('Create Invoice');?></a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_profarma_invoice"><?php echo display('Quote');?></a></li>
+                                                     <!--       <li class="treeview  "><a href="<?php //echo base_url(); ?>/Cinvoice/manage_packing_list"><?php echo display('Packing List');?></a></li>-->
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_ocean_export_tracking"><?php echo display('Ocean Export Tracking');?></a></li>
                     
 
-                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_trucking">Road Transport</a></li>
+                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_trucking"><?php echo display('Road Transport');?></a></li>
                     
 
                 </ul>
@@ -405,7 +405,7 @@ if($_SESSION['u_type']==2)
                         <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Ccustomer/manage_customer">
-                    <i class="fa fa-handshake-o"></i><span>Customer</span>
+                    <i class="fa fa-handshake-o"></i><span><?php  echo  display('customer'); ?></span>
                  <!--    <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span> -->
@@ -462,7 +462,7 @@ if($_SESSION['u_type']==2)
                        <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Cproduct/manage_product">
-                    <i class="ti-bag"></i><span>Product</span>
+                    <i class="ti-bag"></i><span><?php  echo display('product'); ?></span>
                  
                 </a>
 
@@ -478,7 +478,7 @@ if($_SESSION['u_type']==2)
                        <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Csupplier/manage_supplier">
-                    <i class="ti-user"></i><span>Vendor</span>
+                    <i class="ti-user"></i><span><?php echo display('Vendor');?></span>
                  
                 </a>
 
@@ -497,23 +497,23 @@ if($_SESSION['u_type']==2)
 
                                   <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-shopping-cart"></i><span>Expenses</span>
+                    <i class="ti-shopping-cart"></i><span><?php  echo display('purchase');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase">Create Expense</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase_order">Purchase Order</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase"><?php echo display('Create Expense');?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase_order"><?php echo display('Purchase Order');?></a></li>
                        
 
 
             
 
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_ocean_import_tracking">Ocean Import Tracking</a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_ocean_import_tracking"><?php echo display('Ocean Import Tracking');?></a></li>
                        
 
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_trucking">Road Transport</a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_trucking"><?php echo display('Road Transport');?></a></li>
                                        </ul>
             </li>
         
@@ -524,7 +524,7 @@ if($_SESSION['u_type']==2)
              <!-- Quotation Menu Start -->
                      <li class="treeview  ">
                 <a href="<?php echo base_url(); ?>/Cquotation/manage_quotation">
-                    <i class="fa fa-book"></i><span>Quotation</span>
+                    <i class="fa fa-book"></i><span><?php echo display('Quotation');?></span>
                    
                 </a>
               
@@ -540,7 +540,7 @@ if($_SESSION['u_type']==2)
  <li class="treeview  ">
 
 <a href="<?php echo base_url(); ?>/Caccounts/manage_tax">
-       <i class="ti-bar-chart"></i><span>Taxes</span>
+       <i class="ti-bar-chart"></i><span><?php echo display('Taxes');?></span>
     
 </a>
 
@@ -554,16 +554,16 @@ if($_SESSION['u_type']==2)
 
                     <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-retweet" aria-hidden="true"></i><span>Return</span>
+                    <i class="fa fa-retweet" aria-hidden="true"></i><span><?php echo  display('return'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m">Return</a></li>
-                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/return_list">Stock Return List</a></li>
-                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/supplier_return_list">Supplier Return List</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/wastage_return_list">Wastage Return List</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m"><?php echo  display('return'); ?></a></li>
+                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/return_list"><?php echo  display('stock_return_list'); ?></a></li>
+                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/supplier_return_list"><?php echo  display('supplier_return_list'); ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/wastage_return_list"><?php echo  display('wastage_return_list'); ?></a></li>
                       
                 </ul>
             </li>
@@ -572,29 +572,29 @@ if($_SESSION['u_type']==2)
             <!-- Report menu start -->
                          <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-book"></i><span>Report</span>
+                    <i class="ti-book"></i><span><?php echo display('report'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing">Closing</a></li>
-                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing_report">Closing Report</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/all_report">Todays Report</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_customer_receipt">Todays Customer Receipt</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_sales_report">Sales Report</a></li>
-                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/user_sales_report">User Wise Sales Report</a></li>
-                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_DueReports">Due Report</a></li>
-                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_Shippingcost">Shipping Cost Report</a></li>
-                                                        <li><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_purchase_report">Expenses Report</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/purchase_report_category_wise">Expenses Report (Category wise)</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/product_sales_reports_date_wise">Sales Report (Product Wise)</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_report_category_wise">Sales Report (Category wise)</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_return">Sales Return</a></li>
-                                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/supplier_return">Supplier Return</a></li>
-                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_tax">Tax Report</a></li>
-                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/total_profit_report">Profit Report (Sale Wise)</a></li>
-                                                                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport/product_stock">Stock Report (Product wise)</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing"><?php echo display('closing'); ?></a></li>
+                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing_report"><?php echo display('closing_report'); ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/all_report"><?php echo  display('todays_report');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_customer_receipt"><?php echo  display('todays_customer_receipt');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_sales_report"><?php  echo display('sales_report'); ?></a></li>
+                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/user_sales_report"><?php  echo display('user_wise_sales_report'); ?></a></li>
+                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_DueReports"><?php echo  display('due_report');  ?></a></li>
+                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_Shippingcost"><?php echo  display('shipping_cost_report');  ?></a></li>
+                                                        <li><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_purchase_report"><?php echo  display('purchase_report');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/purchase_report_category_wise"><?php echo  display('purchase_report_category_wise');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/product_sales_reports_date_wise"><?php echo  display('sales_report_product_wise');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_report_category_wise"><?php echo  display('sales_report_category_wise');  ?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_return"<?php echo  display('invoice_return');  ?></a></li>
+                                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/supplier_return"><?php echo display('supplier_return'); ?></a></li>
+                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_tax"><?php echo display('tax_report'); ?></a></li>
+                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/total_profit_report"><?php  echo display('profit_report');?></a></li>
+                                                                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport/product_stock"><?php  echo display('stock_report_product_wise');?></a></li>
                                     </ul>
             </li>
                     <!-- Report menu end -->
@@ -603,41 +603,41 @@ if($_SESSION['u_type']==2)
 <!--New Account start-->
              <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-money"></i><span>Accounts</span>
+                    <i class="fa fa-money"></i><span><?php echo display('accounts'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                      <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year">Financial Year</a></li>
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year_end">Financial Year Ending</a></li>
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/show_tree">Chart of Account</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/supplier_payment">Supplier Payment</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/customer_receive">Customer Receive</a></li>
+                      <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year"><?php  echo display('Financial Year');  ?></a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year_end"><?php  echo display('Financial Year Ending');  ?></a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/show_tree"><?php echo display('c_o_a');  ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/supplier_payment"><?php echo display('supplier_payment');  ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/customer_receive"><?php echo  display('customer_receive');  ?></a></li>
                     
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_adjustment">Cash Adjustment</a></li>
-                                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/debit_voucher">Debit Voucher</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/credit_voucher">Credit Voucher</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_adjustment"><?php echo display('cash_adjustment');  ?></a></li>
+                                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/debit_voucher"><?php  echo display('debit_voucher');?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/credit_voucher"><?php echo display('credit_voucher');?></a></li>
                                          
-                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/contra_voucher">Contra Voucher</a></li>
-                                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/journal_voucher">Journal Voucher</a></li> 
+                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/contra_voucher"><?php  echo display('contra_voucher'); ?></a></li>
+                                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/journal_voucher"><?php echo display('journal_voucher');?></a></li> 
                      
-                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/aprove_v">Vouchar Approval</a></li> 
-                                                                      <li class="treeview  "><a href="">Report                            <span class="pull-right-container">
+                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/aprove_v"><?php echo  display('voucher_approval');?></a></li> 
+                                                                      <li class="treeview  "><a href=""><?php echo  display('report');?>                           <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                               <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/voucher_report">Voucher Report</a></li>
-                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_book">Cash Book</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/inventory_ledger">Inventory Ledger</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/bank_book">Bank Book</a></li>
-                                                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/general_ledger">General Ledger</a></li>
-                                                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/trial_balance">Trial Balance</a></li>
-                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/profit_loss_report">Profit Loss</a></li>
-                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_flow_report">Cash Flow</a></li>
-                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/coa_print">Coa Print</a></li>
-                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/balance_sheet">Balance Sheet</a></li>
+                               <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/voucher_report"><?php  echo display('Voucher Report');?></a></li>
+                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_book"><?php  echo display('cash_book'); ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/inventory_ledger"><?php echo display('inventory_ledger');  ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/bank_book"><?php echo display('bank_book');  ?></a></li>
+                                                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/general_ledger"><?php echo display('general_ledger');  ?></a></li>
+                                                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/trial_balance"><?php echo display('trial_balance');  ?></a></li>
+                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/profit_loss_report"><?php echo  display('profit_loss'); ?></a></li>
+                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_flow_report"><?php echo  display('cash_flow'); ?></a></li>
+                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/coa_print"><?php echo  display('coa_print'); ?></a></li>
+                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/balance_sheet"><?php  echo display('Balance Sheet');?></a></li>
                                             </ul>   
 
             </li>
@@ -648,18 +648,18 @@ if($_SESSION['u_type']==2)
             <!-- Bank menu start -->
                           <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-briefcase"></i><span>Bank</span>
+                    <i class="ti-briefcase"></i><span><?php  echo display('bank'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/index">Add New Bank</a></li>
+                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/index"><?php  echo display('add_new_bank'); ?></a></li>
                                 
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_list">Manage Bank</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_transaction">Bank Transaction</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_list"><?php  echo display('manage_bank'); ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_transaction"><?php  echo display('bank_transaction'); ?></a></li>
                 
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_ledger">Bank Ledger</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_ledger"><?php  echo display('bank_ledger'); ?></a></li>
                                 </ul>
             </li>
                     <!-- Bank menu end -->
@@ -678,28 +678,28 @@ if($_SESSION['u_type']==2)
                 <!-- Human Resource New menu start -->
                         <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-balance-scale"></i><span>Human Resource</span>
+                    <i class="fa fa-balance-scale"></i><span><?php  echo display('hrm_management'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_employee">Employee Info (W4 form)</a></li>
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/manage_employee">Time sheet</a></li>
-                                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/pay_slip_list">Pay slip / Checks per user</a></li>
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_setting">Payroll settings</a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_employee"><?php  echo display('Employee Info (W4 form)');?></a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/manage_employee"><?php  echo display('Time sheet');?></a></li>
+                                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/pay_slip_list"><?php  echo display('Pay slip / Checks per user');?></a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_setting"><?php  echo display('Payroll settings');?></a></li>
                     
 
-                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_expense_item">Expense</a></li>
-                    
-
-
-
-                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_office_loan">Office loan</a></li>
+                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_expense_item"><?php echo display("expense");?></a></li>
                     
 
 
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_reports">Payroll reports</a></li>
+
+                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_office_loan"><?php echo display("office_loan");?></a></li>
+                    
+
+
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_reports"><?php  echo display('Payroll reports');?></a></li>
                     
 
 
@@ -721,7 +721,7 @@ if($_SESSION['u_type']==2)
             <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Cweb_setting/email_setting">
-                    <i class="ti-user"></i><span>Email</span>
+                    <i class="ti-user"></i><span><?php echo display('email'); ?></span>
                  
                 </a>
 
@@ -757,13 +757,13 @@ if($_SESSION['u_type']==2)
 
                 <ul class="treeview-menu">
                     <li class="treeview">
-                        <a href="<?php echo base_url('Cweb_setting/invoice_template') ?>">Sales Invoice</a>
+                        <a href="<?php echo base_url('Cweb_setting/invoice_template') ?>"><?php echo display('Sales Invoice'); ?> </a>
                     </li>
                     <li class="treeview">
-                        <a href="<?php echo base_url('Cweb_setting/invoice_design') ?>"> Invoice Design</a>
+                        <a href="<?php echo base_url('Cweb_setting/invoice_design') ?>"><?php echo display('Invoice Design'); ?></a>
                     </li>
                     <li class="treeview">
-                        <a href="<?php echo base_url('Cweb_setting/invoice_content') ?>">Invoice Content</a>
+                        <a href="<?php echo base_url('Cweb_setting/invoice_content') ?>"><?php echo display('Invoice Content'); ?></a>
                     </li>
                    
             </ul>
@@ -784,7 +784,7 @@ if($_SESSION['u_type']==2)
             <!-- Software Settings menu start -->
             <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-settings"></i><span>Settings</span>
+                    <i class="ti-settings"></i><span><?php echo display('settings'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -803,17 +803,15 @@ if($_SESSION['u_type']==2)
 
 
    <ul class="treeview-menu">
-       <li class="treeview">
-           <a href="<?php echo base_url('Cweb_setting/invoice_template') ?>">Sales Invoice</a>
-       </li>
-       <li class="treeview">
-           <a href="<?php echo base_url('Cweb_setting/invoice_design') ?>"> Invoice Design</a>
-       </li>
-       <li class="treeview">
-           <a href="<?php echo base_url('Cweb_setting/invoice_content') ?>">Invoice Content</a>
-       </li>
-   
-
+           <li class="treeview">
+                        <a href="<?php echo base_url('Cweb_setting/invoice_template') ?>"><?php echo display('Sales Invoice'); ?> </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo base_url('Cweb_setting/invoice_design') ?>"><?php echo display('Invoice Design'); ?></a>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo base_url('Cweb_setting/invoice_content') ?>"><?php echo display('Invoice Content'); ?></a>
+                    </li>
 
 
 </ul>
@@ -870,7 +868,7 @@ if($_SESSION['u_type']==2)
 
                       <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>New Sale</span>
+                    <i class=""></i> <span><?php echo display('new_invoice'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -878,9 +876,9 @@ if($_SESSION['u_type']==2)
                 <ul class="treeview-menu">
                 
                 
-                      <li class="treeview  "><a href="">Payment Due date</a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Arrival </a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Departure</a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Payment Due date');?></a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Arrival');?> </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Departure');?></a></li>
 
 
  
@@ -890,7 +888,7 @@ if($_SESSION['u_type']==2)
 
              <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Ocean Export tracking</span>
+                    <i class=""></i> <span><?php echo display('Ocean Export tracking'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -898,8 +896,8 @@ if($_SESSION['u_type']==2)
                 <ul class="treeview-menu">
                 
                 
-                      <li class="treeview  "><a href="">Estimated Time of Arrival  </a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Departure</a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Arrival');?>  </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Departure');?></a></li>
                    
 
 
@@ -910,7 +908,7 @@ if($_SESSION['u_type']==2)
 
              <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Trucking</span>
+                    <i class=""></i> <span><?php echo display('Road Transport');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -918,8 +916,8 @@ if($_SESSION['u_type']==2)
                 <ul class="treeview-menu">
                 
                 
-                      <li class="treeview  "><a href=""> Container / Goods Pick up date</a></li>
-                      <li class="treeview  "><a href=""> Delivery date</a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Container / Goods Pick up date');?></a></li>
+                      <li class="treeview  "><a href=""> <?php echo display('Delivery date');?></a></li>
                  
 
 
@@ -958,15 +956,15 @@ if($_SESSION['u_type']==2)
 
             <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>New Expense</span>
+                    <i class=""></i> <span><?php echo display('new_purchase'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                      <li class="treeview  "><a href="">Payment Due Date      </a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Arrival      </a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Departure </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Payment Due Date');?>      </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Arrival');?>      </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Departure');?> </a></li>
 
                 </ul>
              </li>
@@ -978,7 +976,7 @@ if($_SESSION['u_type']==2)
 
          <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Purchase Order</span>
+                    <i class=""></i> <span><?php echo display('Purchase Order');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -993,14 +991,14 @@ if($_SESSION['u_type']==2)
 
            <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Ocean Import tracking</span>
+                    <i class=""></i> <span><?php echo display('Ocean Import tracking');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                      <li class="treeview  "><a href="">Estimated Time of Arrival  </a></li>
-                      <li class="treeview  "><a href="">Estimated Time of Departure</a></li>            
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Arrival');?>  </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Estimated Time of Departure');?></a></li>            
                 </ul>
              </li>
 
@@ -1009,7 +1007,7 @@ if($_SESSION['u_type']==2)
 
                       <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Trucking</span>
+                    <i class=""></i> <span><?php echo display('Road Transport');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -1017,8 +1015,8 @@ if($_SESSION['u_type']==2)
                 <ul class="treeview-menu">
                 
                 
-                      <li class="treeview  "><a href=""> Container / Goods Pick up date  </a></li>
-                      <li class="treeview  "><a href="">Delivery date</a></li>
+                      <li class="treeview  "><a href=""> <?php echo display('Container / Goods Pick up date');?>  </a></li>
+                      <li class="treeview  "><a href=""><?php echo display('Delivery date');?></a></li>
                    
 
 
@@ -1053,20 +1051,20 @@ if($_SESSION['u_type']==2)
                       <!-- Software Settings menu start -->
                           <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-settings"></i> <span>Manage Settings</span>
+                    <i class="ti-settings"></i> <span><?php echo display('settings'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Company_setup/manage_company">Manage my Company</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Company_setup/manage_company"><?php  echo display('Manage my Company'); ?></a></li>
                                                 
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Language">Language </a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Currency">Currency </a></li>
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting">Setting </a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Language"><?php  echo display('language'); ?> </a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Currency"><?php  echo display('currency'); ?> </a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting"><?php  echo display('setting'); ?> </a></li>
                 
-                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting/mail_setting">Mail Setting </a></li>
-                                 <li style="display:none" class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting/app_setting">App Settings </a></li>
+                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting/mail_setting"><?php  echo display('mail_setting'); ?> </a></li>
+                                 <li style="display:none" class="treeview  "><a href="<?php echo base_url(); ?>/Cweb_setting/app_setting"><?php echo  display('app_setting');  ?> </a></li>
                 </ul>
             </li>
                  <!-- Role permission start -->
@@ -1076,16 +1074,16 @@ if($_SESSION['u_type']==2)
 
               <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-key"></i> <span>Role Permission</span>
+                    <i class="ti-key"></i> <span><?php echo display('role_permission');  ?></span>
                     <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
              
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/add_role">Add Role</a></li>
-                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/role_list">Role List</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/user_assign">User Assign Role</a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/add_role"><?php echo display('add_role'); ?></a></li>
+                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/role_list"><?php echo display('role_list');  ?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Permission/user_assign"><?php echo  display("user_assign_role");  ?></a></li>
                                      
 
                     </ul>
@@ -1102,7 +1100,7 @@ if($_SESSION['u_type']==2)
                 <ul class="treeview-menu">
                 
                 
-                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csms/configure">SMS Configure</a></li>
+                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csms/configure"><?php echo display('sms_configure'); ?></a></li>
                      
  
                 </ul>
@@ -1113,7 +1111,7 @@ if($_SESSION['u_type']==2)
                           <!-- sms menu start -->
                  <li class="treeview  ">
                 <a href="<?php echo base_url(); ?>/Cservice/help_desk">
-                    <i class="fa fa-comments"></i> <span>Help</span>
+                    <i class="fa fa-comments"></i> <span><?php echo display('Help');?></span>
                    
                 </a>
          
@@ -1126,7 +1124,7 @@ if($_SESSION['u_type']==2)
                  <!-- Synchronizer setting start -->
                           <li style="display:none;" class="treeview  ">
                 <a href="#">
-                    <i class="ti-reload"></i>  <span>Data Synchronizer</span>
+                    <i class="ti-reload"></i>  <span><?php  echo display('data_synchronizer'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -1136,7 +1134,7 @@ if($_SESSION['u_type']==2)
                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Backup_restore/restore_form">Restore</a></li>
                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/Backup_restore/import_form">Import</a></li>
                 
-                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Backup_restore/download">Back Up</a></li>
+                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Backup_restore/download"><?php echo display('backup'); ?></a></li>
                 </ul>
             </li>
                     <!-- Synchronizer setting end -->
@@ -1144,8 +1142,8 @@ if($_SESSION['u_type']==2)
                 </ul>
             </li>
                     <!-- Software Settings menu end -->
- <li class="treeview  "><a href="<?php echo base_url(); ?>User/add_user">Add User</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>User/manage_user">Manage User </a></li>
+ <li class="treeview  "><a href="<?php echo base_url(); ?>User/add_user"><?php  echo display('add_user');?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>User/manage_user"><?php echo display('manage_users'); ?></a></li>
         </ul>   
         <!-- /.User 2 -->
 
@@ -1165,7 +1163,7 @@ if($_SESSION['u_type']==3)
 <ul class="sidebar-menu">
 
             <li class="active">
-                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span>Dashboard</span>
+                <a href="<?php echo base_url(); ?>/"><i class="ti-dashboard"></i> <span><?php echo display('dashboard'); ?></span>
                     <span class="pull-right-container">
                         <span class="label label-success pull-right"></span>
                     </span>
@@ -1186,16 +1184,16 @@ foreach(  $this->session->userdata('perm_data') as $test){
     <!-- Invoice menu start -->
                         <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-balance-scale"></i><span>Sale</span>
+                    <i class="fa fa-balance-scale"></i><span><?php echo display('invoice');?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_invoice">New Sale</a></li>
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_profarma_invoice">Profarma Invoice</a></li>
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_ocean_export_tracking">Ocean Export Tracking</a></li>
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_trucking">Road Transport</a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_invoice"><?php echo display('New Sale');?></a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_profarma_invoice"><?php echo display('Profarma Invoice');?></a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_ocean_export_tracking"><?php echo display('Ocean Export Tracking');?></a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Cinvoice/manage_trucking"><?php echo display('Road Transport');?></a></li>
                     
 
                 </ul>
@@ -1221,7 +1219,7 @@ foreach(  $this->session->userdata('perm_data') as $test){
                         <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Ccustomer/manage_customer">
-                    <i class="fa fa-handshake-o"></i><span>Customer</span>
+                    <i class="fa fa-handshake-o"></i><span><?php echo  display('customer');  ?></span>
                  <!--    <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span> -->
@@ -1287,7 +1285,7 @@ break;
                        <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Cproduct/manage_product">
-                    <i class="ti-bag"></i><span>Product</span>
+                    <i class="ti-bag"></i><span><?php  echo  display('product'); ?></span>
                  
                 </a>
 
@@ -1311,7 +1309,7 @@ break;
                        <li class="treeview  ">
 
              <a href="<?php echo base_url(); ?>/Csupplier/manage_supplier">
-                    <i class="ti-user"></i><span>Vendor</span>
+                    <i class="ti-user"></i><span><?php echo  display('Vendor');?></span>
                  
                 </a>
 
@@ -1337,23 +1335,23 @@ break;
 
                                   <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-shopping-cart"></i><span>Expenses</span>
+                    <i class="ti-shopping-cart"></i><span><?php echo  display('purchase');  ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase">New Expenses</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase_order">Purchase Order</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase"><?php echo display('new_purchase'); ?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Cpurchase/manage_purchase_order"><?php echo display('Purchase Order');?></a></li>
                        
 
 
             
 
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_ocean_import_tracking">Ocean Import Tracking</a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_ocean_import_tracking"><?php echo display('Ocean Import Tracking');?></a></li>
                        
 
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_trucking">Trucking</a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Ccpurchase/manage_trucking"><?php echo display('Road Transport');?></a></li>
                                        </ul>
             </li>
         
@@ -1372,7 +1370,7 @@ break;
              <!-- Quotation Menu Start -->
                      <li class="treeview  ">
                 <a href="<?php echo base_url(); ?>/Cquotation/manage_quotation">
-                    <i class="fa fa-book"></i><span>Quotation</span>
+                    <i class="fa fa-book"></i><span><?php echo  display('Quotation');?></span>
                    
                 </a>
               
@@ -1388,13 +1386,13 @@ break;
              <!-- Stock menu start -->
                     <li class="treeview ">
             <a href="#">
-                <i class="ti-bar-chart"></i><span>Stock</span>
+                <i class="ti-bar-chart"></i><span><?php echo  display('stock'); ?></span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport">Stock Report</a></li>
+                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport"><?php echo  display('Stock Report'); ?></a></li>
             
             </ul>
         </li>
@@ -1414,7 +1412,7 @@ break;
         <!-- Taxes menu start -->
                     <li class="treeview ">
             <a href="<?php echo base_url(); ?>/Caccounts/manage_tax">
-                <i class="ti-bar-chart"></i><span>Taxes</span>
+                <i class="ti-bar-chart"></i><span><?php echo  display('Taxes'); ?></span>
            
             </a>
          
@@ -1436,16 +1434,16 @@ break;
         ?>
                     <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-retweet" aria-hidden="true"></i><span>Return</span>
+                    <i class="fa fa-retweet" aria-hidden="true"></i><span><?php echo  display('return'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m">Return</a></li>
-                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/return_list">Stock Return List</a></li>
-                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/supplier_return_list">Supplier Return List</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/wastage_return_list">Wastage Return List</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m"><?php echo  display('return'); ?></a></li>
+                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/return_list"><?php echo  display('stock_return_list'); ?></a></li>
+                                                               <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/supplier_return_list"><?php echo  display('supplier_return_list'); ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/Cretrun_m/wastage_return_list"><?php echo  display('wastage_return_list'); ?></a></li>
                       
                 </ul>
             </li>
@@ -1465,29 +1463,29 @@ break;
             <!-- Report menu start -->
                          <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-book"></i><span>Report</span>
+                    <i class="ti-book"></i><span><?php  echo display('report'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing">Closing</a></li>
-                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing_report">Closing Report</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/all_report">Todays Report</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_customer_receipt">Todays Customer Receipt</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_sales_report">Sales Report</a></li>
-                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/user_sales_report">User Wise Sales Report</a></li>
-                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_DueReports">Due Report</a></li>
-                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_Shippingcost">Shipping Cost Report</a></li>
-                                                        <li><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_purchase_report">Expenses Report</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/purchase_report_category_wise">Expenses Report (Category wise)</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/product_sales_reports_date_wise">Sales Report (Product Wise)</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_report_category_wise">Sales Report (Category wise)</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_return">Sales Return</a></li>
-                                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/supplier_return">Supplier Return</a></li>
-                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_tax">Tax Report</a></li>
-                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/total_profit_report">Profit Report (Sale Wise)</a></li>
-                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport/product_stock">Stock Report (Product wise)</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing"><?php echo display('closing'); ?></a></li>
+                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/closing_report"><?php echo display('closing_report'); ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/all_report"><?php echo  display('todays_report');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_customer_receipt"><?php echo  display('todays_customer_receipt');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_sales_report"><?php  echo display('sales_report'); ?></a></li>
+                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/user_sales_report"><?php  echo display('user_wise_sales_report'); ?></a></li>
+                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_DueReports"><?php echo  display('due_report');  ?></a></li>
+                                                                 <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_Shippingcost"><?php echo  display('shipping_cost_report');  ?></a></li>
+                                                        <li><a href="<?php echo base_url(); ?>/Admin_dashboard/todays_purchase_report"><?php echo  display('purchase_report');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/purchase_report_category_wise"><?php echo  display('purchase_report_category_wise');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/product_sales_reports_date_wise"><?php echo  display('sales_report_product_wise');  ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_report_category_wise"><?php echo  display('sales_report_category_wise');  ?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/sales_return"><?php echo  display('invoice_return');  ?></a></li>
+                                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/supplier_return"><?php echo display('supplier_return'); ?></a></li>
+                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/retrieve_dateWise_tax"><?php echo display('tax_report'); ?></a></li>
+                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Admin_dashboard/total_profit_report"><?php  echo display('profit_report');?></a></li>
+                                                                                                                  <li class="treeview  "><a href="<?php echo base_url(); ?>/Creport/product_stock"><?php  echo display('stock_report_product_wise');?></a></li>
                                                                 </ul>
             </li>
                     <!-- Report menu end -->
@@ -1505,41 +1503,41 @@ break;
 <!--New Account start-->
              <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-money"></i><span>Accounts</span>
+                    <i class="fa fa-money"></i><span><?php echo display('accounts'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                  <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year">Financial Year</a></li>
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year_end">Financial Year Ending</a></li>           
-                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/show_tree">Chart of Account</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/supplier_payment">Supplier Payment</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/customer_receive">Customer Receive</a></li>
+                  <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year"><?php echo display('Financial Year'); ?></a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/financial_year_end"><?php echo display('Financial Year Ending'); ?></a></li>           
+                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/show_tree"><?php echo display('c_o_a');  ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/supplier_payment"><?php echo display('supplier_payment');  ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/customer_receive"><?php echo  display('customer_receive');  ?></a></li>
                     
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_adjustment">Cash Adjustment</a></li>
-                                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/debit_voucher">Debit Voucher</a></li>
-                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/credit_voucher">Credit Voucher</a></li>
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_adjustment"><?php echo display('cash_adjustment');  ?></a></li>
+                                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/debit_voucher"><?php  echo display('debit_voucher');?></a></li>
+                                                                <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/credit_voucher"><?php echo display('credit_voucher');  ?></a></li>
                                          
-                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/contra_voucher">Contra Voucher</a></li>
-                                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/journal_voucher">Journal Voucher</a></li> 
+                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/contra_voucher"><?php  echo display('contra_voucher'); ?></a></li>
+                                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/journal_voucher"><?php echo display('journal_voucher');?></a></li> 
                      
-                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/aprove_v">Vouchar Approval</a></li> 
-                                                                      <li class="treeview  "><a href="">Report                            <span class="pull-right-container">
+                                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/aprove_v"><?php echo  display('voucher_approval');?></a></li> 
+                                                                      <li class="treeview  "><a href=""><?php  echo display('report');?>                            <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/voucher_report">Voucher Report</a></li>
-                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_book">Cash Book</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/inventory_ledger">Inventory Ledger</a></li>
-                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/bank_book">Bank Book</a></li>
-                                                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/general_ledger">General Ledger</a></li>
-                                                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/trial_balance">Trial Balance</a></li>
-                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/profit_loss_report">Profit Loss</a></li>
-                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_flow_report">Cash Flow</a></li>
-                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/coa_print">Coa Print</a></li>
-                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/balance_sheet">Balance Sheet</a></li>
+                             <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/voucher_report"><?php echo display('Voucher Report'); ?></a></li>
+                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_book"><?php echo display('cash_book'); ?></a></li>
+                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/inventory_ledger"><?php echo display('inventory_ledger');  ?></a></li>
+                                                              <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/bank_book"><?php echo display('bank_book');  ?></a></li>
+                                                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/general_ledger"><?php  echo display('general_ledger'); ?></a></li>
+                                                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/trial_balance"><?php echo display('trial_balance');  ?></a></li>
+                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/profit_loss_report"><?php echo  display('profit_loss'); ?></a></li>
+                                                   <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/cash_flow_report"><?php echo  display('cash_flow'); ?></a></li>
+                                                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/coa_print"><?php echo  display('coa_print'); ?></a></li>
+                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/accounts/balance_sheet"><?php echo display('Balance Sheet'); ?></a></li>
                                             </ul>   
 
             </li>
@@ -1560,20 +1558,20 @@ foreach(  $this->session->userdata('perm_data') as $test){
            <!-- New Account End -->
 
             <!-- Bank menu start -->
-                          <li class="treeview  ">
+                                            <li class="treeview  ">
                 <a href="#">
-                    <i class="ti-briefcase"></i><span>Bank</span>
+                    <i class="ti-briefcase"></i><span><?php  echo display('bank'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/index">Add New Bank</a></li>
+                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/index"><?php  echo display('add_new_bank'); ?></a></li>
                                 
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_list">Manage Bank</a></li>
-                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_transaction">Bank Transaction</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_list"><?php  echo display('manage_bank'); ?></a></li>
+                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_transaction"><?php  echo display('bank_transaction'); ?></a></li>
                 
-                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_ledger">Bank Ledger</a></li>
+                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Csettings/bank_ledger"><?php  echo display('bank_ledger'); ?></a></li>
                                 </ul>
             </li>
                     <!-- Bank menu end -->
@@ -1598,30 +1596,30 @@ break;
 
 
                 <!-- Human Resource New menu start -->
-                        <li class="treeview  ">
+                                    <li class="treeview  ">
                 <a href="#">
-                    <i class="fa fa-balance-scale"></i><span>Human Resource</span>
+                    <i class="fa fa-balance-scale"></i><span><?php  echo display('hrm_management'); ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_employee">Employee Info (W4 form)</a></li>
-                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/manage_employee">Time sheet</a></li>
-                                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/pay_slip_list">Pay slip / Checks per user</a></li>
-                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_setting">Payroll settings</a></li>
+                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_employee"><?php  echo display('Employee Info (W4 form)');?></a></li>
+                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/manage_employee"><?php  echo display('Time sheet');?></a></li>
+                                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/pay_slip_list"><?php  echo display('Pay slip / Checks per user');?></a></li>
+                                            <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_setting"><?php  echo display('Payroll settings');?></a></li>
                     
 
-                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_expense_item">Expense</a></li>
-                    
-
-
-
-                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_office_loan">Office loan</a></li>
+                                          <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_expense_item"><?php echo display("expense");?></a></li>
                     
 
 
-                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_reports">Payroll reports</a></li>
+
+                                           <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/add_office_loan"><?php echo display("office_loan");?></a></li>
+                    
+
+
+                                         <li class="treeview  "><a href="<?php echo base_url(); ?>/Chrm/payroll_reports"><?php  echo display('Payroll reports');?></a></li>
                     
 
 
