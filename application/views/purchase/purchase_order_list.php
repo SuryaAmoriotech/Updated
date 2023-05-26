@@ -40,7 +40,7 @@
 	        $message = $this->session->userdata('message');
 	        if (isset($message)) {
 	    ?>
-	    <div class="alert alert-info alert-dismissable">
+	    <div class="alert alert-info alert-dismissable" style="background-color:#38469f;color:white;font-weight:bold;">
 	        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 	        <?php echo $message ?>                    
 	    </div>
@@ -249,7 +249,7 @@ $today = date('Y-m-d');
                <th data-col="17" name="Remarks/Details" data-control-column="17" class="17 value" style="width: 268.011px; height: 43.0114px;">Remarks / Details</th>
     
   <div class="myButtonClass Action">
-         <th class="text-center 18 value" data-col="18" name="action" data-formatter="commands" data-sortable="false" style="width: 185.011px;">Action</th>
+         <th class="text-center 18 value" data-col="18" name="action" data-formatter="commands" data-sortable="false" style="width: 285.011px;">Action</th>
         </div>
       </tr>
     </thead>

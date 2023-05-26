@@ -55,51 +55,51 @@
 
     <section class="content">
 
-        <!-- Alert Message -->
+      <!-- Alert Message -->
 
-        <?php
+      <?php
 
-        $message = $this->session->userdata('message');
+$message = $this->session->userdata('show');
 
-        if (isset($message)) {
+if (isset($message)) {
 
-            ?>
+    ?>
 
-            <div class="alert alert-info alert-dismissable">
+    <div class="alert alert-info alert-dismissable">
 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 
-                <?php echo $message ?>                    
+        <?php echo $message; ?>                    
 
-            </div>
+    </div>
 
-            <?php
+    <?php
 
-            $this->session->unset_userdata('message');
+    // $this->session->unset_userdata('message');
 
-        }
+}
 
-        $error_message = $this->session->userdata('error_message');
+$error_message = $this->session->userdata('error_message');
 
-        if (isset($error_message)) {
+if (isset($error_message)) {
 
-            ?>
+    ?>
 
-            <div class="alert alert-danger alert-dismissable">
+    <div class="alert alert-danger alert-dismissable">
 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 
-                <?php echo $error_message ?>                    
+        <?php echo $error_message ?>                    
 
-            </div>
+    </div>
 
-            <?php
+    <?php
 
-            $this->session->unset_userdata('error_message');
+    $this->session->unset_userdata('error_message');
 
-        }
+}
 
-        ?>
+?>
 
         <div class="row">
 

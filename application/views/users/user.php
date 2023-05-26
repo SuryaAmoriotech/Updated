@@ -54,9 +54,9 @@
 	     <div class="row">
             <div class="col-sm-12">
               
-                	<?php if($this->permission1->method('add_user','create')->access()){?>
+                	<?php //if($this->permission1->method('add_user','create')->access()){?>
                   <a href="<?php echo base_url('User/add_user')?>" class="btn btn-success m-b-5 m-r-2"><i class="ti-plus"> </i> Add User </a>
-              <?php }?>
+              <?php //}?>
                
             </div>
         </div>
@@ -97,7 +97,7 @@
 										<td><?php echo html_escape($user["username"])?></td>
 										<td><?php 
 											$user_type = $user["user_type"];
-											if ($user_type == 1) {
+											if ($user_type == 2) {
 												echo "Admin";
 											}else{
 												echo "User";

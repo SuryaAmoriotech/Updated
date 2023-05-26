@@ -31,19 +31,22 @@ class Cinvoice extends CI_Controller {
 
       
          $payment_id = $this->db->select('payment_id')->from('invoice')->where('invoice_id',$invoice_id)->get()->row()->payment_id;
-         $dataw['commercial_invoice_number'] = $this->input->post('commercial_invoice_number',TRUE);
+
+      $dataw['commercial_invoice_number'] = $this->input->post('commercial_invoice_number',TRUE);
 
     
          $result1 = $this->db->delete('payment',array('payment_id' => $payment_id));
          $result2 = $this->db->delete('invoice', array('invoice_id' => $invoice_id)); 
          $result3 = $this->db->delete('invoice_details', array('invoice_id' => $invoice_id)); 
 
-
-        if ($result3 == true) {
-           $this->session->set_userdata(array('message'=>display('successfully_delete')));
-        }
+  
+           
+            $this->session->set_flashdata('show', display('successfully_delete'));
+      
+    
+     
         // alert('Successfully Delete');
-        redirect('Cinvoice/manage_invoice');
+      redirect('Cinvoice/manage_invoice');
     }
 
 
@@ -79,16 +82,10 @@ class Cinvoice extends CI_Controller {
     {
 
         $data['ocean_export_tracking_id'] = $this->input->post('ocean_export_tracking_id',TRUE);
-
-
         $result = $this->db->delete('ocean_export_tracking', array('ocean_export_tracking_id' => $ocean_export_tracking_id)); 
-        // print_r( $result);
 
-        if ($result == true) {
-           $this->session->set_userdata(array('message'=>display('successfully_delete')));
-        }
-   
-        
+        $this->session->set_flashdata('show', display('successfully_delete'));
+
         redirect('Cinvoice/manage_ocean_export_tracking');
     }
 
@@ -105,10 +102,11 @@ class Cinvoice extends CI_Controller {
         $result1 = $this->db->delete('sale_trucking', array('trucking_id' => $trucking_id)); 
         $result2 = $this->db->delete('sale_trucking_details', array('trucking_id' => $trucking_id)); 
 
-        if ($result2 == true) {
-           $this->session->set_userdata(array('message'=>display('successfully_delete')));
-        }
-   
+        // if ($result2 == true) {
+        //    $this->session->set_userdata(array('message'=>display('successfully_delete')));
+        // }
+        $this->session->set_flashdata('show', display('successfully_delete'));
+
         
         redirect('Cinvoice/manage_trucking');
     }

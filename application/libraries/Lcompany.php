@@ -7,6 +7,12 @@ class Lcompany {
 		$CI =& get_instance();
 		$CI->load->model('Companies');
 		$company_list = $CI->Companies->company_list($limit,$page);
+
+
+		$company_info = $CI->Companies->company_info();
+		$company_admin_info = $CI->Companies->company_admin_info();
+
+
 		$i=$page;
 		if(!empty($company_list)){	
 			foreach($company_list as $k=>$v){$i++;
@@ -16,11 +22,52 @@ class Lcompany {
 		$data = array(
 				'title'        => display('manage_company'),
 				'company_list' => $company_list,
+
+
+				'company_info' => $company_info,
+				'company_admin_info' => $company_admin_info,
+
 				'links'        => $links
 			);
+			// print_r($data);
 		$companyList = $CI->parser->parse('company/company',$data,true);
 		return $companyList;
 	}
+
+
+
+
+
+
+	#=============Company Search item===============#
+	public function company_branch_total()
+	{ 
+		$CI = & get_instance();
+        $data = array(
+            'title' => display('manage_users')
+        );
+        $userForm = $CI->parser->parse('company/companybranch', $data, true);
+        return $userForm;
+
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	#=============Company Search item===============#
 	public function company_search_item($company_id)
 	{

@@ -54,55 +54,51 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
     <section class="content">
 
+   <!-- Alert Message -->
 
+   <?php
 
-        <!-- Alert Message -->
+$message = $this->session->userdata('message');
 
-        <?php
+if (isset($message)) {
 
-        $message = $this->session->userdata('message');
+    ?>
 
-        if (isset($message)) {
+    <div class="alert alert-info alert-dismissable" style="background-color:#38469f;color:white;font-weight:bold;">
 
-            ?>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 
-            <div class="alert alert-info alert-dismissable">
+        <?php echo $message; ?>                    
 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    </div>
 
-                <?php echo $message ?>                    
+    <?php
 
-            </div>
+    // $this->session->unset_userdata('message');
 
-            <?php
+}
 
-            $this->session->unset_userdata('message');
+$error_message = $this->session->userdata('error_message');
 
-        }
+if (isset($error_message)) {
 
-        $error_message = $this->session->userdata('error_message');
+    ?>
 
-        if (isset($error_message)) {
+    <div class="alert alert-danger alert-dismissable">
 
-            ?>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 
-            <div class="alert alert-danger alert-dismissable">
+        <?php echo $error_message ?>                    
 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    </div>
 
-                <?php echo $error_message ?>                    
+    <?php
 
-            </div>
+    $this->session->unset_userdata('error_message');
 
-            <?php
+}
 
-            $this->session->unset_userdata('error_message');
-
-        }
-
-        ?>
-
-
+?>
 
            
 
