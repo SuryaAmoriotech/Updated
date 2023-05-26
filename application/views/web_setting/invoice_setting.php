@@ -74,7 +74,7 @@
                                         <div class="panel-body">
 
                          <input name ="form_type" type="hidden" value="sales&Profarma">
-
+                         
                          
 
                         <div class="form-group row">
@@ -96,7 +96,7 @@
                         <div class="form-group row">
                             <label for="invoice_logo" class="col-sm-3 col-form-label">Remarks/Conditions <i class="text-danger">*</i></label>
                             <div class="col-sm-6">
-                                <textarea required class="form-control" rows="4" cols="50" name ="company_address" id="company_address" type="text" tabindex="2"></textarea>
+                                <textarea required class="form-control" rows="4" cols="50" name ="remarks" id="remarks" type="text" tabindex="2"></textarea>
                             </div>
                         </div>
 
