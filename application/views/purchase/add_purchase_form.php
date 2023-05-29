@@ -884,7 +884,7 @@ td {
                                    
                                     <td>
                                    
-                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value="Save" />
+                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value="<?php  echo  display('save'); ?>" />
                                             </td>
                                             
 
@@ -1013,7 +1013,7 @@ td {
 
 <!-- Modal -->
 <!-- Purchase Report End -->
-<div class="modal fade model success "id="add_vendor" role="dialog">
+<div class="modal fade model success " id="add_vendor" role="dialog">
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
       <div class="modal-header"  style="color:white;background-color:#38469f;">
@@ -1831,7 +1831,7 @@ name="country" id="country" ></select> -->
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php  echo display('balance'); ?>: </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php  echo display('balance_ammount'); ?>: </label>
 
 <div class="col-sm-5">
 
@@ -1881,7 +1881,7 @@ name="country" id="country" ></select> -->
   
      <div class="col-sm-4">
                  <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php  echo display('Close');  ?></a>
-     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay"   value="submit"  required   />
+     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay"   value="<?php  echo display('submit');  ?>"  required   />
 </div>
      </div>
    </div>
@@ -2313,7 +2313,7 @@ name="country" id="country" ></select> -->
 
             
 
-            <input type="submit" class="btn" style="color:white;background-color: #38469f;" value="Submit">
+            <input type="submit" class="btn" style="color:white;background-color: #38469f;" value="<?php echo display('submit');?>">
 
         </div>
 
@@ -3307,7 +3307,7 @@ function discard(){
    function(responseText){
     console.log(responseText);
     window.btn_clicked = true;      //set btn_clicked to true
-    var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been Discarded";
+    var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been Discarded');?>";
   
     console.log(input_hdn);
     $('#myModal3').modal('hide');
@@ -3323,7 +3323,7 @@ function discard(){
 }
      function submit_redirect(){
         window.btn_clicked = true;      //set btn_clicked to true
-        var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been saved Successfully";
+        var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been saved Successfully');?>";
   
     console.log(input_hdn);
     $('#myModal3').modal('hide');
@@ -3338,7 +3338,7 @@ function discard(){
 $('.final_submit').on('click', function (e) {
 
     window.btn_clicked = true;      //set btn_clicked to true
-    var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been saved Successfully";
+  var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been saved Successfully');?>";
   
     console.log(input_hdn);
    

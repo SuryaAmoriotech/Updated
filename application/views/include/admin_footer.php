@@ -171,7 +171,7 @@ function hide() {
         url:url+id,
         type: 'GET',
         success: function(res) {
-          
+          console.log(res);
             $('#customer_emailid').val(res);
             console.log(id);
             const myArray = id.split("-");

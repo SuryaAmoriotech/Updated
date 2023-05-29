@@ -24,9 +24,9 @@
 
         <div class="header-title">
 
-            <h1><?php echo display('manage_purchase') ?></h1>
+            <h1><?php echo display('new_purchase') ?></h1>
 
-            <small><?php echo display('add_new_purchase') ?></small>
+            <small><?php // echo display('new_purchase') ?></small>
 
             <ol class="breadcrumb">
 
@@ -34,7 +34,7 @@
 
                 <li><a href="#"><?php echo display('purchase') ?></a></li>
 
-                <li class="active"><?php echo display('manage_purchase') ?></li>
+                <li class="active" style="color:orange"><?php echo display('new_purchase') ?></li>
 
             </ol>
 
@@ -142,7 +142,7 @@ textarea:focus, input:focus{
                     <div class="panel-title">
                       <div class="Row">
                                  <div class="Column" style="float: left;">
-                          <h4><?php echo "Edit Invoice" ?></h4>
+                          <h4><?php //echo "Edit Invoice" ?></h4>
                           
                                </div> 
                                 <div class="Column" style="float: right;"> <form id="histroy" method="post" >
@@ -611,7 +611,7 @@ if($a==$m){
                                             </tfoot>
                             </table>
                             <?php   } ?>
-                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); ">Bundle</i>    
+                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php  echo  display('Bundle');?></i>    
                          </div> </div>
                                                <table class="taxtab table table-bordered table-hover">
                         <tr>
@@ -746,7 +746,7 @@ if($a==$m){
                                    
                                     <td>
                                    
-                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value="Save" />
+                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value="<?php echo display('save'); ?>" />
                                             </td>
                                             
 
@@ -961,7 +961,10 @@ if($a==$m){
 }
 </style>      
 <script type="text/javascript">
+     $(document).ready(function(){
    
+    $(".sidebar-toggle").trigger('click') ;
+});
         $(document).ready(function() {
             //alert($('#supplier_id').val());
           
@@ -1233,7 +1236,7 @@ td {
 
      <div class="col-sm-4">
        <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php  echo display('Close');  ?></a>
-     <input class="btn btn-primary" type="submit"   style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay"   required   />
+     <input class="btn btn-primary" type="submit"   style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value="<?php  echo display('submit');  ?>"  required   />
 </div>
      </div>
    </div>
@@ -1770,6 +1773,7 @@ $("#bodyModal1").html("");
 
     event.preventDefault();
 });
+
 $('#insert_purchase1').submit(function (event) {
     var dataString = {
         dataString : $("#insert_purchase1").serialize()

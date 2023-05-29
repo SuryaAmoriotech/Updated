@@ -1103,15 +1103,7 @@ function discard(){
         window.location = "<?php  echo base_url(); ?>Cinvoice/manage_invoice";
       }, 2000);
      }
-     $('#email_btn').on('click', function (e) {
-// var link=localStorage.getItem("truck");
-// console.log(link);
- var popout = window.open("<?php  echo base_url(); ?>Cinvoice/sendmail_with_attachments/"+$('#invoice_hdn1').val());
-    // window.setTimeout(function(){
-    //     popout.close();
-    //  }, 1500);
-      e.preventDefault();
-});
+
 $('#insert_trucking').submit(function(e) {
   $.ajax({
     url:"<?php echo base_url(); ?>Cinvoice/manual_sales_insert",

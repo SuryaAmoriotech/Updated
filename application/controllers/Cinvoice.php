@@ -568,17 +568,9 @@ echo json_encode($data);
      $query=$this->db->query($sql);
       $row=$query->result_array();
         echo $row[0]['customer_email'];
-         //  print_r($sql); die();
+
     }
-    //     $sql ;
-    //   //  echo $sql;
-    //   $query=$this->db->query($sql);
-    //   $row=$query->result_array();
-    //   if($row[0]['customer_email']){
-    //  echo $row[0]['customer_email'];
-    //   }else{
-    //      echo $row[0]['primaryemail'];
-    //   }
+
     }
 
     // Send email Attachments
@@ -602,10 +594,12 @@ echo json_encode($data);
       $curn_info_default = $CI->db->select('*')->from('currency_tbl')->where('icon',$currency_details[0]['currency'])->get()->result_array();
     $uid=$_SESSION['user_id'];
     $sql='select c.* from company_information c join user_login as u on u.cid=c.company_id where u.user_id='.$uid;
+
     $query=$this->db->query($sql);
     $company_info=$query->result_array();
     $product_sql='select c.* from invoice i join customer_information c on c.customer_id=i.customer_id where i.invoice_id='.$invoice_id;
     $query=$this->db->query($product_sql);
+   // echo $this->db->last_query();
     $customer_info=$query->result_array();
     $this->session->set_userdata('image_email', base_url().$company_info[0]['logo']);
     $sql='select p.*, i.* from `invoice_details` i join invoice p on p.invoice_id=i.invoice_id where i.invoice_id="'.$invoice_id.'";';

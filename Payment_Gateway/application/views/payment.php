@@ -110,9 +110,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			echo form_dropdown('subscription', $options, '12');
 			?>
 			<br>
-			Description:<br>
-			<?php  echo form_input('desc', ''); ?>
-			<br><br>
+			<!-- Description:<br>
+			<?php  //echo form_input('desc', ''); ?>
+			<br><br> -->
 			<input type="submit" value="Submit">
 		</div>
 </form> 

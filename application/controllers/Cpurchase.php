@@ -423,6 +423,7 @@ public function manage_trucking() {
             $config['allowed_types'] = 'csv';
             $config['max_size'] = '1000';
             $this->upload->initialize($config);
+                 
               if (!$this->upload->do_upload('upload_csv_file')) {
                 $data['error_message'] = $this->upload->display_errors();
                 $this->session->set_userdata($data);
@@ -433,6 +434,12 @@ public function manage_trucking() {
                 $csv_array = $this->csvimport->get_array($file_path);
                 $this->session->set_userdata('file_path',  $csv_array);
                 foreach ($csv_array as $row) {
+                       $msg='';
+        if($row['message_invoice']){
+$msg=$row['message_invoice'];
+        }else{
+          $msg='Product Purchased on '.$row['purchase_date'];
+        }
                      $purchase_id = date('YmdHis');
                      $expense_data = array(
                         'create_by'     =>  $this->session->userdata('user_id'),
@@ -442,7 +449,7 @@ public function manage_trucking() {
                         'payment_due_date'=>$row['payment_due_date'],
                         'chalan_no'=>$row['chalan_no'],
                         'remarks'=>$row['remarks'],
-                        'message_invoice'=>$row['message_invoice'],
+                        'message_invoice'=>$msg,
                         'payment_terms'=>$row['payment_terms'],
                          'etd'=>$row['payment_terms'],
                           'eta'=>$row['payment_terms'],

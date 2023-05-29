@@ -22,12 +22,12 @@
 	        <i class="pe-7s-note2"></i>
 	    </div>
 	    <div class="header-title">
-	        <h1>Ocean Import Invoice</h1>
+	        <h1><?php echo display('Ocean Import Tracking');?></h1>
 	        <small><?php //echo display('manage_your_purchase') ?></small>
 	        <ol class="breadcrumb">
             <li><a href="<?php   echo base_url(); ?>"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-	            <li><a href="#">Expenses</a></li>
-	            <li class="active" style="color:orange;">Manage Ocean Import Invoice</li>
+	            <li><a href="#"><?php echo display('purchase') ?></a></li>
+	            <li class="active" style="color:orange;"><?php echo display('Manage Ocean Import') ?></li>
 	        </ol>
 	    </div>
 	</section>
@@ -98,12 +98,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  >Create ocean import</a>
+<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  ><?php echo display('Create Ocean Import Tracking');?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  >Create ocean import</a>
+<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  ><?php echo display('Create Ocean Import Tracking');?></a>
 
                         <?php  } ?>
 
@@ -142,10 +142,10 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo 'Search By Date Range : '; ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range') ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="Search"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="<?php echo display('search') ?>"/>
 </div> 
 <?php echo form_close() ?>
                     </div>
@@ -175,18 +175,18 @@ $today = date('Y-m-d');
                     <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i> <!-- onclick opens MODAL -->
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span><?php echo display('download') ?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
    
   
                 
-      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
+      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> <?php echo display('pdf') ?></a></li>
       
       <li class="divider"></li> 		
                   
-                  <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> XLS</a></li>
+                  <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"><?php echo display('XLS') ?></a></li>
                  
     </ul>
   </div>

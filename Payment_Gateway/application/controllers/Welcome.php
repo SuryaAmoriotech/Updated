@@ -29,16 +29,19 @@ $mysqltime = date ('Y-m-d H:i:s');
         $orderId = strtotime(date('H:i:s'));
         $id=$val[0]['id'];
         $total_price=$val[0]['grand_total_amount'];
-       
-      
         $description=$val[0]['message_invoice'];
+      
+
+  
+    
+      
     
         $_SESSION['purchase_id']=$records;
         $data1 = [
             'payment_id' =>$id,
             'order_id' => $orderId,
             'purchase_id' => $records,
-            'description' =>isset($description) ? $description : 'Message',
+            'description' =>  $description,
             'mode' => 'Mollie Payment',
             'total_amt' => $total_price,
            'create_by'       =>  $val[0]['create_by'],
@@ -46,7 +49,7 @@ $mysqltime = date ('Y-m-d H:i:s');
       
         ];
            $this->db->insert('payment',$data1) ;
-           echo  $this->db->last_query();
+         //  echo  $this->db->last_query();
 	    try{
             $payment = $mollie->payments->create([
                 "amount" => [
