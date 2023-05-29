@@ -362,7 +362,7 @@ textarea:focus, input:focus{
                                         
                                     
                                     
-                                    <td style="padding-bottom:30px;text-align:right;"  colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b><br/><b><?php  echo display('Preferred Currency');?></b></td>
+                                    <td style="padding-bottom:30px;text-align:right;"  colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b><br/><b>(<?php  echo display('Preferred Currency');?>)</b></td>
                                     <td>
                                     <table border="0">
       <tr>
@@ -406,7 +406,7 @@ textarea:focus, input:focus{
                                             <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
                                                
                                             <td colspan="6" style="text-align: end;">
-                                        <input type="submit" value="Make Payment" style="color:white;background-color:#38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="color:white;background-color:#38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
                                 </tfoot>

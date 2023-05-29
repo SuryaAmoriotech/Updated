@@ -33,9 +33,9 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
         <div class="header-title">
 
-            <h1><?php echo display('customer') ?></h1>
+            <h1><?php echo display('manage_customer')  ?></h1>
 
-            <small><?php echo display('manage_customer') ?></small>
+            <small><?php // echo display('manage_customer') ?></small>
 
             <ol class="breadcrumb">
 
@@ -181,18 +181,18 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
                    
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php  echo  display('download')?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
    
   
                 
-      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
+      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> <?php  echo  display('PDF')?></a></li>
       
       <li class="divider"></li>         
                   
-      <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> XLS</a></li>
+      <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> <?php  echo  display('XLS')?></a></li>
                  
     </ul>
   </div>
@@ -225,28 +225,28 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
                     <div class="panel-heading">
 <div class="row">
-<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by">Filter By&nbsp;&nbsp;
+<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by"><?php echo display('Filter By')?>&nbsp;&nbsp;
                    </label><select id="filterby" style="border-radius:5px;height:25px;">
-                  <option value="1">ID</option>
-<option value="2">Company Name</option>
-<option value="3">Billing Address</option>
-<option value="4">Shipping Address</option>
-<option value="5">Business Phone</option>
-<option value="6">Primary Email</option>
-<option value="7">Mobile</option>
-<option value="8">Credit Limit</option>
-<option value="9">Customer Type</option>
-<option value="10">Secondary Email</option>
-<option value="11">Contact Person</option>
-<option value="12">Fax</option>
-<option value="13">Preferred currency</option>
-<option value="14">City</option>
-<option value="15">State</option>
-<option value="16">Zip</option>
-<option value="17">Country</option>
-<option value="18">Payment Terms</option>
-<option value="19">Sales Tax</option>
-<option value="20">Tax Rates</option>
+                  <option value="1"> <?php echo display('ID') ?></option>
+<option value="2"><?php echo display('Company Name');?></option>
+<option value="3"><?php  echo  display('Billing Address');?></option>
+<option value="4"><?php  echo  display('Shipping Address');?></option>
+<option value="5"><?php  echo  display('Business Phone');?></option>
+<option value="6"><?php  echo  display('Primary Email');?></option>
+<option value="7"><?php  echo  display('Mobile');?></option>
+<option value="8"><?php echo display('Credit Limit');?></option>
+<option value="9"><?php echo display('Customer Type');?></option>
+<option value="10"><?php  echo  display('Secondary Email');?></option>
+<option value="11"><?php  echo  display('Contact Person');?></option>
+<option value="12"><?php  echo  display('Fax');?></option>
+<option value="13"><?php  echo  display('Preferred currency');?></option>
+<option value="14"><?php  echo  display('city');?></option>
+<option value="15"><?php  echo  display('state');?></option>
+<option value="16"><?php  echo  display('zip');?></option>
+<option value="17"><?php  echo  display('country');?></option>
+<option value="18"><?php echo display('Payment Terms');?></option>
+<option value="19"><?php echo display('Sales Tax') ?></option>
+<option value="20"><?php echo  display('Tax Rates')?></option>
 
 
 
@@ -263,31 +263,31 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
   <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
   <thead class="sortableTable">
       <tr style="background-color: #337ab7;border-color: #2e6da4;" class="sortableTable__header">
-      <th class="1 value" data-control-column="1" data-col="1"   style="width: 80px; height: 40.0114px;" >ID</th>
-        <th class="2 value" data-control-column="2" data-col="2" style="height: 45.0114px; width: 234.011px" >Company Name</th>
-        <th class="3  value" data-control-column="3" data-col=" 3 " style="height: 42.0114px;"   > Billing Address </th>
-        <th class="4 value"  data-control-column="4" data-col="4" style="width: 248.011px;"        >Shipping Address</th>
-        <th class="5 value" data-control-column="5"   data-col="5" style="width: 198.011px;"       >Business Phone</th>
-        <th class="6 value" data-control-column="6"data-col="6" style="width: 190.011px; height: 44.0114px;">Primary Email</th>
-           <th class="7 value" data-control-column="7"   data-col="7" style="width: 198.011px;"       >Mobile</th>
-            <th class="8 value" data-control-column="8" data-col="8"   style="width: 198.011px;"       >Credit Limit</th>
-            <th class="9 value"  data-control-column="9" data-col="9" style="width: 248.011px;"        >Customer Type</th>
-        <th class="10 value" data-control-column="10"   data-col="10" style="width: 198.011px;"       >Secondary Email</th>
-        <th class="11 value" data-control-column="11"data-col="11" style="width: 190.011px; height: 44.0114px;">Contact Person</th>
-           <th class="12 value" data-control-column="12"   data-col="12" style="width: 198.011px;"       >Fax</th>
-            <th class="13 value" data-control-column="13" data-col="13"   style="width: 198.011px;"       >Preferred currency</th>
+      <th class="1 value" data-control-column="1" data-col="1"   style="width: 80px; height: 40.0114px;" ><?php echo display('ID') ?></th>
+        <th class="2 value" data-control-column="2" data-col="2" style="height: 45.0114px; width: 234.011px" ><?php echo display('Company Name');?></th>
+        <th class="3  value" data-control-column="3" data-col=" 3 " style="height: 42.0114px;"   > <?php  echo  display('Billing Address');?> </th>
+        <th class="4 value"  data-control-column="4" data-col="4" style="width: 248.011px;"        ><?php  echo  display('Shipping Address');?></th>
+        <th class="5 value" data-control-column="5"   data-col="5" style="width: 198.011px;"       ><?php  echo  display('Business Phone');?></th>
+        <th class="6 value" data-control-column="6"data-col="6" style="width: 190.011px; height: 44.0114px;"><?php  echo  display('Primary Email');?></th>
+           <th class="7 value" data-control-column="7"   data-col="7" style="width: 198.011px;"       ><?php  echo  display('Mobile');?></th>
+            <th class="8 value" data-control-column="8" data-col="8"   style="width: 198.011px;"       ><?php echo display('Credit Limit');?></th>
+            <th class="9 value"  data-control-column="9" data-col="9" style="width: 248.011px;"        ><?php echo display('Customer Type');?></th>
+        <th class="10 value" data-control-column="10"   data-col="10" style="width: 198.011px;"       ><?php  echo  display('Secondary Email');?></th>
+        <th class="11 value" data-control-column="11"data-col="11" style="width: 190.011px; height: 44.0114px;"><?php  echo  display('Contact Person');?></th>
+           <th class="12 value" data-control-column="12"   data-col="12" style="width: 198.011px;"       ><?php  echo  display('Fax');?></th>
+            <th class="13 value" data-control-column="13" data-col="13"   style="width: 198.011px;"       ><?php  echo  display('Preferred currency');?></th>
 
 
-            <th class="14 value" data-control-column="14"   data-col="14" style="width: 198.011px;"       >City</th>
-            <th class="15 value" data-control-column="15" data-col="15"   style="width: 198.011px;"       >State</th>
-            <th class="16 value"  data-control-column="16" data-col="16" style="width: 248.011px;"        >Zip</th>
-        <th class="17 value" data-control-column="17"   data-col="17" style="width: 198.011px;"       >Country</th>
+            <th class="14 value" data-control-column="14"   data-col="14" style="width: 198.011px;"       ><?php  echo  display('city');?></th>
+            <th class="15 value" data-control-column="15" data-col="15"   style="width: 198.011px;"       ><?php  echo  display('state');?></th>
+            <th class="16 value"  data-control-column="16" data-col="16" style="width: 248.011px;"        ><?php  echo  display('zip');?></th>
+        <th class="17 value" data-control-column="17"   data-col="17" style="width: 198.011px;"       ><?php  echo  display('country');?></th>
         
-           <th class="18 value" data-control-column="18"   data-col="18" style="width: 198.011px;"       >Payment Terms</th>
-            <th class="19 value" data-control-column="19" data-col="19"   style="width: 198.011px;"       >Sales Tax</th>
-            <th class="20 value" data-control-column="20" data-col="20"   style="width: 198.011px;"       >Tax Rates</th>
+           <th class="18 value" data-control-column="18"   data-col="18" style="width: 198.011px;"       ><?php echo display('Payment Terms');?></th>
+            <th class="19 value" data-control-column="19" data-col="19"   style="width: 198.011px;"       ><?php echo display('Sales Tax') ?></th>
+            <th class="20 value" data-control-column="20" data-col="20"   style="width: 198.011px;"       ><?php echo  display('Tax Rates')?></th>
      <div class="myButtonClass Action"> 
-         <th class="21 value text-center" data-col="21" data-control-column="21" data-formatter="commands" data-sortable="false"     >Action</th>
+         <th class="21 value text-center" data-col="21" data-control-column="21" data-formatter="commands" data-sortable="false"     ><?php echo  display('action')?></th>
         </div>
       </tr>
     </thead>
@@ -405,29 +405,29 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> ID<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> <?php echo display('ID') ?><br>
 
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/>Company Name<br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Company Name');?><br>
 
-    <input type="checkbox"  data-control-column="3" checked = "checked" class="3 " value="3  "/>Billing Address <br>
+    <input type="checkbox"  data-control-column="3" checked = "checked" class="3 " value="3  "/><?php  echo  display('Billing Address');?> <br>
 
-<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/>Shipping Address<br>
+<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/><?php  echo  display('Shipping Address');?><br>
 
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/>Business Phone<br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php  echo  display('Business Phone');?><br>
 
-<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/>Primary Email<br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php  echo  display('Primary Email');?><br>
 
-<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/>Mobile<br>
-
-
-<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/>Credit limit<br>
+<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/><?php  echo  display('Mobile');?><br>
 
 
-<input type="checkbox"  data-control-column="9"  class="9" value="9"/>Customer Type<br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/><?php echo display('Credit Limit');?><br>
 
-<input type="checkbox"  data-control-column="10"  class="10" value="10"/>Secondary Email<br>
 
-<input type="checkbox"  data-control-column="11"  class="11" value="11"/>Contact Person<br>
+<input type="checkbox"  data-control-column="9"  class="9" value="9"/><?php echo display('Customer Type');?><br>
+
+<input type="checkbox"  data-control-column="10"  class="10" value="10"/><?php  echo  display('Secondary Email');?><br>
+
+<input type="checkbox"  data-control-column="11"  class="11" value="11"/><?php  echo  display('Contact Person');?><br>
         </div>
         </div>
         <div class="col-sm-6">
@@ -435,25 +435,25 @@ $count++;
                             
 
 
-<input type="checkbox"  data-control-column="12"  class="12" value="12"/>Fax <br>
+<input type="checkbox"  data-control-column="12"  class="12" value="12"/><?php  echo  display('Fax');?> <br>
 
-<input type="checkbox"  data-control-column="13"  class="13" value="13"/>Preferred currency<br>
-
-
-<input type="checkbox"  data-control-column="14"  class="14" value="14"/>City<br>
-
-<input type="checkbox"  data-control-column="15"  class="15" value="15"/>State<br>
-
-<input type="checkbox"  data-control-column="16"  class="16" value="16"/>Zip<br>
-
-<input type="checkbox"  data-control-column="17"  class="17" value="17"/>Country<br>
+<input type="checkbox"  data-control-column="13"  class="13" value="13"/><?php  echo  display('Preferred currency');?><br>
 
 
-<input type="checkbox"  data-control-column="18"  class="18" value="18"/>Payment Terms <br>
+<input type="checkbox"  data-control-column="14"  class="14" value="14"/><?php  echo  display('city');?><br>
 
-<input type="checkbox"  data-control-column="19"  class="19" value="19"/>Sales Tax <br>
-<input type="checkbox"  data-control-column="20"  class="20" value="20"/>Tax Rates<br>
-      <input type="checkbox"  data-control-column="21" checked = "checked" class="21" value="21"/>Action<br>
+<input type="checkbox"  data-control-column="15"  class="15" value="15"/><?php  echo  display('state');?><br>
+
+<input type="checkbox"  data-control-column="16"  class="16" value="16"/><?php  echo  display('zip');?><br>
+
+<input type="checkbox"  data-control-column="17"  class="17" value="17"/><?php  echo  display('country');?><br>
+
+
+<input type="checkbox"  data-control-column="18"  class="18" value="18"/><?php echo display('Payment Terms');?> <br>
+
+<input type="checkbox"  data-control-column="19"  class="19" value="19"/><?php echo display('Sales Tax') ?> <br>
+<input type="checkbox"  data-control-column="20"  class="20" value="20"/><?php echo  display('Tax Rates')?><br>
+      <input type="checkbox"  data-control-column="21" checked = "checked" class="21" value="21"/><?php echo  display('action')?><br>
 
 <!-- <input type="checkbox"  data-control-column="15" checked = "checked" class="opt Action" value="Action"/>Action<br> -->
      <!--      <input type="submit" value="submit" id="submit"/>--> 

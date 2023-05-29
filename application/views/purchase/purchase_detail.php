@@ -50,30 +50,32 @@
             <div class="row">
                 <div class="col-6">
                 <table id="one" style="border:none;">
-    <tr><td  class="key">Vendor</td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
-    <tr><td  class="key">Vendor Type</td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
-    <tr><td  class="key">Invoice No</td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key">Payment Due Date</td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
-    <tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key">Payment Type</td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
-    <tr><td  class="key">ETD</td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
-   <?php  if(!empty($isf_filling)) { ?>
-    <tr><td  class="key">ISF NO</td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Vendor');?></td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Type');?></td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('invoice_no');  ?></td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Due Date');?></td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+<tr><td  class="key"><?php
+        echo display('payment_type');
+        ?></td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
+<?php  if(!empty($isf_filling)) { ?>
+<tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
 <?php   }  ?>
 
 </table>
 
-                </div>
-                <div class="col-6">
-                <table id="two">
-                <tr><td  class="key">Vendor Address</td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
-<tr><td  class="key">Expenses /Bill Date</td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
-<tr><td  class="key">Container Number</td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key">B/L No</td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
-<tr><td  class="key">ETA</td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
-<tr><td  class="key">Port of Discharge</td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
+        </div>
+        <div class="col-6">
+        <table id="two">
+        <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
-    
+
     
 </table> </div> 
             </div>
@@ -152,17 +154,17 @@ if($a==$m){
                     <?php $n++;}}  ?><br>
                           <tfoot style="border:none;">
                                     <tr>
-                             <td style="text-align:right;font-size: 9px;" colspan="7"><b>Gross Sq.ft :</b></td>
+                             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_<?php echo $m; ?>" name="overall_gross[]"  class="overall_gross"  style="border:none;width: 40px;font-size: 9px;"   readonly="readonly"  /> 
             </td>     
-             <td style="text-align:right;font-size: 9px;" colspan="4"><b>Net Sq.ft :</b></td>
+             <td style="text-align:right;font-size: 9px;" colspan="4"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 20px;font-size: 9px;"   readonly="readonly"  /> 
              <!-- <input type="text"   style="width:60px;" readonly id="net_sq_ft_<?php  echo $m.$n; ?>" name="overall_net[]" value="<?php  echo $inv['net_sqft'];  ?>" class="overall_net"/></td> -->
             </td>
 
-                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b><?php  echo display('total'); ?> :</b></td>
                                         <td style="text-align: left;">
                <span class="input-symbol-euro">     <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total"   style="border:none;padding-top: 6px;width: 60px;font-size: 9px;text-align: left;"    readonly="readonly"  />
             </td>                   
@@ -175,14 +177,14 @@ if($a==$m){
                             <table border="0" class="overall table table-hover" style="border:none;">
 <tr style="border:none;">
 
- <td colspan="2" style="text-align:left;border:none;"><b>Overall TOTAL :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
+ <td colspan="2" style="text-align:left;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
  <td style="text-align:right;border:none;" colspan="12"><b><?php echo  "Tax( ".$tax_des;  ?></b></td>
                          
                    <td  style="border:none;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
 </tr>
 <tr style="border:none;">
-<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Gross Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
-<td style="text-align:right;border:none;" colspan="10"><b>GRAND TOTAL :</b></td>
+<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
+<td style="text-align:right;border:none;" colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</b></td>
                             <td style="border:none;">
      <?php  echo $currency; ?><?php echo $purchase_all_data[0]['grand_total_amount']; ?></span>
 </td>
@@ -190,9 +192,9 @@ if($a==$m){
                           
                             <tr style="border:none;">
                                 
-                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Net Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
+                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
                             
-                            <td style="text-align:right;border:none;"  colspan="10"><b>GRAND TOTAL :</br><b>(Preferred Currency)</b></td>
+                            <td style="text-align:right;border:none;"  colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</br><b>(<?php  echo display('Preferred Currency');?>)</b></td>
                             <td style="border:none;">
   <table border="0">
 <tr>
@@ -209,7 +211,7 @@ if($a==$m){
 <?php  //  if($all_invoice[0]['amt_paid'] !==''){   ?>
                                 <tr id="amt">
                                
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Amount Paid" ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php  echo display('Amount Paid');?>:</b></td>
                                       
                                         <td style="border:none;">
                                    <?php echo $currency_type." ".$purchase_all_data[0]['paid_amount'] ;?>
@@ -219,7 +221,7 @@ if($a==$m){
                                       
                                         </tr> 
                                         <tr id="bal">
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Balance Amount " ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo display('balance_ammount');  ?>:</b></td>
                                         <td style="border:none;">
                                        
                                       <?php echo $currency_type." ".$purchase_all_data[0]['balance'];?>
@@ -231,8 +233,8 @@ if($a==$m){
 
                   
             <br>
-<h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
-<h4>Message on invoice :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
+<h4><?php echo  display('Remarks / Details');?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
 <br><br>
         </div> </div>
 
@@ -276,30 +278,32 @@ elseif($template==1)
             <div class="row">
                 <div class="col-6">
                 <table id="one" style="border:none;">
-    <tr><td  class="key">Vendor</td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
-    <tr><td  class="key">Vendor Type</td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
-    <tr><td  class="key">Invoice No</td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key">Payment Due Date</td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
-    <tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key">Payment Type</td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
-    <tr><td  class="key">ETD</td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
-   <?php  if(!empty($isf_filling)) { ?>
-    <tr><td  class="key">ISF NO</td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Vendor');?></td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Type');?></td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('invoice_no');  ?></td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Due Date');?></td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+<tr><td  class="key"><?php
+        echo display('payment_type');
+        ?></td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
+<?php  if(!empty($isf_filling)) { ?>
+<tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
 <?php   }  ?>
 
 </table>
 
-                </div>
-                <div class="col-6">
-                <table id="two">
-                <tr><td  class="key">Vendor Address</td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
-<tr><td  class="key">Expenses /Bill Date</td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
-<tr><td  class="key">Container Number</td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key">B/L No</td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
-<tr><td  class="key">ETA</td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
-<tr><td  class="key">Port of Discharge</td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
+        </div>
+        <div class="col-6">
+        <table id="two">
+        <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
-    
+
     
 </table> </div> 
             </div>
@@ -376,19 +380,19 @@ if($a==$m){
 </tr></table></td> 
                     </tr>
                     <?php $n++;}}  ?><br>
-                          <tfoot style="border:none;">
+                           <tfoot style="border:none;">
                                     <tr>
-                             <td style="text-align:right;font-size: 9px;" colspan="7"><b>Gross Sq.ft :</b></td>
+                             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_<?php echo $m; ?>" name="overall_gross[]"  class="overall_gross"  style="border:none;width: 40px;font-size: 9px;"   readonly="readonly"  /> 
             </td>     
-             <td style="text-align:right;font-size: 9px;" colspan="4"><b>Net Sq.ft :</b></td>
+             <td style="text-align:right;font-size: 9px;" colspan="4"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 20px;font-size: 9px;"   readonly="readonly"  /> 
              <!-- <input type="text"   style="width:60px;" readonly id="net_sq_ft_<?php  echo $m.$n; ?>" name="overall_net[]" value="<?php  echo $inv['net_sqft'];  ?>" class="overall_net"/></td> -->
             </td>
 
-                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b><?php  echo display('total'); ?> :</b></td>
                                         <td style="text-align: left;">
                <span class="input-symbol-euro">     <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total"   style="border:none;padding-top: 6px;width: 60px;font-size: 9px;text-align: left;"    readonly="readonly"  />
             </td>                   
@@ -401,14 +405,14 @@ if($a==$m){
                             <table border="0" class="overall table table-hover" style="border:none;">
 <tr style="border:none;">
 
- <td colspan="2" style="text-align:left;border:none;"><b>Overall TOTAL :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
+ <td colspan="2" style="text-align:left;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
  <td style="text-align:right;border:none;" colspan="12"><b><?php echo  "Tax( ".$tax_des;  ?></b></td>
                          
                    <td  style="border:none;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
 </tr>
 <tr style="border:none;">
-<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Gross Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
-<td style="text-align:right;border:none;" colspan="10"><b>GRAND TOTAL :</b></td>
+<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
+<td style="text-align:right;border:none;" colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</b></td>
                             <td style="border:none;">
      <?php  echo $currency; ?><?php echo $purchase_all_data[0]['grand_total_amount']; ?></span>
 </td>
@@ -416,9 +420,9 @@ if($a==$m){
                           
                             <tr style="border:none;">
                                 
-                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Net Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
+                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
                             
-                            <td style="text-align:right;border:none;"  colspan="10"><b>GRAND TOTAL :</br><b>(Preferred Currency)</b></td>
+                            <td style="text-align:right;border:none;"  colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</br><b>(<?php  echo display('Preferred Currency');?>)</b></td>
                             <td style="border:none;">
   <table border="0">
 <tr>
@@ -435,7 +439,7 @@ if($a==$m){
 <?php  //  if($all_invoice[0]['amt_paid'] !==''){   ?>
                                 <tr id="amt">
                                
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Amount Paid" ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php  echo display('Amount Paid');?>:</b></td>
                                       
                                         <td style="border:none;">
                                    <?php echo $currency_type." ".$purchase_all_data[0]['paid_amount'] ;?>
@@ -445,7 +449,7 @@ if($a==$m){
                                       
                                         </tr> 
                                         <tr id="bal">
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Balance Amount " ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo display('balance_ammount');  ?>:</b></td>
                                         <td style="border:none;">
                                        
                                       <?php echo $currency_type." ".$purchase_all_data[0]['balance'];?>
@@ -457,11 +461,10 @@ if($a==$m){
 
                   
             <br>
-<h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
-<h4>Message on invoice :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
+<h4><?php echo  display('Remarks / Details');?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
 <br><br>
         </div> </div>
-
 
         <?php 
 
@@ -503,30 +506,32 @@ elseif($template==3)
             <div class="row">
                 <div class="col-6">
                 <table id="one" style="border:none;">
-    <tr><td  class="key">Vendor</td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
-    <tr><td  class="key">Vendor Type</td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
-    <tr><td  class="key">Invoice No</td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key">Payment Due Date</td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
-    <tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key">Payment Type</td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
-    <tr><td  class="key">ETD</td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
-   <?php  if(!empty($isf_filling)) { ?>
-    <tr><td  class="key">ISF NO</td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+   <tr><td  class="key"><?php echo display('Vendor');?></td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Type');?></td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('invoice_no');  ?></td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Due Date');?></td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+<tr><td  class="key"><?php
+        echo display('payment_type');
+        ?></td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
+<?php  if(!empty($isf_filling)) { ?>
+<tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
 <?php   }  ?>
 
 </table>
 
-                </div>
-                <div class="col-6">
-                <table id="two">
-                <tr><td  class="key">Vendor Address</td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
-<tr><td  class="key">Expenses /Bill Date</td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
-<tr><td  class="key">Container Number</td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key">B/L No</td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
-<tr><td  class="key">ETA</td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
-<tr><td  class="key">Port of Discharge</td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
+        </div>
+        <div class="col-6">
+        <table id="two">
+        <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
-    
+
     
 </table> </div> 
             </div>
@@ -603,19 +608,19 @@ if($a==$m){
 </tr></table></td> 
                     </tr>
                     <?php $n++;}}  ?><br>
-                          <tfoot style="border:none;">
+                            <tfoot style="border:none;">
                                     <tr>
-                             <td style="text-align:right;font-size: 9px;" colspan="7"><b>Gross Sq.ft :</b></td>
+                             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_<?php echo $m; ?>" name="overall_gross[]"  class="overall_gross"  style="border:none;width: 40px;font-size: 9px;"   readonly="readonly"  /> 
             </td>     
-             <td style="text-align:right;font-size: 9px;" colspan="4"><b>Net Sq.ft :</b></td>
+             <td style="text-align:right;font-size: 9px;" colspan="4"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 20px;font-size: 9px;"   readonly="readonly"  /> 
              <!-- <input type="text"   style="width:60px;" readonly id="net_sq_ft_<?php  echo $m.$n; ?>" name="overall_net[]" value="<?php  echo $inv['net_sqft'];  ?>" class="overall_net"/></td> -->
             </td>
 
-                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;font-size: 9px;" colspan="3"><b><?php  echo display('total'); ?> :</b></td>
                                         <td style="text-align: left;">
                <span class="input-symbol-euro">     <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total"   style="border:none;padding-top: 6px;width: 60px;font-size: 9px;text-align: left;"    readonly="readonly"  />
             </td>                   
@@ -628,14 +633,14 @@ if($a==$m){
                             <table border="0" class="overall table table-hover" style="border:none;">
 <tr style="border:none;">
 
- <td colspan="2" style="text-align:left;border:none;"><b>Overall TOTAL :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
+ <td colspan="2" style="text-align:left;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $overall_total; ?> </td>
  <td style="text-align:right;border:none;" colspan="12"><b><?php echo  "Tax( ".$tax_des;  ?></b></td>
                          
                    <td  style="border:none;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
 </tr>
 <tr style="border:none;">
-<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Gross Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
-<td style="text-align:right;border:none;" colspan="10"><b>GRAND TOTAL :</b></td>
+<td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_gross'];  ?></td>
+<td style="text-align:right;border:none;" colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</b></td>
                             <td style="border:none;">
      <?php  echo $currency; ?><?php echo $purchase_all_data[0]['grand_total_amount']; ?></span>
 </td>
@@ -643,9 +648,9 @@ if($a==$m){
                           
                             <tr style="border:none;">
                                 
-                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b>Overall Net Sq.Ft :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
+                            <td colspan="2"  style="vertical-align:top;text-align:left;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_all_data[0]['total_net'];  ?></td>
                             
-                            <td style="text-align:right;border:none;"  colspan="10"><b>GRAND TOTAL :</br><b>(Preferred Currency)</b></td>
+                            <td style="text-align:right;border:none;"  colspan="10"><b><?php  echo display('GRAND TOTAL');?> :</br><b>(<?php  echo display('Preferred Currency');?>)</b></td>
                             <td style="border:none;">
   <table border="0">
 <tr>
@@ -662,7 +667,7 @@ if($a==$m){
 <?php  //  if($all_invoice[0]['amt_paid'] !==''){   ?>
                                 <tr id="amt">
                                
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Amount Paid" ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php  echo display('Amount Paid');?>:</b></td>
                                       
                                         <td style="border:none;">
                                    <?php echo $currency_type." ".$purchase_all_data[0]['paid_amount'] ;?>
@@ -672,7 +677,7 @@ if($a==$m){
                                       
                                         </tr> 
                                         <tr id="bal">
-                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo "Balance Amount " ?>:</b></td>
+                                        <td style="border:none;text-align:right;"  colspan="15"><b><?php echo display('balance_ammount');  ?>:</b></td>
                                         <td style="border:none;">
                                        
                                       <?php echo $currency_type." ".$purchase_all_data[0]['balance'];?>
@@ -684,11 +689,10 @@ if($a==$m){
 
                   
             <br>
-<h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
-<h4>Message on invoice :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
+<h4><?php echo  display('Remarks / Details');?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?php echo $purchase_all_data[0]['message_invoice']; ?>
 <br><br>
         </div> </div>
-
 
         <?php   } ?>
 

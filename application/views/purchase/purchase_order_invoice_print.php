@@ -6,12 +6,12 @@
 	        <i class="pe-7s-note2"></i>
 	    </div>
 	    <div class="header-title">
-	        <h1>Purchase Order Invoice</h1>
-	        <small>Purchase Order Invoice</small>
+	        <h1><?php  echo  display('Purchase Order');  ?></h1>
+	        <small></small>
 	        <ol class="breadcrumb">
 	            <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-	            <li><a href="#">Purchase Order Invoice</a></li>
-	            <li class="active">Purchase Order Invoice</li>
+	            <li><a href="#"><?php echo display('expense');  ?></a></li>
+	            <li class="active"><?php  echo  display('Purchase Order');?></li>
 	        </ol>
 	    </div>
 	</section>
@@ -55,10 +55,10 @@ if($invoice_setting[0]['template']==1)
 <div class="row">
 <div class="col-6">
 <table id="one" >
-<tr><td  class="key">Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
-<tr><td  class="key">Purchase Order Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
-<tr><td  class="key">Created By</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
-<tr><td  class="key">Vendor Address</td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
+<tr><td  class="key"><?php echo  display('Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
+<tr><td  class="key"><?php  echo display('Purchase order date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Created By');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Address');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
 
 
 </table>
@@ -67,12 +67,12 @@ if($invoice_setting[0]['template']==1)
 <div class="col-6">
 <table id="two">
 
-<tr><td  class="key">Ship To</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
-<tr><td class="key">P.O Number</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
-<tr><td  class="key">Shipment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Ship To');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
+<tr><td class="key"><?php echo display('P.O Number');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Payment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Shipment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
 
-<tr><td  class="key">Est.Shipment Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Shipment Date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
 </table>
 
 </div>
@@ -174,34 +174,34 @@ if($a==$m){
 <table border="0" class="overall table table-hover" style="border:none;">
   
   <tr style="border:none;">
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td>
         <td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php echo $purchase_detail[0]['total'];  ?> </td>
          <!-- <td colspan="4" style="text-align:right;border:none;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <?php  echo $currency ; ?>    <?php echo $purchase_detail[0]['tax_details'];  ?></td> -->
         
    
-    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  "Tax (".$tax_des;  ?></b></td>
+    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  display('tax')." (".$tax_des;  ?></b></td>
                                  
                                  <td style='border:none;'><?php  echo $currency; ?><?php echo $tax_details;  ?></td>
         
 
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_gross'];  ?></td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_net'];  ?>   </td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/><b>Preferred Currency</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b><br/><b>(<?php  echo display('Preferred Currency');?>)</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
         
                       
                   
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
-         <td colspan="5" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td><td style="border:none;"> 
+        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Weight');?> :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
+         <td colspan="5" class="amt" style="text-align:right;border:none;"><b><?php  echo display('Amount Paid');?> :</b></td><td style="border:none;"> 
                                         <table border="0">
       <tr class="amt">
 
@@ -213,7 +213,7 @@ if($a==$m){
                                             </tr> 
                                            <tr>
       <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('balance_ammount');  ?></b></td>
         <td class="amt" style="border:none;" colspan="1">
             <table border="0">
       <tr class="amt">
@@ -227,8 +227,8 @@ if($a==$m){
                         </div>
 
 <br>
-<h4>Remarks :</h4><?= $invoice[0]['remarks']; ?><br>
-<h4>Message on Invoice :</h4><?= $invoice[0]['message_invoice']; ?><br>
+<h4><?php echo  display('Remarks / Details');?>  :</h4><?= $invoice[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?= $invoice[0]['message_invoice']; ?><br>
 
 </div>
 
@@ -267,10 +267,10 @@ elseif($invoice_setting[0]['template']==3)
 <div class="row">
 <div class="col-6">
 <table id="one" >
-<tr><td  class="key">Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
-<tr><td  class="key">Purchase Order Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
-<tr><td  class="key">Created By</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
-<tr><td  class="key">Vendor Address</td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
+<tr><td  class="key"><?php echo  display('Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
+<tr><td  class="key"><?php  echo display('Purchase order date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Created By');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Address');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
 
 
 </table>
@@ -279,12 +279,12 @@ elseif($invoice_setting[0]['template']==3)
 <div class="col-6">
 <table id="two">
 
-<tr><td  class="key">Ship To</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
-<tr><td class="key">P.O Number</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
-<tr><td  class="key">Shipment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Ship To');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
+<tr><td class="key"><?php echo display('P.O Number');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Payment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Shipment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
 
-<tr><td  class="key">Est.Shipment Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Shipment Date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
 </table>
 
 </div>
@@ -386,34 +386,34 @@ if($a==$m){
 <table border="0" class="overall table table-hover" style="border:none;">
   
   <tr style="border:none;">
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td>
         <td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php echo $purchase_detail[0]['total'];  ?> </td>
          <!-- <td colspan="4" style="text-align:right;border:none;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <?php  echo $currency ; ?>    <?php echo $purchase_detail[0]['tax_details'];  ?></td> -->
         
    
-    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  "Tax (".$tax_des;  ?></b></td>
+    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  display('tax')." (".$tax_des;  ?></b></td>
                                  
                                  <td style='border:none;'><?php  echo $currency; ?><?php echo $tax_details;  ?></td>
         
 
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_gross'];  ?></td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_net'];  ?>   </td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/><b>Preferred Currency</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b><br/><b>(<?php  echo display('Preferred Currency');?>)</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
         
                       
                   
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
-         <td colspan="5" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td><td style="border:none;"> 
+        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Weight');?> :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
+         <td colspan="5" class="amt" style="text-align:right;border:none;"><b><?php  echo display('Amount Paid');?> :</b></td><td style="border:none;"> 
                                         <table border="0">
       <tr class="amt">
 
@@ -425,7 +425,7 @@ if($a==$m){
                                             </tr> 
                                            <tr>
       <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('balance_ammount');  ?></b></td>
         <td class="amt" style="border:none;" colspan="1">
             <table border="0">
       <tr class="amt">
@@ -439,8 +439,8 @@ if($a==$m){
                         </div>
 
 <br>
-<h4>Remarks :</h4><?= $invoice[0]['remarks']; ?><br>
-<h4>Message on Invoice :</h4><?= $invoice[0]['message_invoice']; ?><br>
+<h4><?php echo  display('Remarks / Details');?>  :</h4><?= $invoice[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?= $invoice[0]['message_invoice']; ?><br>
 
 </div>
 
@@ -468,10 +468,10 @@ if($invoice_setting[0]['template']==2)
 <div class="row">
 <div class="col-6">
 <table id="one" >
-<tr><td  class="key">Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
-<tr><td  class="key">Purchase Order Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
-<tr><td  class="key">Created By</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
-<tr><td  class="key">Vendor Address</td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
+<tr><td  class="key"><?php echo  display('Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $supplier[0]['supplier_name'];  ?></td></tr>
+<tr><td  class="key"><?php  echo display('Purchase order date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['purchase_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Created By');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['create'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Address');?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $invoice[0]['address']; ?> </br>  <?php echo $invoice[0]['city']."\n".$invoice[0]['state'] ."\n". $invoice[0]['zip']  ."\n". $invoice[0]['country']  ."\n". $invoice[0]['primaryemail']   ."\n". $invoice[0]['mobile']  ;       ?>  </td></tr>
 
 
 </table>
@@ -480,12 +480,12 @@ if($invoice_setting[0]['template']==2)
 <div class="col-6">
 <table id="two">
 
-<tr><td  class="key">Ship To</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
-<tr><td class="key">P.O Number</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
-<tr><td  class="key">Shipment Terms</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Ship To');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['ship_to']; ?></td></tr>
+<tr><td class="key"><?php echo display('P.O Number');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['chalan_no'] ; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Payment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['payment_terms']; ?><?php  echo "%"; ?></td></tr>
+<tr><td  class="key"><?php echo  display('Shipment Terms');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['shipment_terms'] ; ?></td></tr>
 
-<tr><td  class="key">Est.Shipment Date</td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Shipment Date');?></td><td style="width:10px;">:</td><td calss="value"><?= $invoice[0]['est_ship_date']; ?></td></tr>
 </table>
 
 </div>
@@ -587,34 +587,34 @@ if($a==$m){
 <table border="0" class="overall table table-hover" style="border:none;">
   
   <tr style="border:none;">
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall TOTAL');?> :</b></td>
         <td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php echo $purchase_detail[0]['total'];  ?> </td>
          <!-- <td colspan="4" style="text-align:right;border:none;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <?php  echo $currency ; ?>    <?php echo $purchase_detail[0]['tax_details'];  ?></td> -->
         
    
-    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  "Tax (".$tax_des;  ?></b></td>
+    <td style="text-align:right;border:none;" colspan="5"><b><?php echo  display('tax')." (".$tax_des;  ?></b></td>
                                  
                                  <td style='border:none;'><?php  echo $currency; ?><?php echo $tax_details;  ?></td>
         
 
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Gross Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_gross'];  ?></td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b></td><td colspan="1" style="border:none;"><?php  echo $currency ; ?><?php  echo $purchase_info[0]['grand_total_amount'];   ?></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Net Sq.Ft');?> :</b></td>
         <td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_net'];  ?>   </td>
-         <td colspan="5" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/><b>Preferred Currency</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
+         <td colspan="5" style="text-align:right;border:none;"><b><?php  echo display('GRAND TOTAL');?> :</b><br/><b>(<?php  echo display('Preferred Currency');?>)</b></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="border:none;"></td> <td style="border:none;text-align:left;"><?php  echo $supplier_currency." ". $purchase_info[0]['gtotal_preferred_currency'];   ?></td></tr></table></td>
         
                       
                   
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
-         <td colspan="5" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td><td style="border:none;"> 
+        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php  echo display('Overall Weight');?> :</b></td><td colspan="1" style="border:none;"><?php echo  $purchase_detail[0]['total_amount'];  ?> </td>
+         <td colspan="5" class="amt" style="text-align:right;border:none;"><b><?php  echo display('Amount Paid');?> :</b></td><td style="border:none;"> 
                                         <table border="0">
       <tr class="amt">
 
@@ -626,7 +626,7 @@ if($a==$m){
                                             </tr> 
                                            <tr>
       <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+        <td class="amt" colspan="5"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('balance_ammount');  ?></b></td>
         <td class="amt" style="border:none;" colspan="1">
             <table border="0">
       <tr class="amt">
@@ -640,8 +640,8 @@ if($a==$m){
                         </div>
 
 <br>
-<h4>Remarks :</h4><?= $invoice[0]['remarks']; ?><br>
-<h4>Message on Invoice :</h4><?= $invoice[0]['message_invoice']; ?><br>
+<h4><?php echo  display('Remarks / Details');?>  :</h4><?= $invoice[0]['remarks']; ?><br>
+<h4><?php echo  display('Message on Invoice');?> :</h4><?= $invoice[0]['message_invoice']; ?><br>
 
 </div>
 
@@ -661,7 +661,7 @@ if($a==$m){
       <div class="modal-content" id="myModal_epurchase" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="">
       
-          <h4 class="modal-title">Expenses - Purchase Order</h4>
+          <h4 class="modal-title"><?php  echo display('purchase')."-".display('Purchase Order'); ?></h4>
         </div>
         <div class="content">
 
