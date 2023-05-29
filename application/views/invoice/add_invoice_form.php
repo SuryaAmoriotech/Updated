@@ -771,7 +771,9 @@ td {
                                             <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
                                                
                                             <td colspan="21" style="text-align: end;">
-                                        <input type="submit" value= "<?php echo display('Make Payment')?>" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+
                                             </td>
                                             </tr>
                                             </tfoot>
@@ -1093,15 +1095,7 @@ function discard(){
         window.location = "<?php  echo base_url(); ?>Cinvoice/manage_invoice";
       }, 2000);
      }
-     $('#email_btn').on('click', function (e) {
-// var link=localStorage.getItem("truck");
-// console.log(link);
- var popout = window.open("<?php  echo base_url(); ?>Cinvoice/sendmail_with_attachments/"+$('#invoice_hdn1').val());
-    // window.setTimeout(function(){
-    //     popout.close();
-    //  }, 1500);
-      e.preventDefault();
-});
+
 $('#insert_trucking').submit(function(e) {
   $.ajax({
     url:"<?php echo base_url(); ?>Cinvoice/manual_sales_insert",

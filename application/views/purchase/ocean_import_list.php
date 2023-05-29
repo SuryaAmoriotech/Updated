@@ -22,12 +22,12 @@
 	        <i class="pe-7s-note2"></i>
 	    </div>
 	    <div class="header-title">
-	        <h1>Ocean Import Invoice</h1>
+	        <h1><?php echo display('Ocean Import Tracking');?></h1>
 	        <small><?php //echo display('manage_your_purchase') ?></small>
 	        <ol class="breadcrumb">
             <li><a href="<?php   echo base_url(); ?>"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-	            <li><a href="#">Expenses</a></li>
-	            <li class="active" style="color:orange;">Manage Ocean Import Invoice</li>
+	            <li><a href="#"><?php echo display('purchase') ?></a></li>
+	            <li class="active" style="color:orange;"><?php echo display('Manage Ocean Import') ?></li>
 	        </ol>
 	    </div>
 	</section>
@@ -98,12 +98,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  >Create ocean import</a>
+<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  ><?php echo display('Create Ocean Import Tracking');?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  >Create ocean import</a>
+<a href="<?php echo base_url('Ccpurchase/ocean_import_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"  ><?php echo display('Create Ocean Import Tracking');?></a>
 
                         <?php  } ?>
 
@@ -142,10 +142,10 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo 'Search By Date Range : '; ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range') ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="Search"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="<?php echo display('search') ?>"/>
 </div> 
 <?php echo form_close() ?>
                     </div>
@@ -175,18 +175,18 @@ $today = date('Y-m-d');
                     <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i> <!-- onclick opens MODAL -->
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span><?php echo display('download') ?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
    
   
                 
-      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
+      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> <?php echo display('pdf') ?></a></li>
       
       <li class="divider"></li> 		
                   
-                  <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> XLS</a></li>
+                  <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"><?php echo display('XLS') ?></a></li>
                  
     </ul>
   </div>
@@ -208,28 +208,28 @@ $today = date('Y-m-d');
                                    <div class="row">
 <div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by">Filter By&nbsp;&nbsp;
                    </label><select id="filterby" style="border-radius:5px;height:25px;">
-                  <option value="1">ID</option>
-<option value="2">Booking Number</option>
-<option value="3">Container Number</option>
-<option value="4">Seal Number</option>
-<option value="5">Ocean Import ID</option>
-<option value="6">Supplier Name</option>
-<option value="7">Purchase Date</option>
-<option value="8">Country of Origin</option>
-<option value="9">Place of Delivery</option>
-<option value="10">Shipper / Vendor</option>
-<option value="11">Estimated time of depature</option>
-<option value="12">Notify Party Email</option>
-<option value="13">Voyage No.</option>
-<option value="14">Port of discharge</option>
-<option value="15">Freight Forwarder</option>
-<option value="16">BL / Shipment created date</option>
-<option value="17">Estimated time of Arrival</option>
-<option value="18">Customer / Consignee</option>
-<option value="19">Vessel</option>
-<option value="20">Port of loading</option>
-<option value="21">Particulars</option>
-<option value="22">Remarks / Details</option>
+                  <option value="1"><?php echo display('ID')?></option>
+<option value="2"><?php echo display('Booking / BL No');?></option>
+<option value="3"><?php echo display('Container No');?></option>
+<option value="4"><?php echo display('Seal No');?></option>
+<option value="5"><?php  echo display('Ocean Import ID');?></option>
+<option value="6"><?php  echo display('supplier_name');?></option>
+<option value="7"><?php  echo display('purchase_date');?></option>
+<option value="8"><?php  echo display('Country of Origin');?></option>
+<option value="9"><?php echo display('Place of Delivery');?></option>
+<option value="10"><?php echo display('Shipper / Vendor');?></option>
+<option value="11"><?php echo display('Estimated Time Of Depature');?></option>
+<option value="12"><?php echo display('Notify Party Email');?></option>
+<option value="13"><?php echo display('Voyage No');?></option>
+<option value="14"><?php echo  display('Port of discharge')?></option>
+<option value="15"><?php echo display('Freight Forwarder');?></option>
+<option value="16"><?php echo  display('BL / Shipment created date')?></option>
+<option value="17"><?php echo display('Estimated time of Arrival');?></option>
+<option value="18"><?php echo display('Customer / Consignee');?></option>
+<option value="19"><?php echo display('Vessel');?></option>
+<option value="20"><?php echo display('Port of loading');?></option>
+<option value="21"><?php echo  display('particulars')?></option>
+<option value="22"><?php echo  display('Remarks / Details');?></option>
 
 
                   </select> <input id="filterinput" style="border-radius:5px;height:25px;" type="text" ></div>
@@ -250,29 +250,29 @@ $today = date('Y-m-d');
   <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
   <thead class="sortableTable">
       <tr style="background-color: #337ab7;border-color: #2e6da4;" class="sortableTable__header">
-      <th data-col="1"class="1 value"  data-control-column="1" style="width: 100px; height: 39.0114px;" >ID</th>
-        <th data-col="2" class="2 value"   data-control-column="2" style="height: 45.0114px; width: 167.011px;" >Booking Number</th>
-        <th data-col="3"class="3 value"  data-control-column="3"   style="height: 44.0114px; width: 193.011px;">Container Number</th>
-        <th data-col="4"class="4 value"       data-control-column="4"   style="width: 127.011px; height: 46.0114px;" >Seal Number</th>
-        <th data-col="5 ID "class="5 ID value" data-control-column="5" style="width: 185.011px; height: 47.0114px;" >Ocean Import ID</th>
-         <th data-col="6"class="6 value"data-control-column="6"  style="height: 42.0114px; width: 151.011px;" >Supplier Name</th>
-         <th data-col="7"class="7 value" data-control-column="7" style="width: 149.011px;" >Purchase Date</th>
-         <th data-col="8"class="8 value"data-control-column="8" style="height: 42.0114px; width: 171.011px;"  >Country of Origin</th>
-         <th data-col="9"class="9 value"data-control-column="9"style="height: 42.0114px; width: 171.011px;" >Place of Delivery</th>
-         <th data-col="10"class="10 value"  data-control-column="10" style="width: 100px; height: 39.0114px;" >Shipper / Vendor</th>
-        <th data-col="11" class="11 value"   data-control-column="11" style="height: 45.0114px; width: 167.011px;" >Estimated time of depature</th>
+      <th data-col="1"class="1 value"  data-control-column="1" style="width: 100px; height: 39.0114px;" ><?php echo display('ID')?></th>
+        <th data-col="2" class="2 value"   data-control-column="2" style="height: 45.0114px; width: 167.011px;" ><?php echo display('Booking / BL No');?></th>
+        <th data-col="3"class="3 value"  data-control-column="3"   style="height: 44.0114px; width: 193.011px;"><?php echo display('Container No');?></th>
+        <th data-col="4"class="4 value"       data-control-column="4"   style="width: 127.011px; height: 46.0114px;" ><?php echo display('Seal No');?></th>
+        <th data-col="5 ID "class="5 ID value" data-control-column="5" style="width: 185.011px; height: 47.0114px;" ><?php  echo display('Ocean Import ID');?></th>
+         <th data-col="6"class="6 value"data-control-column="6"  style="height: 42.0114px; width: 151.011px;" ><?php  echo display('supplier_name');?></th>
+         <th data-col="7"class="7 value" data-control-column="7" style="width: 149.011px;" ><?php  echo display('purchase_date');?></th>
+         <th data-col="8"class="8 value"data-control-column="8" style="height: 42.0114px; width: 171.011px;"  ><?php  echo display('Country of Origin');?></th>
+         <th data-col="9"class="9 value"data-control-column="9"style="height: 42.0114px; width: 171.011px;" ><?php echo display('Place of Delivery');?></th>
+         <th data-col="10"class="10 value"  data-control-column="10" style="width: 100px; height: 39.0114px;" ><?php echo display('Shipper / Vendor');?></th>
+        <th data-col="11" class="11 value"   data-control-column="11" style="height: 45.0114px; width: 167.011px;" ><?php echo display('Estimated Time Of Depature');?></th>
 
-         <th data-col="12"class="12 value"  data-control-column="12" style="width: 100px; height: 39.0114px;" >Notify Party Email</th>
-        <th data-col="13" class="13 value"   data-control-column="13" style="height: 45.0114px; width: 167.011px;" >Voyage No.</th>
-        <th data-col="14"class="14 value"  data-control-column="14"   style="height: 44.0114px; width: 193.011px;">Port of discharge</th>
-        <th data-col="15"class="15 value"       data-control-column="15"   style="width: 127.011px; height: 46.0114px;" >Freight Forwarder</th>
-        <th data-col="16"class="16 value" data-control-column="16" style="width: 185.011px; height: 47.0114px;" >BL / Shipment created date</th>
-         <th data-col="17"class="17 value"data-control-column="17"  style="height: 42.0114px; width: 151.011px;" >Estimated time of Arrival</th>
-         <th data-col="18"class="18 value" data-control-column="18" style="width: 149.011px;" >Customer / Consignee </th>
-         <th data-col="19"class="19 value"data-control-column="19" style="height: 42.0114px; width: 171.011px;"  >Vessel</th>
-         <th data-col="20"class="20 value"data-control-column="20"style="height: 42.0114px; width: 171.011px;" >Port of loading</th>
-         <th data-col="21"class="21 value"  data-control-column="21" style="width: 100px; height: 39.0114px;" >Particulars</th>
-        <th data-col="22" class="22 value"   data-control-column="22" style="height: 45.0114px; width: 167.011px;" >Remarks / Details</th>
+         <th data-col="12"class="12 value"  data-control-column="12" style="width: 100px; height: 39.0114px;" ><?php echo display('Notify Party Email');?><</th>
+        <th data-col="13" class="13 value"   data-control-column="13" style="height: 45.0114px; width: 167.011px;" ><?php echo display('Voyage No');?></th>
+        <th data-col="14"class="14 value"  data-control-column="14"   style="height: 44.0114px; width: 193.011px;"><?php echo  display('Port of discharge')?></th>
+        <th data-col="15"class="15 value"       data-control-column="15"   style="width: 127.011px; height: 46.0114px;" ><?php echo display('Freight Forwarder');?></th>
+        <th data-col="16"class="16 value" data-control-column="16" style="width: 185.011px; height: 47.0114px;" ><?php echo  display('BL / Shipment created date')?></th>
+         <th data-col="17"class="17 value"data-control-column="17"  style="height: 42.0114px; width: 151.011px;" ><?php echo display('Estimated time of Arrival');?></th>
+         <th data-col="18"class="18 value" data-control-column="18" style="width: 149.011px;" ><?php echo display('Customer / Consignee');?> </th>
+         <th data-col="19"class="19 value"data-control-column="19" style="height: 42.0114px; width: 171.011px;"  ><?php echo display('Vessel');?></th>
+         <th data-col="20"class="20 value"data-control-column="20"style="height: 42.0114px; width: 171.011px;" ><?php echo display('Port of loading');?></th>
+         <th data-col="21"class="21 value"  data-control-column="21" style="width: 100px; height: 39.0114px;" ><?php echo  display('particulars')?></th>
+        <th data-col="22" class="22 value"   data-control-column="22" style="height: 45.0114px; width: 167.011px;" ><?php echo  display('Remarks / Details');?></th>
        
       <div class="myButtonClass Action">
          <th data-col="23"class="text-center 23 value" data-control-column="23" data-formatter="commands" data-sortable="false" style="width: 183.011px; height: 45.0114px;" >Action</th>
@@ -403,40 +403,40 @@ $count++;
 
     <!-- The Modal Column Switch -->
             <div id="myModal_colSwitch" class="modal_colSwitch">
-                    <div class="modal-content_colSwitch" style="width:25%;height:40%;">
+                    <div class="modal-content_colSwitch" style="width:25%;height:50%;">
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                             <div class="form-group row">
                                 
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> ID<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> <?php echo display('ID')?><br>
 
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/>Booking Number<br>
-<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/>Container Number<br>
-<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/>Seal Number<br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/>Ocean Import ID<br>
-<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/>Supplier Name<br>
-<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/>Purchase Date<br>
-<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/>Country of Origin<br>
-<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/>Place of Delivery<br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Booking / BL No');?><br>
+<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/><?php echo display('Container No');?><br>
+<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/><?php echo display('Seal No');?><br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php  echo display('Ocean Import ID');?><br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php  echo display('supplier_name');?><br>
+<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/><?php  echo display('purchase_date');?><br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/><?php  echo display('Country of Origin');?><br>
+<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/><?php echo display('Place of Delivery');?><br>
 
-<input type="checkbox"  data-control-column="10"  class="10" value="10"/>Shipper / Vendor<br>
-<input type="checkbox"  data-control-column="11"  class="11" value="11"/>Estimated time of depature<br>
+<input type="checkbox"  data-control-column="10"  class="10" value="10"/><?php echo display('Shipper / Vendor');?><br>
+<input type="checkbox"  data-control-column="11"  class="11" value="11"/><?php echo display('Estimated Time Of Depature');?><br>
         </div>
         </div>
         <div class="col-sm-6">
                             <div class="form-group row">
-                            <input type="checkbox"  data-control-column="12"  class="12" value="12"/>Notify Party Email<br>
-<input type="checkbox"  data-control-column="13" class="13" value="13"/>Voyage No.<br>
-<input type="checkbox"  data-control-column="14"  class="14" value="14"/>Port of discharge<br>
-<input type="checkbox"  data-control-column="15"  class="15" value="15 "/>Freight Forwarder<br>
-<input type="checkbox"  data-control-column="16"  class="16" value="16"/>BL / Shipment created date<br>
-<input type="checkbox"  data-control-column="17"  class="17" value="17"/>Estimated time of Arrival<br>
-<input type="checkbox"  data-control-column="18"  class="18" value="18"/>Customer / Consignee<br>
-<input type="checkbox"  data-control-column="19"  class="19" value="19"/>Vessel<br>
-<input type="checkbox"  data-control-column="20"  class="20" value="20"/>Port of loading<br>
-<input type="checkbox"  data-control-column="21" class="21" value="21"/>Particulars<br>
-<input type="checkbox"  data-control-column="22"  class="22" value="22"/>Remarks / Details<br>
-<input type="checkbox"  data-control-column="23" checked = "checked" class="23" value="23"/>Action<br>
+                            <input type="checkbox"  data-control-column="12"  class="12" value="12"/><?php echo display('Notify Party Email');?><br>
+<input type="checkbox"  data-control-column="13" class="13" value="13"/><?php echo display('Voyage No');?><br>
+<input type="checkbox"  data-control-column="14"  class="14" value="14"/><?php echo  display('Port of discharge')?><br>
+<input type="checkbox"  data-control-column="15"  class="15" value="15 "/><?php echo display('Freight Forwarder');?><br>
+<input type="checkbox"  data-control-column="16"  class="16" value="16"/><?php echo  display('BL / Shipment created date')?><br>
+<input type="checkbox"  data-control-column="17"  class="17" value="17"/><?php echo display('Estimated time of Arrival');?><br>
+<input type="checkbox"  data-control-column="18"  class="18" value="18"/><?php echo display('Customer / Consignee');?><br>
+<input type="checkbox"  data-control-column="19"  class="19" value="19"/><?php echo display('Vessel');?><br>
+<input type="checkbox"  data-control-column="20"  class="20" value="20"/><?php echo display('Port of loading');?><br>
+<input type="checkbox"  data-control-column="21" class="21" value="21"/><?php echo  display('particulars')?><br>
+<input type="checkbox"  data-control-column="22"  class="22" value="22"/><?php echo  display('Remarks / Details');?><br>
+<input type="checkbox"  data-control-column="23" checked = "checked" class="23" value="23"/><?php echo  display('action');?><br>
         </div>
         </div>
 

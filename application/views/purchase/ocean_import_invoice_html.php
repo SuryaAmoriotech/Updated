@@ -17,12 +17,12 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Ocean Import Invoice Detail</h1>
-            <small>Ocean Import Invoice Detail</small>
+            <h1><?php echo  display('Ocean Import Tracking'); ?></h1>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('invoice') ?></a></li>
-                <li class="active">Ocean Export Invoice Detail</li>
+                <li class="active"><?php   echo  display('Ocean Import Tracking')?></li>
             </ol>
         </div>
     </section>
@@ -79,37 +79,37 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-    <tr><td  class="key">Shipper / Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Depature</td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
-    <tr><td  class="key">Ocean Import Tracking Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
-    <tr><td  class="key">Notify Party Email</td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
-    <tr><td  class="key">Voyage No</td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
-    <tr><td  class="key">Port Of Discharge</td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
-    <tr><td  class="key">Freight forwarder</td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
-    <tr><td  class="key">Country of Origin</td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Shipper / Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
+    <tr><td  class="key"> <?php echo display('Ocean Import Tracking date');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Notify Party Email');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Voyage No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of discharge');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Freight Forwarder');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
+    <tr><td  class="key"><?php  echo display('Country of Origin');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
    
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two">
-<tr><td  class="key">Booking / BL No</td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
-    <tr><td  class="key">Seal NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Arrival</td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
-    <tr><td class="key">Customer/Consignee</td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
-    <tr><td  class="key">Vessel</td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
-    <tr><td  class="key">Port of loading</td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
-    <tr><td  class="key">Place of Delivery</td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
-    <tr><td  class="key">BL / Shipment Created Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Booking / BL No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Seal No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated time of Arrival');?></td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
+    <tr><td class="key"><?php echo display('Customer / Consignee');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Vessel');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Delivery');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
+    <tr><td  class="key"><?php echo  display('BL / Shipment created date')?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
    
-    <tr><td  class="key">Particulars</td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
+    <tr><td  class="key"><?php echo  display('particulars')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
 </table>
               
 
                 </div>
             </div><br><br><br>
-            <h4>Remarks/Details : </h4><?php echo $remarks  ?><br><br>
+            <h4><?php echo  display('Remarks / Details');?> : </h4><?php echo $remarks  ?><br><br>
         </div>
         </div>
         <?php 
@@ -139,38 +139,38 @@ elseif($template==1)
         <div class="body-section">
             <div class="row">
                 <div class="col-6">
-                <table id="one" >
-    <tr><td  class="key">Shipper / Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Depature</td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
-    <tr><td  class="key">Ocean Import Tracking Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
-    <tr><td  class="key">Notify Party Email</td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
-    <tr><td  class="key">Voyage No</td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
-    <tr><td  class="key">Port Of Discharge</td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
-    <tr><td  class="key">Freight forwarder</td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
-     <tr><td  class="key">Country of Origin</td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
+               <table id="one" >
+    <tr><td  class="key"><?php echo display('Shipper / Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
+    <tr><td  class="key"> <?php echo display('Ocean Import Tracking date');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Notify Party Email');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Voyage No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of discharge');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Freight Forwarder');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
+    <tr><td  class="key"><?php  echo display('Country of Origin');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
    
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two">
-<tr><td  class="key">Booking / BL No</td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
-    <tr><td  class="key">Seal NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Arrival</td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
-    <tr><td class="key">Customer/Consignee</td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
-    <tr><td  class="key">Vessel</td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
-    <tr><td  class="key">Port of loading</td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
-    <tr><td  class="key">Place of Delivery</td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
-    <tr><td  class="key">BL / Shipment Created Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
-  
-    <tr><td  class="key">Particulars</td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Booking / BL No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Seal No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated time of Arrival');?></td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
+    <tr><td class="key"><?php echo display('Customer / Consignee');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Vessel');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Delivery');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
+    <tr><td  class="key"><?php echo  display('BL / Shipment created date')?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
+   
+    <tr><td  class="key"><?php echo  display('particulars')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
 </table>
               
 
                 </div>
             </div><br><br><br>
-            <h4>Remarks/Details : </h4><?php echo $remarks  ?><br><br>
+            <h4><?php echo  display('Remarks / Details');?> : </h4><?php echo $remarks  ?><br><br>
         </div>
         </div>
         <?php 
@@ -223,38 +223,38 @@ elseif($template==3)
               <div class="row"> <div class="col-sm-12 ">&nbsp;</div></div>
               <div class="row">
                 <div class="col-6">
-                <table id="one" >
-    <tr><td  class="key">Shipper / Vendor</td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Depature</td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
-    <tr><td  class="key">Ocean Import Tracking Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
-    <tr><td  class="key">Notify Party Email</td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
-    <tr><td  class="key">Voyage No</td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
-    <tr><td  class="key">Port Of Discharge</td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
-    <tr><td  class="key">Freight forwarder</td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
-     <tr><td  class="key">Country of Origin</td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
+               <table id="one" >
+    <tr><td  class="key"><?php echo display('Shipper / Vendor');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $supplier_name;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $etd; ?></td></tr>
+    <tr><td  class="key"> <?php echo display('Ocean Import Tracking date');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $invoice_date;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Notify Party Email');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $notify_party;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Voyage No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $voyage_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of discharge');?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $port_of_discharge;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Freight Forwarder');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $freight_forwarder;  ?></td></tr>
+    <tr><td  class="key"><?php  echo display('Country of Origin');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $origin;  ?></td></tr>
    
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two">
-<tr><td  class="key">Booking / BL No</td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
-    <tr><td  class="key">Seal NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
-    <tr><td  class="key">Estimated Time Of Arrival</td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
-    <tr><td class="key">Customer/Consignee</td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
-    <tr><td  class="key">Vessel</td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
-    <tr><td  class="key">Port of loading</td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
-    <tr><td  class="key">Place of Delivery</td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
-    <tr><td  class="key">BL / Shipment Created Date</td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Booking / BL No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $booking_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Seal No');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $seal_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Estimated time of Arrival');?></td><td style="width:10px;">:</td><td calss="value"><?php  echo $eta;   ?></td></tr>
+    <tr><td class="key"><?php echo display('Customer / Consignee');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Vessel');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $vessel;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $port_of_loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Delivery');?></td><td style="width:10px;">:</td><td calss="value"><?php echo $place_of_delivery;  ?></td></tr>
+    <tr><td  class="key"><?php echo  display('BL / Shipment created date')?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $bl_shipment;  ?></td></tr>
    
-    <tr><td  class="key">Particulars</td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
+    <tr><td  class="key"><?php echo  display('particulars')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $particular;  ?></td></tr>
 </table>
               
 
                 </div>
             </div><br><br><br>
-            <h4>Remarks/Details : </h4><?php echo $remarks  ?><br>
+            <h4><?php echo  display('Remarks / Details');?> : </h4><?php echo $remarks  ?><br><br>
         </div>
         </div>
 
@@ -271,7 +271,7 @@ elseif($template==3)
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;font-weight:bold;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title">Expenses - Ocean Import</h4>
+          <h4 class="modal-title"><?php  echo display('purchase')."-".display('Ocean Import Tracking'); ?></h4>
         </div>
         <div class="content">
 

@@ -16,12 +16,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Trucking</h1>
-            <small>Generate New Trucking Invoice</small>
+            <h1><?php echo  display('Create Road Transport'); ?></h1>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?>       </a></li>
-                <li><a href="#">Trucking</a></li>
-                <li class="active">Trucking Invoice</li>
+                <li><a href="#"><?php echo display('expense');  ?></a></li>
+                <li class="active" style="color:orange"><?php echo display('Road Transport');?></li>
             </ol>
         </div>
     </section>
@@ -103,12 +103,12 @@ textarea:focus, input:focus{
                         <div class="panel-title">
 <div id="block_container">
                                 <div id="bloc1" style="float:left;">
-                          <h4><?php echo "Create New Trucking Invoice" ?></h4>
+                          <h4><?php //echo "Create New Trucking Invoice" ?></h4>
                                </div> 
                              <div id="bloc2" style="float:right;">
                            
 
-                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Ccpurchase/manage_trucking') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo "Manage Trucking" ?> </a>
+                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Ccpurchase/manage_trucking') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display("Manage Road Transport"); ?> </a>
 
                     
                      </div>    </div>
@@ -121,7 +121,7 @@ textarea:focus, input:focus{
                         <div class="row">
                              <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="invoice_no" class="col-sm-4 col-form-label">Trucking Invoice No.
+                                    <label for="invoice_no" class="col-sm-4 col-form-label"><?php echo  display('Invoice No');?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -143,7 +143,7 @@ textarea:focus, input:focus{
                             </div>
                              <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="date" class="col-sm-4 col-form-label">Invoice Date
+                                    <label for="date" class="col-sm-4 col-form-label"><?php  echo  display('Invoice Date');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-8">
@@ -156,12 +156,12 @@ textarea:focus, input:focus{
                         <div class="row">
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Bill to
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php  echo  display('Bill to');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-8">
                                             <select name="bill_to" id="bill_to" class="form-control"   required>
-                            <option value="">Select Customer</option>
+                            <option value=""><?php echo  display('Select Customer');?></option>
                     
                              <?php foreach ($customer_list as $customer) {?>
                        <option value="<?php echo html_escape($customer->customer_id);?>"><?php echo html_escape($customer->customer_name);?></option>
@@ -172,7 +172,7 @@ textarea:focus, input:focus{
                             </div>
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Trucking Company
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php  echo display('Trucking Company');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                        <div class="col-sm-7">
@@ -192,7 +192,7 @@ textarea:focus, input:focus{
                         <div class="row">
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Container/Goods Pickupdate
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Container/Goods Pickupdate') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                        <div class="col-sm-8">
@@ -203,7 +203,7 @@ textarea:focus, input:focus{
                             </div>
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Delivery date
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Delivery date') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                      <div class="col-sm-8">
@@ -216,7 +216,7 @@ textarea:focus, input:focus{
                         <div class="row">
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Container Number
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Container Number') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                        <div class="col-sm-8">
@@ -227,7 +227,7 @@ textarea:focus, input:focus{
                             <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Shipment / BL Number
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Shipment / BL Number');?>
                                         <i class="text-danger">*</i>
                                     </label>
                                      <div class="col-sm-8">
@@ -249,11 +249,11 @@ textarea:focus, input:focus{
                 
                                 <td class="hiden" style="width:180px;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width:70px;text-align:center;color:black;padding:5px;" type="text" id="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                       <td style="border:none;text-align:right;font-weight:bold;">Tax : 
+                       <td style="border:none;text-align:right;font-weight:bold;"><?php echo display('tax');?> : 
                                  </td>
                                 <td style="width:20%">
                             <select name="tx" id="product_tax" class="form-control" >
-                                <option value="Select the Tax" selected>Select the Tax</option>
+                                <option value="Select the Tax" selected><?php echo display('Select the Tax');?></option>
                               <?php foreach($tax as $tx){?>
   
                                     <option value="<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';?>">  <?php echo $tx['tax_id'].'-'.$tx['tax'].'%';  ?></option>
@@ -265,11 +265,11 @@ textarea:focus, input:focus{
                             <table class="table table-bordered table-hover" id="truckingTable_1">
                                 <thead>
                                      <tr>
-                                            <th class="text-center" width="15%">Date<i class="text-danger">*</i></th> 
-                                            <th class="text-center">Quantity<i class="text-danger">*</i></th>
-                                            <th class="text-center">Description<i class="text-danger">*</i></th>
-                                            <th class="text-center" width="20%">Rate<i class="text-danger">*</i></th>
-                                            <th class="text-center">Pro No / Reference<i class="text-danger">*</i></th>
+                                            <th class="text-center" width="15%"><?php echo display('date');?><i class="text-danger">*</i></th> 
+                                            <th class="text-center"><?php echo display('Quantity');?><i class="text-danger">*</i></th>
+                                            <th class="text-center"><?php echo display('description');?><i class="text-danger">*</i></th>
+                                            <th class="text-center" width="20%"><?php echo display('rate');?><i class="text-danger">*</i></th>
+                                            <th class="text-center"><?php echo display('Pro No / Reference');?><i class="text-danger">*</i></th>
                                            
 
                                             <th class="text-center"><?php echo display('total') ?></th>
@@ -333,7 +333,7 @@ textarea:focus, input:focus{
                                     </tr>
                                     <tr>
                                    
-                                   <td style="text-align:right;" colspan="5"><b>Tax Details :</b></td>
+                                   <td style="text-align:right;" colspan="5"><b><?php  echo display('TAX DETAILS');?> :</b></td>
                                    <td style="text-align:left;">
                                    <table border="0">
       <tr>
@@ -345,7 +345,7 @@ textarea:focus, input:focus{
                                
                                       
                                </tr>
-                                    <tr> <td style="text-align:right;" colspan="5"><b><?php echo "Grand Total" ?>:</b></td>
+                                    <tr> <td style="text-align:right;" colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b></td>
                                     <td>
                                     <table border="0">
       <tr>
@@ -362,7 +362,7 @@ textarea:focus, input:focus{
                                         
                                     
                                     
-                                    <td style="padding-bottom:30px;text-align:right;"  colspan="5"><b><?php echo "Grand Total" ?>:</b><br/><b>(Preferred Currency)</b></td>
+                                    <td style="padding-bottom:30px;text-align:right;"  colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b><br/><b>(<?php  echo display('Preferred Currency');?>)</b></td>
                                     <td>
                                     <table border="0">
       <tr>
@@ -379,7 +379,7 @@ textarea:focus, input:focus{
                                     
                                     <tr id="amt">
                                    
-                                            <td style="text-align:right;"  colspan="5"><b><?php echo "Amount Paid" ?>:</b></td>
+                                            <td style="text-align:right;"  colspan="5"><b><?php  echo display('Amount Paid');?>:</b></td>
                                           
                                             <td>
                                             <table border="0">
@@ -392,7 +392,7 @@ textarea:focus, input:focus{
                                             </td>
                                             </tr> 
                                             <tr id="bal">
-                                            <td style="text-align:right;"  colspan="5"><b><?php echo "Balance Amount " ?>:</b></td>
+                                            <td style="text-align:right;"  colspan="5"><b><?php echo display('balance_ammount');  ?> :</b></td>
                                             <td>
                                             <table border="0">
       <tr>
@@ -406,7 +406,7 @@ textarea:focus, input:focus{
                                             <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
                                                
                                             <td colspan="6" style="text-align: end;">
-                                        <input type="submit" value="Make Payment" style="color:white;background-color:#38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="color:white;background-color:#38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
                                 </tfoot>
@@ -458,7 +458,7 @@ textarea:focus, input:focus{
 
    <div class="form-group row">
 
-                                    <label for="billing_address" class="col-sm-2 col-form-label">Remarks</label>
+                                    <label for="billing_address" class="col-sm-2 col-form-label"><?php   echo display('Remarks / Details');?></label>
 
                                     <div class="col-sm-8">
 
@@ -469,7 +469,7 @@ textarea:focus, input:focus{
                                 </div> 
                                 <div class="form-group row">
 
-                                    <label for="remark" class="col-sm-2 col-form-label">Attachments</label>
+                                    <label for="remark" class="col-sm-2 col-form-label"><?php  echo display('Attachments');  ?></label>
 
                                     <div class="col-sm-8">
 
@@ -494,13 +494,13 @@ textarea:focus, input:focus{
                                     <td>
                                         <input type="hidden" name="uid" value="<?php echo $_SESSION['user_id']; ?>">
     
-                                        <input type="submit" id="add_purchase" class="btn btn-primary btn-large" name="add-trucking" style="color:white;background-color:#38469f;"  value="<?php echo display('Save') ?>" />
+                                        <input type="submit" id="add_purchase" class="btn btn-primary btn-large" name="add-trucking" style="color:white;background-color:#38469f;"  value="<?php echo display('save') ?>" />
 
                                   
-                                            <a    id="final_submit" style="color:white;background-color:#38469f;"  class='final_submit btn btn-primary'>Submit</a>
+                                            <a    id="final_submit" style="color:white;background-color:#38469f;"  class='final_submit btn btn-primary'><?php  echo display('submit');  ?></a>
 
-                                              <a id="download"  style="color:white;background-color:#38469f;"   class='btn btn-primary'>Download</a>
-                                           <a id="print" style="color:white;background-color:#38469f;" class='btn'>Print</a>  
+                                              <a id="download"  style="color:white;background-color:#38469f;"   class='btn btn-primary'><?php echo display('download') ?></a>
+                                           <a id="print" style="color:white;background-color:#38469f;" class='btn'><?php echo display('print') ?></a>  
                                             </td>
                                     <td>&nbsp;</td>
                                     <td id="btn1_download">
@@ -532,7 +532,7 @@ textarea:focus, input:focus{
   <div class="modal-content">
       <div class="modal-header"  style="color:white;background-color:#38469f;">
           <a href="#" class="close" data-dismiss="modal" >&times;</a>
-          <h3 class="modal-title"  >Add New Vendor</h3>
+          <h3 class="modal-title"  ><?php echo  display('Add New Vendor');?></h3>
       </div>
       <div class="modal-body">
       <form id="insert_supplier"  method="post">
@@ -540,48 +540,48 @@ textarea:focus, input:focus{
   <div class="panel-body">
       <div class="col-sm-6">
       <div class="form-group row">
-      <label for="" class="col-sm-4  col-form-label">Vendor Type<i class="text-danger">*</i></label>
+      <label for="" class="col-sm-4  col-form-label"><?php echo  display('Vendor Type');?><i class="text-danger">*</i></label>
       <div class="col-sm-8">
                 <select   name="vendor_type" id="vendor_type" class=" form-control"   required="" id="vendor_type" >
-                 <option value=""> Selected vendor type</option>
-                 <option value="productsupplier">Product Supplier</option>
-                 <option value="servicevendor"> Service Vendor</option>
-                 <option value="others"> Others</option>
+                 <option value=""> <?php echo  display('Selected vendor type');?></option>
+                 <option value="productsupplier"><?php echo  display('Product Supplier');?></option>
+                 <option value="servicevendor"> <?php echo  display('Service Vendor');?></option>
+                 <option value="others"> <?php echo  display('others');  ?></option>
                 </select>
                 </div>
                 </div>
                 <div class="form-group row">
-                            <label for="supplier_name" class="col-sm-4 col-form-label"> Company Name<i class="text-danger">*</i></label>
+                            <label for="supplier_name" class="col-sm-4 col-form-label"> <?php echo  display('Company Name');?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name ="supplier_name" id="supplier_name" type="text" placeholder="Company Name"  required tabindex="1">
                             </div>
                         </div>
       <div class="form-group row">
-          <label for="mobile" class="col-sm-4 col-form-label"> Mobile<i class="text-danger"></i></label>
+          <label for="mobile" class="col-sm-4 col-form-label"> <?php  echo display('mobile'); ?><i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="mobile" id="mobile" type="number" placeholder=" Mobile"  min="0" tabindex="2">
           </div>
       </div>
           <div class="form-group row">
-          <label for="phone" class="col-sm-4 col-form-label">Business Phone<i class="text-danger">*</i></label>
+          <label for="phone" class="col-sm-4 col-form-label"><?php echo  display('Business Phone');?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="phone" id="phone" type="number" placeholder="Business Phone"   required="" min="0" tabindex="2">
           </div>
       </div>
        <div class="form-group row">
-          <label for="email" class="col-sm-4 col-form-label">primary Email <i class="text-danger">*</i></label>
+          <label for="email" class="col-sm-4 col-form-label"><?php echo  display('primary Email');?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="email" id="email" type="email" placeholder="primary Email"    required="" tabindex="2">
           </div>
       </div>
        <div class="form-group row">
-          <label for="emailaddress" class="col-sm-4 col-form-label">Secondary Email <i class="text-danger"></i></label>
+          <label for="emailaddress" class="col-sm-4 col-form-label"><?php echo  display('Secondary Email');?> <i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="emailaddress" id="emailaddress" type="email" placeholder="Secondary Email"  >
           </div>
       </div>
         <div class="form-group row">
-          <label for="contact" class="col-sm-4 col-form-label">Contact Person<i class="text-danger"></i></label>
+          <label for="contact" class="col-sm-4 col-form-label"><?php echo  display('Contact Person');?><i class="text-danger"></i></label>
           <div class="col-sm-8">
               <input class="form-control" name="contact" id="contact" type="text" placeholder="Contact Person"  >
           </div>
@@ -594,7 +594,7 @@ textarea:focus, input:focus{
       </div>
     
                                         <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency'); ?></label>
 
             <div class="col-sm-8">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
@@ -771,7 +771,7 @@ textarea:focus, input:focus{
   </div>
   <div class="col-sm-6">
 <div class="form-group row">
-      <label for="" class="col-sm-4 col-form-label">Tax Collected<i class="text-danger">*</i></label>
+      <label for="" class="col-sm-4 col-form-label"><?php echo  display('Tax Collected');?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
              <select  style="width: 100%;"  class="form-control"   required="" name="service_provider">
               <option value="1">Yes</option>
@@ -780,7 +780,7 @@ textarea:focus, input:focus{
           </div>
         </div>
   <div class="form-group row">
-          <label for="state" class="col-sm-4 col-form-label">State <i class="text-danger">*</i></label>
+          <label for="state" class="col-sm-4 col-form-label"><?php  echo display('state'); ?> <i class="text-danger">*</i></label>
           <div class="col-sm-8">
               <input class="form-control" name="state" id="state" type="text"  placeholder="State"  >
           </div>
@@ -792,13 +792,13 @@ textarea:focus, input:focus{
           </div>
       </div>
       <div class="form-group row">
-                                    <label for="country" class="col-sm-4 col-form-label">Country<i class="text-danger">*</i></label>
+                                    <label for="country" class="col-sm-4 col-form-label"><?php echo display('country'); ?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
                                     <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country"    style="width: 100%;" ></select>
                                     </div>
                         </div>
       <div class="form-group row">
-          <label for="address " class="col-sm-4 col-form-label">Address</label>
+          <label for="address " class="col-sm-4 col-form-label"><?php echo display('address') ?></label>
           <div class="col-sm-8">
               <textarea class="form-control" name="address" id="address " rows="2" placeholder="Address" ></textarea>
           </div>
@@ -810,7 +810,7 @@ textarea:focus, input:focus{
           </div>
       </div>
       <div class="form-group row">
-          <label for="previous_balance" class="col-sm-4 col-form-label">Credit Limit</label>
+          <label for="previous_balance" class="col-sm-4 col-form-label"><?php  echo  display('Credit Limit');?></label>
           <div class="col-sm-8">
               <input class="form-control" name="previous_balance" id="previous_balance" type="text" min="0" placeholder="Credit Limit" tabindex="5">
           </div>
@@ -822,15 +822,15 @@ textarea:focus, input:focus{
           </div>
       </div>
   <div class="form-group row">
-                    <label for="billing_address" class="col-sm-4  col-form-label">Payment Terms <i class="text-danger">*</i></label>
+                    <label for="billing_address" class="col-sm-4  col-form-label"><?php echo  display('Payment Terms');?> <i class="text-danger">*</i></label>
                     <div class="col-sm-8">
                     <select name="payment_terms"  id="terms"  class="form-control "  placeholder="" style="width:100%;"  required="" tabindex="1" >
-                                        <option value="Select the Product" selected>Select the payment terms</option>
-    <option value="cod">COD</option>
-    <option value="30"> 30-Days</option>
-    <option value="60"> 60-Days</option>
-    <option value="90"> 90-Days</option>
-    <option value="45"> 45-Days</option>
+                                        <option value="Select the Product" selected><?php echo  display('Select the payment terms');?></option>
+     <option value="cod">COD</option>
+    <option value="30"> 30-<?php echo  display('Days');?></option>
+    <option value="60"> 60-<?php echo  display('Days');?></option>
+    <option value="90"> 90-<?php echo  display('Days');?></option>
+    <option value="45"> 45-<?php echo  display('Days');?></option>
                                          <?php
                                             foreach($paymentterms_add as $cn){?>
                                                 <option value="<?php echo $cn['paymentterms_add'];?>">  <?php echo $cn['paymentterms_add'];  ?></option>
@@ -845,7 +845,7 @@ textarea:focus, input:focus{
             <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label> -->
             
   <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Attachments
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo  display('Attachments');?>
                                     </label>
                                     <div class="col-sm-8">
                                        <input type="file" name="attachments" style="width:96%;" class="form-control">
@@ -853,8 +853,8 @@ textarea:focus, input:focus{
                                 </div>
                                 </div>
 <div class="modal-footer">
-                          <a href="#" class="btn" style="color:white;background-color:#38469f;"  data-dismiss="modal">Close</a>
-                          <input type="submit" id="add-supplier-from-expense" name="add-supplier-from-expense"  style="color:white;background-color:#38469f;"  class="btn" value="Submit">
+                          <a href="#" class="btn" style="color:white;background-color:#38469f;"  data-dismiss="modal"><?php echo  display('Close');?></a>
+                          <input type="submit" id="add-supplier-from-expense" name="add-supplier-from-expense"  style="color:white;background-color:#38469f;"  class="btn" value="<?php echo  display('submit');?>">
                       </div>
                          </form>
                       </div>
@@ -871,7 +871,7 @@ textarea:focus, input:focus{
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Expenses - Trucking</h4>
+          <h4 class="modal-title"><?php  echo  display('purchase')."-".display('Road Transport');?> </h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -890,18 +890,18 @@ textarea:focus, input:focus{
 		<div class="modal-content">
 			<div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo  display('Confirmation');?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+					<p><?php echo  display('Your Invoice is not submitted. Would you like to submit or discard');?>
 				</p>
-				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+					<p class="text-warning">
+					<small><?php echo  display('If you dont save, your changes will not be saved.');?></small>
 				</p>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" id="ok" class="btn btn-primary final_submit" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn" onclick="discard()">Discard</button>
+				<input type="submit" id="ok" class="btn btn-primary final_submit" onclick="submit_redirect()"  value="<?php echo  display('submit');?>"/>
+                <button id="btdelete" type="button" class="btn" onclick="discard()"><?php  echo  display('Discard');?></button>
 			
 			</div>
 		</div>
@@ -914,7 +914,7 @@ textarea:focus, input:focus{
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Expenses - Trucking</h4>
+          <h4 class="modal-title"><?php  echo  display('purchase')."-".display('Road Transport');?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -937,7 +937,7 @@ textarea:focus, input:focus{
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ADD PAYMENT</h4>
+          <h4 class="modal-title"><?php  echo  display('add_payment');?></h4>
         </div>
         <div class="modal-body">
           
@@ -948,7 +948,7 @@ textarea:focus, input:focus{
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label">Payment Date <i class="text-danger">*</i></label>
+        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo  display('payment_date');?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
 
@@ -961,14 +961,14 @@ textarea:focus, input:focus{
 <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
  <div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Reference No<i class="text-danger">*</i></label>
+        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo  display('Reference No');?><i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
         <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
  </div> 
     <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label">Select Bank:<i class="text-danger">*</i></label>
+      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo  display('Select Bank');?>:<i class="text-danger">*</i></label>
 <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
       <div class="col-sm-5">
   <select name="bank" id="bank"  class="form-control bankpayment" >
@@ -1015,7 +1015,7 @@ textarea:focus, input:focus{
       <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
       <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount to be paid : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('Amount to be paid');?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1031,13 +1031,13 @@ textarea:focus, input:focus{
 </div> 
       <div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount Received : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('Amount Received');?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"  readonly name="amount_received" id="amount_received" class="form-control"required   /></td>
+        <td><input  type="text"  readonly name="amount_received" id="amount_received" class="form-control" required   /></td>
      </tr>
    </table>
 
@@ -1047,7 +1047,7 @@ textarea:focus, input:focus{
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label">Balance : </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php  echo display('balance_ammount'); ?> : </label>
 
 <div class="col-sm-5">
 
@@ -1061,7 +1061,7 @@ textarea:focus, input:focus{
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Payment Amount: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('payment_amount');?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1077,7 +1077,7 @@ textarea:focus, input:focus{
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Additional Information : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('Additional Information');?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1085,7 +1085,7 @@ textarea:focus, input:focus{
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Attachments : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo display('Attachments');  ?>  : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -1096,8 +1096,8 @@ textarea:focus, input:focus{
      <div class="col-sm-8"></div>
 
      <div class="col-sm-4">
-           <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
-     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value="submit"  required   />
+           <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php  echo display('Close');  ?></a>
+     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value="<?php  echo display('submit');  ?>"  required   />
 </div>
      </div>
    </div>
@@ -1109,7 +1109,7 @@ textarea:focus, input:focus{
         <div class="modal-content">
             <div class="modal-header" style="color:white;background-color:#38469f;" >
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD BANK</h4>
+                	<h4 class="modal-title"><?php echo display('add_new_bank');  ?></h4>
 
             </div>
             <div class="container"></div>
@@ -1177,7 +1177,7 @@ textarea:focus, input:focus{
   </div>
 
   <div class="form-group row">
-  <label for="shipping_line" class="col-sm-4 col-form-label">Country
+  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('country');  ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
@@ -1187,7 +1187,7 @@ textarea:focus, input:focus{
 
 </div>
 <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency');  ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
     <option>Select currency</option>
@@ -1378,7 +1378,7 @@ textarea:focus, input:focus{
 </div>
     
 <div class="col-sm-4">
-               <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+               <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php  echo  display('Close');?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
      <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
@@ -1443,7 +1443,7 @@ if (isNaN(value)) {
        $('#amt').show();
    $('#bal').show();
        $('#payment_modal').modal('hide');
-       $("#bodyModal1").html("Payment Successfully Completed");
+       $("#bodyModal1").html("<?php echo display('Payment Successfully Completed');?>");
           $('#myModal1').modal('show');
        
        window.setTimeout(function(){
@@ -1479,7 +1479,7 @@ if (isNaN(value)) {
          
            $('.bankpayment').selectmenu(); 
            $('.bankpayment').append(result).selectmenu('refresh',true);
-          $("#bodyModal1").html("Bank Added Successfully");
+          $("#bodyModal1").html("<?php echo display('Bank Added Successfully');?>");
           $('#myModal3').modal('hide');
           $('#add_bank_info').modal('hide');
            $('#myModal1').modal('show');
@@ -1588,7 +1588,7 @@ function(data) {
   });
        $('#add_vendor').modal('hide');
      
-      $("#bodyModal1").html("New Vendor Added Successfully");
+      $("#bodyModal1").html("<?php echo display('New Vendor Added Successfully');?>");
       
        $('#myModal1').modal('show');
   
@@ -1903,7 +1903,7 @@ function discard(){
    function(responseText){
     console.log(responseText);
     window.btn_clicked = true;      //set btn_clicked to true
-    var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been Discared";
+    var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been Discarded');?>";
   
     console.log(input_hdn);
     $('#myModal3').modal('hide');
@@ -1919,7 +1919,7 @@ function discard(){
 }
      function submit_redirect(){
         window.btn_clicked = true;      //set btn_clicked to true
-    var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been saved Successfully";
+    var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been saved Successfully');?>";
   
     console.log(input_hdn);
     $('#myModal3').modal('hide');
@@ -1949,7 +1949,7 @@ $('#insert_trucking').submit(function (event) {
 
         success:function (data) {
         console.log(data);
-        $("#bodyModal1").html("Trucking Invoice Created Successfully");
+        $("#bodyModal1").html("<?php echo  display('Road Transport Created Successfully');?>");
         $('#myModal1').modal('show');
         $('#final_submit').show();
 $('#download').show();
@@ -1990,7 +1990,7 @@ console.log(link);
 $('.final_submit').on('click', function (e) {
 
     window.btn_clicked = true;      //set btn_clicked to true
-    var input_hdn="Your Invoice No :"+$('#invoice_hdn').val()+" has been saved Successfully";
+    var input_hdn="<?php echo  display('Your Invoice No')." :";?>"+$('#invoice_hdn').val()+"<?php echo  " ".display('has been saved Successfully');?>";
   
     console.log(input_hdn);
  

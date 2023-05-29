@@ -561,7 +561,7 @@ public function product_details_edit()
                                 }
                for ($i = 0, $n = count($desc); $i < $n; $i++) {
                 // print_r($i); die();
-                 $target_path=$_SERVER['DOCUMENT_ROOT'].'/R15/my-assets/image/product/';
+                 $target_path=$_SERVER['DOCUMENT_ROOT'].'/R16_new/my-assets/image/product/';
     $file='';
 if (file_exists($_FILES['image']['tmp_name'][$i]) || is_uploaded_file($_FILES['image']['tmp_name'][$i])) {
 
@@ -569,7 +569,7 @@ if (file_exists($_FILES['image']['tmp_name'][$i]) || is_uploaded_file($_FILES['i
 
 
 // If no errors, upload the file
-  $target=$_SERVER['DOCUMENT_ROOT'].'/R15/my-assets/image/product/';  // example.com/entities/
+  $target=$_SERVER['DOCUMENT_ROOT'].'/R16_new/my-assets/image/product/';  // example.com/entities/
 //$target = "../fisiere_pub/"; //choose your upload folder
 move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target. $_FILES["image"]["name"][$i]);
 $file = $target . $_FILES["image"]["name"][$i];

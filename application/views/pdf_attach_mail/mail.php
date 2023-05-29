@@ -12,6 +12,7 @@
      
     }
   </style>
+
 <?php
 if(isset($mail))
 {
@@ -90,7 +91,7 @@ try {
         });
 
         setTimeout(function () {
-   window.location.href = '.$base_url(/Cinvoice/manage_invoice).';
+   window.location.href =  '../../Cinvoice/manage_invoice';
     }, 3000);
         
     </script>";

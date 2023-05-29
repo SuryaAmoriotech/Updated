@@ -1413,6 +1413,7 @@ public function ret_company_info() {
         $supinfo =$this->db->select('*')->from('supplier_information')->where('supplier_id',$supplier_id)->get()->row();
         $sup_head = $supinfo->supplier_id.'-'.$supinfo->supplier_name;
         $sup_coa = $this->db->select('*')->from('acc_coa')->where('HeadName',$sup_head)->get()->row();
+     //   echo $this->db->last_query();
         $receive_by=$this->session->userdata('user_id');
         $receive_date=date('Y-m-d');
         $createdate=date('Y-m-d H:i:s');
@@ -1450,6 +1451,12 @@ public function ret_company_info() {
                 $this->session->set_flashdata('message', display('product_and_supplier_did_not_match'));
             }
         }
+        $msg='';
+        if($this->input->post('message_invoice',TRUE)){
+$msg=$this->input->post('message_invoice',TRUE);
+        }else{
+          $msg='Product Purchased on '.$this->input->post('bill_date',TRUE);
+        }
        $data = array(
            'purchase_id'        => $purchase_id,
            'create_by'       =>  $this->session->userdata('user_id'),
@@ -1463,7 +1470,7 @@ public function ret_company_info() {
            'purchase_details'   => $this->input->post('purchase_details',TRUE),
             'payment_due_date'   => $this->input->post('payment_due_date',TRUE),
            'remarks'            => $this->input->post('remark',TRUE),
-           'message_invoice'    => $this->input->post('message_invoice',TRUE),
+           'message_invoice'    => $msg,
             'total_tax'  =>  $this->input->post('tax_details',TRUE),
             'packing_id' => $this->input->post('packing_id',TRUE),
            'etd'   => $this->input->post('etd',TRUE),
