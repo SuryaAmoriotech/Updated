@@ -557,12 +557,12 @@ if($a==$m){
              <td style="text-align:right;" colspan="3"><b><?php echo display('Net weight')?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"   readonly="readonly"  /> 
-            </td>   <td style="text-align:right;" colspan="4"><b><?php echo display('Weight')`345?> :</b></td>
+            </td>   <td style="text-align:right;" colspan="4"><b><?php echo display('Weight')?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_<?php echo $m; ?>" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  /> 
             </td> 
 
-                                        <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;" colspan="1"><b><?php echo display('TOTAL') ?> :</b></td>
                                         <td >
                <span class="input-symbol-euro">     <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total form-control"   style="padding-top: 6px;width: 80px"    readonly="readonly"  />
             </td>
@@ -575,7 +575,7 @@ if($a==$m){
                                                 
                                             </td>
                                             <td colspan="21" style="text-align: end;">
- <i id="buddle_1" class="btn-danger removebundle fa fa-minus"  aria-hidden="true" onclick="removebundle(); ">Bundle</i>    
+ <i id="buddle_1" class="btn-danger removebundle fa fa-minus"  aria-hidden="true" onclick="removebundle(); "><?php echo display('Bundle') ?></i>    
 
                                             </td>
                                      
@@ -583,17 +583,17 @@ if($a==$m){
                                             </tfoot>
                             </table>
                             <?php   } ?>
-                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); ">Bundle</i>    
+                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php echo display('Bundle') ?></i>    
                          </div>      </div>
                                                <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:22%;border:none;text-align:end;font-weight:bold;">
-                            Today's Rate : 
+                        <?php echo display('Todays Rate') ?> : 
                          </td>
                 
                                <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width: 80px;text-align:center;color:black;padding:5px;" type="text" id="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                    <td style="border:none;text-align:right;font-weight:bold;">Tax : 
+                    <td style="border:none;text-align:right;font-weight:bold;"><?php echo display('Tax') ?> : 
                                  </td>
                                 <td style="width:10%">
 <select name="tx"  id="product_tax" class="form-control" >
@@ -615,24 +615,24 @@ if($a==$m){
          <td  style="text-align:right;border:none;"> </td>
 </tr>
   <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Overall TOTAL')?> :</b></td>
         <td colspan="1" style="border:none;padding-bottom: 40px;"><span class="input-symbol-euro"><input type="text" id="Over_all_Total" name="Over_all_Total"  style="width:190px;" class="form-control" value="<?php echo $purchase_info[0]['total_amount'];  ?>"  readonly="readonly"  /> </span></td>
-         <td colspan="4" style="text-align:right;border:none;width:250px;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="<?php echo $purchase_info[0]['tax_details'];  ?>" name="tax_details"  readonly="readonly" /></span></td>
+         <td colspan="4" style="text-align:right;border:none;width:250px;"><b><?php echo display('TAX DETAILS')?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="<?php echo $purchase_info[0]['tax_details'];  ?>" name="tax_details"  readonly="readonly" /></span></td>
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Overall Gross Sq.Ft')?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_gross" name="total_gross" value="<?php echo $purchase_info[0]['total_gross'];  ?>"  class="form-control"   readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="<?php echo $purchase_info[0]['gtotal'];  ?>"  readonly="readonly" /></td>
+         <td colspan="4" style="text-align:right;border:none;"><b><?php echo display('GRAND TOTAL')?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="<?php echo $purchase_info[0]['gtotal'];  ?>"  readonly="readonly" /></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Overall Net Sq.Ft')?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_net" name="total_net" value="<?php echo $purchase_info[0]['total_net'];   ?>" class="form-control"    readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/>(<b>Preferred Currency</b>)</td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="customer_gtotal"  value="<?php echo $invoice_detail[0]['gtotal_preferred_currency'];  ?>"   name="customer_gtotal"  required   /></td></tr></table></td>
+         <td colspan="4" style="text-align:right;border:none;"><b><?php echo display('GRAND TOTAL')?> :</b><br/><?php echo display('Preferred Currency')?></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="customer_gtotal"  value="<?php echo $invoice_detail[0]['gtotal_preferred_currency'];  ?>"   name="customer_gtotal"  required   /></td></tr></table></td>
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight"  value="<?php echo $purchase_info[0]['total_weight'];   ?>" class="form-control"   readonly="readonly"  /></td>
-         <td colspan="4" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td>
+        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Overall Weight')?> :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight"  value="<?php echo $purchase_info[0]['total_weight'];   ?>" class="form-control"   readonly="readonly"  /></td>
+         <td colspan="4" class="amt" style="text-align:right;border:none;"><b><?php echo display('Amount Paid')?> :</b></td>
             <td style="border: none;">
                                             <table border="0">
       <tr>
@@ -645,7 +645,7 @@ if($a==$m){
                                             </tr> 
                                             <tr id="bal">
                                             <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+        <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Balance Amount')?> :</b></td>
                                             <td style="border: none;">
                                            <table border="0">
       <tr>
@@ -670,7 +670,7 @@ if($a==$m){
                         </div>
                            <div class="form-group row">
 
-                                    <label for="billing_address" class="col-sm-4 col-form-label">Account Details/Additional Information</label>
+                                    <label for="billing_address" class="col-sm-4 col-form-label"><?php echo display('Account Details/Additional Information')?></label>
 
                                     <div class="col-sm-8">
 
@@ -682,7 +682,7 @@ if($a==$m){
                                 </div>
                                 <div class="form-group row">
 
-                                    <label for="remark" class="col-sm-4 col-form-label">Remarks/Conditions</label>
+                                    <label for="remark" class="col-sm-4 col-form-label"><?php echo display('Remarks/Conditions')?></label>
 
                                     <div class="col-sm-8">
                              <input type="text" value="<?php echo $remarks;  ?>" id="remarks" name="remark" class=" form-control" placeholder='Remarks/Conditions'/>
@@ -697,14 +697,14 @@ if($a==$m){
                                 <tr>
                                     <td>
                                         <input type="hidden" name="uid" value="<?php echo $_SESSION['user_id']; ?>">
-                                        <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color: #38469f;" name="add-trucking" value="Save" />
-                                            </td><td class="amt">    <a  style="color:white;background-color: #38469f;"  id="final_submit" class='final_submit btn'>Submit</a></td>
+                                        <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color: #38469f;" name="add-trucking" value=<?php echo display('Save')?>/>
+                                            </td><td class="amt">    <a  style="color:white;background-color: #38469f;"  id="final_submit" class='final_submit btn'><?php echo display('Submit')?></a></td>
 
-<td><a id="download" style="color:white;background-color: #38469f;" class='btn'>Download</a>
+<td><a id="download" style="color:white;background-color: #38469f;" class='btn'><?php echo display('Download')?></a>
 
                                    </td>
                                    <td class="amt" style="width: 20px;"></td>
-                                   <td class="amt"><a id="print" style="color:white;background-color: #38469f;" class='btn'>Print</a>
+                                   <td class="amt"><a id="print" style="color:white;background-color: #38469f;" class='btn'><?php echo display('Print')?></a>
 
                                    </td>
                                     <td class="amt">&nbsp;</td>
@@ -746,7 +746,7 @@ if($a==$m){
       <div class="modal-content" style="width: 1000px;min-width: max-content;margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close"   class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"  style="color:white;background-color:#38469f;" >PAYMENT HISTORY</h4>
+          <h4 class="modal-title"  style="color:white;background-color:#38469f;" ><?php echo display('PAYMENT HISTORY')?></h4>
         </div>
         <div class="modal-body1">
         <div id="salle_list"></div>
@@ -786,7 +786,7 @@ if($a==$m){
       <div class="modal-content" style="margin-top: 190px;">
       <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sales - Profarma Invoice</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Profarma Invoice')?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="text-align:center;font-weight:bold;">
           
@@ -808,7 +808,7 @@ if($a==$m){
 <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ADD PAYMENT</h4>
+          <h4 class="modal-title"><?php echo display('ADD PAYMENT') ?></h4>
         </div>
         <div class="modal-body">
           
@@ -819,7 +819,7 @@ if($a==$m){
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label">Payment Date <i class="text-danger">*</i></label>
+        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
 
@@ -832,14 +832,14 @@ if($a==$m){
 <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
  <div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Reference No<i class="text-danger">*</i></label>
+        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No')?><i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
         <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
  </div> 
     <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label">Select Bank:<i class="text-danger">*</i></label>
+      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
    <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
       <div class="col-sm-5">
   <select name="bank" id="bank"  class="form-control bankpayment" >
@@ -887,7 +887,7 @@ if($a==$m){
       <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
       <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount to be paid : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount to be paid') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -902,7 +902,7 @@ if($a==$m){
 </div> 
       <div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount Received : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount Received') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -918,7 +918,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Balance : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Balance')?> : </label>
 
 <div class="col-sm-5">
 
@@ -932,7 +932,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Payment Amount: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Amount')?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -948,7 +948,7 @@ if($a==$m){
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Additional Information : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Additional Information') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -956,7 +956,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Attachments : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Attachments') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -967,8 +967,8 @@ if($a==$m){
      <div class="col-sm-8"></div>
 
      <div class="col-sm-4">
-                   <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" >Close</a>
-     <input class="btn btn-primary" type="submit"   style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value="submit"  required   />
+                   <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php echo display('Close') ?></a>
+     <input class="btn btn-primary" type="submit"   style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value=<?php echo display('submit') ?> required   />
 </div>
      </div>
    </div>
@@ -980,7 +980,7 @@ if($a==$m){
         <div class="modal-content">
             <div class="modal-header" style="color:white;background-color:#38469f;" >
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD BANK</h4>
+                	<h4 class="modal-title"><?php echo display('ADD BANK') ?></h4>
 
             </div>
             <div class="container"></div>
@@ -1048,7 +1048,7 @@ if($a==$m){
   </div>
 
   <div class="form-group row">
-  <label for="shipping_line" class="col-sm-4 col-form-label">Country
+  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('Country') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
@@ -1058,7 +1058,7 @@ if($a==$m){
 
 </div>
 <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('Currency') ?></label>
             <div class="col-sm-6">
             <select id="currency" name="currency1" class="form-control" style="max-width: -webkit-fill-available;">
     <option>Select currency</option>
@@ -1249,7 +1249,7 @@ if($a==$m){
 </div>
     
 <div class="col-sm-4">
-        <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" >Close</a>
+        <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php echo display('Close') ?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
      <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
@@ -1268,7 +1268,7 @@ if($a==$m){
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD NEW CUSTOMER</h4>
+                	<h4 class="modal-title"><?php echo display('ADD NEW CUSTOMER') ?></h4>
 
             </div>
             <div class="container"></div>
@@ -1283,7 +1283,7 @@ if($a==$m){
                     <div class="panel-body">
                         <input type ="hidden" name="csrf_test_name" id="" value="<?php echo $this->security->get_csrf_hash();?>">
                         <div class="form-group row">
-                            <label for="customer_name" class="col-sm-4 col-form-label">Company Name <i class="text-danger">*</i></label>
+                            <label for="customer_name" class="col-sm-4 col-form-label"><?php echo display('Company Name') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name ="company_name" id="customer_name" type="text" placeholder=" Company Name"  required="" tabindex="1" >
                             </div>
@@ -1298,46 +1298,46 @@ if($a==$m){
                             </div>
                         </div> -->
                         <div class="form-group row">
-                            <label for="emailaddress" class="col-sm-4 col-form-label">Primary Email </label>
+                            <label for="emailaddress" class="col-sm-4 col-form-label"><?php echo display('Primary Email') ?> </label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="email" id="" type="email" placeholder="primary Email"  >
                             </div>
                         </div>
                        
                         <div class="form-group row">
-                        <label for="emailaddress" class="col-sm-4 col-form-label">Secondary Email  </label>
+                        <label for="emailaddress" class="col-sm-4 col-form-label"><?php echo display('Secondary Email') ?>  </label>
                         <div class="col-sm-8">
                                 <input class="form-control" name="emailaddress" id="emailaddress" type="email" placeholder="Secondary Email"  >
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="mobile" class="col-sm-4 col-form-label">Business Phone <i class="text-danger">*</i></label>
+                            <label for="mobile" class="col-sm-4 col-form-label"><?php echo display('Business Phone') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name ="phone" id="mobile" type="number" placeholder="Business Phone" min="0" tabindex="3" required="">
                             </div>
                         </div>
                          <div class="form-group row">
-                            <label for="mobile" class="col-sm-4 col-form-label"> Mobile</label>
+                            <label for="mobile" class="col-sm-4 col-form-label"><?php echo display('Mobile') ?></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="mobile" id="mobile" type="number" placeholder="Mobile"  min="0" tabindex="2" >
                             </div>
                         </div>
                                  <div class="form-group row">
-                            <label for="contact" class="col-sm-4 col-form-label">Contact Person <i class="text-danger">*</i></label>
+                            <label for="contact" class="col-sm-4 col-form-label"><?php echo display('Contact Person') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="contact" id="contact" type="text" placeholder="Contact Person" required="" >
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="fax" class="col-sm-4 col-form-label">Fax</label>
+                            <label for="fax" class="col-sm-4 col-form-label"><?php echo display('Fax') ?></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="fax" id="fax" type="text" placeholder="Fax" >
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Preferred currency" class="col-sm-4 col-form-label"> Preferred currency<i class="text-danger">*</i></label>
+                            <label for="Preferred currency" class="col-sm-4 col-form-label"> <?php echo display('Preferred currency') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
     <option>Select currency</option>
@@ -1513,7 +1513,7 @@ if($a==$m){
                             </div>
                             <div class="form-group row">
 
-<label for="ETA" class="col-sm-4 col-form-label">Attachments</label>
+<label for="ETA" class="col-sm-4 col-form-label">Attachments') ?></label>
 
 <div class="col-sm-8">
 
@@ -1521,7 +1521,7 @@ if($a==$m){
 </div>
 
 <div class="form-group row">
-                            <label for="address2 " class="col-sm-4 col-form-label">Billing Address<i class="text-danger">*</i></label>
+                            <label for="address2 " class="col-sm-4 col-form-label">Billing Address') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <textarea class="form-control" required="" name="address2" id="address2" rows="2" placeholder="Billing Address" ></textarea>
                             </div>
@@ -1529,19 +1529,19 @@ if($a==$m){
 
 
                     <div class="form-group row">
-                            <label for="address " class="col-sm-4 col-form-label">Shipping Address</label>
+                            <label for="address " class="col-sm-4 col-form-label">Shipping Address') ?></label>
                             <div class="col-sm-8">
                                 <textarea class="form-control" name="address" id="address "  rows="2" placeholder="Shipping Address"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="city" class="col-sm-4 col-form-label">City <i class="text-danger">*</i></label>
+                            <label for="city" class="col-sm-4 col-form-label">City') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="city" id="city" type="text" placeholder="City" required="" >
                             </div>
                         </div>
                       <div class="form-group row">
-                            <label for="state" class="col-sm-4 col-form-label">State <i class="text-danger">*</i></label>
+                            <label for="state" class="col-sm-4 col-form-label">State') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="state" id="state" type="text" placeholder="State" required="" >
                             </div>
@@ -1549,7 +1549,7 @@ if($a==$m){
                       
                          
                          <div class="form-group row">
-                            <label for="zip" class="col-sm-4 col-form-label">Zip <i class="text-danger">*</i></label>
+                            <label for="zip" class="col-sm-4 col-form-label">Zip') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="zip" id="zip" type="text" placeholder="Zip"  required="">
                             </div>
@@ -1563,7 +1563,7 @@ if($a==$m){
 
                       
                                 <div class="form-group row">
-                                    <label for="country" class="col-sm-4 col-form-label">Country<i class="text-danger">*</i></label>
+                                    <label for="country" class="col-sm-4 col-form-label">Country') ?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
                                     <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" ></select>
                                  
@@ -1572,7 +1572,7 @@ if($a==$m){
                           
                         <div class="form-group row">
 
-<label for="billing_address" class="col-sm-4 col-form-label">Payment Terms<i class="text-danger">*</i></label>
+<label for="billing_address" class="col-sm-4 col-form-label">Payment Terms') ?><i class="text-danger">*</i></label>
 
 <div class="col-sm-8">
 <!-- <input type="text"name="payment" id="payment_terms" class=" form-control" placeholder='Payment Terms'> -->
@@ -1590,7 +1590,7 @@ if($a==$m){
 </div>    
                          
                         <div class="form-group row">
-                            <label for="previous_balance" class="col-sm-4 col-form-label">Credit Limit <i class="text-danger">*</i></label>
+                            <label for="previous_balance" class="col-sm-4 col-form-label">Credit Limit') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="previous_balance" id="previous_balance" type="text" min="0" placeholder="Credit Limit" tabindex="5" required="">
                             </div>
@@ -1600,7 +1600,7 @@ if($a==$m){
 
 <div class="form-group row">
 
-    <label for="invoice_no" class="col-sm-4 col-form-label"> Sales Tax
+    <label for="invoice_no" class="col-sm-4 col-form-label"> Sales Tax') ?>
 
         <i class="text-danger">*</i>
 
@@ -1609,7 +1609,7 @@ if($a==$m){
     <div class="col-sm-8">
 
     <select name="sales_taxes" class="form-control"  id="tax_dropdown" tabindex="3" style="    width: 300%;">
-                                          <option value=""selected>Select Sales Tax</option>
+                                          <option value=""selected>Select Sales Tax') ?></option>
                                         <option value="1"><?php echo display('NO') ?></option>
                                         <option value="2"><?php echo display('YES') ?></option>
                          </select>
@@ -1622,11 +1622,11 @@ if($a==$m){
         <div class="row">
             
         <div class="col-sm-8">
-        <label for="sales" class="col-sm-4 col-form-label">Sales Tax</label>
+        <label for="sales" class="col-sm-4 col-form-label">Sales Tax') ?></label>
       
 
         <select name="tax" value="" tabindex="5" >
-        <option value="">Select the State</option>
+        <option value="">Select the State') ?></option>
 	<option value="Alabama">Alabama</option>
 	<option value="Alaska">Alaska</option>
 	<option value="Arizona">Arizona</option>
@@ -1683,7 +1683,7 @@ if($a==$m){
                     </div>
                                  
                     <div class="col-sm-4">
-                    <label for="sales" class="col-sm-4 col-form-label">Tax Rates </label>
+                    <label for="sales" class="col-sm-4 col-form-label">Tax Rates') ?> </label>
                      <input name="taxes"  class="form-control taxes" value="" placeholder="%" tabindex="5">
                      
         </div>
@@ -1695,7 +1695,7 @@ if($a==$m){
                     </div>
                     </div>
                         <div class="modal-footer">
-                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close') ?></a>
                             <input type="submit" class="btn btn-success"  value="Submit">
                         </div>
                         </form>
@@ -1711,18 +1711,18 @@ if($a==$m){
 		<div class="modal-content">
 		 <div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title">Confirmation') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+				<p>Your Invoice is not submitted. Would you like to submit or discard') ?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+					<small>If you don't submit, your changes will not be saved') ?></small>
 				</p>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" id="ok" class="btn btn-primary pull-left final_submit" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger pull-left" onclick="discard()">Discard</button>
+				<input type="submit" id="ok" class="btn btn-primary pull-left final_submit" onclick="submit_redirect()"  value="Submit') ?>  />
+                <button id="btdelete" type="button" class="btn btn-danger pull-left" onclick="discard()">Discard') ?></button>
 			
 			</div>
 		</div>
