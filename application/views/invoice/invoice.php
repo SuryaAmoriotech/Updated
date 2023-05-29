@@ -139,7 +139,7 @@ if (isset($error_message)) {
 
 
 
-                    <a href="<?php echo base_url('Cinvoice/add_product_csv') ?>" class="btnclr btn btn-primary m-b-5 m-r-2 text-white"><i class="ti-plus"> </i> &nbsp;  <?php echo "Add Invoice (CSV)"; ?> </a>
+                    <a href="<?php echo base_url('Cinvoice/add_product_csv') ?>" class="btnclr btn btn-primary m-b-5 m-r-2 text-white"><i class="ti-plus"> </i> &nbsp;  <?php echo display('Add Invoice (CSV)') ?> </a>
        
                         </div>
                         <div class="col-sm-5">
@@ -160,7 +160,7 @@ $today = date('Y-m-d');
     <label class="" for="from_date"><?php echo display('Search By Date Range'); ?></label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="Search"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display ('Search'); ?> >
     
 </div> 
 <?php echo form_close() ?>

@@ -139,7 +139,7 @@ if(1==1)
          <img src="'.$this->session->userdata('image_email').'" width="100px" />
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
-        <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
       
       </tr>
     </table>
@@ -147,32 +147,32 @@ if(1==1)
 
     <table>
     <tr>
-      <td style="border: none; font-size: 14px;"> <b>Invoice Number</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
-      <td style="border: none; font-size: 14px;"><b>Customer Name:</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
-    </tr>
+    <td style="border: none; font-size: 14px;"> <b>'.display("Invoice Number").':</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Customer Name").':</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
+</tr>
 
-  
 
-    <tr>
-      <td style="border: none; font-size: 14px;"><b>Sales Invoice Date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
-      <td style="border: none; font-size: 14px;"><b>Shipping Address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
-    </tr>
 
-    <tr>
-      <td style="border: none; font-size: 14px;"><b>Payment due date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
-      <td style="border: none; font-size: 14px;"><b>Payment Terms:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
-    </tr>
-    <tr>
-    <td style="border: none; font-size: 14px;"><b>Container Number:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
-    <td style="border: none; font-size: 14px;"><b>B/L No:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
-  </tr>
-  <tr>
-  <td style="border: none; font-size: 14px;"><b>Estimated Time of Arrival:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Estimated Time of Departure:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
+<tr>
+  <td style="border: none; font-size: 14px;"><b>'.display("Sales Invoice Date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Shipping Address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
+</tr>
+
+<tr>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment due date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment Terms").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
 </tr>
 <tr>
-    <td style="border: none; font-size: 14px;"><b>Payment Type:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
-    <td style="border: none; font-size: 14px;"><b>Billing address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Container Number").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("B/L No").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
+</tr>
+<tr>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Arrival").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Departure").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
+</tr>
+<tr>
+<td style="border: none; font-size: 14px;"><b>'.display("Payment Type").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Billing address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
   </tr>
   </table>
 
@@ -238,54 +238,54 @@ foreach($product_info as $inv){
 
 
 
-  $content .='<table>
+$content .='<table>
 
-  <tr>
-  <td colspan="7" style="text-align: right; width:250px;  border: none;  ">Overall TOTAL :</td>
-  <td  style="text-align: left;  width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['total_amount'].'</td>
-  </tr> 
+<tr>
+<td colspan="7" style="text-align: right; width:250px;  border: none;  ">'.display("Overall TOTAL").' :</td>
+<td  style="text-align: left;  width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['total_amount'].'</td>
+</tr> 
 
-  <tr>
-  <td colspan="7" style="text-align: right;   width:250px;     border: none;  ">Overall Net Sq.Ft :</td>
-  <td  style="text-align: left; width:260px;   border: none;  ">'.$invoice[0]['total_net'].'</td>
-  </tr>
-  
+<tr>
+<td colspan="7" style="text-align: right;   width:250px;     border: none;  ">'.display("Overall Net Sq.Ft ").' :</td>
+<td  style="text-align: left; width:260px;   border: none;  ">'.$invoice[0]['total_net'].'</td>
+</tr>
 
-  <tr>
-  <td colspan="7" style="text-align: right;  width:250px;     border: none; ">Tax :</td>
-  <td  style="text-align: left ;  width:260px;  border: none;  "> '.$currency[0]['currency'].' '.$invoice[0]['total_tax'].'</td>
-  </tr>
-  
-  
 
-  <tr>
- <td colspan="7" style="text-align: right; width:250px;      border: none; ">GRAND TOTAL :</td>
- <td  style="text-align: left;   width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['gtotal'].'</td>
+<tr>
+<td colspan="7" style="text-align: right;  width:250px;     border: none; ">'.display("Tax").' :</td>
+<td  style="text-align: left ;  width:260px;  border: none;  "> '.$currency[0]['currency'].' '.$invoice[0]['total_tax'].'</td>
 </tr>
 
 
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;       border: none; ">GRAND TOTAL (Preferred Currency) :</td>
+<td colspan="7" style="text-align: right; width:250px;      border: none; ">'.display("GRAND TOTAL ").' :</td>
+<td  style="text-align: left;   width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['gtotal'].'</td>
+</tr>
+
+
+
+<tr>
+<td colspan="7" style="text-align: right;   width:250px;       border: none; ">'.display("GRAND TOTAL").''.display("Preferred Currency").' :</td>
 <td  style="text-align: left; width:260px;  border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['gtotal_preferred_currency'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;     border: none; ">Amount Paid :</td>
+<td colspan="7" style="text-align: right;   width:250px;     border: none; ">'.display("Amount Paid ").':</td>
 <td  style="text-align: left;   width:360px;   border: none;  "><span style="width:400px;">'.$customer_info[0]['currency_type'].'</span>'.$invoice[0]['paid_amount'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">Balance Amount :</td>
+<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">'.display("Balance Amount").':</td>
 <td  style="text-align: left;    border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['due_amount'].'</td>
 </tr>
 
 </table>
-  <br><h3 class="heading_view">Account Details/Additional Information : <span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
-  <h3 class="heading_view">Remarks/Conditions : <span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
+<br><h3 class="heading_view">'.display("Account Details/Additional Information").' :<span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
+<h3 class="heading_view">'.display("Remarks/Conditions").' :<span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
 
 }
-elseif($template==1)
+elseif($template==1) 
 {
 
 
@@ -293,7 +293,7 @@ elseif($template==1)
   <tr class="header_view">
    
     <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
-    <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+    <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
     <td style="border: none">
     <img src="'.$this->session->userdata('image_email').'" width="100px" />
    </td>
@@ -303,32 +303,32 @@ elseif($template==1)
 
 <table>
 <tr>
-  <td style="border: none; font-size: 14px;"> <b>Invoice Number</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Customer Name:</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
+<td style="border: none; font-size: 14px;"> <b>'.display("Invoice Number").':</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Customer Name").':</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
 </tr>
 
 
 
 <tr>
-  <td style="border: none; font-size: 14px;"><b>Sales Invoice Date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Shipping Address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Sales Invoice Date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Shipping Address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
 </tr>
 
 <tr>
-  <td style="border: none; font-size: 14px;"><b>Payment due date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Payment Terms:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment due date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment Terms").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Container Number:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>B/L No:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Container Number").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("B/L No").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Estimated Time of Arrival:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>Estimated Time of Departure:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Arrival").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Departure").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Payment Type:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>Billing address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Payment Type").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Billing address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
 </tr>
 </table>
 
@@ -397,49 +397,48 @@ $content .='<tr>
 $content .='<table>
 
 <tr>
-<td colspan="7" style="text-align: right; width:250px;  border: none;  ">Overall TOTAL :</td>
+<td colspan="7" style="text-align: right; width:250px;  border: none;  ">'.display("Overall TOTAL").' :</td>
 <td  style="text-align: left;  width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['total_amount'].'</td>
 </tr> 
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;     border: none;  ">Overall Net Sq.Ft :</td>
+<td colspan="7" style="text-align: right;   width:250px;     border: none;  ">'.display("Overall Net Sq.Ft ").' :</td>
 <td  style="text-align: left; width:260px;   border: none;  ">'.$invoice[0]['total_net'].'</td>
 </tr>
 
 
 <tr>
-<td colspan="7" style="text-align: right;  width:250px;     border: none; ">Tax :</td>
+<td colspan="7" style="text-align: right;  width:250px;     border: none; ">'.display("Tax").' :</td>
 <td  style="text-align: left ;  width:260px;  border: none;  "> '.$currency[0]['currency'].' '.$invoice[0]['total_tax'].'</td>
 </tr>
 
 
 
 <tr>
-<td colspan="7" style="text-align: right; width:250px;      border: none; ">GRAND TOTAL :</td>
+<td colspan="7" style="text-align: right; width:250px;      border: none; ">'.display("GRAND TOTAL ").' :</td>
 <td  style="text-align: left;   width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['gtotal'].'</td>
 </tr>
 
 
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;       border: none; ">GRAND TOTAL (Preferred Currency) :</td>
+<td colspan="7" style="text-align: right;   width:250px;       border: none; ">'.display("GRAND TOTAL").''.display("Preferred Currency").' :</td>
 <td  style="text-align: left; width:260px;  border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['gtotal_preferred_currency'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;     border: none; ">Amount Paid :</td>
-<td  style="text-align: left;   width:360px;   border: none;  "><span style="width:400px;">'.$$customer_info[0]['currency_type'].'</span>'.$invoice[0]['paid_amount'].'</td>
+<td colspan="7" style="text-align: right;   width:250px;     border: none; ">'.display("Amount Paid ").':</td>
+<td  style="text-align: left;   width:360px;   border: none;  "><span style="width:400px;">'.$customer_info[0]['currency_type'].'</span>'.$invoice[0]['paid_amount'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">Balance Amount :</td>
+<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">'.display("Balance Amount").':</td>
 <td  style="text-align: left;    border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['due_amount'].'</td>
 </tr>
 
 </table>
-<br><h3 class="heading_view">Account Details/Additional Information : <span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
-<h3 class="heading_view">Remarks/Conditions : <span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
-
+<br><h3 class="heading_view">'.display("Account Details/Additional Information").' :<span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
+<h3 class="heading_view">'.display("Remarks/Conditions").' :<span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
 
 }
 elseif($template==3)
@@ -455,7 +454,7 @@ elseif($template==3)
     <td style="border: none">
      <img src="'.$this->session->userdata('image_email').'" width="100px" />
     </td>
-    <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+    <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
   
   </tr>
 </table>
@@ -467,35 +466,34 @@ elseif($template==3)
 
 
 <br> <br>
-
 <table>
 <tr>
-  <td style="border: none; font-size: 14px;"> <b>Invoice Number</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Customer Name:</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
+<td style="border: none; font-size: 14px;"> <b>'.display("Invoice Number").':</b>:&nbsp;<span style="font-weight: normal;">'.$invoice[0]['commercial_invoice_number'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Customer Name").':</b>&nbsp;<span style="font-weight: normal;">'.$customer_info[0]['customer_name'].'</span></td>
 </tr>
 
 
 
 <tr>
-  <td style="border: none; font-size: 14px;"><b>Sales Invoice Date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Shipping Address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Sales Invoice Date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Shipping Address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['shipping_address'].'</span></td>
 </tr>
 
 <tr>
-  <td style="border: none; font-size: 14px;"><b>Payment due date:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
-  <td style="border: none; font-size: 14px;"><b>Payment Terms:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment due date").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_due_date'].'</span></td>
+  <td style="border: none; font-size: 14px;"><b>'.display("Payment Terms").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_terms'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Container Number:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>B/L No:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Container Number").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['container_no'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("B/L No").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['bl_no'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Estimated Time of Arrival:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>Estimated Time of Departure:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Arrival").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['eta'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Estimated Time of Departure").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['etd'].'</span></td>
 </tr>
 <tr>
-<td style="border: none; font-size: 14px;"><b>Payment Type:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
-<td style="border: none; font-size: 14px;"><b>Billing address:</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Payment Type").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['payment_type'].'</span></td>
+<td style="border: none; font-size: 14px;"><b>'.display("Billing address").':</b>&nbsp;<span style="font-weight: normal;">'.$invoice[0]['billing_address'].'</span></td>
 </tr>
 </table>
 
@@ -564,49 +562,48 @@ $content .='<tr>
 $content .='<table>
 
 <tr>
-<td colspan="7" style="text-align: right; width:250px;  border: none;  ">Overall TOTAL :</td>
+<td colspan="7" style="text-align: right; width:250px;  border: none;  ">'.display("Overall TOTAL").' :</td>
 <td  style="text-align: left;  width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['total_amount'].'</td>
 </tr> 
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;     border: none;  ">Overall Net Sq.Ft :</td>
+<td colspan="7" style="text-align: right;   width:250px;     border: none;  ">'.display("Overall Net Sq.Ft ").' :</td>
 <td  style="text-align: left; width:260px;   border: none;  ">'.$invoice[0]['total_net'].'</td>
 </tr>
 
 
 <tr>
-<td colspan="7" style="text-align: right;  width:250px;     border: none; ">Tax :</td>
+<td colspan="7" style="text-align: right;  width:250px;     border: none; ">'.display("Tax").' :</td>
 <td  style="text-align: left ;  width:260px;  border: none;  "> '.$currency[0]['currency'].' '.$invoice[0]['total_tax'].'</td>
 </tr>
 
 
 
 <tr>
-<td colspan="7" style="text-align: right; width:250px;      border: none; ">GRAND TOTAL :</td>
+<td colspan="7" style="text-align: right; width:250px;      border: none; ">'.display("GRAND TOTAL ").' :</td>
 <td  style="text-align: left;   width:260px;  border: none;  ">'.$currency[0]['currency'].''.$invoice[0]['gtotal'].'</td>
 </tr>
 
 
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;       border: none; ">GRAND TOTAL (Preferred Currency) :</td>
+<td colspan="7" style="text-align: right;   width:250px;       border: none; ">'.display("GRAND TOTAL").''.display("Preferred Currency").' :</td>
 <td  style="text-align: left; width:260px;  border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['gtotal_preferred_currency'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;   width:250px;     border: none; ">Amount Paid :</td>
+<td colspan="7" style="text-align: right;   width:250px;     border: none; ">'.display("Amount Paid ").':</td>
 <td  style="text-align: left;   width:360px;   border: none;  "><span style="width:400px;">'.$customer_info[0]['currency_type'].'</span>'.$invoice[0]['paid_amount'].'</td>
 </tr>
 
 <tr>
-<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">Balance Amount :</td>
+<td colspan="7" style="text-align: right;  width:250px;    border: none;   ">'.display("Balance Amount").':</td>
 <td  style="text-align: left;    border: none;  ">'.$customer_info[0]['currency_type'].''.$invoice[0]['due_amount'].'</td>
 </tr>
 
 </table>
-<br><h3 class="heading_view">Account Details/Additional Information : <span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
-<h3 class="heading_view">Remarks/Conditions : <span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
-
+<br><h3 class="heading_view">'.display("Account Details/Additional Information").' :<span style="font-weight: normal;">'.$invoice[0]['ac_details'].'</span></h3>
+<h3 class="heading_view">'.display("Remarks/Conditions").' :<span style="font-weight: normal;">'.$invoice[0]['remark'].'</span></h3>'; 
 }
 
 
@@ -623,6 +620,8 @@ $content .='<table>
 
 $content .= '</body></html>';    
 $content;
+
+
 // echo $content;
 // die();
 
@@ -718,11 +717,11 @@ else
      <div class="modal-content" style="margin-top: 190px;">
        <div class="modal-header" style="">
          <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <h4 class="modal-title">New Sale</h4>
+         <h4 class="modal-title"><?php echo display('New Sale') ?> </h4>
        </div>
        <div class="modal-body" id="bodyModal1" style="text-align:center;font-weight:bold;">
          
-       Mail Send Successfully
+       <?php echo display('Mail Send Successfully') ?>
     
        </div>
        <div class="modal-footer">

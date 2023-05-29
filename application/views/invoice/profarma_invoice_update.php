@@ -34,12 +34,12 @@ border: 2px solid #dce4ec;
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Edit Quotation</h1>
+            <h1> <?php echo display (' Edit Quotation ') ?></h1>
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Sale</a></li>
-                <li class="active" style="color:orange;">Edit Quotation</li>
+                <li><a href="#"> <?php echo display (' Sale ') ?></a></li>
+                <li class="active" style="color:orange;"><?php echo display (' Edit Quotation ') ?></li>
             </ol>
         </div>
     </section>
@@ -150,7 +150,7 @@ textarea:focus, input:focus{
                   
                              <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="date" class="col-sm-4 col-form-label">Date
+                                    <label for="date" class="col-sm-4 col-form-label"> <?php echo display('Date') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-8">
@@ -161,7 +161,7 @@ textarea:focus, input:focus{
                             </div>
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Buyer / Customer
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo display('Buyer / Customer') ?>
                                     </label>
                                     <div class="col-sm-8">
                                     <select name="customer_id" id="customer_id" class="form-control" style="width:100%">
@@ -192,7 +192,7 @@ textarea:focus, input:focus{
 
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="eta" class="col-sm-4 col-form-label">Place of Receipt
+                                    <label for="eta" class="col-sm-4 col-form-label"><?php echo display('Place of Receipt') ?>
                                     </label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" tabindex="4" id="eta" name="receipt" value="<?php echo $receipt; ?>" placeholder="Place of Receipt"  style="width:100%"   />
@@ -206,7 +206,7 @@ textarea:focus, input:focus{
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="etd" class="col-sm-4 col-form-label">Pre Carriage By
+                                    <label for="etd" class="col-sm-4 col-form-label"><?php echo display('Pre Carriage By') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -217,7 +217,7 @@ textarea:focus, input:focus{
                             
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="bl_number" class="col-sm-4 col-form-label">Description of goods
+                                    <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Description of goods') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -235,7 +235,7 @@ textarea:focus, input:focus{
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="shipping_line" class="col-sm-4 col-form-label">Country of origin of goods
+                                    <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('Country of origin of goods') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -246,7 +246,7 @@ textarea:focus, input:focus{
                         
                             <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="container_no" class="col-sm-4 col-form-label">Country of final destination
+                                    <label for="container_no" class="col-sm-4 col-form-label"><?php echo display('Country of final destination') ?>
                                     </label>
                                     <div class="col-sm-8">
                                     <select class="selectpicker countrypicker form-control" data-live-search="true" data-default="<?php echo $country_destination;  ?>" id="container_no" name="country_destination" placeholder="Country of final destination" style="width:100%"></select>
@@ -260,7 +260,7 @@ textarea:focus, input:focus{
 
                              <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="bl_number" class="col-sm-4 col-form-label">Port of loading
+                                    <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Port of loading') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -271,7 +271,7 @@ textarea:focus, input:focus{
 
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="bl_number" class="col-sm-4 col-form-label">Port of discharge
+                                    <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Port of discharge') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -291,7 +291,7 @@ textarea:focus, input:focus{
 
                              <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="bl_number" class="col-sm-4 col-form-label">Terms of payment and delivery
+                                    <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Terms of payment and delivery') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-8">
@@ -344,34 +344,36 @@ for($m=1;$m<count($purchase_info);$m++){ ?>
 <table class="table normalinvoice table-bordered table-hover" id="normalinvoice_<?php  echo $m; ?>" style="width: -webkit-fill-available;">
                                 <thead>
                                      <tr>
-                                          <th rowspan="2" class="text-center" >Product Name<i class="text-danger">*</i>  &nbsp;&nbsp; </th>
-                                            <th rowspan="2" class="text-center">Description</th>
-                                            <th rowspan="2" class="text-center">Thickness<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>
+                                     <th rowspan="2" class="text-center" style="width:180px;" ><?php echo display('product_name')?><i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Bundle No')?><i class="text-danger">*</i></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Description')?></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Thick ness')?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Supplier Block No')?><i class="text-danger">*</i></th>
 
-                                            <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th>
-                                            <th colspan="2" style="width: max-content;" class="text-center">Gross Measure<i class="text-danger">*</i> </th>
-                                            <th rowspan="2" class="text-center">Gross Sq. Ft</th>
-                                            <th rowspan="2" class="text-center">Bundle No<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Slab No<i class="text-danger">*</i></th>
-                                            <th colspan="2" style="width: max-content;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Net Sq. Ft</th>
-                                           <th rowspan="2" class="text-center" style="width:90px;">Cost <br/>per Sq. Ft</th>
-                                            <th rowspan="2" class="text-center" style="width:90px;">Cost <br/>per Slab</th>
-                                            <th rowspan="2" class="text-center" style="width:90px;">Sales Price per Sq. Ft</th>
-                                            <th rowspan="2" class="text-center" style="width:90px;">Sales Slab Price</th>
-                                            <th rowspan="2" class="text-center">Weight</th>
-                                            <th rowspan="2" class="text-center">Origin</th>
+                                            <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No')?><i class="text-danger">*</i> </th>
+                                            <th colspan="2"   style="width:150px;" class="text-center"><?php echo display('Gross Measurement')?><i class="text-danger">*</i> </th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft')?></th>
                                            
-                                            <th rowspan="2" style="width: 140px" class="text-center">Total</th>
-                                            <th rowspan="2" class="text-center">Action</th>
+                                            <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No')?><i class="text-danger">*</i></th>
+                                            <th colspan="2"  style="width:150px;" class="text-center"><?php echo display('Net Measure')?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Net Sq. Ft')?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Sq.Ft')?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Slab')?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Sales Price per Sq.Ft')?></th>
+                                            <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Sales Slab Price')?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Weight')?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Origin')?></th>
+                                           
+                                            <th rowspan="2" style="width: 100px" class="text-center"><?php echo display('Total')?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Action')?></th>
                                         </tr>
 
                                         <tr>
-                                             <th class="text-center">Width</th>
-                                            <th class="text-center">Height</th>  
-                                          <th class="text-center">Width</th>
-                                            <th class="text-center">Height</th>  
+                                        <th class="text-center"><?php echo display('Width')?></th>
+                                            <th class="text-center"><?php echo display('Height')?></th>  
+                                          <th class="text-center"  ><?php echo display('Width')?></th>
+                                            <th class="text-center" >
+                                              <?php echo display ('Height')?></th> 
                                         </tr>
 
                                 </thead>
@@ -548,14 +550,14 @@ if($a==$m){
                                             </tbody>
                                 <tfoot>
                                     <tr>
-                                    <td style="text-align:right;" colspan="8"><b>Gross weight :</b></td>
+                                    <td style="text-align:right;" colspan="8"><b><?php echo display ('Gross weight') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_<?php echo $m; ?>" name="overall_gross[]"    class="overall_gross form-control" style="width: 60px"   readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="3"><b>Net weight :</b></td>
+             <td style="text-align:right;" colspan="3"><b><?php echo display('Net weight')?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"   readonly="readonly"  /> 
-            </td>   <td style="text-align:right;" colspan="4"><b>Weight :</b></td>
+            </td>   <td style="text-align:right;" colspan="4"><b><?php echo display('Weight')`345?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_<?php echo $m; ?>" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  /> 
             </td> 

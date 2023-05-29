@@ -22,7 +22,7 @@
 
         <div class="header-title">
 
-            <h1><?php echo "Edit Sale" ?></h1>
+            <h1><?php echo display('Edit Sale') ?></h1>
 
             <small></small>
 
@@ -32,7 +32,7 @@
 
                 <li><a href="#"><?php echo display('invoice') ?></a></li>
 
-                <li class="active" style="color:orange;"><?php echo "Edit Sale"; ?></li>
+                <li class="active" style="color:orange;"><?php echo display('Edit Sale') ?></li>
 
             </ol>
 
@@ -113,7 +113,7 @@
                                 <div class="Column" style="float: right;"> <form id="histroy" method="post" >
 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
 <input type="hidden"  value="<?php echo $all_invoice[0]['payment_id']; ?>" name="payment_id" class="payment_id" id="payment_id"/>
-<input type="submit" id="payment_history" name="payment_history" class="btn" style="float:right;color:white;background-color: #38469f;" value="Payment History" style="float:right;margin-bottom:30px;"/>
+<input type="submit" id="payment_history" name="payment_history" class="btn" style="float:right;color:white;background-color: #38469f;float:right;margin-bottom:30px;"   value="<?php echo display('Payment History') ?>"/>
                                             </form> </div> 
                              <div class="Column" style="float: right;">
                             <?php if($this->permission1->method('manage_invoice','read')->access()){ ?>
@@ -240,7 +240,7 @@
 
                                 <div class="form-group row">
 
-                                    <label for="date" class="col-sm-4 col-form-label">Sales Invoice date <i class="text-danger">*</i></label>
+                                <label for="date" class="col-sm-4 col-form-label"><?php echo display('Sales Invoice date') ?> <i class="text-danger">*</i></label>
 
                                     <div class="col-sm-8">
                                     <?php
@@ -260,7 +260,7 @@ $date = date('Y-m-d');
 
                                       <div class="form-group row">
 
-                                    <label for="billing_address" class="col-sm-4 col-form-label">Billing Address</label>
+                                    <label for="billing_address" class="col-sm-4 col-form-label"><?php echo display('Billing Address') ?></label>
 
                                     <div class="col-sm-8">
 
@@ -271,7 +271,7 @@ $date = date('Y-m-d');
                                 <input type="hidden"  value="<?php echo $all_invoice[0]['payment_id']; ?>" name="payment_id" class="payment_id"/>
                                 <div class="form-group row">
 
-<label for="shipping_address" class="col-sm-4 col-form-label">Shipping Address</label>
+<label for="shipping_address" class="col-sm-4 col-form-label"><?php echo display('Shipping Address') ?></label>
 
 <div class="col-sm-8">
 
@@ -282,7 +282,7 @@ $date = date('Y-m-d');
 </div> 
 <div class="form-group row">
 
-<label for="payment_terms" class="col-sm-4 col-form-label">Payment Terms<i class="text-danger">*</i></label>
+<label for="payment_terms" class="col-sm-4 col-form-label"><?php echo display('Payment Terms') ?><i class="text-danger">*</i></label>
 
 <div class="col-sm-8">
 
@@ -334,7 +334,7 @@ $date = date('Y-m-d');
 
                                 <div class="form-group row">
 
-                                    <label for="date" class="col-sm-4 col-form-label">Invoice Number<i class="text-danger">*</i></label>
+                                    <label for="date" class="col-sm-4 col-form-label"><?php echo display('Invoice Number') ?><i class="text-danger">*</i></label>
 
                                     <div class="col-sm-8">
                                         <input class="form-control" placeholder="Commercial Invoice Number" type="text" name="commercial_invoice_number"  value= "<?php  echo $all_invoice[0]['commercial_invoice_number'] ; ?>" readonly />
@@ -344,7 +344,7 @@ $date = date('Y-m-d');
 
                                       <div class="form-group row">
 
-                                    <label for="container_number" class="col-sm-4 col-form-label">Container Number <i class="text-danger">*</i></label>
+                                    <label for="container_number" class="col-sm-4 col-form-label"><?php echo display('Container Number') ?> <i class="text-danger">*</i></label>
 
                                     <div class="col-sm-8">
 
@@ -362,7 +362,7 @@ $date = date('Y-m-d');
 
                                 <div class="form-group row">
 
-                                    <label for="date" class="col-sm-4 col-form-label">B/L No<i class="text-danger">*</i></label>
+                                    <label for="date" class="col-sm-4 col-form-label"><?php echo display('B/L No') ?><i class="text-danger">*</i></label>
 
                                     <div class="col-sm-8">
 
@@ -378,7 +378,7 @@ $date = date('Y-m-d');
              
                                   <div class="form-group row">
 
-                                    <label for="port_of_discharge" class="col-sm-4 col-form-label">  Payment Due date</label>
+                                    <label for="port_of_discharge" class="col-sm-4 col-form-label"><?php echo display('  Payment Due date') ?></label>
 
                                    <div class="col-sm-8">
 
@@ -391,7 +391,7 @@ $date = date('Y-m-d');
                                 </div>
                                 <div class="form-group row">
 
-                                    <label for="ETA" class="col-sm-4 col-form-label">Estimated Time of Arrival</label>
+                                    <label for="ETA" class="col-sm-4 col-form-label"><?php echo display('Estimated Time of Arrival') ?></label>
 
                                    <div class="col-sm-8">
 
@@ -411,7 +411,7 @@ $date = date('Y-m-d');
 
                                 <div class="form-group row">
 
-<label for="ETA" class="col-sm-4 col-form-label">Estimated Time of Departure</label>
+<label for="ETA" class="col-sm-4 col-form-label"><?php echo display('Estimated Time of Departure') ?></label>
 
 <div class="col-sm-8">
 
@@ -423,7 +423,7 @@ $date = date('Y-m-d');
 
 <div class="form-group row">
 
-<label for="port_of_discharge" class="col-sm-4 col-form-label"> Port Of Discharge</label>
+<label for="port_of_discharge" class="col-sm-4 col-form-label"><?php echo display(' Port Of Discharge') ?></label>
 
 <div class="col-sm-8">
 
@@ -435,7 +435,7 @@ $date = date('Y-m-d');
 
                                     <div class="form-group row">
 
-                                    <label for="ETA" class="col-sm-4 col-form-label">Attachments</label>
+                                    <label for="ETA" class="col-sm-4 col-form-label"><?php echo display('Attachments') ?></label>
 
                                     <div class="col-sm-8">
 
@@ -463,7 +463,7 @@ $date = date('Y-m-d');
 
                                    <select name="bank_id" class="form-control bankpayment"  id="bank_id">
 
-                                        <option value="">Select Location</option>
+                                        <option value=""><?php echo display('Select Location') ?></option>
 
                                         <?php foreach($bank_list as $bank){?>
 
@@ -481,7 +481,7 @@ $date = date('Y-m-d');
                                     <div  class=" col-sm-1">
 
                                          <!-- <a href="#" class="client-add-btn btn btn-info" aria-hidden="true" data-toggle="modal" data-target="#bank_info"><i class="ti-plus m-r-2"></i></a> -->
-                                         <a href="#" class="client-add-btn btn btn-info" aria-hidden="true"   data-toggle="modal" data-target="#bank_info" >Add New Bank</a>
+                                         <a href="#" class="client-add-btn btn btn-info" aria-hidden="true"   data-toggle="modal" data-target="#bank_info" ><?php echo display('Add New Bank') ?></a>
                                     </div>
 
                                 <?php } ?>
@@ -559,35 +559,35 @@ for($m=1;$m<count($all_invoice);$m++){
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
                                 <thead>
                                      <tr>
-                                             <th rowspan="2" class="text-center" style="width:180px;" >Product Name</th>
-                                            <th rowspan="2" class="text-center" style="width:60px;">Bundle No<i class="text-danger">*</i></th>
-                                            <th rowspan="2"  class="text-center">Description</th>
-                                            <th rowspan="2" class="text-center" style="width:60px;">Thick ness<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>
+                                     <th rowspan="2" class="text-center" style="width:180px;" ><?php echo display('product_name') ?><i class="text-danger">*</i>  &nbsp;&nbsp; <a href="#" class="btn" style="color:white;background-color:#38469f;"  aria-hidden="true" data-toggle="modal" data-target="#product_info"><i class="ti-plus m-r-2"></i></a></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Bundle No') ?><i class="text-danger">*</i></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Description') ?></th>
+                                            <th rowspan="2" class="text-center" style="width:60px;"><?php echo display('Thick ness') ?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Supplier Block No') ?><i class="text-danger">*</i></th>
 
-                                            <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th>
-                                            <th colspan="2"   style="width:150px;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th>
-                                            <th rowspan="2" class="text-center">Gross Sq. Ft</th>
+                                            <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No') ?><i class="text-danger">*</i> </th>
+                                            <th colspan="2"   style="width:150px;" class="text-center"><?php echo display('Gross Measurement') ?><i class="text-danger">*</i> </th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft') ?></th>
                                            
-                                            <th rowspan="2" style="width:40px;" class="text-center">Slab No<i class="text-danger">*</i></th>
-                                            <th colspan="2"  style="width:150px;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Net Sq. Ft</th>
-                                            <th rowspan="2"  class="text-center">Cost per Sq. Ft</th>
-                                            <th rowspan="2"  class="text-center">Cost per Slab</th>
-                                            <th rowspan="2"  class="text-center">Sales<br/>Price per Sq. Ft</th>
-                                            <th rowspan="2"  class="text-center">Sales Slab Price</th>
-                                            <th rowspan="2" class="text-center">Weight</th>
-                                            <th rowspan="2" class="text-center">Origin</th>
+                                            <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No') ?><i class="text-danger">*</i></th>
+                                            <th colspan="2"  style="width:150px;" class="text-center"><?php echo display('Net Measure') ?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft') ?></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Cost per Sq.Ft') ?></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Cost per Slab') ?></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Sales') ?><br/><?php echo display('Price per Sq.Ft') ?></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Sales Slab Price') ?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Weight') ?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Origin') ?></th>
                                            
-                                            <th rowspan="2" style="width: 100px" class="text-center">Total</th>
-                                            <th rowspan="2" class="text-center">Action</th>
+                                            <th rowspan="2" style="width: 100px" class="text-center"><?php echo display('Total') ?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Action') ?></th>
                                         </tr>
 
                                         <tr>
-                                             <th class="text-center">Width</th>
-                                            <th class="text-center">Height</th>  
-                                          <th class="text-center"  >Width</th>
-                                            <th class="text-center" >Height</th>    
+                                             <th class="text-center"><?php echo display('Width') ?></th>
+                                            <th class="text-center"><?php echo display('Height') ?></th>  
+                                          <th class="text-center"  ><?php echo display('Width') ?></th>
+                                            <th class="text-center" ><?php echo display('Height') ?></th>    
                                         </tr>
 
                                 </thead>
@@ -773,25 +773,25 @@ if($a==$m){
                                 <tfoot>
                                      <input type="hidden" id="paid_convert" name="paid_convert"/>   <input type="hidden" id="bal_convert" name="bal_convert"/>
                                     <tr>
-                                    <td style="text-align:right;" colspan="8"><b>Gross weight :</b></td>
+                                    <td style="text-align:right;" colspan="8"><b><?php echo display('Gross weight') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_<?php echo $m; ?>" name="overall_gross[]"    class="overall_gross form-control" style="width: 60px"   readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="3"><b>Net weight :</b></td>
+             <td style="text-align:right;" colspan="3"><b><?php echo display('Net weight') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"   readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="4"><b>Weight :</b></td>
+             <td style="text-align:right;" colspan="4"><b><?php echo display('Weight') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_<?php echo $m; ?>" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  /> 
             </td> 
 
-                                        <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td>
+                                        <td style="text-align:right;" colspan="1"><b><?php echo display('TOTAL') ?> :</b></td>
                                         <td >
                <span class="input-symbol-euro">     <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total form-control"   style="padding-top: 6px;width: 70px"    readonly="readonly"  />
             </td>
                                                 <td colspan="21" style="text-align: end;">
- <i id="buddle_<?php echo $m; ?>" class="btn-danger removebundle fa fa-minus"  aria-hidden="true">Bundle</i>    
+ <i id="buddle_<?php echo $m; ?>" class="btn-danger removebundle fa fa-minus"  aria-hidden="true"><?php echo display('Bundle') ?></i>    
 
                                             </td>                    
                                     </tr>
@@ -799,17 +799,17 @@ if($a==$m){
                                             </tfoot>
                             </table>
                             <?php   } ?>
-                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); ">Bundle</i>    
+                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php echo display('Bundle') ?></i>    
                          </div> </div>
                                                <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:22%;border:none;text-align:end;font-weight:bold;">
-                            Today's Rate : 
+                        <?php echo display('  Todays Rate') ?> : 
                          </td>
                 
                                <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width: 80px;text-align:center;color:black;padding:5px;" type="text" id="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                    <td style="border:none;text-align:right;font-weight:bold;">Tax : 
+                    <td style="border:none;text-align:right;font-weight:bold;">  <?php echo display('Tax') ?> : 
                                  </td>
                               <td style="width:12%">
 <select name="tx"  id="product_tax" class="form-control" >
@@ -831,24 +831,24 @@ if($a==$m){
          <td  style="text-align:right;border:none;"> </td>
 </tr>
   <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall TOTAL :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>  <?php echo display('Overall TOTAL') ?> :</b></td>
         <td colspan="1" style="border:none;padding-bottom: 40px;"><span class="input-symbol-euro"><input type="text" id="Over_all_Total" name="Over_all_Total"  style="width:200px;" class="form-control" value="<?php echo $invoice_detail[0]['total_amount'];  ?>"  readonly="readonly"  /> </span></td>
-         <td colspan="4" style="text-align:right;border:none;width:250px;"><b>TAX DETAILS :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="<?php echo $invoice_detail[0]['taxs'];  ?>" name="tax_details"  readonly="readonly" /></span></td>
+         <td colspan="4" style="text-align:right;border:none;width:250px;"><b>  <?php echo display('TAX DETAILS') ?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">     <input type="text" class="form-control" style="width:150px;"  id="tax_details" value="<?php echo $invoice_detail[0]['taxs'];  ?>" name="tax_details"  readonly="readonly" /></span></td>
 </tr>
    <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Gross Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>  <?php echo display('Overall Gross Sq.Ft') ?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_gross" name="total_gross" value="<?php echo  $invoice_detail[0]['total_gross'];  ?>"  class="form-control"   readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="<?php echo $all_invoice[0]['gtotal'];  ?>"  readonly="readonly" /></td>
+         <td colspan="4" style="text-align:right;border:none;"><b>  <?php echo display('GRAND TOTAL') ?> :</b></td><td colspan="1" style="border:none;">  <span class="input-symbol-euro">    <span class="input-symbol-euro">   <input type="text" id="gtotal"   class="form-control" style="width:150px;" name="gtotal" value="<?php echo $all_invoice[0]['gtotal'];  ?>"  readonly="readonly" /></td>
 </tr>
     <tr>
-        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>Overall Net Sq.Ft :</b></td>
+        <td  colspan="2" style="vertical-align:top;text-align:right;border:none;"><b>  <?php echo display('Overall Net Sq.Ft') ?> :</b></td>
         <td colspan="1" style="border:none;"><input type="text" id="total_net" name="total_net" value="<?php echo  $invoice_detail[0]['total_net'];  ?>" class="form-control"    readonly="readonly"  /> </td>
-         <td colspan="4" style="text-align:right;border:none;"><b>GRAND TOTAL :</b><br/>(<b>Preferred Currency</b>)</td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="customer_gtotal"  value="<?php echo $invoice_detail[0]['gtotal_preferred_currency'];  ?>"   name="customer_gtotal"  required   /></td></tr></table></td>
+        <td colspan="4" style="text-align:right;border:none;"><b><?php echo display('GRAND TOTAL') ?> :</b><br/><?php echo display('Preferred Currency') ?></td><td colspan="1" style="border:none;"> <table><tr> <td class="cus" name="cus" style="width: 40px;"></td> <td><input  type="text"  readonly id="customer_gtotal"     name="customer_gtotal"  required   /></td></tr></table></td>
 </tr>
 
     <tr>
-        <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b>Overall Weight :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight" value="<?php echo $invoice_detail[0]['total_weight'];  ?>"  class="form-control"   readonly="readonly"  /></td>
-         <td colspan="4" class="amt" style="text-align:right;border:none;"><b>Amount Paid :</b></td><td style="border:none;"> 
+    <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Overall Weight') ?> :</b></td><td colspan="1" style="border:none;"><input type="text" id="total_weight" name="total_weight"   class="form-control"   readonly="readonly"  /></td>
+    <td colspan="4" class="amt" style="text-align:right;border:none;"><b><?php echo display('Amount Paid') ?> :</b></td><td style="border:none;">
                                         <table border="0">
       <tr class="amt">
 
@@ -1232,7 +1232,7 @@ if($a==$m){
 
   <tr>
       <td colspan="2"  style="vertical-align:top;text-align:right;border:none;"></td><td colspan="1" style="border:none;"></td>
-        <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b>Balance Amount :</b></td>
+      <td class="amt" colspan="4"  style="vertical-align:top;text-align:right;border:none;"><b><?php echo display('Balance Amount') ?> :</b></td>
         <td class="amt" style="border:none;" colspan="1">
             <table border="0">
       <tr class="amt">
@@ -1617,7 +1617,7 @@ if($a==$m){
                                             <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
                                                
                                             <td colspan="21" style="text-align: end;">
-                                        <input type="submit" value="Make Payment" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
                                             </tfoot>
@@ -1632,35 +1632,35 @@ if($a==$m){
                                    
                                     <td>
                                    
-                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value="Save" />
+                                        <input type="submit" id="add_purchase" style="color:white;background-color: #38469f;" class="btn btn-large" name="add-packing-list" value= <?php echo display('Save') ?> />
                                             </td>
                                             
 
                                             <td class="hidden_button"> 
  
-                               <a    id="final_submit" style="color:white;background-color: #38469f;" class='final_submit btn'>Submit</a>
-                                            </td>
-                                           
-                                  <td class="hidden_button">         
- <select name="download_select" id="download_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
-                                        <option value="Download" selected>Download</option>
-                                             <option value="Invoice" >New Invoice</option>
-                                                <option value="Packing" >Packing List</option>
-                                        </select>
-                                        
+ <a    id="final_submit" style="color:white;background-color: #38469f;" class='final_submit btn'> <?php echo display('submit') ?></a>
+              </td>
+             
+    <td class="hidden_button">         
+<select name="download_select" id="download_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
+          <option value="Download" selected><?php echo display('Download') ?></option>
+               <option value="Invoice" ><?php echo display('New Invoice') ?></option>
+                  <option value="Packing" ><?php echo display('Packing List') ?></option>
+          </select>
+          
 
-   </td>       
+</td>       
 <td style="width:60px;" class="hidden_button"></td>
-                   <td class="hidden_button">
+<td class="hidden_button">
 
- <select name="print_select" id="print_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
-                                        <option value="Print" selected>Print</option>
-                                             <option value="Invoice" >New Invoice</option>
-                                                <option value="Packing" >Packing List</option>
-                                        </select>
+<select name="print_select" id="print_select" class="form-control" style="color:white;background-color: #38469f;width: auto;" >
+          <option value="Print" selected><?php echo display('Print') ?></option>
+               <option value="Invoice" ><?php echo display('New Invoice') ?></option>
+                  <option value="Packing" ><?php echo display('Packing List') ?></option>
+          </select>
 
 
-                   </td>                   
+</td>                   
                                  
 
                                     
@@ -1675,7 +1675,7 @@ if($a==$m){
   </div>
                            <div class="form-group row">
 
-                                    <label for="billing_address" class="col-sm-4 col-form-label">Account Details/Additional Information</label>
+                           <label for="billing_address" class="col-sm-2 col-form-label"><?php echo display('Account Details/Additional Information') ?></label>
 
                                     <div class="col-sm-8">
                                     <input type="text" id="details" name="ac_details" class=" form-control" value="{ac_details}" />
@@ -1686,7 +1686,7 @@ if($a==$m){
                                 </div> 
                                 <div class="form-group row">
 
-                                    <label for="remark" class="col-sm-4 col-form-label">Remarks/Conditions</label>
+                                <label for="remark" class="col-sm-2 col-form-label"><?php echo display('Remarks/Conditions') ?></label>
 
                                     <div class="col-sm-8">
                                     <input type="text" id="remarks" name="remark" class=" form-control" value="{remark}" />
@@ -1721,7 +1721,7 @@ if($a==$m){
       <div class="modal-content" style="margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sales - New Invoice</h4>
+          <h4 class="modal-title"><?php echo display('Sales - New Invoice') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="text-align:center;font-weight:bold;">
           
@@ -1741,18 +1741,18 @@ if($a==$m){
 		<div class="modal-content">
 			 <div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo display('Confirmation') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+      <p><?php echo display('Your Invoice is not submitted. Would you like to submit or discard') ?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+        <small> <?php echo display ('If you dont submit your changes will not be saved') ?></small>
 				</p>
 			</div>
 			<div class="modal-footer">
 				<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()">Discard</button>
+        <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()"><?php echo display('Discard') ?></button>
 			
 			</div>
 		</div>
@@ -1765,7 +1765,7 @@ if($a==$m){
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ADD PAYMENT</h4>
+          <h4 class="modal-title"><?php echo display('ADD PAYMENT') ?></h4>
         </div>
         <div class="modal-body">
           
@@ -1776,7 +1776,7 @@ if($a==$m){
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label">Payment Date <i class="text-danger">*</i></label>
+        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
 
@@ -1789,14 +1789,14 @@ if($a==$m){
 <input type="hidden"  value="<?php echo $all_invoice[0]['payment_id']; ?>" name="payment_id" class="payment_id" id="payment_id"/>
  <div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Reference No<i class="text-danger">*</i></label>
+        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
         <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
  </div> 
     <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label">Select Bank:<i class="text-danger">*</i></label>
+      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
     <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
       <div class="col-sm-5">
   <select name="bank" id="bank"  class="form-control bankpayment" >
@@ -1843,7 +1843,7 @@ if($a==$m){
       <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
       <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount to be paid : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount to be paid')?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1859,7 +1859,7 @@ if($a==$m){
 </div> 
       <div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount Received : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount Received')?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1875,7 +1875,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label">Balance : </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php echo display('Balance')?> : </label>
 
 <div class="col-sm-5">
 
@@ -1889,7 +1889,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Payment Amount: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Amount') ?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1905,7 +1905,7 @@ if($a==$m){
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Additional Information : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Additional Information') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1913,7 +1913,7 @@ if($a==$m){
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Attachments : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Attachments') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -1924,8 +1924,8 @@ if($a==$m){
      <div class="col-sm-8"></div>
 
      <div class="col-sm-4">
-                  <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" >Close</a>
-     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value="submit" required   />
+                  <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php echo display('Close') ?></a>
+     <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay" value=<?php echo display('submit') ?> required   />
 </div>
      </div>
    </div>
@@ -1937,7 +1937,7 @@ if($a==$m){
         <div class="modal-content">
             <div class="modal-header" style="color:white;background-color:#38469f;">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD BANK</h4>
+                	<h4 class="modal-title"><?php echo display('ADD BANK') ?></h4>
 
             </div>
             <div class="container"></div>
@@ -2005,7 +2005,7 @@ if($a==$m){
   </div>
 
   <div class="form-group row">
-  <label for="shipping_line" class="col-sm-4 col-form-label">Country
+  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('Country') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
@@ -2015,10 +2015,10 @@ if($a==$m){
 
 </div>
 <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('Currency') ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1" class="form-control"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
-    <option>Select currency</option>
+    <option><?php echo display('Select currency') ?></option>
     <option value="AFN">AFN - Afghan Afghani</option>
     <option value="ALL">ALL - Albanian Lek</option>
     <option value="DZD">DZD - Algerian Dinar</option>
@@ -2206,7 +2206,7 @@ if($a==$m){
 </div>
     
 <div class="col-sm-4">
-              <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" >Close</a>
+              <a href="#" class="btn" data-dismiss="modal" style="color:white;background-color:#38469f;" ><?php echo display('Close') ?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
      <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
@@ -2675,7 +2675,7 @@ function(data) {
 
                                         <td width="300">
                                             <select name="supplier_id[]" class="form-control"  required="">
-                                                <option value=""> select Supplier</option>
+                                                <option value=""> <?php echo display('select Supplier') ?></option>
                                                 <?php if ($supplier) { ?>
                                                     {supplier}
                                                     <option value="{supplier_name}">{supplier_name}</option>
@@ -2721,7 +2721,7 @@ function(data) {
 
                             
 
-                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close') ?></a>
 
                             
                             <input type="submit" id="add-deposit" class="btn btn-success" name="add-deposit" value="<?php echo display('save') ?>" tabindex="6"/>
@@ -2848,7 +2848,7 @@ function(data) {
 
                             
 
-                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close') ?></a>
 
                             
                             <input type="submit" id="add-deposit" class="btn btn-success" name="add-deposit" value="<?php echo display('save') ?>" tabindex="6"/>
@@ -2910,7 +2910,7 @@ function(data) {
                         <div class="form-group row">
 
                              <label for="customer_email" class="col-sm-3 col-form-label">
-                                Customer <br>Email
+                             <?php echo display('  Customer') ?> <br><?php echo display('Email') ?>
                               <i class="text-danger">*</i></label>
 
                             <div class="col-sm-6">
@@ -2963,7 +2963,7 @@ function(data) {
 
                             
 
-                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close') ?></a>
 
                             
 
@@ -2997,7 +2997,7 @@ function(data) {
 
                             <a href="#" class="close" data-dismiss="modal">&times;</a>
 
-                            <h3 class="modal-title">Add New Payment Type</h3>
+                            <h3 class="modal-title"><?php echo display('Add New Payment Type') ?></h3>
 
                         </div>
 
@@ -3015,7 +3015,7 @@ function(data) {
 
                         <div class="form-group row">
 
-                            <label for="customer_name" class="col-sm-3 col-form-label">New Payment Type <i class="text-danger">*</i></label>
+                            <label for="customer_name" class="col-sm-3 col-form-label"><?php echo display('New Payment Type') ?> <i class="text-danger">*</i></label>
 
                             <div class="col-sm-6">
 
@@ -3038,11 +3038,11 @@ function(data) {
 
                             
 
-                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close') ?></a>
 
                             
 
-                            <input type="submit" class="btn btn-success" value="Submit">
+                            <input type="submit" class="btn btn-success" value=<?php echo display('Submit') ?> >
 
                         </div>
 
@@ -3060,31 +3060,33 @@ function(data) {
     </section>
 
 </div>
+
+
 <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="formModalLabel">Contact Us</h4>
+				<h4 class="modal-title" id="formModalLabel"><?php echo display('Contact Us') ?></h4>
 			</div>
 			<div class="modal-body">
 				<div class="alert alert-success hidden" id="contactSuccess">
-					<strong>Success!</strong> Your message has been sent to us.
+					<strong><?php echo display('Success') ?>!</strong><?php echo display(' Your message has been sent to us.') ?>
 				</div>
 
 				<div class="alert alert-danger hidden" id="contactError">
-					<strong>Error!</strong> There was an error sending your message.
+					<strong><?php echo display('Error') ?>!</strong> <?php echo display('There was an error sending your message.') ?>
 				</div>
              
 			
 					<div class="row">
 						<div class="form-group">
 							<div class="col-md-6">
-								<label>Your name *</label>
+								<label><?php echo display('Your name') ?> *</label>
 								<input type="text"  data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name_email" required>
 							</div>
 							<div class="col-md-6">
-								<label>Your email address *</label>
+								<label><?php echo display('Your email address') ?> *</label>
 								<input type="email"  data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email_info" required>
 							</div>
 						</div>
@@ -3092,7 +3094,7 @@ function(data) {
 					<div class="row">
 						<div class="form-group">
 							<div class="col-md-12">
-								<label>Subject</label>
+								<label><?php echo display('Subject') ?></label>
 								<input type="text"  data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject_email" required>
 							</div>
 						</div>
@@ -3100,14 +3102,14 @@ function(data) {
 					<div class="row">
 						<div class="form-group">
 							<div class="col-md-12">
-								<label>Message *</label>
+								<label><?php echo display('Message') ?> *</label>
 								<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message_email" required></textarea>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<input type="submit" value="Send Message" id="email_send" name="email_send" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+							<input type="submit" value="Send Message" id="email_send" name="email_send" style="color:white;background-color: #38469f;" class="btn btn-lg mb-xlg" data-loading-text="Loading...">
 						</div>
 					</div>
                    
@@ -3124,11 +3126,11 @@ function(data) {
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">New Sale</h4>
+          <h4 class="modal-title"><?php echo display('New Sale') ?></h4>
         </div>
         <div class="modal-body">
           
-          <h4>Sales Invoice Updated Succefully</h4>
+          <h4><?php echo display('Sales Invoice Updated Succefully') ?></h4>
      
         </div>
         <div class="modal-footer">
@@ -3148,7 +3150,7 @@ function(data) {
       <div class="modal-content" style="width: 1000px;min-width: max-content;margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PAYMENT HISTORY</h4>
+          <h4 class="modal-title"><?php echo display('PAYMENT HISTORY') ?></h4>
         </div>
         <div class="modal-body1">
         <div id="salle_list"></div>
@@ -3170,7 +3172,7 @@ function(data) {
    <div class="modal-content" style="width: fit-content;margin-top: 100px;margin-left:300px;">
     <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Product</h4>
+          <h4 class="modal-title"><?php echo display('Product') ?></h4>
         </div>
       <div class="modal-body">
         <div id="salle" style="padding:20px;"></div>

@@ -38,10 +38,10 @@
      <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     <div class="col-sm-5" style="color:white;font-weight:bold;" id='company_info'>
            
-           <b> Company name : </b><?php echo $company[0]['company_name']; ?><br>
-          <b>   Address : </b><?php echo $company[0]['address']; ?><br>
-          <b>   Email : </b><?php echo $company[0]['email']; ?><br>
-          <b>   Contact : </b><?php echo $company[0]['mobile']; ?><br>
+    <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+          <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
+          <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
+          <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
        </div>
  </div>
         </div>
@@ -49,14 +49,14 @@
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-    <tr><td  class="key">Packing List NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
-    <tr><td  class="key">Gross Weight</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Packing List NO') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
 </table>
                </div>
                 <div class="col-sm-6">
                 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
    </table> </div> 
             </div>
         </div>
@@ -139,7 +139,7 @@ if($a==$m){
                             <?php   } ?>
             </table>
             <br>
-          <h4>Remarks :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
+          <h4><?php echo display('Remarks') ?>  :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
         </div>
 
 
@@ -158,10 +158,10 @@ elseif($template==1)
      <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     <div class="col-sm-5" style="color:white;font-weight:bold;" id='company_info'>
            
-           <b> Company name : </b><?php echo $company[0]['company_name']; ?><br>
-          <b>   Address : </b><?php echo $company[0]['address']; ?><br>
-          <b>   Email : </b><?php echo $company[0]['email']; ?><br>
-          <b>   Contact : </b><?php echo $company[0]['mobile']; ?><br>
+    <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+          <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
+          <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
+          <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
        </div>
  </div>
         </div>
@@ -169,14 +169,14 @@ elseif($template==1)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-    <tr><td  class="key">Packing List NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
-    <tr><td  class="key">Gross Weight</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
+                <tr><td  class="key"><?php echo display('Packing List NO') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
 </table>
                </div>
                 <div class="col-sm-6">
                 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
    </table> </div> 
             </div>
         </div>
@@ -259,7 +259,7 @@ if($a==$m){
                             <?php   } ?>
             </table>
             <br>
-          <h4>Remarks :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
+            <h4><?php echo display('Remarks') ?>  :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
         </div>
 
 
@@ -278,10 +278,10 @@ elseif($template==3)
      <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     <div class="col-sm-5" style="color:white;font-weight:bold;" id='company_info'>
            
-           <b> Company name : </b><?php echo $company[0]['company_name']; ?><br>
-          <b>   Address : </b><?php echo $company[0]['address']; ?><br>
-          <b>   Email : </b><?php echo $company[0]['email']; ?><br>
-          <b>   Contact : </b><?php echo $company[0]['mobile']; ?><br>
+    <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+          <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
+          <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
+          <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
        </div>
  </div>
         </div>
@@ -289,14 +289,14 @@ elseif($template==3)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-    <tr><td  class="key">Packing List NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
-    <tr><td  class="key">Gross Weight</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
+                <tr><td  class="key"><?php echo display('Packing List NO') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['commercial_invoice_number'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['total_amount']; ?></td></tr>
 </table>
                </div>
                 <div class="col-sm-6">
                 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $all_invoice[0]['container_no'];  ?></td></tr>
    </table> </div> 
             </div>
         </div>
@@ -379,7 +379,7 @@ if($a==$m){
                             <?php   } ?>
             </table>
             <br>
-          <h4>Remarks :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
+            <h4><?php echo display('Remarks') ?>  :</h4><?php echo $all_invoice[0]['remark']; ?><br><br><br>
         </div>
 
 

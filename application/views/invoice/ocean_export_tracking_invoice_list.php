@@ -24,12 +24,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Manage Ocean Export Invoice</h1>
+            <h1><?php echo display('Manage Ocean Export Invoice') ?></h1>
             <small></small>
             <ol class="breadcrumb">
             <li><a href="<?php   echo base_url(); ?>"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Ocean Export</a></li>
-                <li class="active" style="color:orange;">Manage Ocean Export Invoice</li>
+                <li><a href="#"><?php echo display('Ocean Export') ?></a></li>
+                <li class="active" style="color:orange;"><?php echo display('Manage Ocean Export Invoice') ?></li>
             </ol>
         </div>
     </section>
@@ -104,12 +104,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Cinvoice/ocean_export_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2">Create ocean export</a>
+<a href="<?php echo base_url('Cinvoice/ocean_export_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create ocean export'); ?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Cinvoice/ocean_export_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2">Create ocean export</a>
+<a href="<?php echo base_url('Cinvoice/ocean_export_tracking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create ocean export') ?></a>
 
                         <?php  } ?>
 
@@ -144,10 +144,10 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo 'Search By Date Range : '; ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?></label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="Search"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?> >
    
 </div> 
 <?php echo form_close() ?>
@@ -180,7 +180,7 @@ $today = date('Y-m-d');
                     <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i> <!-- onclick opens MODAL -->
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php echo display('Download') ?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -211,33 +211,33 @@ $today = date('Y-m-d');
                     <div class="panel-heading">
                         <div class="panel-title">
                                <div class="row">
-<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by">Filter By&nbsp;&nbsp;
+<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by"><?php echo display('Filter By') ?>&nbsp;&nbsp;
                    </label><select id="filterby" style="border-radius:5px;height:25px;">
-                  <option value="1">ID</option>
-<option value="2">Booking Number</option>
-<option value="3">Container Number</option>
-<option value="4">Seal Number</option>
-<option value="5">Ocean Export ID</option>
-<option value="6">Shipper</option>
-<option value="7">Purchase Date</option>
-<option value="8">Place of Delivery</option>
-<option value="9">Notify Party</option>
-<option value="10">Vessel</option>
-<option value="11">Voyage No</option>
-<option value="12">Freight Forwarder</option>
-<option value="13">HBL No</option>
-<option value="14">OBL No</option>
-<option value="15">AMS No</option>
-<option value="16">ISF No</option>
-<option value="17">MBL No</option>
-<option value="18">Port of discharge</option>
-<option value="19">Customs Broker Name</option>
-<option value="20">Estimated time of departure</option>
-<option value="21">Customer / Consignee</option>
-<option value="22">Port of loading</option>
-<option value="23">Estimated Time of Arrival</option>
-<option value="24">Remarks / Particulars</option>
-<option value="25">Invoice Date</option>
+                  <option value="1"><?php echo display('ID') ?></option>
+<option value="2"><?php echo display('Booking Number') ?></option>
+<option value="3"><?php echo display('Container Number') ?></option>
+<option value="4"><?php echo display('Seal Number') ?></option>
+<option value="5"><?php echo display('Ocean Export ID') ?></option>
+<option value="6"><?php echo display('Shipper') ?></option>
+<option value="7"><?php echo display('Purchase Date') ?></option>
+<option value="8"><?php echo display('Place of Delivery') ?></option>
+<option value="9"><?php echo display('Notify Party') ?></option>
+<option value="10"><?php echo display('Vessel') ?></option>
+<option value="11"><?php echo display('Voyage No') ?></option>
+<option value="12"><?php echo display('Freight Forwarder') ?></option>
+<option value="13"><?php echo display('HBL No') ?></option>
+<option value="14"><?php echo display('OBL No') ?></option>
+<option value="15"><?php echo display('AMS No') ?></option>
+<option value="16"><?php echo display('ISF No') ?></option>
+<option value="17"><?php echo display('MBL No') ?></option>
+<option value="18"><?php echo display('Port of discharge') ?></option>
+<option value="19"><?php echo display('Customs Broker Name') ?></option>
+<option value="20"><?php echo display('Estimated time of departure') ?></option>
+<option value="21"><?php echo display('Customer / Consignee') ?></option>
+<option value="22"><?php echo display('Port of loading') ?></option>
+<option value="23"><?php echo display('Estimated Time of Arrival') ?></option>
+<option value="24"><?php echo display('Remarks / Particulars') ?></option>
+<option value="25"><?php echo display('Invoice Date') ?></option>
 
                   </select> <input id="filterinput" style="border-radius:5px;height:25px;" type="text" ></div>
         </div>
@@ -256,42 +256,42 @@ $today = date('Y-m-d');
   <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
   <thead class="sortableTable">
       <tr style="background-color: #337ab7;border-color: #2e6da4;" class="sortableTable__header">
-      <th class="1 value"  data-col="1" data-resizable-column-id="1"  style="width: 100px; height: 39.0114px;"               >ID</th>
-        <th class="2 value"  data-col="2" data-resizable-column-id="2"    style="height: 45.0114px; width: 167.011px;"    >Booking Number</th>
-        <th class="3 value" data-col="3" data-resizable-column-id="3"  style="height: 44.0114px; width: 193.011px;"     >Container Number</th>
-        <th class="4 value"   data-col="4"  data-resizable-column-id="4"    style="width: 127.011px; height: 46.0114px;"   >Seal Number</th>
-        <th class="5 value" data-col="5"  data-resizable-column-id="5"    style="width: 185.011px; height: 47.0114px;"   > Ocean Export ID</th>
-         <th class="6 value"   data-col="6"data-resizable-column-id="6"  style="height: 42.0114px; width: 151.011px;"  >Shipper </th>
-		      <th class="7 value" data-col="7" data-resizable-column-id="7"   style="width: 129.011px;"    >Purchase Date</th>
-	          <th class="8 value"  data-col="8"  data-resizable-column-id="8" style="height: 42.0114px; width: 171.011px;"       >Place of Delivery</th>
+      <th class="1 value"  data-col="1" data-resizable-column-id="1"  style="width: 100px; height: 39.0114px;"   ><?php echo display('ID') ?></th>
+        <th class="2 value"  data-col="2" data-resizable-column-id="2"    style="height: 45.0114px; width: 167.011px;"    ><?php echo display('Booking Number') ?></th>
+        <th class="3 value" data-col="3" data-resizable-column-id="3"  style="height: 44.0114px; width: 193.011px;"     ><?php echo display('Container Number') ?></th>
+        <th class="4 value"   data-col="4"  data-resizable-column-id="4"    style="width: 127.011px; height: 46.0114px;"   ><?php echo display('Seal Number') ?></th>
+        <th class="5 value" data-col="5"  data-resizable-column-id="5"    style="width: 185.011px; height: 47.0114px;"   > <?php echo display('Ocean Export ID') ?></th>
+         <th class="6 value"   data-col="6"data-resizable-column-id="6"  style="height: 42.0114px; width: 151.011px;"  ><?php echo display('Shipper') ?> </th>
+		      <th class="7 value" data-col="7" data-resizable-column-id="7"   style="width: 129.011px;"    ><?php echo display('Purchase Date') ?></th>
+	          <th class="8 value"  data-col="8"  data-resizable-column-id="8" style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Place of Delivery') ?></th>
 
 
-	          <th class="9 value"  data-col="9" data-resizable-column-id="9"  style="height: 42.0114px; width: 171.011px;"       >Notify Party</th>
-	          <th class="10 value"  data-col="10" data-resizable-column-id="10"  style="height: 42.0114px; width: 171.011px;"       >Vessel</th>
-	          <th class="11 value" data-col="11"data-resizable-column-id="11"    style="height: 42.0114px; width: 171.011px;"       >Voyage No</th>
-	          <th class="12 value" data-col="12" data-resizable-column-id="12"   style="height: 42.0114px; width: 171.011px;"       >Freight Forwarder</th>
-	          <th class="13 value"  data-col="13" data-resizable-column-id="13"  style="height: 42.0114px; width: 171.011px;"       >HBL No</th>
-	          <th class="14 value" data-col="14" data-resizable-column-id="14"   style="height: 42.0114px; width: 171.011px;"       >OBL No</th>
-	          <th class="15 value" data-col="15" data-resizable-column-id="15"   style="height: 42.0114px; width: 171.011px;"       >AMS No</th>
-	          <th class="16 value" data-col="16" data-resizable-column-id="16"   style="height: 42.0114px; width: 171.011px;"       >ISF No</th>
-	          <th class="17 value" data-col="17" data-resizable-column-id="17"   style="height: 42.0114px; width: 171.011px;"       >MBL No</th>
+	          <th class="9 value"  data-col="9" data-resizable-column-id="9"  style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Notify Party') ?></th>
+	          <th class="10 value"  data-col="10" data-resizable-column-id="10"  style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Vessel') ?></th>
+	          <th class="11 value" data-col="11"data-resizable-column-id="11"    style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Voyage No') ?></th>
+	          <th class="12 value" data-col="12" data-resizable-column-id="12"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Freight Forwarder') ?></th>
+	          <th class="13 value"  data-col="13" data-resizable-column-id="13"  style="height: 42.0114px; width: 171.011px;"       ><?php echo display('HBL No') ?></th>
+	          <th class="14 value" data-col="14" data-resizable-column-id="14"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('OBL No') ?></th>
+	          <th class="15 value" data-col="15" data-resizable-column-id="15"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('AMS No') ?></th>
+	          <th class="16 value" data-col="16" data-resizable-column-id="16"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('ISF No') ?></th>
+	          <th class="17 value" data-col="17" data-resizable-column-id="17"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('MBL No') ?></th>
 
 
-            <th class="18 value"  data-col="18" data-resizable-column-id="18"  style="height: 42.0114px; width: 171.011px;"       >Port of discharge</th>
-	          <th class="19 value" data-col="19" data-resizable-column-id="19"   style="height: 42.0114px; width: 171.011px;"       >Customs Broker Name</th>
-	          <th class="20 value" data-col="20" data-resizable-column-id="20"   style="height: 42.0114px; width: 171.011px;"       >Estimated time of departure</th>
-	          <th class="21 value" data-col="21" data-resizable-column-id="21"   style="height: 42.0114px; width: 171.011px;"       >Customer / Consignee</th>
-	          <th class="22 value" data-col="22" data-resizable-column-id="22"   style="height: 42.0114px; width: 171.011px;"       >Port of loading</th>
+            <th class="18 value"  data-col="18" data-resizable-column-id="18"  style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Port of discharge') ?></th>
+	          <th class="19 value" data-col="19" data-resizable-column-id="19"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Customs Broker Name') ?></th>
+	          <th class="20 value" data-col="20" data-resizable-column-id="20"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Estimated time of departure') ?></th>
+	          <th class="21 value" data-col="21" data-resizable-column-id="21"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Customer / Consignee') ?></th>
+	          <th class="22 value" data-col="22" data-resizable-column-id="22"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Port of loading') ?></th>
 
 
-            <th class="23 value"  data-col="23" data-resizable-column-id="23"  style="height: 42.0114px; width: 171.011px;"       >Estimated Time of Arrival</th>
-	          <th class="24 value" data-col="24" data-resizable-column-id="24"   style="height: 42.0114px; width: 171.011px;"       >Remarks / Particulars</th>
-	          <th class="25 value" data-col="25" data-resizable-column-id="25"   style="height: 42.0114px; width: 171.011px;"       >Invoice Date</th>
+            <th class="23 value"  data-col="23" data-resizable-column-id="23"  style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Estimated Time of Arrival') ?></th>
+	          <th class="24 value" data-col="24" data-resizable-column-id="24"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Remarks / Particulars') ?></th>
+	          <th class="25 value" data-col="25" data-resizable-column-id="25"   style="height: 42.0114px; width: 171.011px;"       ><?php echo display('Invoice Date') ?></th>
             
 
      
       <div class="myButtonClass"> 
-         <th class="text-center 26" data-column-id="26" data-formatter="commands" data-sortable="false" style="width: 700.011px; height: 45.0114px;"     >Action</th>
+         <th class="text-center 26" data-column-id="26" data-formatter="commands" data-sortable="false" style="width: 700.011px; height: 45.0114px;"     ><?php echo display('Action') ?></th>
         </div>
       </tr>
     </thead>
@@ -439,28 +439,28 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1" /> ID<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1" /><?php echo display(' ID') ?><br>
 
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/>Booking Number<br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Booking Number') ?><br>
 
-<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/>Container Number<br>
+<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/><?php echo display('Container Number') ?><br>
 
-<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/>Seal Number<br>
+<input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/><?php echo display('Seal Number') ?><br>
 
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/>Ocean Import ID<br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php echo display('Ocean Import ID') ?><br>
 
-<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/>Shipper<br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php echo display('Shipper') ?><br>
 
-<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/>Purchase Date<br>
+<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/><?php echo display('Purchase Date') ?><br>
 
-<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/>Place of Delivery<br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/><?php echo display('Place of Delivery') ?><br>
 
-<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/>Notify Party<br>
-<input type="checkbox"  data-control-column="10" checked = "checked" class="10" value="10"/>Vessel<br>
-<input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/>Voyage No.<br>
-<input type="checkbox"  data-control-column="12" checked = "checked" class="12 " value="12 " /> Freight forwarder <br>
-<input type="checkbox"  data-control-column="13" checked = "checked" class="13" value="13"/>HBL NO<br>
-<input type="checkbox"  data-control-column="14" checked = "checked" class="14" value="14"/>OBL NO<br>
+<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/><?php echo display('Notify Party') ?><br>
+<input type="checkbox"  data-control-column="10" checked = "checked" class="10" value="10"/><?php echo display('Vessel') ?><br>
+<input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/><?php echo display('Voyage No.') ?><br>
+<input type="checkbox"  data-control-column="12" checked = "checked" class="12 " value="12 " /> <?php echo display('Freight forwarder ') ?><br>
+<input type="checkbox"  data-control-column="13" checked = "checked" class="13" value="13"/><?php echo display('HBL NO') ?><br>
+<input type="checkbox"  data-control-column="14" checked = "checked" class="14" value="14"/><?php echo display('OBL NO') ?><br>
 
 
 
@@ -470,26 +470,26 @@ $count++;
                           <div class="form-group row">
                           
 
-                          <input type="checkbox"  data-control-column="15" checked = "checked" class="15" value="15"/>AMS NO<br>
-<input type="checkbox"  data-control-column="16" checked = "checked" class="16" value="16"/>ISF NO<br>
-<input type="checkbox"  data-control-column="17" checked = "checked" class="17" value="17"/>MBL NO<br>
+                          <input type="checkbox"  data-control-column="15" checked = "checked" class="15" value="15"/><?php echo display('AMS NO') ?><br>
+<input type="checkbox"  data-control-column="16" checked = "checked" class="16" value="16"/><?php echo display('ISF NO') ?><br>
+<input type="checkbox"  data-control-column="17" checked = "checked" class="17" value="17"/><?php echo display('MBL NO') ?><br>
 
-<input type="checkbox"  data-control-column="18"  class="18" value="18"/>Port of discharge<br>
-<input type="checkbox"  data-control-column="19"  class="19" value="19"/>Customs Broker Name<br>
-<input type="checkbox"  data-control-column="20"  class="20" value="20"/>Estimated time of departure<br>
-<input type="checkbox"  data-control-column="21"  class="21" value="21"/>Customer / Consignee<br>
-<input type="checkbox"  data-control-column="22"  class="22 " value="22 "/>Port of loading <br>
+<input type="checkbox"  data-control-column="18"  class="18" value="18"/><?php echo display('Port of discharge') ?><br>
+<input type="checkbox"  data-control-column="19"  class="19" value="19"/><?php echo display('Customs Broker Name') ?><br>
+<input type="checkbox"  data-control-column="20"  class="20" value="20"/><?php echo display('Estimated time of departure') ?><br>
+<input type="checkbox"  data-control-column="21"  class="21" value="21"/><?php echo display('Customer / Consignee') ?><br>
+<input type="checkbox"  data-control-column="22"  class="22 " value="22 "/><?php echo display('Port of loading ') ?><br>
 
-<input type="checkbox"  data-control-column="23" class="23" value="23"/>Estimated Time of Arrival<br>
-<input type="checkbox"  data-control-column="24"  class="24" value="24"/>Remarks / Particulars<br>
-
-
-
-<input type="checkbox"  data-control-column="25"  class="25" value="25"/>Invoice Date<br>
+<input type="checkbox"  data-control-column="23" class="23" value="23"/><?php echo display('Estimated Time of Arrival') ?><br>
+<input type="checkbox"  data-control-column="24"  class="24" value="24"/><?php echo display('Remarks / Particulars') ?><br>
 
 
 
-<input type="checkbox"  data-control-column="26" checked = "checked" class="26"value="26" />Action<br>
+<input type="checkbox"  data-control-column="25"  class="25" value="25"/><?php echo display('Invoice Date') ?><br>
+
+
+
+<input type="checkbox"  data-control-column="26" checked = "checked" class="26"value="26" /><?php echo display('Action') ?><br>
         </div>
         </div>
                          

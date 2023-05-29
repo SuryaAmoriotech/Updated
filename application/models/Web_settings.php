@@ -295,6 +295,9 @@ if ($query->num_rows() > 0 )
         'account' => $fomdata['acc'],
         'remarks'  => $fomdata['remarks']
         );
+
+    //    print_r($data); die();
+        
         $this->db->where('user_id', $fomdata['uid']);
         $this->db->where('invoice_template',$fomdata['form_type']);
         $this->db->update('sales_invoice_settings',$data);
@@ -307,7 +310,7 @@ if ($query->num_rows() > 0 )
             'remarks'  => $fomdata['remarks'],
             'Time'  => $mysqltime,
             );
-            // print_r($data);
+        print_r($data);
 
             $this->db->insert('sales_invoice_settings', $data);
     }

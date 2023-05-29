@@ -34,7 +34,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
         <div class="header-title">
 
-            <h1>Manage Quotation</h1>
+            <h1><?php echo display('manage_quotation')?></h1>
 
             <small></small>
 
@@ -44,7 +44,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
                 <li><a href="#"><?php echo display('invoice') ?></a></li>
 
-                <li class="active" style="color:orange;">Manage Quotation</li>
+                <li class="active" style="color:orange;"><?php echo display('Manage Quotation')?></li>
 
             </ol>
 
@@ -125,12 +125,12 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
       
        ?>
 
-<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2">Create Quotation</a>
+<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?><?php echo display('quotation') ?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2">Create Quotation</a>
+<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?><?php echo display('quotation') ?></a>
 
                         <?php  } ?>
 
@@ -157,7 +157,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
 
         
-                    <a href="<?php echo base_url('Cinvoice/add_profarma_product_csv') ?>" class="btnclr btn btn-primary m-b-5 m-r-2 text-white"><i class="ti-plus"> </i> &nbsp;  <?php echo "Add Quotation (CSV)"; ?> </a>
+                    <a href="<?php echo base_url('Cinvoice/add_profarma_product_csv') ?>" class="btnclr btn btn-primary m-b-5 m-r-2 text-white"><i class="ti-plus"> </i> &nbsp;  <?php echo display('Add Invoice (CSV)') ?> </a>
       
                         </div>
                         <div class="col-sm-4">
@@ -175,10 +175,10 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo 'Search By Date Range : '; ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range ') ?></label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;" />
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="Search"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?> >
    
 </div> 
 <?php echo form_close() ?>
@@ -210,7 +210,7 @@ $today = date('Y-m-d');
                     <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i> <!-- onclick opens MODAL -->
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span><?php echo display('Download') ?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -239,30 +239,30 @@ $today = date('Y-m-d');
                     <div class="panel-heading">
                         <div class="panel-title">
                                    <div class="row">
-<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by">Filter By&nbsp;&nbsp;
+<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by"><?php echo display('Filter By') ?>&nbsp;&nbsp;
                    </label><select id="filterby" style="border-radius:5px;height:25px;">
-             <option value="1">ID</option>
-<option value="2">Invoice No</option>
-<option value="3">Sale By</option>
-<option value="4">Pre Carriage</option>
-<option value="5">Country goods</option>
-<option value="6">Country Destination</option>
-<option value="7">Loading</option>
-<option value="8">Discharge</option>
-<option value="9">Terms payment</option>
-<option value="10">Description goods</option>
-<option value="11">Overall Gross</option>
-<option value="12">Overall Net</option>
-<option value="13">Amount Paid</option>
-<option value="14">Due Amount</option>
-<option value="15">Total Amount</option>
-<option value="16">Date</option>
-<option value="17">Buyer / Customer</option>
-<option value="18">Place of Receipt</option>
-<option value="19">Tax Details</option>
-<option value="20">Grand Total</option>
-<option value="21">Grand Total(Preferred Currency)</option>
-<option value="22">Remarks / Details</option>
+             <option value="1"><?php echo display('ID') ?></option>
+<option value="2"><?php echo display('Invoice No') ?></option>
+<option value="3"><?php echo display('Sale By') ?></option>
+<option value="4"><?php echo display('Pre Carriage') ?></option>
+<option value="5"><?php echo display('Country goods') ?></option>
+<option value="6"><?php echo display('Country Destination') ?></option>
+<option value="7"><?php echo display('Loading') ?></option>
+<option value="8"><?php echo display('Discharge') ?></option>
+<option value="9"><?php echo display('Terms payment') ?></option>
+<option value="10"><?php echo display('Description goods') ?></option>
+<option value="11"><?php echo display('Overall Gross') ?></option>
+<option value="12"><?php echo display('Overall Net') ?></option>
+<option value="13"><?php echo display('Amount Paid') ?></option>
+<option value="14"><?php echo display('Due Amount') ?></option>
+<option value="15"><?php echo display('Total Amount') ?></option>
+<option value="16"><?php echo display('Date') ?></option>
+<option value="17"><?php echo display('Buyer/Customer') ?></option>
+<option value="18"><?php echo display('Place of Receipt') ?></option>
+<option value="19"><?php echo display('Tax Details') ?></option>
+<option value="20"><?php echo display('Grand Total') ?></option>
+<option value="21"><?php echo display('Grand Total') ?><?php echo display('Preferred Currency') ?></option>
+<option value="22"><?php echo display('Remarks / Details') ?></option>
 
 
                   </select> <input id="filterinput" style="border-radius:5px;height:25px;" type="text" ></div>
@@ -288,30 +288,30 @@ $today = date('Y-m-d');
      
 
 
-         <th class="1 value" data-col="1" data-control-column="1"    style="width: 80px; height: 40.0114px;" >ID</th>
-        <th class="2 value" data-col="2" data-control-column="2"  style="height: 45.0114px; width: 234.011px" >Invoice No</th>
-        <th class="3 value" data-col="3" data-control-column="3"  style="height: 42.0114px; display:none;"   >Sale By</th>
-        <th class="4 value"  data-col="4" data-control-column="4"  style="width: 248.011px;">Pre Carriage</th>
-        <th class="5 value" data-col="5 " data-control-column="5"    style="width: 198.011px;"       >Country goods</th>
-          <th class="6 value" data-col="6" data-control-column="6"    style="width: 198.011px;"       >Country Destination</th>
-            <th class="7 value" data-col="7" data-control-column="7"    style="width: 198.011px;">Loading</th>
-              <th class="8 value" data-col="8" data-control-column="8"    style="width: 198.011px;"       >Discharge</th>
-                <th class="9 value" data-col="9" data-control-column="9"    style="width: 198.011px;"       >Terms payment</th>
-                  <th class="10 value" data-col="10" data-control-column="10"    style="width: 198.011px;"       >Description goods</th>
-                  <th class="11 value" data-col="11" data-control-column="11" style="width: 190.011px; height: 44.0114px;">Overall Gross</th>
-                  <th class="12 value"  data-col="12" data-control-column="12" style="width: 190.011px; height: 44.0114px;">Overall Net</th>
-                  <th class="13 value" data-col="13" data-control-column="13" style="width: 190.011px; height: 44.0114px;">Amount Paid</th>
-                  <th class="14 value" data-col="14" data-control-column="14" style="width: 190.011px; height: 44.0114px;">Due Amount</th>
-        <th class="15 value" data-col="15" data-control-column="15" style="width: 190.011px; height: 44.0114px;">Total Amount</th>
-        <th class="16 value" data-col="16" data-control-column="16"    style="width: 198.011px;"       >Date</th>
-                <th class="17 value" data-col="17" data-control-column="17"    style="width: 198.011px;"       >Buyer / Customer</th>
-                  <th class="18 value" data-col="18 " data-control-column="18"    style="width: 198.011px;">Place of Receipt</th>
+         <th class="1 value" data-col="1" data-control-column="1"    style="width: 80px; height: 40.0114px;" ><?php echo display('ID') ?></th>
+        <th class="2 value" data-col="2" data-control-column="2"  style="height: 45.0114px; width: 234.011px" ><?php echo display('Invoice No') ?></th>
+        <th class="3 value" data-col="3" data-control-column="3"  style="height: 42.0114px; display:none;"   ><?php echo display('Sale By') ?></th>
+        <th class="4 value"  data-col="4" data-control-column="4"  style="width: 248.011px;"><?php echo display('Pre Carriage') ?></th>
+        <th class="5 value" data-col="5 " data-control-column="5"    style="width: 198.011px;"       ><?php echo display('Country goods') ?></th>
+          <th class="6 value" data-col="6" data-control-column="6"    style="width: 198.011px;"       ><?php echo display('Country Destination') ?></th>
+            <th class="7 value" data-col="7" data-control-column="7"    style="width: 198.011px;"><?php echo display('Loading') ?></th>
+              <th class="8 value" data-col="8" data-control-column="8"    style="width: 198.011px;"       ><?php echo display('Discharge') ?></th>
+                <th class="9 value" data-col="9" data-control-column="9"    style="width: 198.011px;"       ><?php echo display('Terms payment') ?></th>
+                  <th class="10 value" data-col="10" data-control-column="10"    style="width: 198.011px;"       ><?php echo display('Description goods') ?></th>
+                  <th class="11 value" data-col="11" data-control-column="11" style="width: 190.011px; height: 44.0114px;"><?php echo display('Overall Gross') ?></th>
+                  <th class="12 value"  data-col="12" data-control-column="12" style="width: 190.011px; height: 44.0114px;"><?php echo display('Overall Net') ?></th>
+                  <th class="13 value" data-col="13" data-control-column="13" style="width: 190.011px; height: 44.0114px;"><?php echo display('Amount Paid') ?></th>
+                  <th class="14 value" data-col="14" data-control-column="14" style="width: 190.011px; height: 44.0114px;"><?php echo display('Due Amount') ?></th>
+        <th class="15 value" data-col="15" data-control-column="15" style="width: 190.011px; height: 44.0114px;"><?php echo display('Total Amount') ?></th>
+        <th class="16 value" data-col="16" data-control-column="16"    style="width: 198.011px;"       ><?php echo display('Date') ?></th>
+                <th class="17 value" data-col="17" data-control-column="17"    style="width: 198.011px;"       ><?php echo display('Buyer / Customer') ?></th>
+                  <th class="18 value" data-col="18 " data-control-column="18"    style="width: 198.011px;"><?php echo display('Place of Receipt') ?></th>
             
-<th class="19 value" data-col="19" data-control-column="19" style="width: 190.011px; height: 44.0114px;">Tax Details</th>
-<th class="20 value" data-col="20" data-control-column="20" style="width: 190.011px; height: 44.0114px;">Grand Total</th>
-<th class="21 value" data-col="21" data-control-column="21" style="width: 190.011px; height: 44.0114px;">Grand Total(Preferred Currency)</th>
-<th class="22 value" data-col="22" data-control-column="22" style="width: 190.011px; height: 44.0114px;">Remarks / Details</th>
-        <th class="text-center 23" data-column-id="23" data-formatter="commands" data-sortable="false" style="    width: 650.011px; height: 49.0114px;" >Action</th>
+<th class="19 value" data-col="19" data-control-column="19" style="width: 190.011px; height: 44.0114px;"><?php echo display('Tax Details') ?></th>
+<th class="20 value" data-col="20" data-control-column="20" style="width: 190.011px; height: 44.0114px;"><?php echo display('Grand Total') ?></th>
+<th class="21 value" data-col="21" data-control-column="21" style="width: 190.011px; height: 44.0114px;"><?php echo display('Grand Total(Preferred Currency)') ?></th>
+<th class="22 value" data-col="22" data-control-column="22" style="width: 190.011px; height: 44.0114px;"><?php echo display('Remarks / Details') ?></th>
+        <th class="text-center 23" data-column-id="23" data-formatter="commands" data-sortable="false" style="    width: 650.011px; height: 49.0114px;" ><?php echo display('Action') ?></th>
       </tr>
     </thead>
     <tbody class="sortableTable__body">
@@ -432,17 +432,17 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1"checked = "checked" class="1" value="1"/> ID<br>
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/>Invoice No<br>
-<input type="checkbox"  data-control-column="4" checked = "checked"class="4" value="4"/>Pre Carriage<br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/>Country goods<br>
-<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/>Country Destination<br>
-    <input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/>Loading<br>
-<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/>Discharge<br>
-<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/>Terms payment<br>
-<input type="checkbox"  data-control-column="10" checked = "checked"class="10" value="10"/>Description goods<br>
- <input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/>Overall Gross<br>
-<input type="checkbox"  data-control-column="12" checked = "checked" class="12" value="12"/>Overall Net<br>
+                          <input type="checkbox"  data-control-column="1"checked = "checked" class="1" value="1"/> <?php echo display('ID') ?><br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Invoice No') ?><br>
+<input type="checkbox"  data-control-column="4" checked = "checked"class="4" value="4"/><?php echo display('Pre Carriage') ?><br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php echo display('Country goods') ?><br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php echo display('Country Destination') ?><br>
+    <input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/><?php echo display('Loading') ?><br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/><?php echo display('Discharge') ?><br>
+<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/><?php echo display('Terms payment') ?><br>
+<input type="checkbox"  data-control-column="10" checked = "checked"class="10" value="10"/><?php echo display('Description goods') ?><br>
+ <input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/><?php echo display('Overall Gross') ?><br>
+<input type="checkbox"  data-control-column="12" checked = "checked" class="12" value="12"/><?php echo display('Overall Net') ?><br>
 <input type="checkbox"  data-control-column="3" style=" display:none;" checked = "checked" class="3" value="3"/><br>
 
 
@@ -450,17 +450,17 @@ $count++;
                           </div>
                           <div class="col-sm-6">
                           <div class="form-group row">
-<input type="checkbox"  data-control-column="13" checked = "checked" class="13" value="13"/>Amount Paid<br>
-<input type="checkbox"  data-control-column="14" checked = "checked"class="14" value="14"/>Due Amount<br>
- <input type="checkbox"  data-control-column="15" checked = "checked"class="15" value="15"/>Total Amount<br>
-<input type="checkbox"  data-control-column="16" class="16" value="16"/>Date<br>
-<input type="checkbox"  data-control-column="17" class="17" value="17"/>Buyer / Customer<br>
-<input type="checkbox"  data-control-column="18" class="18" value="18"/>Place of Receipt<br>
-    <input type="checkbox"  data-control-column="19"  class="19 " value="19"/>Tax Details<br>
-<input type="checkbox"  data-control-column="20"  class="20 " value="20"/>Grand Total<br>
-<input type="checkbox"  data-control-column="21"  class="21 " value="21"/>Grand Total(Preferred Currency)<br>
-<input type="checkbox"  data-control-column="22"  class="22 " value="22"/>Remarks / Details<br>
-<input type="checkbox"  data-control-column="23" class="23" checked = "checked" value="23"/>Action<br>
+<input type="checkbox"  data-control-column="13" checked = "checked" class="13" value="13"/><?php echo display('Amount Paid') ?><br>
+<input type="checkbox"  data-control-column="14" checked = "checked"class="14" value="14"/><?php echo display('Due Amount') ?><br>
+ <input type="checkbox"  data-control-column="15" checked = "checked"class="15" value="15"/><?php echo display('Total Amount') ?><br>
+<input type="checkbox"  data-control-column="16" class="16" value="16"/><?php echo display('Date') ?><br>
+<input type="checkbox"  data-control-column="17" class="17" value="17"/><?php echo display('Buyer / Customer') ?><br>
+<input type="checkbox"  data-control-column="18" class="18" value="18"/><?php echo display('Place of Receipt') ?><br>
+    <input type="checkbox"  data-control-column="19"  class="19 " value="19"/><?php echo display('Tax Details') ?><br>
+<input type="checkbox"  data-control-column="20"  class="20 " value="20"/><?php echo display('Grand Total') ?><br>
+<input type="checkbox"  data-control-column="21"  class="21 " value="21"/><?php echo display('Grand Total') ?><?php echo display('preferred') ?><br>
+<input type="checkbox"  data-control-column="22"  class="22 " value="22"/><?php echo display('Remarks / Details') ?><br>
+<input type="checkbox"  data-control-column="23" class="23" checked = "checked" value="23"/><?php echo display('Action') ?><br>
                           </div>
                           </div>
                           
