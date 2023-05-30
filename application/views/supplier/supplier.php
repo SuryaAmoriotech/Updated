@@ -236,7 +236,7 @@ if (isset($error_message)) {
   <thead class="sortableTable">
       <tr class="sortableTable__header">
       <th class="1 value" data-control-column="1"   data-col="1" style="width: 80px; height: 40.0114px;" ><?php echo display('ID')?></th>
-            <th class="2 value" data-control-column="2"   data-col="2" style="width: 80px; height: 40.0114px;" ><?php echo display('Company ID')?></th>
+            <th class="2 value" data-control-column="2"   data-col="2" style="width: 80px; height: 40.0114px;" ><?php echo display('Supplier ID')?></th>
         <th class="3 value" data-control-column="3"  data-col="3"style="height: 45.0114px; width: 234.011px" ><?php echo display('Company Name')?></th>
         <th class="4 value" data-control-column="4"data-col="4"  style="height: 42.0114px;"   ><?php echo display('Address')?></th>
     

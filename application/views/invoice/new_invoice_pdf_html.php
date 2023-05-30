@@ -924,13 +924,13 @@ body {
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title">New Sale</h4>
+          <h4 class="modal-title"><?php echo display('New Sale') ?></h4>
         </div>
         <div class="content">
 
         <div class="modal-body" style="text-align:center;font-weight:bold;">
           
-          <h4>New Sale Downloaded Successfully</h4>
+          <h4><?php echo display('New Sale Downloaded Successfully') ?></h4>
      
         </div>
         <div class="modal-footer">
@@ -953,7 +953,7 @@ body {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 <script>
                     $(document).ready(function(){
-                     
+                  // window.onload = function (){ 
  $(".normalinvoice").each(function(i,v){
    if($(this).find("tbody").html().trim().length === 0){
        $(this).hide()
@@ -994,7 +994,13 @@ var v=$(this).html();
 
     });
 });
-$(document).ready(function () {
+
+
+
+// $(document).ready(function () {
+  // window.onload =function (){
+    $(window).on('load', function () {
+
 function first(callback1,callback2){
 setTimeout( function(){
     var pdf = new jsPDF('p','pt','a4');
