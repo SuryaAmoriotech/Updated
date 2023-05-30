@@ -682,7 +682,7 @@ td {
                              <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:35%;border:none;text-align:end;font-weight:bold;">
-                           <?php echo display('Todays Rate') ?> : 
+                           <?php echo display('Live Rate') ?> : 
                          </td>
                 
                                <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
@@ -1121,44 +1121,8 @@ $('.modal-backdrop').remove();
   e.preventDefault();
   return false;
 });
-// $('#insert_trucking').submit(function (event) {
-//    event.preventDefault();
-
-//     //   alert("");
-//     var dataString = {
-//         dataString : $("#insert_trucking").serialize()
-    
-//    };
-//    dataString[csrfName] = csrfHash;
-  
-//     $.ajax({
-//         type:"POST",
-//         dataType:"json",
-//         async: false,
-//          cache: false,
-//         url:"<?php// echo base_url(); ?>Cinvoice/manual_sales_insert",
-//         data:dataString,
-
-//         success:function (data) {
-//         console.log(data);
-//         var input_hdn2="New Sale created Successfully";
-//         $("#bodyModal1").html(input_hdn2);
-//         $('#myModal1').modal('show');
 
 
-//             var split = data.split("/");
-//             $('#invoice_hdn1').val(split[0]);
-         
-     
-//          $('#invoice_hdn').val(split[1]);
-//        },
-//      error: function(xhr, status, error) {
-//   alert(xhr.responseText);
-// }
-
-//     });
-   
-// });
 $('#download').on('click', function (e) {
 
  var popout = window.open("<?php  echo base_url(); ?>Cinvoice/invoice_inserted_data/"+$('#invoice_hdn1').val());
@@ -1192,15 +1156,7 @@ if(!window.btn_clicked){
 }
 };
 
-/*
-window.onbeforeunload = function(){
-    if(!window.btn_clicked){
-       // window.btn_clicked = true; 
-        $('#myModal3').modal('show');
-       return false;
-    }
-};
- */
+
 
 $(document).ready(function(){
    // $('#payment_modal').modal("show");
@@ -1307,6 +1263,8 @@ function(data) {
       $('#cust_info').modal('hide');
      $('#customer_name').show();
     
+     $('#instant_customer')[0].reset();
+
       window.setTimeout(function(){
        $('#myModal1').modal('hide');
        $('.modal-backdrop').remove();
@@ -1323,7 +1281,11 @@ $('.hiden').css("display","none");
 
 var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
 var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
-$(document).on('click', '.checkbox', function () {
+
+
+
+  $( "body" ).on( "click", ".checkbox", function() {
+
  $('#product_model_info').modal('hide');
      var values = new Array();
 
@@ -1331,7 +1293,9 @@ $(document).on('click', '.checkbox', function () {
               function () {
                    values.push($(this).text());
               });
-          
+          console.log(values);
+          console.log(table_id_product);
+
      var table_id_product=localStorage.getItem("tab_id");
    var netheight = $(table_id_product).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
@@ -2116,7 +2080,7 @@ function payment_info(){
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -2283,7 +2247,7 @@ function payment_info(){
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option selected value="USD">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>
@@ -3484,14 +3448,8 @@ newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover"
 
 
 document.getElementById('content').appendChild(newdiv);
-// document.getElementById(tabin).focus();
-// document.getElementById("add_invoice_item").setAttribute("tabindex", tab5);
-//  document.getElementById("add_purchase").setAttribute("tabindex", tab6);
-// document.getElementById("add_purchase_another").setAttribute("tabindex", tab7);
 
 dynamic_id++;
-
-
 
 }
  $(document).on('click', '.delete', function(){
