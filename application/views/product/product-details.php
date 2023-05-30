@@ -187,11 +187,11 @@ border:none;
         </div>
         <div class="header-title">
             <h1><?php echo display('product_report') ?></h1>
-            <small><?php echo display('product_sales_and_purchase_report') ?></small>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('report') ?></a></li>
-                <li class="active"><?php echo display('product_report') ?></li>
+                <li class="active" style="color:orange"><?php echo display('product_report') ?></li>
             </ol>
         </div>
     </section>
@@ -233,10 +233,10 @@ border:none;
                         <div class="panel-title">
                       <div id="block_container">
                                 <div id="bloc1" style="float:left;">
-                          <h4><?php echo "Product Information" ?></h4>
+                          <h4><?php //echo display("Product Information") ?></h4>
                                </div> 
                              <div id="bloc2" style="float:right;">
-                             <a href="#"   style="float:right;color:white;background-color: #38469f;"  class="client-add-btn btn"   data-toggle="modal"  data-target="#product_hty"> Product History</a>
+                             <a href="#"   style="float:right;color:white;background-color: #38469f;"  class="client-add-btn btn"   data-toggle="modal"  data-target="#product_hty"><?php echo  display('Product History')?></a>
                             </div>    </div>
  
     
@@ -254,42 +254,39 @@ border:none;
                      <div class="row">
                          
                          <div class="col-sm-4">
-                             <table class="table table-bordered">
+                          <table class="table table-bordered">
                                      <tr >
-                                     <th colspan="2" style="text-align:center;">Product Details</th>
+                                     <th colspan="2" style="text-align:center;"><?php echo display('product_details') ?></th>
                                      </tr>
 
                               
-                                <tr><td style="text-align:center">Product Name</td><td style="text-align:center"><?php echo $product_info[0]['product_id']; ?></td></tr> 
-                                <tr><td style="text-align:center">Product model</td><td style="text-align:center"><?php echo $product_info[0]['product_model']; ?></td></tr>
+                                <tr><td style="text-align:center"><?php echo display('product_name') ?></td><td style="text-align:center"><?php echo $product_info[0]['product_id']; ?></td></tr> 
+                                <tr><td style="text-align:center"><?php echo display('product_model') ?></td><td style="text-align:center"><?php echo $product_info[0]['product_model']; ?></td></tr>
                              
-                               <tr><td style="text-align:center">Product price</td><td style="text-align:center"><?php echo $product_info[0]['price']; ?></td></tr>
+                               <tr><td style="text-align:center"><?php echo display('price') ?></td><td style="text-align:center"><?php echo $product_info[0]['price']; ?></td></tr>
                               
                               
                              </table>
-                              <table class="table table-bordered">
+                           <table class="table table-bordered">
                                      <tr >
-                                     <th colspan="2" style="text-align:center;">Supplier Details</th>
+                                     <th colspan="2" style="text-align:center;"><?php echo display('Vendor Details') ?></th>
                                      </tr>
 
                               
-                                <tr><td style="text-align:center">Supplier Name</td><td style="text-align:center"><?php echo $supplier_name; ?></td></tr> 
+                                <tr><td style="text-align:center"><?php echo display('Vendor')?></td><td style="text-align:center"><?php echo $supplier_name; ?></td></tr> 
                               
                               
-                               <tr><td style="text-align:center">Supplier price</td><td style="text-align:center"><?php echo $supplier_price; ?></td></tr>
-                              
-                              
+                               <tr><td style="text-align:center"><?php echo display('Vendor')." ".display('price');?></td><td style="text-align:center"><?php echo $supplier_price; ?></td></tr>
                              </table>
                          </div>
                          <div class="col-sm-4">
  <table class="table table-bordered">
                                  <tr >
-                                     <th colspan="2" style="text-align:center;">Origin :
-                                     <?php 
-                                     if($product_info[0]['country']){
-                                     $title= explode('-', $product_info[0]['country']);
-                                    $trimmedTitle=trim($title[1]);
-                                     echo $trimmedTitle; }?></th>
+                                     <th colspan="2" style="text-align:center;"><?php echo display('Origin')?> :
+                                    <!--  -->
+                                    <!-- $title= explode('-', $product_info[0]['country']);-->
+                                    <!--$trimmedTitle=trim($title[1]);-->
+                                    <!-- echo $trimmedTitle; ?></th>-->
                                     </tr>  
  <input type="hidden" value="<?php echo $product_info[0]['country']; ?>"  id="country_flag"/>
        
@@ -309,15 +306,14 @@ border:none;
                          
 
 
-
-                         <div class="col-sm-4">
+       <div class="col-sm-4">
                              <table class="table table-bordered" style="text-align: right;">
                                  <tr >
-                                     <th colspan="2" style="text-align:center;">Inventory Balance</th>
+                                     <th colspan="2" style="text-align:center;"><?php  echo  display('Inventory Balance')?></th>
 
                                  </tr>
-                                <tr><td style="text-align:center">In Stock</td><td style="text-align:center"><?php echo $product_info[0]['p_quantity']; ?></td></tr> 
-                                <tr><td style="text-align:center">Available</td><td style="text-align:center">   <?php  
+                                <tr><td style="text-align:center"><?php  echo  display('In Stock')?></td><td style="text-align:center"><?php echo $product_info[0]['p_quantity']; ?></td></tr> 
+                                <tr><td style="text-align:center"><?php  echo  display('Available')?></td><td style="text-align:center">   <?php  
      $sale_sum=false;
      $s=0;
      $e=0;
@@ -364,12 +360,12 @@ $total =$s+$e;
 </table>
     <table class="table table-bordered" style="text-align: right;">
   <tr>
-                                     <th colspan="2" style="text-align:center;">Additional Information</th>
+                                     <th colspan="2" style="text-align:center;"><?php  echo  display('Additional Information')?></th>
 
                                  </tr>
-                                <tr><td style="text-align:center">Category</td><td style="text-align:center"><?php echo $category_name; ?></td></tr> 
-                             <tr><td style="text-align:center">Product Sub Category</td><td style="text-align:center"><?php echo $product_info[0]['product_sub_category']; ?></td></tr> 
-                                <tr><td style="text-align:center">Units</td><td style="text-align:center"><?php echo $product_info[0]['unit']; ?></td></tr> 
+                                <tr><td style="text-align:center"><?php  echo  display('category')?></td><td style="text-align:center"><?php echo $category_name; ?></td></tr> 
+                             <tr><td style="text-align:center"><?php  echo  display('Product Sub Category')?></td><td style="text-align:center"><?php echo $product_info[0]['product_sub_category']; ?></td></tr> 
+                                <tr><td style="text-align:center"><?php  echo  display('Units')?></td><td style="text-align:center"><?php echo $product_info[0]['unit']; ?></td></tr> 
                              </table>
                          </div>
                            </div>
@@ -385,15 +381,15 @@ $total =$s+$e;
     </div>
 
   <?php   $i=1;
-   if(isset($all_product_detail[0]['bundle_no'])) {   
+                            foreach($all_product_detail as $apd) {    ?>
 
-  ?>
+<?php } ?>
                      <div class="row">
                         <div class="col-sm-12">
                              
 <ul class="nav nav-tabs" style="    border-bottom: 1px solid;">
-    <li class="active"><a data-toggle="tab" href="#home">Sales Invoice</a></li>
-    <li><a data-toggle="tab" href="#menu1">Packing Details</a></li>
+    <li class="active"><a data-toggle="tab" href="#home"><?php  echo  display('Sales Invoice')?></a></li>
+    <li><a data-toggle="tab" href="#menu1"><?php  echo  display('Packing Details')?></a></li>
 
   </ul>
 
@@ -401,84 +397,78 @@ $total =$s+$e;
     <div id="home" class="tab-pane fade in active">
       <h3>Sales Invoice</h3>
       <!-- <p>Sales Invoice</p> -->
-      
      <form id="product_details_edit"  method="post">
           <div class="table-responsive product-supplier">
-                            <table class="table table-bordered table-hover add_product_table"  id="product_table">
+                            <table class="table table-bordered table-hover"  id="product_table">
                             <thead>
-                                     <tr>
+                                      <tr>
                                             <th rowspan="2"class="text-center"><i class="fa fa-shopping-cart" aria-hidden="true" data-toggle="tooltip" title="Add to cart"></i></th>
-                                            <th rowspan="2" style="width: max-content;" class="text-center">Description</th>
-                                            <th rowspan="2" style="width:100px;" class="text-center">Thickness<i class="text-danger">*</i></th>
-                                            <th rowspan="2" style="width:100px;" class="text-center">Supplier<br/>Block No<i class="text-danger">*</i></th>
+                                            <th rowspan="2" style="width: max-content;" class="text-center"><?php echo  display('description'); ?></th>
+                                            <th rowspan="2"  class="text-center"><?php echo display('Thick ness');?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" style="width: 70px;" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>
 
-                                            <th rowspan="2" style="width:100px;" class="text-center" >Supplier <br/>Slab No<i class="text-danger">*</i> </th>
-                                            <th colspan="2"   style="width:150px;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th>
-                                            <th rowspan="2" class="text-center">Gross Sq.Ft</th>
+                                            <th rowspan="2" style="width:100px;" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th>
+                                            <th colspan="2"   style="width:150px;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>
                                             <th rowspan="2" style="width: min-content;" class="text-center">Bundle No<i class="text-danger">*</i></th>
                                             <th rowspan="2" style="width: min-content;" class="text-center">Slab No<i class="text-danger">*</i></th>
-                                            <th colspan="2"  style="width:150px;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                                            <th rowspan="2" class="text-center">Net Sq.Ft</th>
-                                            <th rowspan="2" style="width: 70px;" class="text-center">Cost per Sq.Ft</th>
-                                            <th rowspan="2" style="width: 70px;" class="text-center">Cost per Slab</th>
-                                            <th rowspan="2" style="width: 70px;" class="text-center">Sales<br/>Price per Sq.Ft</th>
-                                            <th rowspan="2"  class="text-center">Sales Slab Price</th>
-                                            <th rowspan="2" class="text-center">Weight</th>
-                                            <th rowspan="2" class="text-center">Origin</th>
+                                            <th colspan="2"  style="width:150px;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th>
+                                            <th rowspan="2" style="width: 70px;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th>
+                                            <th rowspan="2" style="width: 70px;" class="text-center"><?php echo display('Cost per Slab');?></th>
+                                            <th rowspan="2" style="width: 70px;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th>
+                                            <th rowspan="2"  style="width: 70px;" class="text-center"><?php echo display('Sales Slab Price');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Weight');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>
                                            
-                                            <th rowspan="2" class="text-center">Image</th>
-                                            <th rowspan="2" class="text-center">Note</th>
-                                            <th rowspan="2" class="text-center">Block</th>
-                                            <th rowspan="2" style="width: 100px" class="text-center">Total</th>
+                                            <th rowspan="2" class="text-center"><?php echo display('image');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('note');?></th>
+                                            <th rowspan="2" class="text-center"><?php echo display('Block');?></th>
+                                            <th rowspan="2" style="width: 100px" class="text-center"><?php  echo  display('total'); ?></th>
 
                                         </tr>
-                                        <tr>
-                                             <th class="text-center">Width</th>
-                                            <th class="text-center">Height</th>  
-                                          <th class="text-center"  >Width</th>
-                                            <th class="text-center" >Height</th>  
+                                         <tr>
+                                              <th class="text-center"><?php echo display('Width');?></th>
+                                            <th class="text-center"><?php echo display('Height');?></th>  
+                                          <th class="text-center"  ><?php echo display('Width');?></th>
+                                            <th class="text-center" ><?php echo display('Height');?></th>  
                                         </tr>
-
                                   
 
                                 </thead>
                                 <tbody id="addPurchaseItem">
 
                             <?php   $i=1;
-                            foreach($all_product_detail as $apd) {  ?>
+                            foreach($all_product_detail as $apd) {    ?>
                                 
 
                                     <tr>
-                                        <!-- <td><input type="checkbox" class="form-check-input item_add_<?php echo $i; ?>" ></td> -->
-                                        <!-- <td><a href="<?php echo site_url("Cproduct/add_tocart/".$product_info[0]['product_id']); ?>"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></td> -->
-
-                                        <td><a href="" data-product_id="<?php echo $product_info[0]['product_id'];?>" data-description="<?php echo $apd['description_table']; ?>" data-thickness="<?php  echo $apd['thickness']; ?>" data-supplier_block_no = "<?php echo $apd['supplier_block_no']; ?>" data-supplier_slab_no="<?php echo $apd['supplier_slab_no']; ?>" data-g_width="<?php echo $apd['g_width']; ?>" data-g_height="<?php echo $apd['g_height']; ?>" data-gross_sq_ft="<?php echo $apd['gross_sqft']; ?>" data-bundle_no="<?php echo $apd['bundle_no']; ?>" data-slab_no="slab_no" data-n_width="<?php echo $apd['n_width']; ?>" data-n_height="<?php echo $apd['n_height']; ?>" data-net_sq_ft="<?php echo $apd['net_sqft']; ?>" data-cost_sq_ft="<?php echo $apd['cost_sqft']; ?>" data-cost_sq_slab="<?php echo $apd['cost_slab']; ?>" data-sales_amt_sq_ft="<?php echo $apd['sales_price_sqft']; ?>" data-sales_slab_amt="<?php echo $apd['sales_slab_price']; ?>" data-weight="<?php echo $apd['weight']; ?>" data-origin="<?php echo $apd['origin']; ?>" data-total_amt="<?php echo $apd['total_amt']; ?>" class="add-to-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></td>
-                                        
-                                        <td style="display: none;">
-                                          <!-- <input type="hidden" value="<?php echo $apd['id']; ?>" /> -->
+                                         <td><a href="" data-product_id="<?php echo $product_info[0]['product_id'];?>" data-description="<?php echo $apd['description_table']; ?>" data-thickness="<?php  echo $apd['thickness']; ?>" data-supplier_block_no = "<?php echo $apd['supplier_block_no']; ?>" data-supplier_slab_no="<?php echo $apd['supplier_slab_no']; ?>" data-g_width="<?php echo $apd['g_width']; ?>" data-g_height="<?php echo $apd['g_height']; ?>" data-gross_sq_ft="<?php echo $apd['gross_sqft']; ?>" data-bundle_no="<?php echo $apd['bundle_no']; ?>" data-slab_no="slab_no" data-n_width="<?php echo $apd['n_width']; ?>" data-n_height="<?php echo $apd['n_height']; ?>" data-net_sq_ft="<?php echo $apd['net_sqft']; ?>" data-cost_sq_ft="<?php echo $apd['cost_sqft']; ?>" data-cost_sq_slab="<?php echo $apd['cost_slab']; ?>" data-sales_amt_sq_ft="<?php echo $apd['sales_price_sqft']; ?>" data-sales_slab_amt="<?php echo $apd['sales_slab_price']; ?>" data-weight="<?php echo $apd['weight']; ?>" data-origin="<?php echo $apd['origin']; ?>" data-total_amt="<?php echo $apd['total_amt']; ?>" class="add-to-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></td>
+                                        <td>
+                                         
                                            <input type="hidden" name="product_id[]" data-product_id="<?php echo $product_info[0]['product_id'];?>" value="<?php echo $product_info[0]['product_id'];?>" />
-                                        </td>
                                           <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
-                                            <td>
-                                                <input type="text" id="description_<?php echo $i; ?>" name="description[]"   readonly  class="form-control" data-description="<?php echo $apd['description_table']; ?>" value="<?php  echo  $apd['description_table'] ;  ?>" />
+   <input type="hidden" id="id_<?php echo $i; ?>" name="id[]"   readonly  class="form-control" value="<?php  echo  $apd['id'] ;  ?>" />
+                                                <input type="text" id="description_<?php echo $i; ?>" name="description[]"   readonly  class="form-control" value="<?php  echo  $apd['description_table'] ;  ?>" />
                                             </td>
                                         
                                             <td >
-                                                <input type="text" name="thickness[]" id="thickness_<?php echo $i; ?>" required=""    readonly data-thickness="<?php  echo $apd['thickness']; ?>" class="form-control"  value="<?php  echo $apd['thickness'] ;  ?>" />
+                                                <input type="text" name="thickness[]" id="thickness_<?php echo $i; ?>" required=""    readonly     class="form-control"  value="<?php  echo $apd['thickness'] ;  ?>"        />
                                             </td>
                                             <td>
-                                                <input type="text" id="supplier_b_no_<?php echo $i; ?>" name="supplier_block_no[]"  readonly   required="" data-supplier_block_no = "<?php echo $apd['supplier_block_no']; ?>" class="form-control" value="<?php echo $apd['supplier_block_no']; ?>" />
+                                                <input type="text" id="supplier_b_no_<?php echo $i; ?>" id="supplier_b_no_<?php echo $i; ?>" name="supplier_block_no[]"  readonly   required="" class="form-control" value="<?php echo $apd['supplier_block_no']; ?>" />
                                             </td>
                                         
                                             <td >
-                                                <input type="text"  id="supplier_s_no_<?php echo $i; ?>" name="supplier_slab_no[]"  readonly  required="" data-supplier_slab_no="<?php echo $apd['supplier_slab_no']; ?>" class="form-control" value="<?php echo $apd['supplier_slab_no']; ?>"  />
+                                                <input type="text"  id="supplier_s_no_<?php echo $i; ?>" id="supplier_s_no_<?php echo $i; ?>" name="supplier_slab_no[]"  readonly  required="" class="form-control" value="<?php echo $apd['supplier_slab_no']; ?>"  />
                                             </td>
-
-                                            <td>
-                                                <input type="text" id="gross_width_1_<?php echo $i; ?>" name="gross_width[]" required="" class="gross_width  form-control" value="<?php echo $apd['g_width']; ?>" />
+                                        
+                                        
+                                               <td>
+                                                <input type="text" id="gross_width_1_<?php echo $i; ?>" id="gross_width_1_<?php echo $i; ?>" name="gross_width[]" required="" class="gross_width  form-control" value="<?php echo $apd['g_width']; ?>" />
                                             </td>
                                             <td>
-                                                <input type="text" id="gross_height_1_<?php echo $i; ?>" name="gross_height[]"  required="" class="gross_height form-control" value="<?php echo $apd['g_height']; ?>" />
+                                                <input type="text" id="gross_height_1_<?php echo $i; ?>" id="gross_height_1_<?php echo $i; ?>" name="gross_height[]"  required="" class="gross_height form-control" value="<?php echo $apd['g_height']; ?>" />
                                             </td>
                                         
                                         
@@ -486,13 +476,14 @@ $total =$s+$e;
                                                 <input type="text"   style="width:60px;" id="gross_sq_ft_<?php echo $i; ?>" readonly name="gross_sq_ft[]" data-gross_sq_ft="<?php echo $apd['gross_sqft']; ?>" class="gross_sq_ft form-control"  value="<?php echo $apd['gross_sqft']; ?>"      />
                                             </td>
                                             <td>
-                                                <input type="text" id="bundle_no_<?php echo $i; ?>" name="bundle_no[]" required="" readonly data-bundle_no="<?php echo $apd['bundle_no']; ?>"  class="bundle_no form-control" value="<?php echo $apd['bundle_no']; ?>" />
+                                                <input type="text" id="bundle_no_<?php echo $i; ?>" name="bundle_no[]" required="" readonly   class="bundle_no form-control" value="<?php echo $apd['bundle_no']; ?>" />
                                             </td>
                                         
                                             <td style="text-align:center;">
-                                                <input type="text"  id="slab_no_<?php echo $i; ?>" name="slab_no[]" style="width:40px;" readonly  data-slab_no="slab_no" class="form-control"     value="1"  required=""/>
+                                                <input type="text"  id="slab_no_<?php echo $i; ?>" name="slab_no[]" style="width:40px;" readonly  class="form-control"     value="1"  required=""/>
                                             </td>
-                                            <td>
+       
+                                             <td>
                                                 <input type="text" id="net_width_1_<?php echo $i; ?>" name="net_width[]"  required="" class="net_width form-control" value="<?php echo $apd['n_width']; ?>" />
                                             </td>
                                             <td>
@@ -502,15 +493,15 @@ $total =$s+$e;
                                             <td style="text-align:center;">
                                                  <input type="text"   style="width:60px;"  id="net_sq_ft_<?php echo $i; ?>" name="net_sq_ft[]" readonly    class="net_sq_ft form-control"  value="<?php echo $apd['net_sqft']; ?>"/>
                                             </td>
-                                               
+                                            <td>
 
-      <td>     
-  <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_<?php echo $i; ?>"  name="cost_sq_ft[]"  style="width:60px;"  readonly data-cost_sq_ft="<?php echo $apd['cost_sqft']; ?>" class="cost_sq_ft form-control"   value="<?php echo $apd['cost_sqft']; ?>"></span>
+           
+  <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_<?php echo $i; ?>"  name="cost_sq_ft[]"  style="width:60px;"  readonly  class="cost_sq_ft form-control"   value="<?php echo $apd['cost_sqft']; ?>"></span>
 
                                         
-                            </td>
-                      <td>
-      <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_<?php echo $i; ?>" name="cost_sq_slab[]"   style="width:60px;"  readonly  class="form-control" data-cost_sq_slab="<?php echo $apd['cost_slab']; ?>"  value="<?php echo $apd['cost_slab']; ?>" /></span>
+                                            <td >
+                     
+      <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_<?php echo $i; ?>" name="cost_sq_slab[]"   style="width:60px;"  readonly  class="form-control"   value="<?php echo $apd['cost_slab']; ?>" /></span>
  
 
 
@@ -518,7 +509,7 @@ $total =$s+$e;
                                             </td>
                                             <td>
                                         
-         <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $i; ?>"  name="sales_amt_sq_ft[]"  readonly style="width:60px;" data-sales_amt_sq_ft="<?php echo $apd['sales_price_sqft']; ?>"   class="sales_amt_sq_ft form-control"  value="<?php echo $apd['sales_price_sqft']; ?>" /></span>
+         <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $i; ?>"  name="sales_amt_sq_ft[]"  readonly style="width:60px;"    class="sales_amt_sq_ft form-control"  value="<?php echo $apd['sales_price_sqft']; ?>" /></span>
 
 
 
@@ -527,18 +518,18 @@ $total =$s+$e;
                                         
                                             <td >
                                     
-      <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $i; ?>" name="sales_slab_amt[]"  readonly style="width:60px;"  data-sales_slab_amt="<?php echo $apd['sales_slab_price']; ?>" class="sales_slab_amt form-control"  value="<?php echo $apd['sales_slab_price']; ?>" /></td> </span>
+      <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $i; ?>" name="sales_slab_amt[]"  readonly style="width:60px;"      class="sales_slab_amt form-control"  value="<?php echo $apd['sales_slab_price']; ?>" /></td> </span>
   
 
 
                                              
                                             </td>
                                             <td>
-                                                <input type="text" id="weight_<?php echo $i; ?>" name="weight[]"  readonly value="<?php echo $apd['weight']; ?>" data-weight="<?php echo $apd['weight']; ?>" class="form-control" />
+                                                <input type="text" id="weight_<?php echo $i; ?>" name="weight[]"  readonly value="<?php echo $apd['weight']; ?>"   class="form-control" />
                                             </td>
                                         
                                             <td >
-                                                <input type="text"  id="origin_<?php echo $i; ?>" name="origin[]"  readonly value="<?php echo $apd['origin']; ?>" data-origin="<?php echo $apd['origin']; ?>"  class="form-control"/>
+                                                <input type="text"  id="origin_<?php echo $i; ?>" name="origin[]"  readonly value="<?php echo $apd['origin']; ?>"   class="form-control"/>
                                             </td>
 
                                             <td >
@@ -564,7 +555,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
                        <div class="panel-body">
                      
                        <div class="col-sm-6"  style="text-align: center;width:850px;">
-<input type="file" data-img = "<?php $apd['img']; ?>" name="image[]" id="fileChooser_<?php echo $i; ?>" class="dropify"   data-height="300" data-default-file="<?php echo $apd['img'];  ?>"/>                   </div>
+<input type="file" name="image[]" id="fileChooser_<?php echo $i; ?>" class="dropify"   data-height="300" data-default-file="<?php echo $apd['img'];  ?>"/>                   </div>
 
                           </div>
                         </div>                      
@@ -577,7 +568,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
         <p style="display: none;" name="notesForm" id="notesForm_<?php echo $i; ?>">
             <!-- <input class="form-control" type="text" name="pastorName" placeholder="Pastor Name" />  -->
            
-            <textarea data-notes="<?php echo ['notes']; ?>" class="form-control" style="width:100%;" maxlength="500" id="notes_<?php echo $i; ?>" name="notes[]" cols="50" rows="5" placeholder="Notes">
+            <textarea class="form-control" style="width:100%;" maxlength="500" id="notes_<?php echo $i; ?>" name="notes[]" cols="50" rows="5" placeholder="Notes">
          <?php  echo $apd['notes']; ?>
          
           </textarea>
@@ -600,7 +591,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
                                    
 
                                             <td >
-                                               <span class="input-symbol-euro"><input  type="text" data-total_amt="<?php echo $apd['total_amt']; ?>" class="total_price form-control" style="width:80px;"  readonly    id="total_amt_1<?php echo $i; ?>"     name="total_amt[]" value="<?php echo $apd['total_amt']; ?>"  /></span>
+                                               <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;"  readonly    id="total_<?php echo $i; ?>"     name="total_amt[]" value="<?php echo $apd['total_amt']; ?>"  /></span>
                                             </td>
                                           
                                             
@@ -615,21 +606,15 @@ $x = pathinfo($str, PATHINFO_FILENAME);
                                     <tr>
                                  
 
-                                        <td style="text-align:right;" colspan="22"><b>TOTAL :</b></td>x
+                                        <td style="text-align:right;padding-bottom: 35px;" colspan="22"><b><?php echo display('total');?> :</b></td>
                                         <td >
-           <span class="input-symbol-euro">    <input type="text"  data-total="<?php echo $apd['total_amt']; ?>" id="total_net" name="total_net[]" class="form-control" style="width: 80px"  value="<?php echo $apd['total_amt']; ?>"   readonly="readonly"  /> </span>
+           <span class="input-symbol-euro">    <input type="text" id="Total" name="total"  readonly  class="form-control" style="width: 80px"  value="<?php echo $product_info[0]['oa_total']; ?>"   readonly="readonly"  /> </span>
             </td>
                                     
                                            
                                     </tr>
                                
-                                    <!-- <tr> <td style="text-align:right;" colspan="17"><b>GRAND TOTAL :</b></td>
-                                    <td>
-               <span class="input-symbol-euro">   <input type="text" id="gtotal" data-gtotal="<?php echo $product_info[0]['gtotal']; ?>" readonly  style="width: 80px" class="form-control" name="gtotal"  value="<?php echo $product_info[0]['gtotal']; ?>"    readonly="readonly" /></span>
-    </td>
-
-                                           
-                                    </tr> -->
+                              
                        
                                             </tfoot>
                             </table>
@@ -641,7 +626,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
 
                             </form>
 
-<?php  } ?>
+
 
 
 
@@ -656,8 +641,8 @@ $x = pathinfo($str, PATHINFO_FILENAME);
    
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Packing Details</h3>
-      <p>Packing</p>
+      <h3><?php echo display('Packing Details')?></h3>
+      <p></p>
     </div>
    
    
@@ -694,7 +679,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
 
                    <div class="modal-header" style="color:white;background-color:#38469f;">
                             <a href="#" class="close" data-dismiss="modal">&times;</a>
-                            <h3 class="modal-title">PRODUCT HISTORY</h3>
+                            <h3 class="modal-title"><?php echo display('PRODUCT HISTORY')?></h3>
                         </div>
 
 
@@ -705,8 +690,8 @@ $x = pathinfo($str, PATHINFO_FILENAME);
                        <div class="col-sm-4">
                               <table class="table table-bordered" cellspacing="0" width="100%" >
                                  <tr >
-                                     <th colspan="2" style="text-align:center;">Product Name</th>
- <th colspan="2" style="text-align:center;">Product Model</th>
+                                     <th colspan="2" style="text-align:center;"><?php echo display('product_name')?></th>
+ <th colspan="2" style="text-align:center;"><?php echo display('product_model')?></th>
                                  </tr>
                                 <tr><td colspan="2" style="text-align:center"><?php echo $product_info[0]['product_name']; ?></td>
                               <td colspan="2" style="text-align:center"><?php echo $product_info[0]['product_model']; ?></td>
@@ -716,12 +701,12 @@ $x = pathinfo($str, PATHINFO_FILENAME);
                           
                               <?php  if($sale_history){ ?>
                               <table class="table table-bordered" cellspacing="0" width="100%" >
-                               <h4>Sales :<h4>
+                               <h4><?php echo display('sales')?> :<h4>
 
                                  
                           
                              <tr>
-                           <th colspan="3 " style="text-align:center;">Bundle No</th>   <th colspan="3" style="text-align:center;">Invoice No</th> <th colspan="2" style="text-align:center;">Edit</th>
+                           <th colspan="3 " style="text-align:center;"><?php echo display('Bundle No');?></th>   <th colspan="3" style="text-align:center;"><?php echo display('Invoice No');?></th> <th colspan="2" style="text-align:center;"><?php echo display('Edit');?></th>
 
     </tr >
    
@@ -744,11 +729,11 @@ $x = pathinfo($str, PATHINFO_FILENAME);
 
                                 <?php  if($expense_history){ ?>
                              <table class="table table-bordered" cellspacing="0" width="100%" >
-                                   <h4>Expense :<h4>
+                                   <h4><?php echo display('expense')?> :<h4>
 
                                
                              <tr >
-                           <th colspan="3 " style="text-align:center;">Bundle No</th>   <th colspan="3" style="text-align:center;">Invoice No</th> <th colspan="2" style="text-align:center;">Edit</th>
+                           <th colspan="3 " style="text-align:center;"><?php echo display('Bundle No');?></th>   <th colspan="3" style="text-align:center;"><?php echo display('Invoice No');?></th> <th colspan="2" style="text-align:center;"><?php echo display('Edit');?></th>
 
     </tr >
    
@@ -794,7 +779,7 @@ $x = pathinfo($str, PATHINFO_FILENAME);
       <div class="modal-content" style="  margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Product</h4>
+          <h4 class="modal-title"><?php echo display('product');?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -810,8 +795,6 @@ $x = pathinfo($str, PATHINFO_FILENAME);
   </div>
 
 <script>
-
-
 $('.dropify').dropify();
 // Used events
 var drEvent = $('.dropify-event').dropify();
@@ -913,7 +896,7 @@ $('#block_'+id).val("off");
       type: 'POST',
       data: new FormData( this ),
       success:function (data) {
-$("#bodyModal1").html("Updated Successfully");
+$("#bodyModal1").html("<?php echo display('Updated Successfully')?>");
 $('#myModal1').modal('show');
 $('#product_info').modal('hide');
 
@@ -934,7 +917,45 @@ console.log(input_hdn);
   } );
 
 
+// $('#product_details_edit').submit(function (event) {
+//    $(this).find('input[type="checkbox"]').each( function () {
+//           var netheight = $(this).attr('id');
+// const indexLastDot = netheight.lastIndexOf('_');
+// var id = netheight.slice(indexLastDot + 1);
 
+//   if($('#blockcheck_'+id).is(':checked'))
+// {
+// $('#block_'+id).val("on");
+// }else{
+// $('#block_'+id).val("off");
+// }
+
+//     })
+// var dataString = {
+// dataString : $("#product_details_edit").serialize()
+// };
+// dataString[csrfName] = csrfHash;
+// $.ajax({
+// type:"POST",
+// dataType:"json",
+// url:"<?php //echo base_url(); ?>Cproduct/product_details_edit",
+// data:$("#product_details_edit").serialize(),
+// success:function (data) {
+// $("#bodyModal1").html("Updated Successfully");
+// $('#myModal1').modal('show');
+// $('#product_info').modal('hide');
+// console.log(data);
+// console.log(input_hdn);
+// }
+// });
+// event.preventDefault();
+// window.setTimeout(function(){
+// $('#product_info').modal('hide');
+// }, 2000);
+// window.setTimeout(function(){
+// $('#myModal1').modal('hide');
+// }, 2000);
+// });
 var shoppingCart = (function() {
 
   cart = [];
@@ -968,9 +989,9 @@ var shoppingCart = (function() {
   function saveCart() {
     console.log(cart);
      if (sessionStorage.setItem('shoppingCart', JSON.stringify(cart))) {
-        alert("Product Successfully Added");
+        alert("<?php echo  display('Product Added Successfully')?>");
      }else{
-         alert("Product Successfully Added");
+         alert("<?php echo  display('Product Added Successfully')?>");
      }
   }
   
@@ -1121,265 +1142,6 @@ $('.add-to-cart').click(function(event) {
 //   shoppingCart.clearCart();
 //   displayCart();
 // });
-
-
-function displayCart() {
-  var cartArray = shoppingCart.listCart();
-// console.log(cartArray);
-  var output = "";
-  for(var i in cartArray) {
-
-    output += "<tr>"
-    + "<td>" + "<input type='checkbox' id='myCheckbox' class='checkboxall'>" + "</td>"
-    + "<td prop='description'>" +"<input type='text' name='description[]' class='form-control' id='description' readonly  value="+cartArray[i].description+">"+  "</td>"
-    + "<td prop='thickness'>" +"<input type='text' class='form-control' name='thickness[]' id='thickness' readonly  value="+ cartArray[i].thickness+ ">"+ "</td>"
-    + "<td prop='supplier_block_no'>" +"<input type='text' class='form-control' id='supplier_block_no' name='supplier_block_no[]' readonly  value="+ cartArray[i].supplier_block_no +">"+ "</td>"
-    + "<td prop='supplier_slab_no'>" +"<input type='text' class='form-control' id='supplier_slab_no' name='supplier_slab_no[]' readonly  value="+ cartArray[i].supplier_slab_no +">"+ " </td>"
-    + "<td prop='gross_sq_ft'>" +"<input type='text' class='form-control size_view' id='gross_sq_ft' name='gross_sq_ft[]' readonly  value="+ cartArray[i].gross_sq_ft+ ">"+ "</td>"
-    + "<td prop='bundle_no'>" +"<input type='text' class='form-control size_view' id='bundle_no' name='bundle_no[]' readonly value="+ cartArray[i].bundle_no + ">"+"</td>"
-    + "<td prop='slab_no'>" +"<input type='text' class='form-control size_view' id='slab_no' name='slab_no[]' readonly   value="+ cartArray[i].slab_no +">"+"</td>"
-    + "<td prop='net_sq_ft'>" +"<input type='text' class='form-control size_view' id='net_sq_ft' name='net_sq_ft[]' readonly  value="+ cartArray[i].net_sq_ft+">"+ "</td>"
-    + "<td prop='cost_sq_ft'>" +"<input type='text' class='form-control size_view' id='cost_sq_ft' name='cost_sq_ft[]' readonly  value="+ cartArray[i].cost_sq_ft +">"+ "</td>"
-    + "<td prop='cost_sq_slab'>" +"<input type='text' class='form-control size_view' id='cost_sq_slab' name='cost_sq_slab[]' readonly  value="+ cartArray[i].cost_sq_slab+ ">"+ "</td>"
-    + "<td prop='sales_amt_sq_ft'>" +"<input type='text' class='form-control size_view' id='sales_amt_sq_ft' name='sales_amt_sq_ft[]'  readonly  value="+ cartArray[i].sales_amt_sq_ft+">"+ "</td>"
-    + "<td prop='sales_slab_amt'>" +"<input type='text' class='form-control size_view' id='sales_slab_amt'  name='sales_slab_amt[]' readonly  value="+ cartArray[i].sales_slab_amt+ ">"+"</td>"
-    + "<td prop='weight'>" +"<input type='text' class='form-control size_view' id='weight' name='weight[]' readonly  value="+ cartArray[i].weight+ ">"+ "</td>"
-    + "<td prop='origin'>" +"<input type='text' class='form-control size_view' id='origin' name='origin[]' readonly  value="+ cartArray[i].origin+ ">"+ "</td>"
-    + "<td prop='total_amt'>" +"<input type='text' class='form-control size_view' id='total_amt'  name='total_amt[]' readonly  value="+ cartArray[i].total_amt+">"+"</td>"
-    // + "<td><button class='delete-item btn btn-danger' data-description=" + cartArray[i].description + " data-thickness=" + cartArray[i].thickness + " >X</button></td>"
-    "</tr>";
-  }
-  $('.show-cart').html(output);
-  // $('.total-cart').html(shoppingCart.totalCart());
-  $('.total-count').html(shoppingCart.totalCount());
-}
-
-// Delete item button
-
-// $('.show-cart').on("click", ".delete-item", function(event) {
-//   var description = $(this).data('description');
-//   var thickness = $(this).data('thickness');
-//   shoppingCart.removeItemFromCartAll(description, thickness);
-//   displayCart();
-// })
-
-
-// -1
-// $('.show-cart').on("click", ".minus-item", function(event) {
-//   var description = $(this).data('description');
-//   var thickness = $(this).data('thickness');
-//   shoppingCart.removeItemFromCart(description, thickness);
-//   displayCart();
-// })
-// +1
-// $('.show-cart').on("click", ".plus-item", function(event) {
-//   var description = $(this).data('description');
-//   var thickness = $(this).data('thickness');
-//   shoppingCart.addItemToCart(description, thickness);
-//   displayCart();
-// })
-
-// Item count input
-// $('.show-cart').on("change", ".item-count", function(event) {
-//    var description = $(this).data('description');
-//   var thickness = $(this).data('thickness');
-//    var count = Number($(this).val());
-//   shoppingCart.setCountForItem(description, thickness, count);
-//   displayCart();
-// });
-
-displayCart();
-
-// $(document).ready(function(){
-//    $(".radio_invoice").click(function(){
-//         $(function(){
-//         var results = []; 
-//         var row = -1; 
-//         $('#contactlisttable').find('td').each(function(i, val){
-//             if(i % 15 === 0){ //New Row? 
-//                 results.push([]); 
-//                 row++;//Increment the row counter
-//             }
-//             results[row].push(this.textContent || this.innerText); //Add the values (textContent is standard while innerText is not)       
-//         }); 
-//         console.log(results); 
-//     }); 
-
-//     });
-// });
-
-
-// function GetSelected() {
-//         //Reference the Table.
-//         var grid = document.getElementById("contactlisttable");
- 
-//         //Reference the CheckBoxes in Table.
-//         var checkBoxes = grid.getElementsByTagName("INPUT");
-//         var message = "Description Thickness  Supplier\n";
- 
-//         //Loop through the CheckBoxes.
-//         for (var i = 0; i < checkBoxes.length; i++) {
-//             console.log(checkBoxes.length);
-//             if (checkBoxes[i].checked) {
-//                 var row = checkBoxes[i].parentNode.parentNode;
-//                 message += row.cells[1].innerHTML;
-//                 message += "   " + row.cells[2].innerHTML;
-//                 message += "   " + row.cells[3].innerHTML;
-//                 message += "\n";
-//             }
-//         }
- 
-//         //Display selected Row data in Alert Box.
-//         console.log(message);
-//     }
-
-
-// var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
-// var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
-
-// $(document).ready(function(){
-//     $('.radio_invoice').on('click', () => {
-//    const selectedRows = [...$('table tbody tr:has("input:checked")')]
-//       .map(tr => 
-//         [...$(tr).find('td:lt(16)')]
-//           .reduce((res,td) => (res[$(td).attr('prop')]=$(td).text(), res),{}));
-//         $.ajax({
-//             method: "POST",
-//              // dataType : "json",
-//             url: '<?php echo base_url();?>Cinvoice/get_cartdata',
-//             data: {selectedRows: selectedRows,[csrfName]: csrfHash },
-//             success: function(response){
-//               console.log(response);
-//             }
-//         });
-//    // console.log(selectedRows)
-// }); 
-  
-// }); 
-
-
-
-// $(document).ready(function(){
-// $("#selectall").click(function(){
-//         if(this.checked){
-//             $('.checkboxall').each(function(){
-//                 $(".checkboxall").prop('checked', true);
-//             })
-//         }else{
-//             $('.checkboxall').each(function(){
-//                 $(".checkboxall").prop('checked', false);
-//             })
-//         }
-//     });
-// });
-
-</script>
-
-  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <form id="cartdata" method='post'>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">View Cart</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="table table-bordered">
-          <thead>   
-            <tr>
-                <th rowspan="2"><input type="checkbox" class="check" id="selectall"></th>
-                <th rowspan="2" style="width: max-content;" class="text-center">Description</th>
-                <th rowspan="2" style="width:100px;" class="text-center">Thickness<i class="text-danger">*</i></th>
-                <th rowspan="2" style="width:100px;" class="text-center">Supplier<br/>Block No<i class="text-danger">*</i></th>
-
-                <th rowspan="2" style="width:100px;" class="text-center" >Supplier <br/>Slab No<i class="text-danger">*</i> </th>
-                <th rowspan="2" class="text-center">Gross Sq.Ft</th>
-                <th rowspan="2" style="width: min-content;" class="text-center">Bundle No<i class="text-danger">*</i></th>
-                <th rowspan="2" style="width: min-content;" class="text-center">Slab No<i class="text-danger">*</i></th>
-                <th rowspan="2" class="text-center">Net Sq.Ft</th>
-                <th rowspan="2" style="width: 70px;" class="text-center">Cost per Sq.Ft</th>
-                <th rowspan="2" style="width: 70px;" class="text-center">Cost per Slab</th>
-                <th rowspan="2" style="width: 70px;" class="text-center">Sales<br/>Price per Sq.Ft</th>
-                <th rowspan="2"  class="text-center">Sales Slab Price</th>
-                <th rowspan="2" class="text-center">Weight</th>
-                <th rowspan="2" class="text-center">Origin</th>
-                <th rowspan="2" style="width: 100px" class="text-center">Total</th>
-            </tr>
-
-            </thead>
-            <tbody class="show-cart table" id="itemlist">
-                
-            </tbody>
-             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>"> 
-        </table>
-        <!-- <div>Total price: $<span class="total-cart"></span></div> -->
-        <div class="row">
-          <div class="col-sm-6">
-                <div class="form-check-inline">
-                    <!-- <button type="submit" class="btn btn-primary create_invoice" id="invoice">Create Invoice</button> -->
-                    <!-- <input type="button" class="btn btn-primary create_invoice" id="invoice" value="Create Invoice" /> -->
-                 <label class="form-check-label" for="radio1">
-                    <input type="radio" style="position: relative; top: 1px;" class="form-check-input" id="invoice" name="create_invoice" value="create_invoice in"> Create Invoice
-                  </label> 
-                </div>
-          </div>
-          <div class="col-sm-6">
-                <div class="form-check-inline">
-                    <!-- <button type="submit" class="btn btn-primary create_quotation" id="quotation">Create Invoice</button> -->
-                  <label class="form-check-label" for="radio1">
-                    <input type="radio" style="position: relative; top: 1px;" class="form-check-input" id="quotation" name="create_invoice" value="create_quotation in"> Create Quotation
-                  </label>
-                </div>
-          </div>
-          <center><button type="submit" class="btn btn-primary btn_invoice">Create Invoice</button></center>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-    </form>
-  </div>
-</div>
-
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    //Event code start here
-       ....
-    //Event code end here
-    $(".sidebar-toggle").trigger('click') //trigger its click
-});
-    var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
-    var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
-    
-//     $(document).ready(function(){
-
-//         $('#cartdata').submit(function (event) {
-//         event.preventDefault();
-//             var dataString = {
-//             dataString : $("#cartdata").serialize()
-//         };
-//    dataString[csrfName] = csrfHash; 
-//         var FormData = $('#cartdata').serialize();
-//             $.ajax({
-//                type:"POST",
-//                dataType:"json",
-//                url:"<?php echo base_url(); ?>Cinvoice/get_cartdata",
-//                data:$("#cartdata").serialize(),
-//                success: function(res){
-//                  console.log("Res :"+res);
-//                },
-// //                  error: function(xhr, status, error) {
-// //   alert(xhr.responseText);
-// // }
-//             });
-
-//         })
-//     }); 
-  
 $('#cartdata').submit(function (event) {
    
        
@@ -1403,116 +1165,7 @@ $('#cartdata').submit(function (event) {
     });
     event.preventDefault();
 });
-
-    // $(document).ready(function(){
-    //     $('.radio_invoice').on('click', () => {
-    //       var formdata = $('input[type="checkbox"]:checked').closest("tr").find("input").serialize();
-    //     //  // var data = json_decode(formdata);
-
-    //     // console.log(formdata);
-    //       // var formdata = $('#cartdata').serialize();
-    //        var values = {};
-    //         $.each($('#cartdata').serializeArray(), function(i, field) {
-    //             values[field.name] = field.value;
-    //         });
-
-    //         $('input[type="checkbox"]:not(:checked)').each(function(){
-    //             if($.inArray(this.name, values) === -1){
-    //                 values[this.name] = $(this).prop('checked')
-    //             }
-    //         });
-    //         // var formdata = JSON.stringify(values);
-    //         $.ajax({
-    //             type: "POST",
-    //             dataType: "json",
-    //             url: "<?php echo base_url(); ?>Cinvoice/get_cartdata",
-    //             data:{values: values, [csrfName]: csrfHash},
-    //             success: function(response){
-    //                console.log(response);
-    //             }
-    //         })
-    //     });
-    // });
-
-
-$(document).on('keyup', '.gross_height,.gross_width', function(){
-
- var netheight = $(this).attr('id');
-const indexLastDot = netheight.lastIndexOf('_');
-var id = netheight.slice(indexLastDot + 1);
-var net_width='gross_width_'+id;
-var net_height = 'gross_height_'+ id;
-var netwidth=$('#'+net_width).val();
-var netheight=$('#'+net_height).val();
-var netresult=parseInt(netwidth) * parseInt(netheight);
-netresult=netresult/144;
-netresult = isNaN(netresult) ? 0 : netresult;
-var nresult=netresult.toFixed(3);
-
-$('#'+'gross_sq_ft_'+id).val(netresult.toFixed(3));
-
-
-});
-
-
-$(document).on('keyup', '.net_height,.net_width', function(){
-
- var netheight = $(this).attr('id');
-const indexLastDot = netheight.lastIndexOf('_');
-var id = netheight.slice(indexLastDot + 1);
-var net_width='net_width_'+id;
-var net_height = 'net_height_'+ id;
-var netwidth=$('#'+net_width).val();
-var netheight=$('#'+net_height).val();
-var netresult=parseInt(netwidth) * parseInt(netheight);
-netresult=netresult/144;
-netresult = isNaN(netresult) ? 0 : netresult;
-$('#'+'net_sq_ft_'+id).val(netresult.toFixed(3));
-var nresult=netresult.toFixed(3);
-var cost_sqft=$('#cost_sq_ft_'+id).val();
-
-var sales_sqft=cost_sqft *nresult;
-var x = $('#slab_no_'+id).val();
-
-var sales_slab_price=cost_sqft *nresult*x;
-console.log(parseInt(cost_sqft) +"*"+parseInt(nresult)+"*"+id);
-$('#'+'sales_slab_amt_'+id).val(sales_slab_price.toFixed(3));
-sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
-$('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
-      var sum_total=0;
-     $('.btotal').each(function() {
-var v=$(this).val();
-  sum_total += parseFloat(v);
-});
-$('#Over_all_Total').val(sum_total);
-});
-
-// var Total_1 = 0;
-//     $(this).find('.total_price').each(function() {
-//         var precio = $(this).val();
-//         if (!isNaN(precio) && precio.length !== 0) {
-//           Total_1 += parseFloat(precio);
-//         }
-//       });
-// $('#Total_1').val(Total_1.toFixed(3)).trigger('change');
-
-var total_net=0;
-    $('#product_table').find('.total_price').each(function() {
-        var precio = $(this).val();
-        if (!isNaN(precio) && precio.length !== 0) {
-          total_net += parseFloat(precio);
-        }
-      });
-$('#total_net').val(total_net.toFixed(3)).trigger('change');
-
-
-
-</script>
-
-
-
-
-
+  </script>
 <style type="text/css">
     .size_view{
         width: 50px !important;
@@ -1523,4 +1176,5 @@ $('#total_net').val(total_net.toFixed(3)).trigger('change');
 }
     }
 </style>
+
 

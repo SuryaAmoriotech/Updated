@@ -50,14 +50,14 @@
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-    <tr><td  class="key">Packing List NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
-    <tr><td  class="key">Gross Weight</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Packing List NO')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
 </table>
                </div>
                 <div class="col-sm-6">
                 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['purchase_date'];  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['container_no']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['purchase_date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['container_no']; ?></td></tr>
    </table> </div> 
             </div>
         </div>
@@ -124,7 +124,7 @@ if($a==$m){
                      </tbody>
                      <tfoot>
 <tr>
-    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;">Net Sq.ft:</td>
+    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
                                             <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
@@ -133,9 +133,9 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-               <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> Overall Net Sq.ft :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+               <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.Ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
-          <h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
+          <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
 
 
@@ -172,15 +172,15 @@ elseif($template==1)
         <div class="body-section">
             <div class="row">
                 <div class="col-6">
-                <table id="one" >
-    <tr><td  class="key">Packing List NO</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
-    <tr><td  class="key">Gross Weight</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
+                  <table id="one" >
+    <tr><td  class="key"><?php echo display('Packing List NO')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
 </table>
                </div>
                 <div class="col-sm-6">
                 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['purchase_date'];  ?></td></tr>
-    <tr><td  class="key">Container No</td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['container_no']; ?></td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['purchase_date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['container_no']; ?></td></tr>
    </table> </div> 
             </div>
         </div>
@@ -247,7 +247,7 @@ if($a==$m){
                      </tbody>
                      <tfoot>
 <tr>
-    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;">Net Sq.ft:</td>
+    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
                                             <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
@@ -256,9 +256,9 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> Overall Net Sq.ft :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
-          <h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
+          <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
 
 
@@ -287,7 +287,21 @@ elseif($template==3)
        </div>
  </div>
         </div>
-       
+             <div class="body-section">
+            <div class="row">
+                <div class="col-6">
+                  <table id="one" >
+    <tr><td  class="key"><?php echo display('Packing List NO')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Gross Weight')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
+</table>
+               </div>
+                <div class="col-sm-6">
+                <table id="two">
+<tr><td  class="key"><?php echo display('Invoice Date')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['purchase_date'];  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Container No')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['container_no']; ?></td></tr>
+   </table> </div> 
+            </div>
+        </div>
          <div class="body-section">
         <?php 
 
@@ -352,7 +366,7 @@ if($a==$m){
                      </tbody>
                      <tfoot>
 <tr>
-    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;">Net Sq.ft:</td>
+    <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
                                             <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
@@ -361,9 +375,9 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-            <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> Overall Net Sq.ft :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+            <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
-          <h4>Remarks :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
+          <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
 
 
@@ -380,7 +394,7 @@ if($a==$m){
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title">New Expenses</h4>
+          <h4 class="modal-title"><?php  echo display('purchase')."-".display('Packing List'); ?></h4>
         </div>
         <div class="content">
 

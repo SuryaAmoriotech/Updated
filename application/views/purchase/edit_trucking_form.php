@@ -368,13 +368,13 @@ preg_match('#\((.*?)\)#', $d, $match);
                                     <?php $cnt++; } ?>
                                 </tbody>
                                 <tfoot>
-                                    <tr>
+                                    <tr style="height:50px;">
                                    
                                         <td style="text-align:right;" colspan="5"><b><?php echo display('total') ?>:</b></td>
                                       
         <td>   <span class="input-symbol-euro">   <input type="text" id="Total" class="form-control text-right" name="total"  value="<?php echo $purchase_info[0]['total_amt']; ?>" readonly="readonly" /></span></td>
                                </tr>
-                                    <tr>
+                                    <tr style="height:50px;">
                                    
                                    <td style="text-align:right;" colspan="5"><b><?php  echo display('TAX DETAILS');?> :</b></td>
                                    <td style="text-align:left;">
@@ -384,15 +384,15 @@ preg_match('#\((.*?)\)#', $d, $match);
                                
                                       
                                </tr>
-                                    <tr> <td style="text-align:right;" colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b></td>
+                                    <tr style="height:50px;"> <td style="text-align:right;" colspan="5"><b><?php  echo display('GRAND TOTAL');?>:</b></td>
                                     <td>
            <span class="input-symbol-euro">   <input type="text" id="gtotal"  class="form-control" name="gtotal" onchange="" value="<?php echo $purchase_info[0]['grand_total_amount']; ?>"  readonly="readonly" /></span></td>
-           <td style="text-align:center;"> <button type="button" id="add_invoice_item" class="btn btn-info" name="add-invoice-item" onClick="addTruckingOrderField('addPurchaseItem')"  style="color:white;background-color:#38469f;"  tabindex="9" ><i class="fa fa-plus"></i></button>
+         
 
                                            
                                     </tr>
                                   
-                                    <tr>
+                                    <tr style="height:50px;">
                                         
                                     
                                     
@@ -411,7 +411,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                             <input type="hidden" name="baseUrl" class="baseUrl" value="<?php echo base_url();?>"/></td>
                                     </tr> 
                                     
-                                    <tr id="amt">
+                                    <tr style="height:50px;" id="amt">
                                    
                                             <td style="text-align:right;"  colspan="5"><b><?php  echo display('Amount Paid');?>:</b></td>
                                           
@@ -425,7 +425,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                         
                                             </td>
                                             </tr> 
-                                            <tr id="bal">
+                                            <tr style="height:50px;" id="bal">
                                             <td style="text-align:right;"  colspan="5"><b><?php echo display('balance_ammount');  ?>:</b></td>
                                             <td>
                                             <table border="0">
@@ -443,7 +443,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                  
                                             </td>
                                             <td colspan="6" style="">
-                                        <input type="submit" value="Make Payment" style="float:left;color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value=" <?php  echo display('Make Payment')?>" style="float:left;color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
 
@@ -1180,7 +1180,7 @@ preg_match('#\((.*?)\)#', $d, $match);
       <div class="modal-content" style="width: 1000px;min-width: max-content;margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PAYMENT HISTORY</h4>
+          <h4 class="modal-title"> <?php  echo display("PAYMENT HISTORY")?></h4>
         </div>
         <div class="modal-body1">
         <div id="salle_list"></div>
@@ -1844,8 +1844,8 @@ $('#payment_history').click(function (event) {
         var amtpd=data.amt_paid;
         console.log(data);
         var bal= $('#customer_gtotal').val() - data.amt_paid;
-var total= "<table class='table table-striped table-bordered'><tr><td rowspan='2' style='vertical-align: middle;text-align-last: center;'><b>Grand Total :  <?php  echo $currency;  ?>"+$('#customer_gtotal').val()+"<b></td><td class='td' style='border-right: hidden;'><b>Total Amount Paid :<b></td><td><?php  echo $currency;  ?>"+data.amt_paid+"</td></tr></tr><td class='td' style='border-right: hidden;'><b>Balance :<b></td><td><?php  echo $currency;  ?>"+bal +"</td></tr></table>"
-        var table_header = "<table class='table table-striped table-bordered'><thead style='FONT-WEIGHT:BOLD;'><tr><td>S.NO</td><td>Payment Date</td><td>Reference.NO</td><td>Bank Name</td><td>Amount Paid</td><td>Balance</td><td>Details</td></tr></thead><tbody>";
+var total= "<table class='table table-striped table-bordered'><tr><td rowspan='2' style='vertical-align: middle;text-align-last: center;'><b><?php  echo display("GRAND TOTAL");?> :  <?php  echo $currency;  ?>"+$('#customer_gtotal').val()+"<b></td><td class='td' style='border-right: hidden;'><b><?php echo display("total")." ".display("Amount Paid") ?> :<b></td><td><?php  echo $currency;  ?>"+data.amt_paid+"</td></tr></tr><td class='td' style='border-right: hidden;'><b><?php echo display("balance");  ?> :<b></td><td><?php  echo $currency;  ?>"+bal +"</td></tr></table>"
+        var table_header = "<table class='table table-striped table-bordered'><thead style='FONT-WEIGHT:BOLD;'><tr><td>S.NO</td><td><?php  echo display("payment_date");?></td><td><?php  echo display("Reference No");?></td><td><?php  echo display("bank_name");?></td><td><?php  echo display("Amount Paid");?></td><td><?php  echo display("balance");?></td><td><?php  echo display("details");?></td></tr></thead><tbody>";
                    var table_footer = "</tbody></table>";
                 var html ="";
 var count=1;

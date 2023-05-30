@@ -148,7 +148,7 @@ textarea:focus, input:focus{
                                 <div class="Column" style="float: right;"> <form id="histroy" method="post" >
 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
 <input type="hidden"  value="<?php echo $payment_id; ?>" name="payment_id" class="payment_id" id="payment_id"/>
-<input type="submit" id="payment_history" name="payment_history" class="btn" style="float:right;color:white;background-color: #38469f;" value="Payment History" style="float:right;margin-bottom:30px;"/>
+<input type="submit" id="payment_history" name="payment_history" class="btn" style="float:right;color:white;background-color: #38469f;" value="<?php echo display('Payment History')?>" style="float:right;margin-bottom:30px;"/>
                                             </form> </div> 
                              <div class="Column" style="float: right;">
                             <?php if($this->permission1->method('manage_invoice','read')->access()){ ?>
@@ -616,7 +616,7 @@ if($a==$m){
                                                <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:25%;border:none;text-align:end;font-weight:bold;">
-                            <?php  echo display("Today's Rate");?> : 
+                            <?php  echo display("Live Rate");?> : 
                          </td>
                 
                                <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
@@ -696,7 +696,7 @@ if($a==$m){
 											
 											       <td colspan="21" style="text-align: end;">
                                             
-                                        <input type="submit" value="Make Payment" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment')?>" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             <tr>
 
@@ -798,7 +798,7 @@ if($a==$m){
       <div class="modal-content" style="width: 1000px;min-width: max-content;margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PAYMENT HISTORY</h4>
+          <h4 class="modal-title"><?php echo display('PAYMENT HISTORY')?></h4>
         </div>
         <div class="modal-body1">
         <div id="salle_list"></div>
@@ -847,8 +847,8 @@ if($a==$m){
 				</p>
 			</div>
 			<div class="modal-footer">
-          	<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()">Discard</button>
+          	<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="<?php  echo  display('submit');?>"/>
+                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()"><?php  echo  display('Discard');?></button>
 			</div>
 		</div>
 	</div>
@@ -2605,8 +2605,8 @@ $('#payment_history').click(function (event) {
 // $('#amount_paid').val(amtpd);
 // $('#balance').val(bal);
         var bal= $('#vendor_gtotal').val() - data.amt_paid;
-var total= "<table class='table table-striped table-bordered'><tr><td rowspan='2' style='vertical-align: middle;text-align-last: center;'><b>Grand Total :  <?php  echo $currency;  ?>"+$('#vendor_gtotal').val()+"<b></td><td class='td' style='border-right: hidden;'><b>Total Amount Paid :<b></td><td><?php  echo $currency;  ?>"+data.amt_paid+"</td></tr></tr><td class='td' style='border-right: hidden;'><b>Balance :<b></td><td><?php  echo $currency;  ?>"+bal +"</td></tr></table>"
-        var table_header = "<table class='table table-striped table-bordered'><thead style='FONT-WEIGHT:BOLD;'><tr><td>S.NO</td><td>Payment Date</td><td>Reference.NO</td><td>Bank Name</td><td>Amount Paid</td><td>Balance</td><td>Details</td></tr></thead><tbody>";
+var total= "<table class='table table-striped table-bordered'><tr><td rowspan='2' style='vertical-align: middle;text-align-last: center;'><b><?php  echo display("GRAND TOTAL");?> :  <?php  echo $currency;  ?>"+$('#vendor_gtotal').val()+"<b></td><td class='td' style='border-right: hidden;'><b><?php echo display("total")." ".display("Amount Paid") ?> :<b></td><td><?php  echo $currency;  ?>"+data.amt_paid+"</td></tr></tr><td class='td' style='border-right: hidden;'><b><?php echo display("balance");  ?> :<b></td><td><?php  echo $currency;  ?>"+bal +"</td></tr></table>"
+        var table_header = "<table class='table table-striped table-bordered'><thead style='FONT-WEIGHT:BOLD;'><tr><td>S.NO</td><td><?php  echo display("payment_date");?></td><td><?php  echo display("Reference No");?></td><td><?php  echo display("bank_name");?></td><td><?php  echo display("Amount Paid");?></td><td><?php  echo display("balance");?></td><td><?php  echo display("details");?></td></tr></thead><tbody>";
                    var table_footer = "</tbody></table>";
                 var html ="";
 var count=1;

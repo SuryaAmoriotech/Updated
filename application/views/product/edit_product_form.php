@@ -28,11 +28,11 @@
         </div>
         <div class="header-title">
             <h1><?php echo display('product_edit') ?></h1>
-            <small><?php echo display('edit_your_product') ?></small>
+            <small><?php //echo display('edit_your_product') ?></small>
             <ol class="breadcrumb">
                 <li><a href="index.html"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('product') ?></a></li>
-                <li class="active"><?php echo display('product_edit') ?></li>
+                <li class="active" style="color:orange"><?php echo display('product_edit') ?></li>
             </ol>
         </div>
     </section>
@@ -98,7 +98,7 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                        <h4><?php echo display('product_edit') ?> </h4>
+                        <h4><?php //echo display('product_edit') ?> </h4>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -125,7 +125,7 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="quantity" class="col-sm-4 col-form-label"><?php echo 'Quantity' ?> <i class="text-danger">*</i></label>
+                                    <label for="quantity" class="col-sm-4 col-form-label"><?php echo display('quantity') ?> <i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
                                         <input class="form-control" name="quantity"   value="{p_quantity}" type="number" id="quantity" placeholder="Enter Product Quantity only" required tabindex="1" >
                                     </div>
@@ -145,7 +145,7 @@
                         
                         <div class="col-sm-6">
                             <div class="form-group row">
-                                <label for="serial_no" class="col-sm-4 col-form-label">Serial No</label>
+                                <label for="serial_no" class="col-sm-4 col-form-label"><?php echo display('Serial No')?></label>
                                 <div class="col-sm-8">
                                     <input type="text" tabindex="" class="form-control "   value="{serial_no}" id="serial_no" name="serial_no" placeholder="111,abc,XYz"   />
                                 </div>
@@ -265,18 +265,18 @@
                   
                         <div class="col-sm-6">
                             <div class="form-group row">
-<label for="product_sub_category" class="col-sm-4 col-form-label">Product Sub Category<i class="text-danger">*</i></label>
+<label for="product_sub_category" class="col-sm-4 col-form-label"><?php echo display('Product Sub Category')?><i class="text-danger">*</i></label>
 <div class="col-sm-8">
     <select   name="product_sub_category" id="product_sub_category" class=" form-control" placeholder="product_sub_category"  required style="width:100%;">
      <option value="<?php (!empty($product_sub_category)?$product_sub_category:'') ; ?>"><?php (!empty($product_sub_category)?$product_sub_category:'');  ?></option>
-    <option value="Granite">Granite</option>
-    <option value="Marble">Marble</option>
-    <option value="Quartz">Quartz</option>
-    <option value="Quartzite">Quartzite</option>
-    <option value="Lime Stone">Lime Stone</option>
-    <option value="Dolomite">Dolomite</option>
-    <option value="Sand Stone">Sand Stone</option>
-    <option value="Soap Stone">Soap Stone</option>
+ <option value="Granite"><?php echo  display('Granite');?></option>
+<option value="Marble"><?php echo  display('Marble');?></option>
+<option value="Quartz"><?php echo  display('Quartz');?></option>
+<option value="Quartzite"><?php echo  display('Quartzite');?></option>
+<option value="Lime Stone"><?php echo  display('Lime Stone');?></option>
+<option value="Dolomite"><?php echo  display('Dolomite');?></option>
+<option value="Sand Stone"><?php echo  display('Sand Stone');?></option>
+<option value="Soap Stone"><?php echo  display('Soap Stone');?></option>
     </select>
 </div>
                             </div>
@@ -288,7 +288,7 @@
                   <div class="col-sm-12">
                             <div class="col-sm-6">
                             <div class="form-group row">
-                                    <label for="account_category_name" class="col-sm-4 col-form-label">Account Category Name</label>
+                                    <label for="account_category_name" class="col-sm-4 col-form-label"><?php echo  display('Account Category Name');?></label>
                                     <div class="col-sm-8">
                                     <input class="form-control" name ="account_category_name" id="account_category_name" value="{account_category_name}" type="text" placeholder=" Account Category Name"   tabindex="1" >
                                  
@@ -302,7 +302,7 @@
        
                             <div class="col-sm-6">
                             <div class="form-group row">
-                                    <label for="account_sub_category"  class="col-sm-4 col-form-label">Account Sub Category</label>
+                                    <label for="account_sub_category"  class="col-sm-4 col-form-label"><?php echo  display('Account Sub Category');?></label>
                                     <div class="col-sm-8">
                                     <input class="form-control" name ="account_sub_category" id="account_sub_category" value="{account_sub_category}" type="text" placeholder=" Account Sub Category"  tabindex="1" >
                                  
@@ -318,29 +318,29 @@
                             <div class="col-sm-6">
                    
                                 <div class="form-group row">
-<label for="account_category" class="col-sm-4 col-form-label">Account Category</label>
+<label for="account_category" class="col-sm-4 col-form-label"><?php echo  display('Account Category');?></label>
 <div class="col-sm-8">
 
     <select id="ddl"  name="account_category" class="form-control" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
 <option value="<?php echo "{account_category}"  ?>"><?php echo "{account_category}"  ?></option>
-<option value="1000 ASSETS">1000 ASSETS</option>
-<option value="1200 RECEIVABLES">1200 RECEIVABLES</option>
-<option value="1300 INVENTORIES">1300 INVENTORIES</option>
-  <option value="1400 PREPAID EXPENSES & OTHER CURRENT ASSETS">1400 PREPAID EXPENSES & OTHER CURRENT ASSETS</option>
-<option value="1500 PROPERTY PLANT & EQUIPMENT">1500 PROPERTY PLANT & EQUIPMENT</option>
-<option value="1600 ACCUMULATED DEPRECIATION & AMORTIZATION">1600 ACCUMULATED DEPRECIATION & AMORTIZATION</option>
-  <option value="1700 NON – CURRENT RECEIVABLES">1700 NON – CURRENT RECEIVABLES</option>
-<option value="1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS">1800 INTERCOMPANY RECEIVABLES & 1900 OTHER NON-CURRENT ASSETS</option>
-<option value="2000 LIABILITIES & 2100 PAYABLES">2000 LIABILITIES & 2100 PAYABLES</option>
-  <option value="2200 ACCRUED COMPENSATION & RELATED ITEMS">2200 ACCRUED COMPENSATION & RELATED ITEMS</option>
-<option value="2300 OTHER ACCRUED EXPENSES">2300 OTHER ACCRUED EXPENSES</option>
-<option value="2500 ACCRUED TAXES">2500 ACCRUED TAXES</option>
-  <option value="2600 DEFERRED TAXES">2600 DEFERRED TAXES</option>
-<option value="2700 LONG-TERM DEBT">2700 LONG-TERM DEBT</option>
-<option value="2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES">2800 INTERCOMPANY PAYABLES & 2900 OTHER NON CURRENT LIABILITIES & 3000 OWNERS EQUITIES</option>
-  <option value="4000 REVENUE">4000 REVENUE</option>
-<option value="5000 COST OF GOODS SOLD">5000 COST OF GOODS SOLD</option>
-<option value="6000 – 7000 OPERATING EXPENSES">6000 – 7000 OPERATING EXPENSES</option>
+<option value="1000 ASSETS">1000 <?php echo  display('ASSETS');?></option>
+<option value="1200 RECEIVABLES">1200 <?php echo  display('RECEIVABLES');?></option>
+<option value="1300 INVENTORIES">1300 <?php echo  display('INVENTORIES');?></option>
+<option value="1400 PREPAID EXPENSES & OTHER CURRENT ASSETS">1400 <?php echo  display('PREPAID EXPENSES & OTHER CURRENT ASSETS');?></option>
+<option value="1500 PROPERTY PLANT & EQUIPMENT">1500 <?php echo  display('PROPERTY PLANT & EQUIPMENT');?></option>
+<option value="1600 ACCUMULATED DEPRECIATION & AMORTIZATION">1600 <?php echo  display('ACCUMULATED DEPRECIATION & AMORTIZATION');?></option>
+<option value="1700 NON – CURRENT RECEIVABLES">1700 <?php echo  display('NON – CURRENT RECEIVABLES');?></option>
+<option value="1800 INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS">1800 <?php echo  display('INTERCOMPANY RECEIVABLES & OTHER NON-CURRENT ASSETS');?></option>
+<option value="2000 LIABILITIES & 2100 PAYABLES">2000 <?php echo  display('LIABILITIES & PAYABLES');?></option>
+<option value="2200 ACCRUED COMPENSATION & RELATED ITEMS">2200 <?php echo  display('ACCRUED COMPENSATION & RELATED ITEMS');?></option>
+<option value="2300 OTHER ACCRUED EXPENSES">2300 <?php echo  display('OTHER ACCRUED EXPENSES');?></option>
+<option value="2500 ACCRUED TAXES">2500 <?php echo  display('ACCRUED TAXES');?></option>
+<option value="2600 DEFERRED TAXES">2600 <?php echo  display('DEFERRED TAXES');?></option>
+<option value="2700 LONG-TERM DEBT">2700 <?php echo  display('LONG-TERM DEBT');?></option>
+<option value="2800 INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES">2800 <?php echo  display('INTERCOMPANY PAYABLES & OTHER NON CURRENT LIABILITIES & OWNERS EQUITIES');?></option>
+<option value="4000 REVENUE">4000 <?php echo  display('REVENUE');?></option>
+<option value="5000 COST OF GOODS SOLD">5000 <?php echo  display('COST OF GOODS SOLD');?></option>
+<option value="6000 – 7000 OPERATING EXPENSES">6000 – 7000 <?php echo  display('OPERATING EXPENSES');?></option>
   
 </select>
 </div>
@@ -357,7 +357,7 @@
 
 							 <div class="col-sm-6">
                              <div class="form-group row">
-                                    <label for="country" class="col-sm-4 col-form-label"  required="" >Country<i class="text-danger">*</i></label>
+                                    <label for="country" class="col-sm-4 col-form-label"  required="" ><?php echo  display('country')?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
    
                                     <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="<?php echo $country;  ?>"
@@ -382,7 +382,7 @@
                            <div class="col-sm-12">
                             <div class="col-sm-6">
 							  <div class="form-group row">
-                                <label for="account_category" class="col-sm-4 col-form-label">Account Sub Category</label>
+                                <label for="account_category" class="col-sm-4 col-form-label"><?php echo  display('Account Sub Category');?></label>
 <div class="col-sm-8">
 							<select class="form-control" name="sub_category" id="ddl2">
                             <option value="<?php echo "{sub_category}"  ?>"><?php echo "{sub_category}"  ?></option>
@@ -395,7 +395,7 @@
 
                             <div class="col-sm-6">  
                                 <div class="form-group row">
-                                    <label for="image" class="col-sm-4 col-form-label">Product Image </label>
+                                    <label for="image" class="col-sm-4 col-form-label"><?php echo  display('Product Image');?></label>
                                     <div class="col-sm-8">
                                         <input type="file" name="image" class="form-control" id="image"  tabindex="4">
                                     </div>
@@ -411,7 +411,7 @@
                                 <div class="col-sm-12">
                             <div class="col-sm-6">
                                 <div class="form-group row">
-                                    <label for="tax_id" class="col-sm-4 col-form-label">Tax </label>
+                                    <label for="tax_id" class="col-sm-4 col-form-label"><?php   echo  display('Taxes');?> </label>
                                     <div class="col-sm-8">
                                         <input type="text" name="tax" class="form-control" id="tax_id" tabindex="4" placeholder=" Tax" style="text-align: left;"  value="{tax}">
                                     </div>
@@ -419,9 +419,9 @@
                                 </div>
                                 <div class="col-sm-6">
                              <div class="form-group row">
-                                 <label for="tax_id" class="col-sm-4 col-form-label">Product Id  </label>
+                                 <!-- <label for="tax_id" class="col-sm-4 col-form-label">Product Id  </label> -->
                                  <div class="col-sm-8">
-                                     <input class="form-control"  type="text"  id="product_id" value= <?php echo $product_detail[0]['product_id']; ?> name="product_id" readonly  >
+                                     <input class="form-control"  type="hidden"  id="product_id" value= <?php echo $product_detail[0]['product_id']; ?> name="product_id" readonly  >
                                 </div>
                                </div>
                                </div>
@@ -436,33 +436,33 @@
     <thead>
              <tr>
             
-                    <th rowspan="2" style="width: max-content;" class="text-center">Description</th>
-                    <th rowspan="2" class="text-center">Thick ness<i class="text-danger">*</i></th>
-                    <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>
+                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo  display('description'); ?></th>
+                    <th rowspan="2" class="text-center"><?php echo display('Thick ness');?><i class="text-danger">*</i></th>
+                    <th rowspan="2" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>
 
-                    <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th>
-                    <th colspan="2" style="width: max-content;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th>
-                    <th rowspan="2" class="text-center">Gross Sq. Ft</th>
-                    <th rowspan="2" style="width: min-content;" class="text-center">Bundle No<i class="text-danger">*</i></th>
-                    <th rowspan="2" style="width: min-content;" class="text-center">Slab No<i class="text-danger">*</i></th>
-                    <th colspan="2" style="width: max-content;" class="text-center">Net Measure<i class="text-danger">*</i></th>
-                    <th rowspan="2" class="text-center">Net Sq. Ft</th>
-                    <th rowspan="2" style="width: max-content;" class="text-center">Cost per Sq. Ft</th>
-                    <th rowspan="2" style="width: max-content;" class="text-center">Cost per Slab</th>
-                    <th rowspan="2" style="width: max-content;" class="text-center">Sales<br/>Price per Sq. Ft</th>
-                    <th rowspan="2"  class="text-center">Sales Slab Price</th>
-                    <th rowspan="2" class="text-center">Weight</th>
-                    <th rowspan="2" class="text-center">Origin</th>
+                    <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th>
+                    <th colspan="2" style="width: max-content;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th>
+                    <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>
+                    <th rowspan="2" style="width: min-content;" class="text-center"><?php echo display('Bundle No');?><i class="text-danger">*</i></th>
+                    <th rowspan="2" style="width: min-content;" class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th>
+                    <th colspan="2" style="width: max-content;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th>
+                    <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th>
+                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th>
+                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('Cost per Slab');?></th>
+                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th>
+                    <th rowspan="2"  class="text-center"><?php echo display('Sales Slab Price');?></th>
+                   <th rowspan="2" class="text-center"><?php echo display('Weight');?></th>
+                    <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>
                    
-                    <th rowspan="2" style="width: 100px" class="text-center">Total</th>
-                    <th rowspan="2" class="text-center">Action</th>
+                    <th rowspan="2" style="width: 100px" class="text-center"><?php  echo  display('total'); ?></th>
+                    <th rowspan="2" class="text-center"><?php  echo  display('action'); ?></th>
                 </tr>
 
-                <tr>
-                     <th class="text-center">Width</th>
-                    <th class="text-center">Height</th>  
-                  <th class="text-center">Width</th>
-                    <th class="text-center">Height</th>  
+               <tr>
+                     <th class="text-center"><?php echo display('Width');?></th>
+                    <th class="text-center"><?php echo display('Height');?></th>  
+                  <th class="text-center"><?php echo display('Width');?></th>
+                    <th class="text-center"><?php echo display('Height');?></th>  
                 </tr>
 
         </thead>
@@ -689,20 +689,20 @@
                     <tfoot>
                       <?php     if($data_products){   ?>
             <tr>
-                                     <td style="text-align:right;" colspan="6"><b>Gross Sq.Ft :</b></td>
+                                     <td style="text-align:right;" colspan="6"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_1" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="4"><b>Net Sq.Ft :</b></td>
+             <td style="text-align:right;" colspan="4"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_1" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> 
             </td>
-              <td style="text-align:right;" colspan="4"><b>Weight :</b></td>
+              <td style="text-align:right;" colspan="4"><b><?php  echo display('Weight');?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_1" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  /> 
             </td>
 
-                <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td>
+                <td style="text-align:right;" colspan="1"><b><?php  echo display('total'); ?> :</b></td>
 
                <td >
                 <span class="input-symbol-euro">       <input type="text" id="Total" name="oa_total" readonly  value="0.00"  class="b_total form-control" style="width: 80px" value="0.00"    /> </span>
@@ -721,20 +721,20 @@
           
       <?php }else{ ?>
   <tr>
-                                     <td style="text-align:right;" colspan="6"><b>Gross Sq.Ft :</b></td>
+                                     <td style="text-align:right;" colspan="6"><b><?php  echo display('Gross Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_gross_1" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> 
             </td>
-             <td style="text-align:right;" colspan="4"><b>Net Sq.Ft :</b></td>
+             <td style="text-align:right;" colspan="4"><b><?php  echo display('Net Sq.Ft');?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_1" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> 
             </td>
-              <td style="text-align:right;" colspan="4"><b>Weight :</b></td>
+              <td style="text-align:right;" colspan="4"><b><?php  echo display('Weight');?> :</b></td>
                                         <td >
              <input type="text" id="overall_weight_1" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  /> 
             </td>
 
-                <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td>
+                <td style="text-align:right;" colspan="1"><b><?php  echo display('total');?> :</b></td>
 
                <td >
                 <span class="input-symbol-euro">       <input type="text" id="Total" name="oa_total" readonly value="<?php  echo $oa_total; ?>"  class="b_total form-control" style="width: 80px" value="0.00"    /> </span>
@@ -793,7 +793,7 @@
       <div class="modal-content" style="  margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Product</h4>
+          <h4 class="modal-title"><?php echo display('product') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -903,7 +903,7 @@ dataType:"json",
 url:"<?php echo base_url(); ?>Cproduct/insert_product_from_expense",
 data:$("#insert_product_from_expense").serialize(),
 success:function (data) {
-$("#bodyModal1").html(" Product Updated  Successfully");
+$("#bodyModal1").html("<?php echo display('product')." ".display('has been Updated Successfully')?>");
 $('#myModal1').modal('show');
 $('#product_info').modal('hide');
 console.log(data);

@@ -909,18 +909,18 @@ th{
                                <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;padding-right: 30px;" onClick="columnSwitchMODAL()"></i>
                                       <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btn btnclr dropdown-toggle" type="button" id="dropdownMenu1" style="padding: revert;background-color:#38469f;color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php  echo display('download')?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
    
   
                 
-      <li><a href="#" onclick="pdf()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
+      <li><a href="#" onclick="pdf()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> <?php  echo display('pdf')?></a></li>
       
       <li class="divider"></li>         
                   
-      <li><a href="#" onclick="fnExcelReport();"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> XLS</a></li>
+      <li><a href="#" onclick="fnExcelReport();"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> X<?php  echo display('XLS')?></a></li>
                  
     </ul>
   </div>
@@ -941,7 +941,7 @@ th{
                       <table class="table">
         <thead>
  <tr class="filters">
-            <th class="search_dropdown"><span>Product Name</span>
+            <th class="search_dropdown"><span><?php echo display('product_name') ?> </span>
               <select id="pname-filter" class="form-control">
                  <option>Any</option>
                 <?php 
@@ -980,7 +980,7 @@ $unique_supplier_name = array_unique($supplier_name);
              <?php }  ?>
               </select>
             </th>
-            <th class="search_dropdown"><span>Product Model</span>
+            <th class="search_dropdown"><span><?php echo  display('product_model')?></span>
               <select id="model-filter" class="form-control">
                 <option>Any</option>
                  <?php foreach($unique_model as $product){  ?>
@@ -988,7 +988,7 @@ $unique_supplier_name = array_unique($supplier_name);
              <?php }  ?>
               </select>
             </th>
-            <th class="search_dropdown"><span>Category</span>
+            <th class="search_dropdown"><span><?php echo  display('category')?> </span>
               <select id="category-filter" class="form-control">
                 <option>Any</option>
                  <?php foreach($unique_category as $product){  ?>
@@ -996,7 +996,7 @@ $unique_supplier_name = array_unique($supplier_name);
              <?php }  ?>
               </select>
             </th>
-            <th class="search_dropdown"><span>Unit</span>
+            <th class="search_dropdown"><span><?php echo  display('Unit')?></span>
               <select id="unit-filter" class="form-control">
                 <option>Any</option>
                  <?php foreach($unique_unit as $product){  ?>
@@ -1004,7 +1004,7 @@ $unique_supplier_name = array_unique($supplier_name);
              <?php }  ?>
               </select>
             </th>
-            <th class="search_dropdown"><span>Supplier Name</span>
+            <th class="search_dropdown"><span><?php echo  display('Vendor')?></span>
               <select id="supplier-filter" class="form-control">
                 <option>Any</option>
                 <?php foreach($unique_supplier_name as $product){  ?>
@@ -1083,26 +1083,26 @@ $unique_supplier_name = array_unique($supplier_name);
   <thead class="sortableTable">
       <tr style="background-color: #337ab7;border-color: #2e6da4;" class="sortableTable__header">
       <th class="1 value" data-col="1"data-control-column="1">S.No</th>
-        <th class="2 value"data-col="2" data-control-column="2">Product Name</th>
-        <th class="3 value"data-col="3" data-control-column="3">Product Model</th>
-        <th class="I4 value" data-col="4" data-control-column="4">Inventry</th>
-        <th class="5 value"data-col="5" data-control-column="5" >Category</th>
-          <th class="6 value" data-col="6"data-control-column="6">Unit</th>
-            <th class="7 value"data-col="7" data-control-column="7">Supplier Name</th>
-              <th class="8 value" data-col="8"data-control-column="8">Supplier price</th>
-                <th class="9 value "data-col="9" data-control-column="9">Origin</th>
-                  <th class="10 value"data-col="10" data-control-column="10">Account Category</th>
+        <th class="2 value"data-col="2" data-control-column="2"><?php echo display('product_name') ?></th>
+        <th class="3 value"data-col="3" data-control-column="3"><?php echo display('product_model') ?></th>
+        <th class="I4 value" data-col="4" data-control-column="4"><?php echo display('Inventry')?></th>
+        <th class="5 value"data-col="5" data-control-column="5" ><?php echo display('category') ?></th>
+          <th class="6 value" data-col="6"data-control-column="6"><?php echo display('Unit') ?></th>
+            <th class="7 value"data-col="7" data-control-column="7"><?php echo display('Vendor') ?></th>
+              <th class="8 value" data-col="8"data-control-column="8"><?php echo display('Vendor')." ".display('price') ?></th>
+                <th class="9 value "data-col="9" data-control-column="9"><?php echo display('Origin') ?></th>
+                  <th class="10 value"data-col="10" data-control-column="10"><?php echo display('Account Category') ?></th>
 
-        <th class="11 value"data-col="11" data-control-column="11">Account Sub Category</th>
-             <th class="12 value"data-col="12" data-control-column="12" >Product Sub Category</th>
-                  <th class="13 value"data-col="13" data-control-column="13" style="color:white;">Price</th>
-                  <th class="14 value"data-col="14" data-control-column="14">Account Category Name</th>
-             <th class="15 value" data-col="15"data-control-column="15" >Tax</th>
-                  <th class="16 value"data-col="16" data-control-column="16" style="color:white;">Quantity</th>
-                  <th class="17 value"data-col="17" data-control-column="17" >Serial No</th>
-                  <th class="18 value" data-col="18" data-control-column="18" style="color:white;">Country</th>
+        <th class="11 value"data-col="11" data-control-column="11"><?php echo display('Account Sub category') ?></th>
+             <th class="12 value"data-col="12" data-control-column="12" ><?php echo display('Product Sub Category') ?></th>
+                  <th class="13 value"data-col="13" data-control-column="13" style="color:white;"><?php echo display('price') ?></th>
+                  <th class="14 value"data-col="14" data-control-column="14"><?php echo display('Account Category Name')?></th>
+             <th class="15 value" data-col="15"data-control-column="15" ><?php echo display('tax')?></th>
+                  <th class="16 value"data-col="16" data-control-column="16" style="color:white;"><?php echo display('quantity')?></th>
+                  <th class="17 value"data-col="17" data-control-column="17" ><?php echo display('Serial No')?></th>
+                  <th class="18 value" data-col="18" data-control-column="18" style="color:white;"><?php echo display('country')?></th>
                   
-                  <th class="19 text-center Action"  data-col="19" data-resizable-column-id="19" data-column-id="action" data-formatter="commands" style="width: 100Px;" data-sortable="false" >Action</th>
+                  <th class="19 text-center Action"  data-col="19" data-resizable-column-id="19" data-column-id="action" data-formatter="commands" style="width: 100Px;" data-sortable="false" ><?php echo display('action')?></th>
       </tr>
     </thead>
                      
@@ -1138,9 +1138,9 @@ $unique_supplier_name = array_unique($supplier_name);
                             <td data-col="3" class="3"><?php echo $product['product_model']; ?></td>
                             <td data-col="4"  class="4"style="text-align: -webkit-center;">
                                 <div class="row" style="text-align:center;padding:5px;width:300px;border: 1px solid #d3d3d366;
-    margin: -1px;"><div class="col-sm-6" style="font-weight:bold;">In Stock</div><div class="col-sm-6"><?php echo $product['p_quantity']; ?></div></div>
+    margin: -1px;"><div class="col-sm-6" style="font-weight:bold;"><?php echo display('In Stock')?></div><div class="col-sm-6"><?php echo $product['p_quantity']; ?></div></div>
                                 <div class="row" style="text-align:center;padding:5px;width:300px;border: 1px solid #d3d3d366;
-    margin: -1px;"><div class="col-sm-6" style="font-weight:bold;">Avaliablity</div><div class="col-sm-6">
+    margin: -1px;"><div class="col-sm-6" style="font-weight:bold;"><?php echo display('Avaliablity')?></div><div class="col-sm-6">
      <?php  
      $sale_sum=false;
      $s=0;
@@ -1267,43 +1267,43 @@ $total =$s+$e;
                           <div class="form-group row">
 
                           <input type="checkbox"  data-control-column="1" checked = "checked" class="1"  value="1"/>S.No<br>
-                          <input type="checkbox"  data-control-column="2" checked = "checked" class="2"  value="2"/>Product Name<br>
+                          <input type="checkbox"  data-control-column="2" checked = "checked" class="2"  value="2"/><?php echo display('product_name') ?><br>
 
-    <input type="checkbox"  data-control-column="3" checked = "checked" class="3"  value="3"/>Product Model<br>
+    <input type="checkbox"  data-control-column="3" checked = "checked" class="3"  value="3"/><?php echo display('product_model') ?><br>
  
-    <input type="checkbox"  data-control-column="4" checked = "checked" class="4"   value="4"/>Inventry<br>
+    <input type="checkbox"  data-control-column="4" checked = "checked" class="4"   value="4"/><?php echo display('Inventry')?><br>
   
-    <input type="checkbox"  data-control-column="5" checked = "checked" class="5"   value="5"/>Category<br>
+    <input type="checkbox"  data-control-column="5" checked = "checked" class="5"   value="5"/><?php echo display('category') ?><br>
 
-    <input type="checkbox"  data-control-column="6" checked = "checked" class="6"   value="6"/>Unit<br>
+    <input type="checkbox"  data-control-column="6" checked = "checked" class="6"   value="6"/><?php echo display('Unit') ?><br>
     
-    <input type="checkbox"  data-control-column="7" checked = "checked" class="7"  value="7"/>Supplier Name<br>
+    <input type="checkbox"  data-control-column="7" checked = "checked" class="7"  value="7"/><?php echo display('Vendor') ?><br>
  
-    <input type="checkbox"  data-control-column="8" checked = "checked" class="8"   value="8"/>Supplier Price<br>
+    <input type="checkbox"  data-control-column="8" checked = "checked" class="8"   value="8"/><?php echo display('Vendor')." ".display('price') ?><br>
   
-    <input type="checkbox"  data-control-column="9" checked = "checked" class="9"   value="9"/>Origin<br>
+    <input type="checkbox"  data-control-column="9" checked = "checked" class="9"   value="9"/><?php echo display('Origin') ?><br>
 </div>
 </div>
 
 <div class="col-sm-6">
                           <div class="form-group row">
 
-                          <input type="checkbox"  data-control-column="10" checked = "checked" class="10"   value="10"/>Account Category<br>
-     <input type="checkbox"  data-control-column="11" checked = "checked" class="11"   value="11"/>Account Sub Category<br>
+                          <input type="checkbox"  data-control-column="10" checked = "checked" class="10"   value="10"/><?php echo display('Account Category') ?><br>
+     <input type="checkbox"  data-control-column="11" checked = "checked" class="11"   value="11"/><?php echo display('Account Sub category') ?><br>
 
-    <input type="checkbox"  data-control-column="12" checked = "checked" class="12"  value="12"/>Product Sub Category<br>
+    <input type="checkbox"  data-control-column="12" checked = "checked" class="12"  value="12"/><?php echo display('Product Sub Category') ?><br>
 
-    <input type="checkbox"  data-control-column="13" checked = "checked" class="13"   value="13"/>Price<br>
+    <input type="checkbox"  data-control-column="13" checked = "checked" class="13"   value="13"/><?php echo display('price') ?><br>
 
-    <input type="checkbox"  data-control-column="14"  class="14"   value="14"/>Account Category Name<br>
+    <input type="checkbox"  data-control-column="14"  class="14"   value="14"/><?php echo display('Account Category Name')?><br>
 
-<input type="checkbox"  data-control-column="15"  class="15"   value="15"/>Tax<br>
- <input type="checkbox"  data-control-column="16"  class="16 "   value="16 "/>Quantity <br>
+<input type="checkbox"  data-control-column="15"  class="15"   value="15"/><?php echo display('tax')?><br>
+ <input type="checkbox"  data-control-column="16"  class="16 "   value="16 "/><?php echo display('quantity')?> <br>
 
-<input type="checkbox"  data-control-column="17" class="17"  value="17"/>Serial No<br>
+<input type="checkbox"  data-control-column="17" class="17"  value="17"/><?php echo display('Serial No')?><br>
 
-<input type="checkbox"  data-control-column="18"  class="18"   value="18"/>Country<br>
-       <input type="checkbox"  data-control-column="19" checked = "checked" class="19"   value="19"/>Action<br> 
+<input type="checkbox"  data-control-column="18"  class="18"   value="18"/><?php echo display('country')?><br>
+       <input type="checkbox"  data-control-column="19" checked = "checked" class="19"   value="19"/><?php echo display('action')?><br> 
 </div>
 </div>
                           

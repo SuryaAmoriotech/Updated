@@ -244,7 +244,7 @@ textarea:focus, input:focus{
                        <table class="table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:50%;border:none;text-align:end;font-weight:bold;">
-                            Todays Rate : 
+                            <?php  echo display("Live Rate");?> : 
                          </td>
                 
                                 <td class="hiden" style="width:180px;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>

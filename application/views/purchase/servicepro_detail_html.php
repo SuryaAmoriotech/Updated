@@ -48,9 +48,9 @@
                 <div class="col-6">
                 <table id="one" style="border:none;">
 
-    <tr><td  class="key">Service Provider Name</td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-    <tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key">Bill Date</td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
 
    
 </table>
@@ -59,11 +59,11 @@
                 <div class="col-6">
                 <table id="two">
 
-                <tr><td  class="key">Service Provider complete Address</td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key">Bill Number</td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key">Due Date</td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
 </table> </div> 
 
 
@@ -82,12 +82,11 @@
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
             <thead>
                     <tr>
-                        <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;">Account Name</th>
-                        <th rowspan="1" class="text-center text-white"style="width:13px;">Account Category</th>
-                        <th rowspan="1" class="text-center text-white"style="width:13px;">Account Sub Category</th>
-                        <th rowspan="1" class="text-center text-white"style="width:13px;">Description</th>
-                        <th rowspan="1" class="text-center text-white"style="width:13px;">Total Price</th> 
-                     
+                         <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
                      </tr> 
 
             </thead>
@@ -114,7 +113,7 @@
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;">Total:</td>
+                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
                         <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
                     </tr>
                     </tfoot>
@@ -123,7 +122,7 @@
 
                   
             <br>
-<h4>Memo Details :</h4><?php echo $memo_details; ?><br>
+<h4><?php echo display('Memo / Details')?> :</h4><?php echo $memo_details; ?><br>
 <br><br>
       
 
@@ -154,28 +153,25 @@ elseif($template==1)
     <div class="body-section">
         <div class="row">
             <div class="col-6">
-            <table id="one" style="border:none;">
+                        <table id="one" style="border:none;">
 
-<tr><td  class="key">Service Provider Name</td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-<tr><td  class="key">Bill Date</td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
 
-
+   
 </table>
 
-            </div>
-            <div class="col-6">
-            <table id="two">
+                </div>
+                <div class="col-6">
+                <table id="two">
 
-            <tr><td  class="key">Service Provider complete Address</td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key">Bill Number</td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
-<br> </br>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key">Due Date</td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
-<br>
-
-</table> </div> 
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+</table></div> 
 
 
         </div>
@@ -193,12 +189,11 @@ elseif($template==1)
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
         <thead>
                 <tr>
-                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;">Account Name</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Account Category</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Account Sub Category</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Description</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Total Price</th> 
-                 
+                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
                  </tr> 
 
         </thead>
@@ -225,7 +220,7 @@ elseif($template==1)
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;">Total:</td>
+                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
                         <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
                 </tr>
                 </tfoot>
@@ -234,7 +229,7 @@ elseif($template==1)
 
               
         <br>
-<h4>Memo Details :</h4><?php echo $memo_details; ?><br>
+<h4><?php echo display('Memo / Details')?> :</h4><?php echo $memo_details; ?><br>
 <br><br>
   
 
@@ -281,28 +276,25 @@ elseif($template==1)
     <div class="body-section">
         <div class="row">
             <div class="col-6">
-            <table id="one" style="border:none;">
+                       <table id="one" style="border:none;">
 
-<tr><td  class="key">Service Provider Name</td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-<tr><td  class="key">Bill Date</td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
 
-
+   
 </table>
 
-            </div>
-            <div class="col-6">
-            <table id="two">
+                </div>
+                <div class="col-6">
+                <table id="two">
 
-            <tr><td  class="key">Service Provider complete Address</td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key">Bill Number</td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
-<br> </br>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key">Due Date</td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
-<br>
-
-</table> </div> 
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+</table></div> 
 
 
         </div>
@@ -320,11 +312,11 @@ elseif($template==1)
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
         <thead>
                 <tr>
-                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;">Account Name</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Account Category</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Account Sub Category</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Description</th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;">Total Price</th> 
+                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
                  
                  </tr> 
 
@@ -352,7 +344,7 @@ elseif($template==1)
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;">Total:</td>
+                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
                         <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
                 </tr>
                 </tfoot>
@@ -361,7 +353,7 @@ elseif($template==1)
 
               
         <br>
-<h4>Memo Details :</h4><?php echo $memo_details; ?><br>
+<h4><?php echo display('Memo / Details')?> :</h4><?php echo $memo_details; ?><br>
 <br><br>
   
 
