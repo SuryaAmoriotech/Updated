@@ -25,11 +25,11 @@
         </div>
         <div class="header-title">
             <h1><?php echo display('customer') ?></h1>
-            <small><?php echo display('paid_customer') ?></small>
+            <small><?php //echo display('paid_customer') ?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('customer') ?></a></li>
-                <li class="active"><?php echo display('paid_customer') ?></li>
+                <li class="active" style="color:orange"><?php echo display('paid_customer') ?></li>
             </ol>
         </div>
     </section>
@@ -83,18 +83,18 @@
     
                     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 
-    <span class="glyphicon glyphicon-th-list"></span> Download <br>
+    <span class="glyphicon glyphicon-th-list"></span> <?php  echo  display('download')?> <br>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
    
   
                 
-      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
+      <li><a href="#" onclick="generate()"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> <?php  echo  display('PDF')?></a></li>
       
       <li class="divider"></li>         
                   
-      <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> XLS</a></li>
+      <li><a href="#" onclick="$('#ProfarmaInvList').tableExport({type:'excel',escape:'false'});"> <img src="<?php echo base_url()?>assets/images/xls.png" width="24px"> <?php  echo  display('XLS')?></a></li>
                  
     </ul>
   </div>
@@ -126,14 +126,14 @@
 <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
 <thead>
 <tr>
-<th class="ID" data-resizable-column-id="1"    style="width: 80px; height: 40.0114px;" >ID</th>
-<th class="Customer Name" data-resizable-column-id="2"  style="height: 45.0114px; width: 234.011px" >Customer Name</th>
-<th class="Address 1" data-resizable-column-id="3"  style="height: 42.0114px;"   >Address 1</th>
-<th class="Address 2"  data-resizable-column-id="4"  style="width: 248.011px;"        >Address 2</th>
-<th class="Mobile" data-resizable-column-id="5"    style="width: 198.011px;"       >Mobile</th>
-<th class="Email" data-resizable-column-id="6" style="width: 190.011px; height: 44.0114px;">Email</th>
-<th class="Phone" data-resizable-column-id="7"    style="width: 198.011px;"       >Phone</th>
-<th class="Balance" data-resizable-column-id="8"    style="width: 198.011px;"       >Paid Amount</th>
+<th class="ID" data-resizable-column-id="1"    style="width: 80px; height: 40.0114px;" ><?php  echo  display('ID')?></th>
+<th class="Customer Name" data-resizable-column-id="2"  style="height: 45.0114px; width: 234.011px" ><?php  echo  display('customer_name')?></th>
+<th class="Address 1" data-resizable-column-id="3"  style="height: 42.0114px;"   ><?php  echo  display('address')?> 1</th>
+<th class="Address 2"  data-resizable-column-id="4"  style="width: 248.011px;"        ><?php  echo  display('address')?> 2</th>
+<th class="Mobile" data-resizable-column-id="5"    style="width: 198.011px;"       ><?php  echo  display('mobile')?></th>
+<th class="Email" data-resizable-column-id="6" style="width: 190.011px; height: 44.0114px;"><?php  echo  display('email')?></th>
+<th class="Phone" data-resizable-column-id="7"    style="width: 198.011px;"       ><?php  echo  display('phone')?></th>
+<th class="Balance" data-resizable-column-id="8"    style="width: 198.011px;"       ><?php  echo  display('due_amount')?></th>
 <!-- <div class="myButtonClass Action"> 
 <th class="Action text-center" data-column-id="action" data-resizable-column-id="9" data-formatter="commands" data-sortable="false"     >Action</th>
 </div> -->
@@ -199,22 +199,22 @@ $count++;
 <div id="myModal_colSwitch"  class="modal_colSwitch">
         <div class="modal-content_colSwitch">
               <span class="close_colSwitch">&times;</span>
-              <input type="checkbox"  data-control-column="1" checked = "checked" class="opt ID" value="ID"/> ID<br>
+              <input type="checkbox"  data-control-column="1" checked = "checked" class="opt ID" value="ID"/> <?php  echo  display('ID')?><br>
 
-<input type="checkbox"  data-control-column="2" checked = "checked" class="opt Customer Name" value="Customer Name"/>Customer Name<br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="opt Customer Name" value="Customer Name"/><?php  echo  display('customer_name')?><br>
 
-<input type="checkbox"  data-control-column="3" checked = "checked" class="opt Address 1" value="Address 1"/>Address 1<br>
+<input type="checkbox"  data-control-column="3" checked = "checked" class="opt Address 1" value="Address 1"/><?php  echo  display('address')?> 1<br>
 
-<input type="checkbox"  data-control-column="4" checked = "checked" class="opt Address 2" value="Address 2"/>Address 2<br>
+<input type="checkbox"  data-control-column="4" checked = "checked" class="opt Address 2" value="Address 2"/><?php  echo  display('address')?> 2<br>
 
-<input type="checkbox"  data-control-column="5" checked = "checked" class="opt Mobile" value="Mobile"/>Mobile<br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="opt Mobile" value="Mobile"/><?php  echo  display('mobile')?><br>
 
-<input type="checkbox"  data-control-column="6" checked = "checked" class="opt Email" value="Email"/>Email<br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="opt Email" value="Email"/><?php  echo  display('email')?><br>
 
-<input type="checkbox"  data-control-column="7" checked = "checked" class="opt Phone" value="Phone"/>Phone<br>
+<input type="checkbox"  data-control-column="7" checked = "checked" class="opt Phone" value="Phone"/><?php  echo  display('phone')?><br>
 
 
-<input type="checkbox"  data-control-column="8" checked = "checked" class="opt Paid Amount" value="Paid Amount"/>Paid Amount<br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="opt Paid Amount" value="Paid Amount"/><?php  echo  display('due_amount')?><br>
 
 
 <!-- <input type="checkbox"  data-control-column="15" checked = "checked" class="opt Action" value="Action"/>Action<br> -->
