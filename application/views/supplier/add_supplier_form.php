@@ -11,7 +11,7 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Create Supplier</h1>
+            <h1><?php echo display('Create Supplier') ?></h1>
             <small> </small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
@@ -61,49 +61,40 @@
 
 
                     <div class="form-group row">
-<label for="" class="col-sm-4    col-form-label"   >Vendor Type<i class="text-danger">*</i></label>
+<label for="" class="col-sm-4    col-form-label"   ><?php echo display('Vendor Type') ?><i class="text-danger">*</i></label>
 <div class="col-sm-6">
     <select   name="vendor_type" id="vendor_type" class=" form-control" placeholder='' required="" id="vendor_type" style="width:135%;">
-     <option value=""> Selected vendor type</option>   
-    <option value="productsupplier">Product Supplier</option> 
-    <option value="servicevendor"> Service Vendor</option> 
-    <option value="others"> Others</option> 
+     <option value=""> <?php echo display('Selected vendor type') ?></option>   
+    <option value="productsupplier"><?php echo display('Product Supplier') ?></option> 
+    <option value="servicevendor"> <?php echo display('Service Vendor') ?></option> 
+    <option value="others"> <?php echo display('Others') ?></option> 
     </select>
 </div>
 </div>
 
 
 
-                        <!-- <div class="form-group row">
-                            <label for="supplier_name" class="col-sm-4 col-form-label"  required>Company Name <i class="text-danger">*</i></label>
-                            <div class="col-sm-8">
-             
-                    
-
-     </div>
-</div> -->
-
    <div class="form-group row">
-                            <label for="supplier_name" class="col-sm-4 col-form-label"> Company Name<i class="text-danger">*</i></label>
+                            <label for="supplier_name" class="col-sm-4 col-form-label"> <?php echo display('Company Name') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name ="supplier_name" id="supplier_name" type="text" placeholder="Company Name"  required="" tabindex="1">
                             </div>
                         </div>
 
                        	<div class="form-group row">
-                            <label for="mobile" class="col-sm-4 col-form-label"> Mobile <i class="text-danger"></i></label>
+                            <label for="mobile" class="col-sm-4 col-form-label"> <?php echo display('Mobile') ?> <i class="text-danger"></i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="mobile" id="mobile" type="number" placeholder="Mobile"  min="0" tabindex="2">
                             </div>
                         </div>
                             <div class="form-group row">
-                            <label for="phone" class="col-sm-4 col-form-label">Business Phone <i class="text-danger">*</i></label>
+                            <label for="phone" class="col-sm-4 col-form-label"><?php echo display('Business Phone') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="phone" id="phone" type="number" placeholder="Business phone" required=""  min="0" tabindex="2"  >
                             </div>
                         </div>
                          <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label">Primary Email <i class="text-danger">*</i></label>
+                            <label for="email" class="col-sm-4 col-form-label"><?php echo display('Primary Email') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="email" id="email" type="email" placeholder="Primary email"  required=""    tabindex="2">
                             </div>
@@ -114,7 +105,7 @@
 
 
                          <div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label"> Secondary Email <i class="text-danger"></i></label>
+                            <label for="" class="col-sm-4 col-form-label"> <?php echo display('Secondary Email') ?> <i class="text-danger"></i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="emailaddress" id="emailaddress" type="email" placeholder="Secondary email"  >
                             </div>
@@ -130,7 +121,7 @@
                         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
 
                           <div class="form-group row">
-                            <label for="contact" class="col-sm-4 col-form-label"> Contact Person <i class="text-danger"></i></label>
+                            <label for="contact" class="col-sm-4 col-form-label"> <?php echo display('Contact Person') ?> <i class="text-danger"></i></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="contact" id="contact" type="text" placeholder="Contact person"  >
                             </div>
@@ -165,11 +156,11 @@
 
                          
                     <div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label"  required >Tax Collected<i class="text-danger">*</i></label>
+                            <label for="" class="col-sm-4 col-form-label"  required ><?php echo display('Tax Collected') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                                <select class="form-control" name="service_provider"  required=""  >
-                                <option value="1">Yes</option>
-                                <option value="0" selected>No</option>
+                                <option value="1"><?php echo display('Yes') ?></option>
+                                <option value="0" selected><?php echo display('No') ?></option>
                                </select>
                             </div> 
 
@@ -188,7 +179,7 @@
                     <div class="col-sm-6">
                
                         <div class="form-group row">
-                            <label for="address " class="col-sm-4 col-form-label">Address</label>
+                            <label for="address " class="col-sm-4 col-form-label"><?php echo display('Address') ?></label>
                             <div class="col-sm-8">
                                 <textarea class="form-control" name="address" id="address " rows="3"  col="2" placeholder="<?php echo display('supplier_address') ?>" ></textarea>
                             </div>
@@ -203,7 +194,7 @@
                             </div>
                         </div>
                                     <div class="form-group row">
-                                    <label for="country" class="col-sm-4 col-form-label"  required="" >Country<i class="text-danger">*</i></label>
+                                    <label for="country" class="col-sm-4 col-form-label"  required="" ><?php echo display('Country') ?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
                                     <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" ></select>
                                     </div>
@@ -224,13 +215,13 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="previous_balance" class="col-sm-4 col-form-label">Credit Limit</label>
+                            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('Credit Limit') ?></label>
                             <div class="col-sm-8">
                                 <input class="form-control" name="previous_balance" id="previous_balance" type="text" min="0" placeholder="Credit Limit" tabindex="5">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Preferred currency" class="col-sm-4 col-form-label" > Preferred currency<i class="text-danger">*</i></label>
+                            <label for="Preferred currency" class="col-sm-4 col-form-label" > <?php echo display('Preferred currency') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-8">
                             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;"   required=""  style="max-width: -webkit-fill-available;">
     <!-- <option>Select currency</option> -->
@@ -413,10 +404,10 @@
 
 
                                  <div class="form-group row">
-                                    <label for="payment_terms" class="col-sm-4 col-form-label">Payment Terms<i class="text-danger">*</i></label>
+                                    <label for="payment_terms" class="col-sm-4 col-form-label"><?php echo display('Payment Terms') ?><i class="text-danger">*</i></label>
                                     <div class="col-sm-7">
                                         <select   name="terms" id="terms" class=" form-control"  required=""  placeholder='Payment Terms'>
-                                         <option value="">Select Payment Terms</option>
+                                         <option value=""><?php echo display('Select Payment Terms') ?></option>
                                         <option value="CAD">CAD</option>
                                         <option value="COD">COD</option>
                                         <option value="ADVANCE">ADVANCE</option>
@@ -466,7 +457,7 @@
 
                                   <!-- <div class="col-sm-6">  -->
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Attachments
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo display('Attachments') ?>
                                     </label>
                                     <div class="col-sm-8">
                                        <input type="file" name="attachments" class="form-control">
@@ -494,7 +485,7 @@
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header"  style="color:white;background-color:#38469f;" >
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Vendor</h4>
+          <h4 class="modal-title"><?php echo display('Vendor') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -608,7 +599,7 @@ var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
     <div class="modal-content">
         <div class="modal-header" style="color:white;background-color:#38469f;">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
-            <h4 class="modal-title">Add New Payment Terms</h4>
+            <h4 class="modal-title"><?php echo display('Add New Payment Terms') ?></h4>
         </div>
         <div class="modal-body">
             <div id="customeMessage" class="alert hide"></div>
@@ -616,7 +607,7 @@ var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
     <div class="panel-body">
 <input type ="hidden" name="csrf_test_name" id="" value="<?php echo $this->security->get_csrf_hash();?>">
         <div class="form-group row">
-            <label for="customer_name" style="width: auto;" class="col-sm-3 col-form-label">New Payment Terms <i class="text-danger">*</i></label>
+            <label for="customer_name" style="width: auto;" class="col-sm-3 col-form-label"><?php echo display('New Payment Terms') ?><i class="text-danger">*</i></label>
             <div class="col-sm-6">
                 <input class="form-control" name ="new_payment_terms" id="new_payment_terms" type="text" placeholder="New Payment Terms"  required="" tabindex="1">
             </div>
@@ -624,8 +615,8 @@ var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
     </div>
         </div>
         <div class="modal-footer">
-            <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
-            <input type="submit" class="btn" style="color:white;background-color: #38469F;" value="Submit">
+            <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close')?></a>
+            <input type="submit" class="btn" style="color:white;background-color: #38469F;" value="<?php echo display('Submit') ?>">
         </div>
                                 </form>
     </div><!-- /.modal-content -->

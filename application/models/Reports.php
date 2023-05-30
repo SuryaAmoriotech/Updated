@@ -1424,7 +1424,7 @@ $this->db->select("sum(a.gtotal) as amount,count(a.invoice_id) as toal_invoice,a
    
  $query = $this->db->get();
 
-//  echo $this->db->last_query();
+//   echo $this->db->last_query();
 
  if ($query->num_rows() > 0) {
            return $query->row()->totalpaid;
