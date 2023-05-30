@@ -24,12 +24,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Edit Road Transport</h1>
+            <h1><?php echo display('Edit Road Transport') ?></h1>
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Sale</a></li>
-                <li class="active" style="color:orange">Edit Road Transport</li>
+                <li><a href="#"><?php echo display('Sale') ?></a></li>
+                <li class="active" style="color:orange"><?php echo display('Edit Road Transport') ?></li>
             </ol>
         </div>
     </section>
@@ -207,7 +207,7 @@ tfoot tr{
 
          <div class="col-sm-6">
             <div class="form-group row">
-                <label for="date" class="col-sm-4 col-form-label">Invoice Date
+                <label for="date" class="col-sm-4 col-form-label"><?php echo display('Invoice Date') ?>
                     <i class="text-danger">*</i>
                 </label>
                 <div class="col-sm-8">
@@ -222,7 +222,7 @@ tfoot tr{
     <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
         <div class="col-sm-6">
            <div class="form-group row">
-                <label for="supplier_sss" class="col-sm-4 col-form-label">Customer Name
+                <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Customer Name') ?>
                     <i class="text-danger">*</i>
                 </label>
                 <div class="col-sm-8">
@@ -241,7 +241,7 @@ tfoot tr{
                         </select> -->
                         <select name="bill_to" id="bill_to" class="form-control" onchange="" required>
 
-<option value="<?php echo $purchase_info[0]['customer_id'];  ?>"><?php echo $purchase_info[0]['customer_name'];  ?></option>}
+<option value="<?php echo $purchase_info[0]['customer_id'];  ?>"><?php echo $purchase_info[0]['customer_name'];  ?></option> 
 
  <?php foreach ($customer_list as $customer) {?>
 
@@ -274,7 +274,7 @@ tfoot tr{
 
 <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Shipment company
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Shipment company') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-8">
@@ -309,7 +309,7 @@ tfoot tr{
 
 <div class="col-sm-6">
 <div class="form-group row">
-<label for="delivery_to" class="col-sm-4 col-form-label">Delivery to
+<label for="delivery_to" class="col-sm-4 col-form-label"><?php echo display('Delivery to') ?>
 <i class="text-danger">*</i>
 </label>
 <div class="col-sm-8">
@@ -333,7 +333,7 @@ tfoot tr{
 
 <div class="col-sm-6">
            <div class="form-group row">
-                <label for="container_pick_up_date" class="col-sm-4 col-form-label">Container / Goods Pick up date
+                <label for="container_pick_up_date" class="col-sm-4 col-form-label"><?php echo display('Container / Goods Pick up date') ?>
                     <i class="text-danger">*</i>
                 </label>
                    <div class="col-sm-8">
@@ -345,7 +345,7 @@ tfoot tr{
 </div>
 <div class="col-sm-6">
            <div class="form-group row">
-                <label for="delivery_date" class="col-sm-4 col-form-label">Delivery date
+                <label for="delivery_date" class="col-sm-4 col-form-label"><?php echo display('Delivery date') ?>
                     <i class="text-danger">*</i>
                 </label>
                  <div class="col-sm-8">
@@ -359,16 +359,16 @@ tfoot tr{
     
         <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="delivery_time" class="col-sm-4 col-form-label">Delivery Time
+                                    <label for="delivery_time" class="col-sm-4 col-form-label"><?php echo display('Delivery Time') ?>
                                         <i class="text-danger">*</i>
                                     </label>
-                                    <label for="supplier_sss" class="col-sm-1 col-form-label">From
+                                    <label for="supplier_sss" class="col-sm-1 col-form-label"><?php echo display('From')?>
                                     </label>
                                      <div class="col-sm-3">
                                    
                                         <input type="time" required tabindex="2" class="form-control " name="delivery_time_from" value="{delivery_time_from}" id="time"  />
                                     </div>
-                                    <label for="delivery_time" class="col-sm-1 col-form-label">TO
+                                    <label for="delivery_time" class="col-sm-1 col-form-label"><?php echo display('TO' )?>
                                     </label>
                                     <div class="col-sm-3">
                                     
@@ -386,7 +386,7 @@ tfoot tr{
 
         <div class="col-sm-6">
            <div class="form-group row">
-                <label for="upload_image" class="col-sm-4 col-form-label">Attachments
+                <label for="upload_image" class="col-sm-4 col-form-label"><?php echo display('Attachments') ?>
                 </label>
                  <div class="col-sm-8">
                     <input type="file" class="form-control"  tabindex="2" class="form-control " name="upload_image" value="{upload_image}" id="upload_image"/>
@@ -397,7 +397,7 @@ tfoot tr{
 
         <div class="col-sm-6">
            <div class="form-group row">
-                <label for="truck_no" class="col-sm-4 col-form-label">Truck No
+                <label for="truck_no" class="col-sm-4 col-form-label"><?php echo display('Truck No') ?>
                 </label>
                  <div class="col-sm-8">
                     <input type="text" class="form-control" required tabindex="2" class="form-control " name="truck_no" value="{truck_no}" id="truck_no"/>
@@ -417,12 +417,12 @@ preg_match('#\((.*?)\)#', $d, $match);
                         <table class="table table-bordered table-hover">
                         <tr>
                        <td class="hiden" style="width:50%;border:none;text-align:end;font-weight:bold;">
-                            Todays Rate : 
+                       <?php echo display('live rate') ?> : 
                          </td>
                 
                                 <td class="hiden" style="width:180px;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width:70px;text-align:center;color:black;padding:5px;" type="text" id="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                       <td style="border:none;text-align:right;font-weight:bold;">Tax : 
+                       <td style="border:none;text-align:right;font-weight:bold;"><?php echo display('Tax') ?> : 
                                  </td>
                                 <td style="width:20%">
                             <select name="tx" id="product_tax" class="form-control" >
@@ -439,11 +439,11 @@ preg_match('#\((.*?)\)#', $d, $match);
                              <table class="table table-bordered table-hover" id="truckingTable_1">
                                 <thead>
                                      <tr>
-                                                    <th class="text-center" width="15%">Date<i class="text-danger">*</i></th> 
-                                            <th class="text-center">Quantity<i class="text-danger">*</i></th>
-                                            <th class="text-center">Description<i class="text-danger">*</i></th>
-                                            <th class="text-center" width="20%">Rate<i class="text-danger">*</i></th>
-                                            <th class="text-center">Pro No / Reference<i class="text-danger">*</i></th>
+                                                    <th class="text-center" width="15%"><?php echo display('Date') ?><i class="text-danger">*</i></th> 
+                                            <th class="text-center"><?php echo display('Quantity') ?><i class="text-danger">*</i></th>
+                                            <th class="text-center"><?php echo display('Description') ?><i class="text-danger">*</i></th>
+                                            <th class="text-center" width="20%"><?php echo display('Rate') ?><i class="text-danger">*</i></th>
+                                            <th class="text-center"><?php echo display('Pro No / Reference') ?><i class="text-danger">*</i></th>
                                            
 
                                             <th class="text-center"><?php echo display('total') ?></th>
@@ -503,7 +503,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                </tr>
                                     <tr>
                                    
-                                   <td style="text-align:right;" colspan="5"><b>Tax Details :</b></td>
+                                   <td style="text-align:right;" colspan="5"><b><?php echo display('Tax Details') ?> :</b></td>
                                    <td style="text-align:left;">
             <span class="input-symbol-euro">   <input type="text" id="tax_details" class="form-control text-right" value="<?php echo $purchase_info[0]['tax']; ?>" name="tax_details"  readonly="readonly" /></span></td>
 
@@ -511,7 +511,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                
                                       
                                </tr>
-                                    <tr> <td style="text-align:right;" colspan="5"><b><?php echo "Grand Total" ?>:</b></td>
+                                    <tr> <td style="text-align:right;" colspan="5"><b><?php echo display('Grand Total') ?>:</b></td>
                                     <td>
            <span class="input-symbol-euro">   <input type="text" id="gtotal"  class="form-control" name="gtotal" onchange="" value="<?php echo $purchase_info[0]['grand_total_amount']; ?>"  readonly="readonly" /></span></td>
                        
@@ -523,7 +523,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                         
                                     
                                     
-                                    <td style="text-align:right;"  colspan="5"><b><?php echo "Grand Total" ?>:</b><br/><b>(Preferred Currency)</b></td>
+                                    <td style="text-align:right;"  colspan="5"><b><?php echo display('Grand Total') ?>:</b><br/><b><?php echo display('Preferred Currency') ?></b></td>
                                     <td>
                                     <table border="0">
       <tr>
@@ -540,7 +540,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                     
                                     <tr id="amt">
                                    
-                                            <td style="text-align:right;"  colspan="5"><b><?php echo "Amount Paid" ?>:</b></td>
+                                            <td style="text-align:right;"  colspan="5"><b><?php echo display('Amount Paid') ?>:</b></td>
                                           
                                             <td>
                                             <table border="0">
@@ -553,7 +553,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                             </td>
                                             </tr> 
                                             <tr id="bal">
-                                            <td style="text-align:right;"  colspan="5"><b><?php echo "Balance Amount " ?>:</b></td>
+                                            <td style="text-align:right;"  colspan="5"><b><?php echo display('Balance Amount') ?>:</b></td>
                                             <td>
                                             <table border="0">
       <tr>
@@ -570,62 +570,22 @@ preg_match('#\((.*?)\)#', $d, $match);
                                  
                                             </td>
                                             <td colspan="6" style="">
-                                        <input type="submit" value="Make Payment" style="float:left;color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="float:left;color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
 
 
-                                            <!-- <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
-                                               
-                                            <td colspan="6" style="text-align: end;">
-                                        <input type="submit" value="Make Payment" class="btn btn-primary btn-large" id="paypls"/>
-                                            </td>
-                                            </tr> -->
+                                         
                                 </tfoot>
-                                    <!--     <tr>
-                                       
-                                        <td class="text-right" colspan="4"><b><?php echo display('discounts') ?>:</b></td>
-                                        <td class="text-right">
-                                            <input type="text" id="discount" class="text-right form-control discount" onkeyup="calculate_store(1)" name="discount" placeholder="0.00" value="" />
-                                        </td>
-                                        <td> 
+                                   
 
-                                           </td>
-                                    </tr> -->
-
-<!--                                         <tr>
-                                        
-                                        <td class="text-right" colspan="4"><b><?php echo display('grand_total') ?>:</b></td>
-                                        <td class="text-right">
-                                            <input type="text" id="grandTotal" class="text-right form-control" name="grand_total_price" value="0.00" readonly="readonly" />
-                                        </td>
-                                        <td> </td>
-                                    </tr> -->
-                                    <!--      <tr>
-                                        
-                                        <td class="text-right" colspan="4"><b><?php echo display('paid_amount') ?>:</b></td>
-                                        <td class="text-right">
-                                            <input type="text" id="paidAmount" class="text-right form-control" onKeyup="invoice_paidamount()" name="paid_amount" value="" />
-                                        </td>
-                                        <td> </td>
-                                    </tr> -->
-                                <!--     <tr>
-                                        <td colspan="2" class="text-right">
-                                             <input type="button" id="full_paid_tab" class="btn btn-warning" value="<?php echo display('full_paid') ?>" tabindex="16" onClick="full_paid()"/>
-                                        </td>
-                                        <td class="text-right" colspan="2"><b><?php echo display('due_amount') ?>:</b></td>
-                                        <td class="text-right">
-                                            <input type="text" id="dueAmmount" class="text-right form-control" name="due_amount" value="0.00" readonly="readonly" />
-                                        </td>
-                                        <td></td>
-                                    </tr> -->
 
                                    
                                 </tfoot>
                             </table>
                         </div>
                         <div class="form-group row">
-                            <label for="remarks" class="col-sm-4 col-form-label">Remarks</label>
+                            <label for="remarks" class="col-sm-4 col-form-label"><?php echo display('Remarks') ?></label>
                             <div class="col-sm-6">
                              <input type="text" name="remarks" class=" form-control"  value="<?php echo  $purchase_info[0]['remarks']; ?>"  placeholder="Remarks" />
                             </div>
@@ -633,11 +593,11 @@ preg_match('#\((.*?)\)#', $d, $match);
 
                         <div class="form-group row">
                             <div class="col-sm-6">
-                                <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color:#38469f;" name="add-trucking" value="Save" />
-                                <a  style="color:white;background-color:#38469f;"  id="final_submit" class='final_submit btn'>Submit</a>
+                                <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color:#38469f;" name="add-trucking" value="<?php echo display('Save') ?>" />
+                                <a  style="color:white;background-color:#38469f;"  id="final_submit" class='final_submit btn'><?php echo display('Submit') ?></a>
 
-<a id="download" style="color:white;background-color:#38469f;" class='btn'>Download</a>
-    <a id="print" style="color:white;background-color:#38469f;" class='btn'>Print</a>  
+<a id="download" style="color:white;background-color:#38469f;" class='btn'><?php echo display('Download') ?></a>
+    <a id="print" style="color:white;background-color:#38469f;" class='btn'><?php echo display('Print') ?></a>  
 
                             </div>
                         </div>
@@ -834,7 +794,7 @@ preg_match('#\((.*?)\)#', $d, $match);
       <div class="modal-content" style="margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Expenses - Trucking</h4>
+          <h4 class="modal-title"><?php echo display('Expenses - Trucking') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -853,18 +813,18 @@ preg_match('#\((.*?)\)#', $d, $match);
 		<div class="modal-content">
 			 <div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo display('Confirmation') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+				<p><?php echo display('Your Invoice is not submitted. Would you like to submit or discard') ?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+					<small><?php echo display('If you dont submit your changes will not be saved') ?>.</small>
 				</p>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()">Discard</button>
+				<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="<?php echo display('Submit') ?>"/>
+                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()"><?php echo display('Discard') ?></button>
 			
 			</div>
 		</div>
@@ -877,7 +837,7 @@ preg_match('#\((.*?)\)#', $d, $match);
       <div class="modal-content" style="    margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ADD PAYMENT</h4>
+          <h4 class="modal-title"><?php echo display('ADD PAYMENT') ?></h4>
         </div>
         <div class="modal-body">
           
@@ -888,7 +848,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label">Payment Date <i class="text-danger">*</i></label>
+        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
 
@@ -901,14 +861,14 @@ preg_match('#\((.*?)\)#', $d, $match);
 <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
  <div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Reference No<i class="text-danger">*</i></label>
+        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
         <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
  </div> 
     <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label">Select Bank:<i class="text-danger">*</i></label>
+      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
 <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
       <div class="col-sm-5">
   <select name="bank" id="bank"  class="form-control bankpayment" >
@@ -955,7 +915,7 @@ preg_match('#\((.*?)\)#', $d, $match);
       <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
       <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount to be paid : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount to be paid') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -971,7 +931,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 </div> 
       <div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Amount Received : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount Received') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -987,7 +947,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label">Balance : </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php echo display('Balance') ?> : </label>
 
 <div class="col-sm-5">
 
@@ -1001,7 +961,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Payment Amount: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Amount') ?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
@@ -1017,7 +977,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Additional Information : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Additional Information') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1025,7 +985,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label">Attachments : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Attachments') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -1036,7 +996,7 @@ preg_match('#\((.*?)\)#', $d, $match);
      <div class="col-sm-8"></div>
     
      <div class="col-sm-4">
-                 <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+                 <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close') ?></a>
      <input class="btn btn-primary" type="submit" style="color:white;background-color:#38469f;"  name="submit_pay" id="submit_pay"  value="submit"  required   />
 </div>
      </div>
@@ -1049,7 +1009,7 @@ preg_match('#\((.*?)\)#', $d, $match);
         <div class="modal-content">
             <div class="modal-header" style="color:white;background-color:#38469f;" >
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	<h4 class="modal-title">ADD BANK</h4>
+                	<h4 class="modal-title"><?php echo display('ADD BANK') ?></h4>
 
             </div>
             <div class="container"></div>
@@ -1117,7 +1077,7 @@ preg_match('#\((.*?)\)#', $d, $match);
   </div>
 
   <div class="form-group row">
-  <label for="shipping_line" class="col-sm-4 col-form-label">Country
+  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('Country') ?>
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
@@ -1127,7 +1087,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 
 </div>
 <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo "Currency" ?></label>
+            <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('Currency') ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
     <option>Select currency</option>
@@ -1318,7 +1278,7 @@ preg_match('#\((.*?)\)#', $d, $match);
 </div>
     
 <div class="col-sm-4">
-             <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal">Close</a>
+             <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close') ?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
      <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
@@ -1337,7 +1297,7 @@ preg_match('#\((.*?)\)#', $d, $match);
       <div class="modal-content" style="width: 1000px;min-width: max-content;margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" id="history_close" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">PAYMENT HISTORY</h4>
+          <h4 class="modal-title"><?php echo display('PAYMENT HISTORY') ?></h4>
         </div>
         <div class="modal-body1">
         <div id="salle_list"></div>

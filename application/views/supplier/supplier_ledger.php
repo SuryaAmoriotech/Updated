@@ -125,7 +125,7 @@
                    
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btn btnclr dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php echo display('Download') ?>
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -173,12 +173,12 @@
                             <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
   <thead>
       <tr>
-      <th class="Date" data-resizable-column-id="1"    style="width: 100px; height: 40.0114px;" >Date</th>
-        <th class="Description" data-resizable-column-id="2"  style="height: 45.0114px; width: 250.011px" >Description</th>
-        <th class="Voucher_no" data-resizable-column-id="3"  style="height: 42.0114px; width: 234.011px"   >Voucher_no</th>
-        <th class="Debit"  data-resizable-column-id="4"  style="width: 200.011px;">Debit</th>
-        <th class="Credit" data-resizable-column-id="5"    style="width: 198.011px;"       >Credit</th>
-        <th class="Balance" data-resizable-column-id="6" style="width: 190.011px; height: 44.0114px;">Balance</th>
+      <th class="Date" data-resizable-column-id="1"    style="width: 100px; height: 40.0114px;" ><?php echo display('Date') ?></th>
+        <th class="Description" data-resizable-column-id="2"  style="height: 45.0114px; width: 250.011px" ><?php echo display('Description') ?></th>
+        <th class="Voucher_no" data-resizable-column-id="3"  style="height: 42.0114px; width: 234.011px"   ><?php echo display('Voucher_no') ?></th>
+        <th class="Debit"  data-resizable-column-id="4"  style="width: 200.011px;"><?php echo display('Debit') ?></th>
+        <th class="Credit" data-resizable-column-id="5"    style="width: 198.011px;"       ><?php echo display('Credit') ?></th>
+        <th class="Balance" data-resizable-column-id="6" style="width: 190.011px; height: 44.0114px;"><?php echo display('Balance') ?></th>
        
       </tr>
     </thead>
