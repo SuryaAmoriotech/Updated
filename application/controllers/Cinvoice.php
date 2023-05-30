@@ -2144,7 +2144,7 @@ $this->db->update('bootgrid_data');
         $CI = & get_instance();
         $CI->auth->check_admin_auth();
        $CI->load->library('linvoice');
-        $content = $CI->linvoice->ocean_export_tracking_details_data($purchase_id);
+    $content = $CI->linvoice->ocean_export_tracking_details_data($purchase_id);
         echo json_encode($content);
       $this->template->full_admin_html_view($content);
     }

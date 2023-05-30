@@ -179,7 +179,7 @@ form {
                                         <div class="col mr-2">
                                               <i class="fa fa-money"  style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#4775d1;color:white;" aria-hidden="true"></i>
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                               Total Sales</div>
+                                            <?php echo display('Total Sales') ?></div>
                                              
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
@@ -209,7 +209,7 @@ form {
                                         <div class="col mr-2">
                                             <i class='fa fa-credit-card-alt' style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#53c68c;color:white;" aria-hidden="true"></i>
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Total Expense</div>
+                                              <?php echo display('Total Expense') ?> </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                         
        <?php
@@ -236,7 +236,7 @@ form {
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <i class='fa fa-line-chart'  style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#47d1d1;color:white;"></i>
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Profit
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><?php echo display('Profit') ?>
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
@@ -271,7 +271,7 @@ echo html_escape($currency).$string;
                                         <div class="col mr-2">
                                             <i class="fa fa-shopping-bag" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#ffd633;color:white;"></i>
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                               No. of Products</div>
+                                            <?php echo display('No. of Products') ?></div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 <?php echo $total_product ;  ?>
                                             </div>
@@ -300,7 +300,7 @@ echo html_escape($currency).$string;
                             <div class="card shadow mb-2" id="print">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row " style="font-size:12px;text-align:center;">
-                                    <h6 class="m-0 font-weight-bold text-primary">Sales and Expense Overview</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo display('Sales and Expense Overview') ?></h6>
                                     <div class="no-arrow" style="margin-left: auto;">
                                       <span>  <i class="fa fa-download" id="click"  style="color:#38469f;" aria-hidden="true"></i> </span>
                                        
@@ -318,14 +318,14 @@ echo html_escape($currency).$string;
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary  text-uppercase mb-1">
-                                                SALES</div>
+                                            <?php echo display('SALES') ?></div>
                                             <div class="h5 mb-0  text-gray-800"> 
                                               
                            
-                                              <b> No. of Sales :</b><div id="no_of_sales"></div>
-                                               <b> Total Amount:</b><div id="t_s_a"></div>
-                                              <b>  Total Paid Amount :</b><div id="t_p_a"></div>
-                                              <b>  Total Due Amount :</b><div id="t_d_a"></div>
+                                              <b> <?php echo display('No. of Sales') ?> :</b><div id="no_of_sales"></div>
+                                               <b> <?php echo display('Total Amount') ?>:</b><div id="t_s_a"></div>
+                                              <b>  <?php echo display('Total Paid Amount') ?> :</b><div id="t_p_a"></div>
+                                              <b>  <?php echo display('Total Due Amount') ?> :</b><div id="t_d_a"></div>
                                           <div id="container"></div>
                                         </div>
                                         </div>
@@ -340,12 +340,12 @@ echo html_escape($currency).$string;
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Expense</div>
+                                            <?php echo display('Expense') ?></div>
                                             <div class="h5 mb-0  text-gray-800">
-                                                 <b> No. of Expense :</b><div id="no_of_exp"></div>
-                                               <b> Total Amount:</b><div id="t_x_a"></div>
-                                              <b>  Total Paid Amount :</b><div id="t_xp_a"></div>
-                                              <b>  Total Due Amount :</b><div id="t_xd_a"></div>
+                                                 <b> <?php echo display('No. of Expense') ?> :</b><div id="no_of_exp"></div>
+                                               <b> <?php echo display('Total Amount') ?>:</b><div id="t_x_a"></div>
+                                              <b>  <?php echo display('Total Paid Amount') ?> :</b><div id="t_xp_a"></div>
+                                              <b>  <?php echo display('Total Due Amount') ?> :</b><div id="t_xd_a"></div>
                                             </div>
                                         </div>
                                        
@@ -359,13 +359,13 @@ echo html_escape($currency).$string;
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                               Today's Sales</div>
+                                            <?php echo display('Todays Sales')?></div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                   <div class="h5 mb-0  text-gray-800">
-                                              <b> No. of Sales :</b><div id="today_sale"></div>
-                                              <b> Total Amount:</b><div id="today_s_a"></div> 
-                                              <b> Total Paid Amount :</b><div id="today_s_p"></div>
-                                              <b>  Total Due Amount :</b><div id="today_s_d"></div>
+                                              <b> <?php echo display('No. of Sales')?> :</b><div id="today_sale"></div>
+                                              <b> <?php echo display('Total Amount')?>:</b><div id="today_s_a"></div> 
+                                              <b> <?php echo display('Total Paid Amount')?> :</b><div id="today_s_p"></div>
+                                              <b>  <?php echo display('Total Due Amount')?> :</b><div id="today_s_d"></div>
                                             </div>
                                             </div>
                                         </div>
@@ -384,13 +384,13 @@ echo html_escape($currency).$string;
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                               Today's Expense</div>
+                                            <?php echo display('Todays Expense')?></div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                   <div class="h5 mb-0  text-gray-800">
-                                               <b> No. of Expense :</b><div id="today_exp"></div>
-                                               <b> Total Amount:</b><div id="today_ex_a"></div>
-                                               <b>  Paid Amount :</b><div id="today_ex_p"></div>
-                                               <b>  Total Due Amount :</b><div id="today_ex_d"></div>
+                                               <b> <?php echo display('No. of Expense')?> :</b><div id="today_exp"></div>
+                                               <b> <?php echo display('Total Amount')?>:</b><div id="today_ex_a"></div>
+                                               <b>  <?php echo display('Total Paid Amount')?> :</b><div id="today_ex_p"></div>
+                                               <b>  <?php echo display('Total Due Amount')?> :</b><div id="today_ex_d"></div>
                                             </div>
                                             </div>
                                         </div>
@@ -428,7 +428,7 @@ echo html_escape($currency).$string;
 
   <input  style="width: 220px;" class="form-control daterangepicker-field" name="daterangepicker-field" autocomplete="off" id="daterangepicker-field" value="<?php echo $searchdate;?>"></input>
     </td><td>
-&nbsp;&nbsp; <input type="submit" style="color:white;background-color: #38469f;" class="btn-sm" name="btnSearch" id="submit1" value="submit" />
+&nbsp;&nbsp; <input type="submit" style="color:white;background-color: #38469f;" class="btn-sm" name="btnSearch" id="submit1" value=" <?php echo display('submit') ?>" />
     </td></tr></table>
 
 </h6>
@@ -461,7 +461,7 @@ echo html_escape($currency).$string;
         <div class="col mr-2">
             <i class="fa fa-user-secret" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#4775d1;color:white;"></i>
             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-               No. of Vendors</div>
+            <?php echo display('No. of Vendors') ?></div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">
             <?php echo $total_suppliers ;  ?>
             </div>
@@ -489,7 +489,7 @@ echo html_escape($currency).$string;
         <div class="col mr-2">
             <i class="fa fa-users" aria-hidden="true" style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#53c68c;;color:white;"></i>
             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-               No. of Customers</div>
+            <?php echo display('No. of Customers') ?></div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">
             <?php echo $total_customer ;  ?>
             </div>
@@ -514,7 +514,7 @@ echo html_escape($currency).$string;
           
             <i class='fa fa-user-o'  style="float:right;border-radius:10px;padding: 5px 10px 5px 10px;background-color:#47d1d1;color:white;"></i>
             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-               No. of Employees</div>
+            <?php echo display('No. of Employees')?></div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">
             <?php echo "0" ;  ?>
             </div>
@@ -541,7 +541,7 @@ echo html_escape($currency).$string;
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row " style="font-size:12px;text-align:center;">
-                                    <h6 class="m-0 font-weight-bold text-primary">Best 10 Sales Product (<span style="font-size:13px;"><?php echo date("Y"); ?></span>)</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo display('Best 10 Sales Product') ?> (<span style="font-size:13px;"><?php echo date("Y"); ?></span>)</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body" style="padding:0;">

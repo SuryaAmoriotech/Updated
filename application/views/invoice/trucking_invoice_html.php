@@ -17,7 +17,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-        <h1>invoice design</h1>
+        <h1><?php echo display('invoice design') ?></h1>
             <!-- <h1>Packing List Invoice Detail</h1>
             <small>Packing List Invoice Detail</small>
             <ol class="breadcrumb">
@@ -77,10 +77,10 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
     
     <div class="col-sm-4" style="color:white;font-weight:bold;" id='company_info'>
            
-          <b> Company name : </b><?php echo $cname; ?><br>
-          <b>   Address : </b><?php echo $address; ?><br>
-          <b>   Email : </b><?php echo $email; ?><br>
-          <b>   Contact : </b><?php echo $phone; ?><br>
+          <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
+          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
        </div>
        <div class="col-sm-4 text-center" style="text-align:center;color:white;"><h3><?php echo $header; ?></h3></div>
        <div class="col-sm-4" style="text-align:center;"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 50%;'>
@@ -95,20 +95,20 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
          
   <div class="col-6">
                     <table id="one" >
-<tr><td  class="key"> Invoice No</td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
-<tr><td  class="key">Customer Name</td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key">Container/Goods Pick Up Date</td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
-<tr><td  class="key">Delivery to</td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
-<tr><td  class="key">Truck No</td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
+<tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
+<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>
 
 </div>
 <div class="col-6">
 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
-<tr><td  class="key">Shipment company</td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
-<tr><td  class="key">Delivery Time</td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from." <span style='font-weight:bold'>To :</span>".$delivery_time_to; ?></td></tr>
-<tr><td  class="key">Delivery Date</td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Shipment company') ?></td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Time') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from." <span style='font-weight:bold'>To :</span>".$delivery_time_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Date') ?></td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
 <!-- <tr><td  class="key">Pro No</td><td style="width:10px;">:</td><td calss="value"><?= $pro_no; ?></td></tr> -->
 
 </table>
@@ -127,13 +127,13 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                 <thead style="background-color:<?php echo $color; ?>">
                     <tr>
 
-                        <th data-column-id="id" class="ID"   style="width:30px;" >S.No</th>
-                        <th class="text-center text-white">Date</th>
-                        <th class="text-center text-white">Quantity</th>
-                        <th class="text-center text-white">Description</th>
-                        <th class="text-center text-white">Rate</th>
-                        <th class="text-center text-white">Pro No / Reference</th>
-                        <th class="text-center text-white">Total</th>
+                        <th data-column-id="id" class="ID"   style="width:30px;" ><?php echo display('S.No') ?></th>
+                        <th class="text-center text-white"><?php echo display('Date') ?></th>
+                        <th class="text-center text-white"><?php echo display('Quantity') ?></th>
+                        <th class="text-center text-white"><?php echo display('Description') ?></th>
+                        <th class="text-center text-white"><?php echo display('Rate') ?></th>
+                        <th class="text-center text-white"><?php echo display('Pro No / Reference') ?></th>
+                        <th class="text-center text-white"><?php echo display('Total') ?></th>
                     </tr>
                 </thead>
 
@@ -169,7 +169,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                              
                 <tfoot>
                     <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Total:</td>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Total') ?>:</td>
                         <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $total_amt;  ?></td>
                     </tr>
                     <tr>
@@ -179,26 +179,26 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                           </tr>
                        <tr>
                     <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total:</td>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?>:</td>
                         <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $grandtotal;  ?></td>
                     </tr>
                     <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total(Preferred Currency):</td>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?> <?php echo display('Preferred Currency') ?>:</td>
                         <td style="font-size: 16px;"><?php echo $customer_currency." ".$purchase_all_data[0]['customer_gtotal'];  ?></td>
                     </tr>
                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Amount Paid" ?>:</b></td>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Amount Paid') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['amt_paid'] ;?></td>
                     </tr>
                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Balance" ?>:</b></td>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Balance') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['balance'] ;?></td>
                     </tr>
                     </tfoot>
             </table>
             <br>
 
-                       <h4>Remarks : </h4> <?php echo $remarks;  ?> <br/><br/> 
+                       <h4><?php echo display('Remarks') ?>:</h4> <?php echo $remarks;  ?> <br/><br/> 
             
         </div>
 <?php 
@@ -220,10 +220,10 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 
   <div class="col-sm-4" id='company_info' style="color:white;">
          
-       <b>  Company name : </b><?php echo $cname; ?><br>
-       <b> Address : </b><?php echo $address; ?><br>
-       <b>  Email : </b><?php echo $email; ?><br>
-       <b>  Contact : </b><?php echo $phone; ?><br>
+  <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
+          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
      </div>
 </div>
      </div>
@@ -233,21 +233,20 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 
            <div class="col-6">
                     <table id="one" >
-                    <tr><td  class="key"> Invoice No</td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
-<tr><td  class="key">Customer Name</td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key">Container/Goods Pick Up Date</td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
-<tr><td  class="key">Delivery to</td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
-<tr><td  class="key">Truck No</td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
-
+                    <tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
+<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>
 
 </div>
 <div class="col-6">
 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
-<tr><td  class="key">Shipment company</td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
-<tr><td  class="key">Delivery Time</td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from."<span style='font-weight:bold'> To :</span>".$delivery_time_to; ?></td></tr>
-<tr><td  class="key">Delivery Date</td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Shipment company') ?></td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Time') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from." <span style='font-weight:bold'>To :</span>".$delivery_time_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Date') ?></td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
 <!-- <tr><td  class="key">Pro No</td><td style="width:10px;">:</td><td calss="value"><?= $pro_no; ?></td></tr> -->
 
 
@@ -265,14 +264,13 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
             <table class="table-bordered">
                 <thead style="background-color:<?php echo $color; ?>">
                     <tr>
-                        <th data-column-id="id" class="ID"   style="width:30px;" >S.No</th>
-
-                        <th class="text-center text-white">Date</th>
-                        <th class="text-center text-white">Quantity</th>
-                        <th class="text-center text-white">Description</th>
-                        <th class="text-center text-white">Rate</th>
-                        <th class="text-center text-white">Pro No / Reference</th>
-                        <th class="text-center text-white">Total</th>
+                    <th data-column-id="id" class="ID"   style="width:30px;" ><?php echo display('S.No') ?></th>
+                        <th class="text-center text-white"><?php echo display('Date') ?></th>
+                        <th class="text-center text-white"><?php echo display('Quantity') ?></th>
+                        <th class="text-center text-white"><?php echo display('Description') ?></th>
+                        <th class="text-center text-white"><?php echo display('Rate') ?></th>
+                        <th class="text-center text-white"><?php echo display('Pro No / Reference') ?></th>
+                        <th class="text-center text-white"><?php echo display('Total') ?></th>
                     </tr>
                 </thead>
 
@@ -303,29 +301,29 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                              
                 <tfoot>
                     <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Total:</td>
+                    <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Total') ?>:</td>
                         <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $total_amt;  ?></td>
                     </tr>
                     <tr>
                        
-                    <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo  "Tax (".$tax_des;  ?></td>
-                           <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
-                       </tr>
+                       <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo  "Tax (".$tax_des;  ?></td>
+                              <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
+                          </tr>
+                       <tr>
                     <tr>
-                    <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total:</td>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?>:</td>
                         <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $grandtotal;  ?></td>
                     </tr>
                     <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total(Preferred Currency):</td>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?> <?php echo display('Preferred Currency') ?>:</td>
                         <td style="font-size: 16px;"><?php echo $customer_currency." ".$purchase_all_data[0]['customer_gtotal'];  ?></td>
                     </tr>
                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Amount Paid" ?>:</b></td>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Amount Paid') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['amt_paid'] ;?></td>
                     </tr>
                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Balance" ?>:</b></td>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Balance') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['balance'] ;?></td>
                     </tr>
                    
@@ -333,7 +331,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
             </table>
             <br>
 
-                      <h4>Remarks : </h4> <?php echo $remarks;  ?> <br/><br/>   
+            <h4><?php echo display('Remarks') ?>:</h4> <?php echo $remarks;  ?> <br/><br/> 
          </div>
          <?php 
 
@@ -355,10 +353,10 @@ elseif($template==3)
     
      <div class="col-sm-6" style="color:white;font-weight:bold ;text-align: end;" id='company_info'>
            
-             <b> Company name : </b><?php echo $cname; ?><br>
-           <b>   Address : </b><?php echo $address; ?><br>
-           <b>   Email : </b><?php echo $email; ?><br>
-           <b>   Contact : </b><?php echo $phone; ?><br>
+     <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
+          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
        </div>
 
 
@@ -384,22 +382,20 @@ elseif($template==3)
 
             <div class="col-6">
                     <table id="one" >
-                    <tr><td  class="key"> Invoice No</td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
-<tr><td  class="key">Customer Name</td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key">Container/Goods Pick Up Date</td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
-<tr><td  class="key">Delivery to</td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
-<tr><td  class="key">Truck No</td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
-
-
+                    <tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
+<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>
 
 </div>
 <div class="col-6">
 <table id="two">
-<tr><td  class="key">Invoice Date</td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
-<tr><td  class="key">Shipment company</td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
-<tr><td  class="key">Delivery Time</td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from."<span style='font-weight:bold'> To :</span>".$delivery_time_to; ?></td></tr>
-<tr><td  class="key">Delivery Date</td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
+<tr><td  class="key"><?php echo display('Invoice Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $invoice_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Shipment company') ?></td><td style="width:10px;">:</td><td calss="value"><?= $shipment_company; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Time') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo "<span style='font-weight:bold'>From :</span>".$delivery_time_from." <span style='font-weight:bold'>To :</span>".$delivery_time_to; ?></td></tr>
+<tr><td  class="key"><?php echo display('Delivery Date') ?></td><td style="width:10px;">:</td><td calss="value">{delivery_date}</td></tr>
 <!-- <tr><td  class="key">Pro No</td><td style="width:10px;">:</td><td calss="value"><?= $pro_no; ?></td></tr> -->
 
 </table>
@@ -415,14 +411,13 @@ elseif($template==3)
            <table class="table-bordered">
                <thead style="background-color:<?php echo $color; ?>" >
                    <tr>
-                   <th data-column-id="id" class="ID"   style="width:30px;" >S.No</th>
-
-                       <th class="text-center text-white">Date</th>
-                       <th class="text-center text-white">Quantity</th>
-                       <th class="text-center text-white">Description</th>
-                       <th class="text-center text-white">Rate</th>
-                       <th class="text-center text-white">Pro No / Reference</th>
-                       <th class="text-center text-white">Total</th>
+                   <th data-column-id="id" class="ID"   style="width:30px;" ><?php echo display('S.No') ?></th>
+                        <th class="text-center text-white"><?php echo display('Date') ?></th>
+                        <th class="text-center text-white"><?php echo display('Quantity') ?></th>
+                        <th class="text-center text-white"><?php echo display('Description') ?></th>
+                        <th class="text-center text-white"><?php echo display('Rate') ?></th>
+                        <th class="text-center text-white"><?php echo display('Pro No / Reference') ?></th>
+                        <th class="text-center text-white"><?php echo display('Total') ?></th>
                    </tr>
                </thead>
 
@@ -454,39 +449,36 @@ elseif($template==3)
                             
                <tfoot>
                    <tr>
-                       <td colspan="6" style="text-align:right;font-weight:bold;">Total:</td>
-                       <td style="font-size: 16px;"><?php  echo $currency ; ?><?php echo $total_amt;  ?></td>
-                   </tr>
-                 
-                   <tr>
+                   <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Total') ?>:</td>
+                        <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $total_amt;  ?></td>
+                    </tr>
+                    <tr>
                        
                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo  "Tax (".$tax_des;  ?></td>
                               <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
                           </tr>
                        <tr>
-
-
-                   <tr>
-                       <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total:</td>
-                       <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $grandtotal;  ?></td>
-                   </tr>
-                   <tr>
-                        <td colspan="6" style="text-align:right;font-weight:bold;">Grand Total(Preferred Currency):</td>
+                    <tr>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?>:</td>
+                        <td style="font-size: 16px;"><?php  echo $currency; ?><?php echo $grandtotal;  ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="text-align:right;font-weight:bold;"><?php echo display('Grand Total') ?> <?php echo display('Preferred Currency') ?>:</td>
                         <td style="font-size: 16px;"><?php echo $customer_currency." ".$purchase_all_data[0]['customer_gtotal'];  ?></td>
                     </tr>
-                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Amount Paid" ?>:</b></td>
+                    <tr>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Amount Paid') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['amt_paid'] ;?></td>
                     </tr>
                     <tr>
-                    <td style="text-align:right;"  colspan="6"><b><?php echo "Balance" ?>:</b></td>
+                    <td style="text-align:right;"  colspan="6"><b><?php echo display('Balance') ?>:</b></td>
                         <td style="font-size: 16px;"> <?php echo $customer_currency." ".$purchase_all_data[0]['balance'] ;?></td>
                     </tr>
                    </tfoot>
            </table> 
            <br>
 
-                     <h4>Remarks : </h4> <?php echo $remarks;  ?> <br/><br/>    
+           <h4><?php echo display('Remarks') ?>:</h4> <?php echo $remarks;  ?> <br/><br/> 
         </div>
         <?php 
 
@@ -508,13 +500,13 @@ elseif($template==3)
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title">Sales - Trucking</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Trucking') ?></h4>
         </div>
         <div class="content">
 
         <div class="modal-body" style="text-align:center;font-weight:bold;">
           
-          <h4>Trucking Invoice Downloaded Successfully</h4>
+          <h4><?php echo display('Trucking Invoice Downloaded Successfully') ?></h4>
      
         </div>
         <div class="modal-footer">

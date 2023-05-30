@@ -93,7 +93,7 @@ if(1==1)
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
            
-      <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+      <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
 
 
         </tr>
@@ -101,10 +101,10 @@ if(1==1)
     <br><br>
 
     <table>
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+      <tr>                                                      
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
       </tr>
       
 
@@ -113,34 +113,34 @@ if(1==1)
 
       <tr>
 
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Customer Name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Customer Name").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
 
-      <td style="border: none; font-weight: normal; "><b>Shipping Company</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
-
-      </tr>
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Container / <br> Goods pickup date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Time</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
-
-      </tr>
-
-
-
-
-
-
-      <tr>
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery to</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+      <td style="border: none; font-weight: normal; "><b>'.display("Shipping Company").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
 
       </tr>
 
 
       <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Truck No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Container / Goods pickup date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
+
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Time").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
+
+      </tr>
+
+
+
+
+
+
+      <tr>
+     <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery to").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
+       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+
+      </tr>
+
+
+      <tr>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Truck No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
 
 
       </tr>
@@ -188,7 +188,7 @@ if(1==1)
        
 
 
-      <td colspan="6" style="text-align: right">Total:</td>
+      <td colspan="6" style="text-align: right">'.display("Total").':</td>
       <td class="data_view">'.$currency[0]['currency'].''.$customer_info[0]['total_amt'].'</td>
     </tr>
 
@@ -198,7 +198,7 @@ if(1==1)
   </tr>
 
   <tr>
-  <td colspan="6" style="text-align: right">Grand Total:</td>
+  <td colspan="6" style="text-align: right">'.display("Grand Total").':</td>
   <td class="data_view">'.$currency[0]['currency'].''.$sale_trucking[0]['grand_total_amount'].'</td>
 </tr>
 
@@ -206,20 +206,20 @@ if(1==1)
 
 
 <tr>
-<td colspan="6" style="text-align:right;">Grand Total(Preferred Currency):</td>
+<td colspan="6" style="text-align:right;">'.display("Grand Total").''.display("Preferred Currency").':</td>
 <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['customer_gtotal'].'</td>
   </tr>
 
        
        
   <tr>
-  <td style="text-align:right;"  colspan="6">Amount Paid:</td>
+  <td style="text-align:right;"  colspan="6">'.display("Amount Paid").':</td>
   <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['amt_paid'].'</td>
     </tr>
   
 
     <tr>
-    <td style="text-align:right;"  colspan="6">Balance</td>
+    <td style="text-align:right;"  colspan="6">'.display("Balance").'</td>
         <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['balance'].'</td>
 
         </tr>
@@ -230,7 +230,7 @@ if(1==1)
      
     </table>
     <br>
-  <h3 class="heading_view">Remarks : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
+  <h3 class="heading_view">'.display("Remarks").' : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
 
 
   }
@@ -244,7 +244,7 @@ if(1==1)
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
            
-        <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
 
         </tr>
     </table>
@@ -252,9 +252,9 @@ if(1==1)
 
     <table>
       <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
       </tr>
       
 
@@ -263,34 +263,35 @@ if(1==1)
 
       <tr>
 
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Customer Name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Customer Name").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
 
-      <td style="border: none; font-weight: normal; "><b>Shipping Company</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
-
-      </tr>
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Container / <br> Goods pickup date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Time</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
-
-      </tr>
-
-
-
-
-
-
-      <tr>
-    <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery to</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+      <td style="border: none; font-weight: normal; "><b>'.display("Shipping Company").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
 
       </tr>
 
 
       <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Truck No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Container / Goods pickup date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
+
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Time").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
+
+      </tr>
+
+
+
+
+
+
+      <tr>
+     <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery to").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
+       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+
+      </tr>
+
+
+      <tr>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Truck No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
+
 
 
       </tr>
@@ -338,38 +339,38 @@ if(1==1)
        
 
 
-      <td colspan="6" style="text-align: right">Total:</td>
-      <td class="data_view">'.$currency[0]['currency'].''.$customer_info[0]['total_amt'].'</td>
-    </tr>
-
-    <tr>
-    <td colspan="6" style="text-align:right;">Tax:&nbsp;('.$tax_des.'</td>
-    <td class="data_view">'.$currency[0]['currency'].''.$tax_amt.'</td>
-  </tr>
-
-  <tr>
-  <td colspan="6" style="text-align: right">Grand Total:</td>
-  <td class="data_view">'.$currency[0]['currency'].''.$sale_trucking[0]['grand_total_amount'].'</td>
-</tr>
-
-
-
-
-<tr>
-<td colspan="6" style="text-align:right;">Grand Total(Preferred Currency):</td>
-<td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['customer_gtotal'].'</td>
-  </tr>
-
-       
-       
-  <tr>
-  <td style="text-align:right;"  colspan="6">Amount Paid:</td>
-  <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['amt_paid'].'</td>
-    </tr>
-  
-
-    <tr>
-    <td style="text-align:right;"  colspan="6">Balance</td>
+       <td colspan="6" style="text-align: right">'.display("Total").':</td>
+       <td class="data_view">'.$currency[0]['currency'].''.$customer_info[0]['total_amt'].'</td>
+     </tr>
+ 
+     <tr>
+     <td colspan="6" style="text-align:right;">Tax:&nbsp;('.$tax_des.'</td>
+     <td class="data_view">'.$currency[0]['currency'].''.$tax_amt.'</td>
+   </tr>
+ 
+   <tr>
+   <td colspan="6" style="text-align: right">'.display("Grand Total").':</td>
+   <td class="data_view">'.$currency[0]['currency'].''.$sale_trucking[0]['grand_total_amount'].'</td>
+ </tr>
+ 
+ 
+ 
+ 
+ <tr>
+ <td colspan="6" style="text-align:right;">'.display("Grand Total").''.display("Preferred Currency").':</td>
+ <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['customer_gtotal'].'</td>
+   </tr>
+ 
+        
+        
+   <tr>
+   <td style="text-align:right;"  colspan="6">'.display("Amount Paid").':</td>
+   <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['amt_paid'].'</td>
+     </tr>
+   
+ 
+     <tr>
+     <td style="text-align:right;"  colspan="6">'.display("Balance").'</td>
         <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['balance'].'</td>
 
         </tr>
@@ -380,7 +381,7 @@ if(1==1)
      
     </table>
     <br>
-  <h3 class="heading_view">Remarks : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
+    <h3 class="heading_view">'.display("Remarks").' : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
 
 
   }
@@ -393,52 +394,52 @@ if(1==1)
           <img src="'.$this->session->userdata('image_email').'" width="100px" />
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
-        <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
         </tr>
     </table>
     <br><br>
 
         <table>
         <tr>
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Invoice Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
-      </tr>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
+        </tr>
+        
+  
       
-
-    
-     
-
-      <tr>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Customer Name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
-
-      <td style="border: none; font-weight: normal; "><b>Shipping Company</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
-
-      </tr>
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Container / <br> Goods pickup date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Time</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
-
-      </tr>
-
-
-
-
-
-
-      <tr>
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery to</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b>Delivery Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
-
-      </tr>
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>Truck No</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
+       
+  
+        <tr>
+  
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Customer Name").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['customer_name'].'</span></td>
+  
+        <td style="border: none; font-weight: normal; "><b>'.display("Shipping Company").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customer_info[0]['shipment_company'].'</span></td>
+  
+        </tr>
+  
+  
+        <tr>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Container / Goods pickup date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
+  
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Time").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
+  
+        </tr>
+  
+  
+  
+  
+  
+  
+        <tr>
+       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery to").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
+         <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+  
+        </tr>
+  
+  
+        <tr>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Truck No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
   
   
         </tr>
@@ -485,7 +486,7 @@ if(1==1)
        
 
 
-       <td colspan="6" style="text-align: right">Total:</td>
+       <td colspan="6" style="text-align: right">'.display("Total").':</td>
        <td class="data_view">'.$currency[0]['currency'].''.$customer_info[0]['total_amt'].'</td>
      </tr>
  
@@ -495,7 +496,7 @@ if(1==1)
    </tr>
  
    <tr>
-   <td colspan="6" style="text-align: right">Grand Total:</td>
+   <td colspan="6" style="text-align: right">'.display("Grand Total").':</td>
    <td class="data_view">'.$currency[0]['currency'].''.$sale_trucking[0]['grand_total_amount'].'</td>
  </tr>
  
@@ -503,20 +504,20 @@ if(1==1)
  
  
  <tr>
- <td colspan="6" style="text-align:right;">Grand Total(Preferred Currency):</td>
+ <td colspan="6" style="text-align:right;">'.display("Grand Total").''.display("Preferred Currency").':</td>
  <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['customer_gtotal'].'</td>
    </tr>
  
         
         
    <tr>
-   <td style="text-align:right;"  colspan="6">Amount Paid:</td>
+   <td style="text-align:right;"  colspan="6">'.display("Amount Paid").':</td>
    <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['amt_paid'].'</td>
      </tr>
    
  
      <tr>
-     <td style="text-align:right;"  colspan="6">Balance</td>
+     <td style="text-align:right;"  colspan="6">'.display("Balance").'</td>
          <td class="data_view">'.$customer_info[0]['currency_type'].''.$sale_trucking[0]['balance'].'</td>
  
          </tr>
@@ -527,7 +528,7 @@ if(1==1)
       
      </table>
     <br>
-  <h3 class="heading_view">Remarks : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
+    <h3 class="heading_view">'.display("Remarks").' : <span style="font-weight: normal;">'.$sale_trucking[0]['remarks'].'</span></h3>';
 
  }
 
