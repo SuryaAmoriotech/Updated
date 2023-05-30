@@ -82,7 +82,7 @@ public function insert_product_from_expense(){
         $CI->auth->check_admin_auth();
         $CI->load->model('Products');
            
-        $product_id = $this->generator(10);
+        $product_id = $this->input->post('product_id',TRUE);
                $quantity = (!empty($this->input->post('quantity',TRUE))?$this->input->post('quantity',TRUE):1);
               if($quantity<1){
                   $quantity=1;

@@ -167,6 +167,8 @@
         <!-- Add Product -->
         <form id="insert_product_from_expense"  enctype="multipart/form-data" method="post">
     
+<?php  $product_id = rand();  ?>
+                            <input type="hidden" name="product_id" class="form-control" id="product_id" value="<?php echo  $product_id; ?>" tabindex="4" placeholder=" product_id" />   
 
             <div class="col-sm-12">
                 <div class="panel panel-bd lobidrag">
@@ -189,7 +191,6 @@
 
                                 </div>
                             </div>
-
 
 
 
@@ -281,7 +282,7 @@
                                     <label for="" class="col-sm-4 col-form-label"><?php echo display('Supplier') ?> <i class="text-danger">*</i> </label>
                                     <div class="col-sm-7">
                                     <select name="supplier_id"  id="supplier_id" style="width: 100%;" class="form-control"  required="">
-                                                <option value=""> <?php echo display('Vendor')?></option>
+                                                <option value="" > <?php echo display('Select Vendor')?></option>
                                                 <?php if ($supplier) { ?>
                                                     {supplier}
                                                     <option value="{supplier_id}">{supplier_name}</option>
@@ -564,7 +565,7 @@
                     </td>
                 
                     <td >
-                        <input type="text"   style="width:60px;"id="gross_sq_ft_1" name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
+                        <input type="text"   style="width:60px;"id="gross_sq_ft_1" readonly name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
                     </td>
                     <td>
                         <input type="text" id="bundle_no_1" name="bundle_no[]" required="" class="bundle_no form-control" />
@@ -580,7 +581,7 @@
                         <input type="text" id="net_height_1" name="net_height[]"    required="" class="net_height form-control" />
                     </td>
                     <td >
-                        <input type="text"   style="width:60px;"  id="net_sq_ft_1" name="net_sq_ft[]" class="net_sq_ft form-control"/>
+                        <input type="text"   style="width:60px;"  id="net_sq_ft_1" readonly name="net_sq_ft[]" class="net_sq_ft form-control"/>
                     </td>
                     <td>
 
@@ -598,7 +599,7 @@
                     </td>
                     <td>
                 
-<span class="input-symbol-euro">   <input type="text" id="sales_amt_sq_ft_1"  name="sales_amt_sq_ft[]"  style="width:70px;"  placeholder="0.00"  class="sales_amt_sq_ft form-control" />
+<span class="input-symbol-euro">   <input type="text" id="sales_amt_sq_ft_1"  name="sales_amt_sq_ft[]" readonly  style="width:70px;"  placeholder="0.00"  class="sales_amt_sq_ft form-control" />
 </span>
 
 
@@ -607,7 +608,7 @@
                 
                     <td >
             
-  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_1" name="sales_slab_amt[]"  style="width:70px;" placeholder="0.00"   class="sales_slab_amt form-control"/></span></td> 
+  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_1" name="sales_slab_amt[]" readonly  style="width:70px;" placeholder="0.00"   class="sales_slab_amt form-control"/></span></td> 
 
 
 
@@ -987,7 +988,7 @@
       <div class="form-group row">
                                     <label for="country" class="col-sm-4 col-form-label">Country<i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country"    style="width: 100%;" ></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="US-United States"  name="country" id="country"    style="width: 100%;" ></select>
                                     </div>
                         </div>
       <div class="form-group row">
@@ -1433,7 +1434,7 @@ $(document).ready(function() {
       
        $('#myModal1').modal('show');
   
-      
+      $('#insert_supplier')[0].reset();
      
        window.setTimeout(function(){
         $('#myModal1').modal('hide');
@@ -1734,22 +1735,22 @@ ddl.options.add(opt);
         dataType:"json",
         url:"<?php echo base_url(); ?>Cproduct/insert_instant_unit",
         data:$("#insert_unit").serialize(),
-        success:function (data1) {
-              var $select = $('select#unit');
-            $select.empty();
+        success:function (data) {
+            console.log(data);
+            $.each(data, function (i, item) {
+           
+           result = '<option value=' + data[i].unit_name + '>' + data[i].unit_name + '</option>';
+       });
        
-              for(var i = 0; i < data1.length; i++) {
-        var option = $('<option/>').attr('value', data1[i].unit_name).text(data1[i].unit_name);
-        $select.append(option); // append new options
-    }
-       $('#unit_name').val('');
-      // $('#unit').append(result).selectmenu('refresh',true);
+
+       $('#unit').selectmenu(); 
+       $('#unit').append(result).selectmenu('refresh',true);
        $("#bodyModal1").html("<?php echo  display('Unit Added Successfully')?>");
       
       $('#myModal1').modal('show');
       $('#add_unit').modal('hide');
      $('#unit').show();
-    
+    $('#unit_name').val("");
       window.setTimeout(function(){
       $('#myModal1').modal('hide');
        $('.modal-backdrop').remove();
@@ -1788,7 +1789,7 @@ $('#insert_category').submit(function (event) {
            result = '<option value=' + data[i].category_name + '>' + data[i].category_name + '</option>';
        });
        
-
+ $('#category_name').val("");
        $('#category_id').selectmenu(); 
        $('#category_id').append(result).selectmenu('refresh',true);
        $("#bodyModal1").html("<?php echo display('Category Added Successfully')?>");
