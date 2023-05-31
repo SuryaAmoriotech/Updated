@@ -74,6 +74,9 @@ public function retrieve_data() {
         }
     }
 
+
+
+    
 public function retrieve_data1() {
         $id=$_SESSION['user_id'];
         $this->db->select('*');

@@ -391,11 +391,20 @@ if(1==1)
   $content .= '<table>
       <tr class="header_view" >
         <td style="border: none">
-          <img src="'.$this->session->userdata('image_email').'" width="100px" />
+        
+        <img src="'.$this->session->userdata('image_email').'" width="100px" />
+
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
-        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
-        </tr>
+           
+      <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+
+
+      </tr>
+
+
+
+
     </table>
     <br><br>
 

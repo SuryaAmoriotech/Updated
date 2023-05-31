@@ -731,6 +731,7 @@ if($a==$m){
 ?>
         
     </div>   
+    </div>
 
     
     </section> <!-- /.content -->

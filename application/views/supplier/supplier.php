@@ -32,7 +32,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
         <div class="header-title">
 
-            <h1><?php echo display('Manage Supplier') ?></h1>
+            <h1><?php echo display('Manage Vendor') ?></h1>
 
             <small><?php //echo "Manage Supplier"; ?></small>
 
@@ -40,9 +40,9 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 
-                <li><a href="#"><?php echo display('Supplier') ?></a></li>
+                <li><a href="#"><?php echo display('Vendor') ?></a></li>
 
-                <li class="active" style="color:orange;"><?php echo display('Manage Supplier') ?></li>
+                <li class="active" style="color:orange;"><?php echo display('Manage Vendor') ?></li>
 
             </ol>
 
@@ -130,12 +130,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Supplier') ?> </a>
+<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Vendor') ?> </a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Supplier') ?> </a>
+<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Vendor') ?> </a>
 
                         <?php  } ?>
 
@@ -150,10 +150,10 @@ if (isset($error_message)) {
 
 
 
-                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btnclr btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display('Supplier Overview') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btnclr btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display('Vendor Overview') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btnclr btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('Supplier Sales Detail') ?> </a>
-             <button type="button" class="btnclr btn btn-success m-b-5 m-r-2" data-toggle="modal" data-target="#supplier_modal"  ><?php echo display('csv_upload_supplier')?></button>
+                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btnclr btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('Vendor Sales Detail') ?> </a>
+             <button type="button" class="btnclr btn btn-success m-b-5 m-r-2" data-toggle="modal" data-target="#supplier_modal"  ><?php echo display('Csv Upload Vendor')?></button>
                   </div>
                            <div class="col-sm-2">
                     <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i> <!-- onclick opens MODAL -->
@@ -370,7 +370,7 @@ $count++;
     <div class="modal-content">
       <div class="modal-header" style="color:white;background-color:#38469f;">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><?php echo display('csv_supplier'); ?></h4>
+        <h4 class="modal-title"><?php echo display('csv_vendor'); ?></h4>
       </div>
       <div class="modal-body">
 

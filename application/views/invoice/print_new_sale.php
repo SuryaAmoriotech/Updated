@@ -81,7 +81,7 @@ textarea:focus, input:focus{
      <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     <div class="col-sm-4" style="color:white;font-weight:bold;" id='company_info'>
            
-          <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+    <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
           <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
           <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
           <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
@@ -307,7 +307,7 @@ elseif($template==1)
    <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
   <div class="col-sm-4" id='company_info' style="color:white;">
          
-   <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+  <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
           <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
           <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
           <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
@@ -541,10 +541,10 @@ elseif($template==3)
             <div class="col-sm-6 " style="width:50%;">
              <table>
 
-        <tr>  <td style="100px;font-weight:bold;"> <?php echo display('Company name') ?> </td><td style="width:10px;">:</td><td> <?php echo $company[0]['company_name']; ?></td></tr>
-        <tr>   <td style="100px;font-weight:bold;"> <?php echo display('Address') ?></td><td style="width:10px;">:</td><td> <?php  echo $company[0]['address']; ?></td></tr>
-        <tr>   <td style="100px;font-weight:bold;"> <?php echo display('Email') ?> </td><td style="width:10px;">:</td><td> <?php $company[0]['email']; ?></td></tr>
-        <tr>   <td style="100px;font-weight:bold;"> <?php echo display('Contact') ?></td><td style="width:10px;">:</td><td> <?php $company[0]['mobile']; ?></td></tr>
+             <b><?php echo display('Companyname') ?> : </b><?php echo $company[0]['company_name']; ?><br>
+          <b> <?php echo display('Address') ?> : </b><?php echo $company[0]['address']; ?><br>
+          <b> <?php echo display('Email') ?> : </b><?php echo $company[0]['email']; ?><br>
+          <b> <?php echo display('Contact') ?> : </b><?php echo $company[0]['mobile']; ?><br>
 </tr>        
              
 </table>

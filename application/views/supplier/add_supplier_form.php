@@ -11,12 +11,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1><?php echo display('Create Supplier') ?></h1>
+            <h1><?php echo display('Create vendor') ?></h1>
             <small> </small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#"><?php echo display('supplier') ?></a></li>
-                <li class="active" style="color:orange;"><?php echo display('add_supplier') ?></li>
+                <li><a href="#"><?php echo display('vendor') ?></a></li>
+                <li class="active" style="color:orange;"><?php echo display('add_vendor') ?></li>
             </ol>
         </div>
     </section>
@@ -29,11 +29,11 @@
         <div class="row">
             <div class="col-sm-12">
                 
-                    <a href="<?php echo base_url('Csupplier/manage_supplier') ?>" class="btn btn-info m-b-5 m-r-2" style="color:white;background-color:#38469f;" ><i class="ti-align-justify"> </i> <?php echo display('manage_supplier') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/manage_supplier') ?>" class="btn btn-info m-b-5 m-r-2" style="color:white;background-color:#38469f;" ><i class="ti-align-justify"> </i> <?php echo display('manage_vendor') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btn btn-primary m-b-5 m-r-2" style="color:white;background-color:#38469f;"><i class="ti-align-justify"> </i>  <?php echo display('supplier_ledger') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btn btn-primary m-b-5 m-r-2" style="color:white;background-color:#38469f;"><i class="ti-align-justify"> </i>  <?php echo display('vendor_ledger') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btn btn-success m-b-5 m-r-2" style="color:white;background-color:#38469f;" ><i class="ti-align-justify"> </i>  <?php echo display('supplier_sales_details') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btn btn-success m-b-5 m-r-2" style="color:white;background-color:#38469f;" ><i class="ti-align-justify"> </i>  <?php echo display('vendor_sales_details') ?> </a>
                  
 
                

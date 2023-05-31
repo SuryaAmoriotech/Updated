@@ -1445,7 +1445,7 @@
       <div class="modal-content" style="margin-top: 190px;">
        <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sales - Ocean</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Ocean') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -1464,13 +1464,13 @@
 		<div class="modal-content">
 			 <div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo display('Confirmation') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+				<p><?php echo display('Your Invoice is not submitted. Would you like to submit or discard')?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+					<small><?php echo display('If you dont submit your changes will not be saved') ?>.</small>
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -1518,8 +1518,8 @@ $('#print').hide();
       $("#bodyModal1").html("New Vendor Added Successfully");
       
        $('#myModal1').modal('show');
-  
-      
+       
+       $('#insert_supplier')[0].reset();
      
        window.setTimeout(function(){
         $('#myModal1').modal('hide');
@@ -1563,7 +1563,7 @@ $.ajax({
   $('#consignee').show();
   $('#myModal1').modal('show');
   $('#cust_info').modal('hide');
- 
+  $('#instant_customer')[0].reset();
 
   window.setTimeout(function(){
    $('#myModal1').modal('hide');

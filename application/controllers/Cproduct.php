@@ -328,12 +328,12 @@ public function insert_product() {
 if(!empty($row3['product_id'])){
   $this->db->where('product_id',$product_id);
  $this->db->delete('product_information');
-  //echo $this->db->last_query();
+//   echo $this->db->last_query();
 $this->db->insert('product_information', $data);
-//echo $this->db->last_query();
+// echo $this->db->last_query();
 } else{
 $this->db->insert('product_information', $data);
-//echo $this->db->last_query();
+// echo $this->db->last_query();
 }
    $all_product = $CI->Products->get_all_products();
 echo json_encode($all_product);
