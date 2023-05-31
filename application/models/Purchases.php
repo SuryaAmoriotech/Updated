@@ -1505,9 +1505,11 @@ $msg=$this->input->post('message_invoice',TRUE);
    $this->db->where('purchase_id', $this->session->userdata("purchase_1"));
   $this->db->delete('product_purchase');
         $this->db->insert('product_purchase', $data);
+        echo  $this->db->last_query();
    }
     else{
     $this->db->insert('product_purchase', $data);
+     echo  $this->db->last_query();
     }
     $purchase_id_2 = $this->db->select('purchase_id')->from('product_purchase')->where('chalan_no',$this->input->post('invoice_no',TRUE))->get()->row()->purchase_id;
     $this->session->set_userdata("purchase_2",$purchase_id_2);
@@ -1668,6 +1670,7 @@ $description =$this->input->post('description',TRUE);
                 'status'             => 1
             );
             $this->db->insert('product_purchase_details', $data1);
+             echo  $this->db->last_query();
 $data2 = array(
             'create_by'        => $this->session->userdata('user_id'),
             'overall_total'         =>    $this->input->post('gtotal',TRUE),

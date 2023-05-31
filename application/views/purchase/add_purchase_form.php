@@ -3545,8 +3545,8 @@ $('#vendor_gtotal').val(custo_final);
 
 var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
 var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
-$(document).on('change', '.product_name', function(){
-//debugger;
+ $( "body" ).on('change', '.product_name', function(){
+debugger;
  var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
