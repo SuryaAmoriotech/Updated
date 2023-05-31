@@ -78,9 +78,10 @@ ul.dropdown-submenu>li>a:hover{
         </span>
 
         <span class="logo-lg">
+            <?php   echo base_url().html_escape($this->session->userdata('logo'));die(); ?>
             <!--<b>Admin</b>BD-->
             <img src="<?php
-            echo base_url().html_escape($_SESSION['logo']);
+            echo base_url().html_escape($this->session->userdata('logo'));
             ?>" alt="">
         </span>
     </a>
