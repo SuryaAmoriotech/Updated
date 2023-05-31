@@ -545,7 +545,7 @@ td {
                              <table class="taxtab table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:22%;border:none;text-align:end;font-weight:bold;">
-                        <?php echo display(' Todays Rate ') ?>: 
+                        <?php echo display('Live Rate') ?>: 
                          </td>
                 
                                <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
@@ -629,7 +629,7 @@ td {
                                             <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">
                                                
                                             <td colspan="21" style="text-align: end;">
-                                        <input type="submit" value=<?php echo  display ('Make Payment') ?> style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
+                                        <input type="submit" value="<?php echo display('Make Payment') ?>" style="color:white;background-color: #38469f;" class="btn btn-large" id="paypls"/>
                                             </td>
                                             </tr>
                                             </tfoot>
@@ -1313,31 +1313,30 @@ td {
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
+<label for="date" style="text-align:end;" class="col-sm-3 col-form-label">  <?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
 
-        <div class="col-sm-5">
+<div class="col-sm-5">
 
-            <input class=" form-control" type="date"  name="payment_date" id="payment_date" required value="<?php echo html_escape($date); ?>" tabindex="4" />
+    <input class=" form-control" type="date"  name="payment_date" id="payment_date" required value="<?php echo html_escape($date); ?>" tabindex="4" />
 
-        </div>
+</div>
 
-    </div>
+</div>
 <input type="hidden" id="cutomer_name" name="cutomer_name"/>
 <input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id" id="payment_id"/>
- <div class="form-group row">
+<div class="form-group row">
 
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
 
-        <div class="col-sm-5">
-        <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
+<div class="col-sm-5">
+<input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
- </div> 
-    <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
-     <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
-      <div class="col-sm-5">
-  <select name="bank" id="bank"  class="form-control bankpayment" >
-
+</div> 
+<div class="form-group row">
+<label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
+<a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
+<div class="col-sm-5">
+<select name="bank" id="bank"  class="form-control bankpayment" >
 <option value="Axis Bank Ltd.">Axis Bank Ltd.</option>
 <option value="Bandhan Bank Ltd.">Bandhan Bank Ltd.</option>
 <option value="Bank of Baroda">Bank of Baroda</option>
@@ -1372,37 +1371,38 @@ td {
 <option value="Union Bank of India">Union Bank of India</option>
 <option value="YES Bank Ltd.">YES Bank Ltd.</option>
 <?php foreach($bank_list as $b){ ?>
-  <option value="<?=$b['bank_name']; ?>"><?=$b['bank_name']; ?></option>
+<option value="<?=$b['bank_name']; ?>"><?=$b['bank_name']; ?></option>
 <?php } ?>
 </select>
 </div>
-      </div>
-      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
-      <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
-      <div class="form-group row">
+</div>
+<input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+<input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
+<div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount to be paid') ?> : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Amount to be paid') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
-      <tr>
-        <td class="cus" name="cus"></td>
-        <td><input  type="text"  readonly style="width:190%;border:none;" name="amount_to_pay"     id="amount_to_pay" class="form-control" required   /></td>
-     </tr>
-   </table>
+<tr>
+<td class="cus" name="cus"></td>
+<td><input  type="text"  readonly name="amount_to_pay" id="amount_to_pay"  style="width:332%;"   class="form-control" required   /></td>
+
+</tr>
+</table>
 
 
 </div>
 </div> 
-      <div class="form-group row" style="display:none;">
+<div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount Received ') ?>: </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Amount Received ') ?>: </label>
 
 <div class="col-sm-5">
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"  readonly name="amount_received" id="amount_received" style="width:190%;"  class="form-control"required   /></td>
+        <td><input  type="text"  readonly name="amount_received" value="0.00" style="width:332%;"  id="amount_received" class="form-control"required   /></td>
      </tr>
    </table>
 
@@ -1412,27 +1412,27 @@ td {
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Balance') ?>: </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php echo display ('Balance ') ?> : </label>
 
 <div class="col-sm-5">
 
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"  style="width:190%;border:none;" readonly  name="balance_modal"      id="balance_modal" class="form-control" required  /></td>
+        <td><input  type="text"   readonly name="balance_modal"   style="width:332%;"  id="balance_modal" class="form-control" required  /></td>
      </tr>
    </table>
 </div>
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Amount') ?>: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Balance ') ?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"   name="payment" id="payment_from_modal" class="form-control"  style="width:190%;"   required   /></td>
+        <td><input  type="text"   name="payment" id="payment_from_modal"    style="width:332%;"  class="form-control"required   /></td>
      </tr>
    </table>
 
@@ -1442,7 +1442,7 @@ td {
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Additional Information ') ?>: </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Additional Information') ?>  : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1450,7 +1450,7 @@ td {
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Attachments ') ?>: </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Attachments ') ?> : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
@@ -1555,7 +1555,7 @@ td {
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -1722,7 +1722,7 @@ td {
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option selected value="USD">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>
@@ -1788,7 +1788,8 @@ td {
 
         <input type ="hidden" name="csrf_test_name" id="" value="<?php echo $this->security->get_csrf_hash();?>">
 
-    <div class="col-sm-6">
+   
+        <div class="col-sm-6">
                      <div class="form-group row">
                          <label for="product_name" class="col-sm-4 col-form-label"><?php echo display('product_name') ?> <i class="text-danger">*</i></label>
                          <div class="col-sm-8">
@@ -1803,13 +1804,12 @@ td {
                          <div class="form-group row">
                              <label for="barcode_or_qrcode" class="col-sm-4 col-form-label"><?php echo display('barcode_or_qrcode') ?> <i class="text-danger"></i></label>
                              <div class="col-sm-8">
-    <input type="text" tabindex="3" class="form-control"  style="width: 100%;" name="product_id" value="<?php if(!empty($voucher_no[0]['voucher']))
-                      ?>"
-                      placeholder="Barcode/QR-code" id="product_id"  />
+   <input type="text" tabindex="3" class="form-control"  style="width: 100%;" name="barcode" value=""  placeholder="Barcode/QR-code"   />
                              </div>
                          
                       </div>
                  </div>
+
 
 
                  
@@ -2288,8 +2288,9 @@ var tabin="crate_wrap_"+dynamic_id;
 
 newdiv = document.createElement("div");
 
- newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover" id="normalinvoice_'+ dynamic_id +'"> <thead> <tr> <th rowspan="2" class="text-center" style="width: 180px;" >Product Name<i class="text-danger">*</i></th> <th rowspan="2" style="width:60px;" class="text-center">Bundle No<i class="text-danger">*</i></th> <th rowspan="2"  class="text-center">Description</th> <th rowspan="2" style="width:60px;" class="text-center">Thick ness<i class="text-danger">*</i></th> <th rowspan="2" class="text-center">Supplier Block No<i class="text-danger">*</i></th>  <th rowspan="2" class="text-center" >Supplier Slab No<i class="text-danger">*</i> </th> <th colspan="2" style="width:150px;" class="text-center">Gross Measurement<i class="text-danger">*</i> </th> <th rowspan="2" class="text-center">Gross Sq. Ft</th>  <th rowspan="2" style="width:40px;" class="text-center">Slab No<i class="text-danger">*</i></th> <th colspan="2" style="width:150px;" class="text-center">Net Measure<i class="text-danger">*</i></th> <th rowspan="2" class="text-center">Net Sq. Ft</th> <th rowspan="2"  style="width:90px;" class="text-center">Cost per Sq.Ft</th> <th rowspan="2" style="width:90px;"  class="text-center">Cost per Slab</th> <th rowspan="2" style="width:90px;" class="text-center">Sales<br/>Price per Sq.Ft</th> <th rowspan="2" style="width:90px;" class="text-center">Sales Slab Price</th> <th rowspan="2" class="text-center">Weight</th> <th rowspan="2" class="text-center">Origin</th>  <th rowspan="2" style="width: 100px" class="text-center">Total</th> <th rowspan="2" class="text-center">Action</th> </tr>  <tr> <th class="text-center">Width</th> <th class="text-center">Height</th> <th class="text-center">Width</th> <th class="text-center">Height</th> </tr>  </thead> <tbody id="addPurchaseItem_'+ dynamic_id +'"> <tr> <input type="hidden" name="tableid[]" id="tableid_'+ dynamic_id +'"/> <td> <input list="magicHouses" name="prodt[]" id="prodt_'+ dynamic_id +'"  class="form-control product_name" placeholder="Search Product" >  <datalist id="magicHouses"> <?php  foreach($product as $tx){?>  <option value="<?php echo $tx["product_name"]."-".$tx["product_model"];?>">  <?php echo $tx["product_name"]."-".$tx["product_model"];  ?></option> <?php } ?> </datalist> <input type="hidden" class="common_product autocomplete_hidden_value  product_id_'+ dynamic_id +'" name="product_id[]" id="SchoolHiddenId_'+ dynamic_id +'" /> </td>  <td> <input type="text" id="bundle_no__'+ dynamic_id +'" name="bundle_no[]" required="" class="bundle_no form-control" /> </td> <td> <input type="text" id="description_'+ dynamic_id +'" name="description[]" class="form-control" /> </td>  <td > <input type="text" name="thickness[]" id="thickness_'+ dynamic_id +'" required="" class="form-control"/> </td> <td> <input type="text" id="supplier_b_no_'+ dynamic_id +'" name="supplier_block_no[]" required="" class="form-control" /> </td>  <td > <input type="text"  id="supplier_s_no_'+ dynamic_id +'" name="supplier_slab_no[]" required="" class="form-control"/> </td> <td> <input type="text" id="gross_width_'+ dynamic_id +'" name="gross_width[]" required="" class="gross_width  form-control" /> </td> <td> <input type="text" id="gross_height_'+ dynamic_id +'" name="gross_height[]"  required="" class="gross_height form-control" /> </td>  <td > <input type="text"   style="width:60px;" readonly id="gross_sq_ft_'+ dynamic_id +'" name="gross_sq_ft[]" class="gross_sq_ft form-control"/> </td>   <td style="text-align:center;" >  <input type="text"   style="width:20px;" value="1" class="slab_no" id="slab_no_'+ dynamic_id +'" name="slab_no[]"   readonly  required=""/>  </td> <td> <input type="text" id="net_width_'+ dynamic_id +'" name="net_width[]" required="" class="net_width form-control" /> </td> <td> <input type="text" id="net_height_'+ dynamic_id +'" name="net_height[]"    required="" class="net_height form-control" /> </td> <td > <input type="text"   style="width:60px;" readonly id="net_sq_ft_'+ dynamic_id +'" name="net_sq_ft[]" class="net_sq_ft form-control"/> </td> <td>   <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_'+ dynamic_id +'"  name="cost_sq_ft[]" readonly  style="width:70px;" value="0.00"  class="cost_sq_ft form-control" ></span>   <td >  <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_'+ dynamic_id +'" name="cost_sq_slab[]" readonly   style="width:70px;" value="0.00"  class="form-control"/></span>     </td> <td>  <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_'+ dynamic_id +'"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>     </td>  <td >  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_'+ dynamic_id +'" name="sales_slab_amt[]"  style="width:70px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>     </td> <td> <input type="text" id="weight_'+ dynamic_id +'" name="weight[]"  class="weight form-control" /> </td>  <td > <input type="text"  id="origin_'+ dynamic_id +'" name="origin[]" class="form-control"/> </td>  <td > <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_'+ dynamic_id +'"     name="total_amt[]"/></span> </td>  <td style="text-align:center;"> <button  class="delete btn btn-danger" type="button" id="delete_'+ dynamic_id +'" value="Delete" ><i class="fa fa-trash"></i></button> </td>  </tr> </tbody> <tfoot> <tr> <td style="text-align:right;" colspan="8"><b>Gross Sq.Ft :</b></td> <td > <input type="text" id="overall_gross_'+ dynamic_id +'" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> </td> <td style="text-align:right;" colspan="3"><b>Net Sq.Ft :</b></td> <td > <input type="text" id="overall_net_'+ dynamic_id +'" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> </td>     <td style="text-align:right;" colspan="4"><b>Weight :</b></td> <td ><input type="text" id="overall_weight_'+ dynamic_id +'" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  />  </td>  <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td> <td > <span class="input-symbol-euro">    <input type="text" id="Total_'+ dynamic_id +'" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span> </td><td  style="text-align: center;"> <i id="buddle_'+ dynamic_id +'" class="btn-danger removebundle fa fa-minus"  aria-hidden="true" onclick="removebundle(); "></i>  </td> </tr><tr style="border-right:none;border-left:none;border-bottom:none;border-top:none"> <td colspan="20" style="text-align: end;">    </td>  </tr></foot></table> <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;font-size:24px; " aria-hidden="true" onclick="addbundle(); "></i>    ';  
+//  newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover" id="normalinvoice_'+ dynamic_id +'"> <thead> <tr> <th rowspan="2" class="text-center" style="width: 180px;" ><?php echo display('Product_name') ?><i class="text-danger">*</i></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Bundle No') ?><i class="text-danger">*</i></th> <th rowspan="2"  class="text-center"><?php echo display('Description') ?></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Thick ness') ?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Supplier Block No') ?><i class="text-danger">*</i></th>  <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No') ?><i class="text-danger">*</i> </th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Gross Measurement') ?><i class="text-danger">*</i> </th> <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft') ?></th>  <th rowspan="2" style="width:40px;" class="text-center">Slab No<i class="text-danger">*</i></th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Net Measure') ?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft') ?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Sq.Ft') ?></th> <th rowspan="2" style="width:90px;"  class="text-center"><?php echo display('Cost per Slab') ?></th> <th rowspan="2" style="width:90px;" class="text-center"><?php echo display('Sales') ?><br/><?php echo display('Price per Sq.Ft') ?></th> <th rowspan="2" style="width:90px;" class="text-center"><?php echo display('Sales Slab Price') ?></th> <th rowspan="2" class="text-center"><?php echo display('Weight') ?></th> <th rowspan="2" class="text-center"><?php echo display('Origin') ?></th>  <th rowspan="2" style="width: 100px" class="text-center"><?php echo display('Total') ?></th> <th rowspan="2" class="text-center"><?php echo display('Action') ?></th> </tr>  <tr> <th class="text-center"><?php echo display('Width') ?></th> <th class="text-center">Height</th> <th class="text-center"><?php echo display('Width') ?></th> <th class="text-center"><?php echo display('Height') ?></th> </tr>  </thead> <tbody id="addPurchaseItem_'+ dynamic_id +'"> <tr> <input type="hidden" name="tableid[]" id="tableid_'+ dynamic_id +'"/> <td> <input list="magicHouses" name="prodt[]" id="prodt_'+ dynamic_id +'"  class="form-control product_name" placeholder="Search Product" >  <datalist id="magicHouses"> <?php  foreach($product as $tx){?>  <option value="<?php echo $tx["product_name"]."-".$tx["product_model"];?>">  <?php echo $tx["product_name"]."-".$tx["product_model"];  ?></option> <?php } ?> </datalist> <input type="hidden" class="common_product autocomplete_hidden_value  product_id_'+ dynamic_id +'" name="product_id[]" id="SchoolHiddenId_'+ dynamic_id +'" /> </td>  <td> <input type="text" id="bundle_no__'+ dynamic_id +'" name="bundle_no[]" required="" class="bundle_no form-control" /> </td> <td> <input type="text" id="description_'+ dynamic_id +'" name="description[]" class="form-control" /> </td>  <td > <input type="text" name="thickness[]" id="thickness_'+ dynamic_id +'" required="" class="form-control"/> </td> <td> <input type="text" id="supplier_b_no_'+ dynamic_id +'" name="supplier_block_no[]" required="" class="form-control" /> </td>  <td > <input type="text"  id="supplier_s_no_'+ dynamic_id +'" name="supplier_slab_no[]" required="" class="form-control"/> </td> <td> <input type="text" id="gross_width_'+ dynamic_id +'" name="gross_width[]" required="" class="gross_width  form-control" /> </td> <td> <input type="text" id="gross_height_'+ dynamic_id +'" name="gross_height[]"  required="" class="gross_height form-control" /> </td>  <td > <input type="text"   style="width:60px;" readonly id="gross_sq_ft_'+ dynamic_id +'" name="gross_sq_ft[]" class="gross_sq_ft form-control"/> </td>   <td style="text-align:center;" >  <input type="text"   style="width:20px;" value="1" class="slab_no" id="slab_no_'+ dynamic_id +'" name="slab_no[]"   readonly  required=""/>  </td> <td> <input type="text" id="net_width_'+ dynamic_id +'" name="net_width[]" required="" class="net_width form-control" /> </td> <td> <input type="text" id="net_height_'+ dynamic_id +'" name="net_height[]"    required="" class="net_height form-control" /> </td> <td > <input type="text"   style="width:60px;" readonly id="net_sq_ft_'+ dynamic_id +'" name="net_sq_ft[]" class="net_sq_ft form-control"/> </td> <td>   <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_'+ dynamic_id +'"  name="cost_sq_ft[]" readonly  style="width:70px;" value="0.00"  class="cost_sq_ft form-control" ></span>   <td >  <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_'+ dynamic_id +'" name="cost_sq_slab[]" readonly   style="width:70px;" value="0.00"  class="form-control"/></span>     </td> <td>  <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_'+ dynamic_id +'"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>     </td>  <td >  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_'+ dynamic_id +'" name="sales_slab_amt[]"  style="width:70px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>     </td> <td> <input type="text" id="weight_'+ dynamic_id +'" name="weight[]"  class="weight form-control" /> </td>  <td > <input type="text"  id="origin_'+ dynamic_id +'" name="origin[]" class="form-control"/> </td>  <td > <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_'+ dynamic_id +'"     name="total_amt[]"/></span> </td>  <td style="text-align:center;"> <button  class="delete btn btn-danger" type="button" id="delete_'+ dynamic_id +'" value="Delete" ><i class="fa fa-trash"></i></button> </td>  </tr> </tbody> <tfoot> <tr> <td style="text-align:right;" colspan="8"><b>Gross Sq.Ft :</b></td> <td > <input type="text" id="overall_gross_'+ dynamic_id +'" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> </td> <td style="text-align:right;" colspan="3"><b>Net Sq.Ft :</b></td> <td > <input type="text" id="overall_net_'+ dynamic_id +'" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> </td>     <td style="text-align:right;" colspan="4"><b>Weight :</b></td> <td ><input type="text" id="overall_weight_'+ dynamic_id +'" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  />  </td>  <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td> <td > <span class="input-symbol-euro">    <input type="text" id="Total_'+ dynamic_id +'" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span> </td><td  style="text-align: center;"> <i id="buddle_'+ dynamic_id +'" class="btn-danger removebundle fa fa-minus"  aria-hidden="true" onclick="removebundle(); "></i>  </td> </tr><tr style="border-right:none;border-left:none;border-bottom:none;border-top:none"> <td colspan="20" style="text-align: end;">    </td>  </tr></foot></table> <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;font-size:24px; " aria-hidden="true" onclick="addbundle(); "></i>    ';  
 
+ newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover" id="normalinvoice_'+ dynamic_id +'"> <thead> <tr> <th rowspan="2" class="text-center" style="width: 180px;" ><?php echo display('Product_name') ?><i class="text-danger">*</i></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Bundle No') ?><i class="text-danger">*</i></th> <th rowspan="2"  class="text-center"><?php echo display('Description') ?></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Thick ness')?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Supplier Block No') ?><i class="text-danger">*</i></th>  <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No') ?><i class="text-danger">*</i> </th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Gross Measurement') ?><i class="text-danger">*</i> </th> <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft') ?></th>  <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No') ?><i class="text-danger">*</i></th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Net Measure') ?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft') ?></th> <th rowspan="2"  class="text-center"><?php echo display('Cost per Sq.Ft') ?></th> <th rowspan="2"  class="text-center"><?php echo display('Cost per Slab') ?></th> <th rowspan="2"  class="text-center"><?php echo display('Sales') ?><br/><?php echo display('Price per Sq.Ft') ?></th> <th rowspan="2"  class="text-center"><?php echo display('Sales Slab Price') ?></th> <th rowspan="2" class="text-center"><?php echo display('Weight') ?></th> <th rowspan="2" class="text-center"><?php echo display('Origin') ?></th>  <th rowspan="2" style="width: 100px" class="text-center"><?php echo display('Total') ?></th> <th rowspan="2" class="text-center"><?php echo display('Action') ?></th> </tr>  <tr> <th class="text-center"><?php echo display('Width') ?></th> <th class="text-center"><?php echo display('Height') ?></th> <th class="text-center"><?php echo display('Width') ?></th> <th class="text-center"><?php echo display('Height') ?></th> </tr>  </thead> <tbody id="addPurchaseItem_'+ dynamic_id +'"> <tr> <input type="hidden" name="tableid[]" id="tableid_'+ dynamic_id +'"/> <td> <select name="prodt[]" id="prodt_'+ dynamic_id +'" style="width: 160px;" class="form-control product_name" > <option value="Select the Product" selected>Select the Product</option> <?php  foreach($product as $tx){?>  <option value="<?php echo $tx["product_name"]."-".$tx["product_model"];?>">  <?php echo $tx["product_name"]."-".$tx["product_model"];  ?></option> <?php } ?> </select> <input type="hidden" class="common_product autocomplete_hidden_value  product_id_'+ dynamic_id +'" name="product_id[]" id="SchoolHiddenId_'+ dynamic_id +'" /> </td> <td> <input type="text" id="bundle_no__'+ dynamic_id +'" name="bundle_no[]" required="" class="bundle_no form-control" /> </td> <td> <input type="text" id="description_'+ dynamic_id +'" name="description[]" class="form-control" /> </td>  <td > <input type="text" name="thickness[]" id="thickness_'+ dynamic_id +'" required="" class="form-control"/> </td> <td> <input type="text" id="supplier_b_no_'+ dynamic_id +'" name="supplier_block_no[]" required="" class="form-control" /> </td>  <td > <input type="text"  id="supplier_s_no_'+ dynamic_id +'" name="supplier_slab_no[]" required="" class="form-control"/> </td> <td> <input type="text" id="gross_width_'+ dynamic_id +'" name="gross_width[]" required="" class="gross_width  form-control" /> </td> <td> <input type="text" id="gross_height_'+ dynamic_id +'" name="gross_height[]"  required="" class="gross_height form-control" /> </td>  <td > <input type="text"   style="width:60px;" readonly id="gross_sq_ft_'+ dynamic_id +'" name="gross_sq_ft[]" class="gross_sq_ft form-control"/> </td>   <td style="text-align:center;" >  <input type="text"   style="width:20px;" value="1" class="slab_no" id="slab_no_'+ dynamic_id +'" name="slab_no[]"   readonly  required=""/>  </td> <td> <input type="text" id="net_width_'+ dynamic_id +'" name="net_width[]" required="" class="net_width form-control" /> </td> <td> <input type="text" id="net_height_'+ dynamic_id +'" name="net_height[]"    required="" class="net_height form-control" /> </td> <td > <input type="text"   style="width:60px;" readonly id="net_sq_ft_'+ dynamic_id +'" name="net_sq_ft[]" class="net_sq_ft form-control"/> </td> <td>   <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_'+ dynamic_id +'"  name="cost_sq_ft[]" readonly  style="width:70px;" value="0.00"  class="cost_sq_ft form-control" ></span>   <td >  <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_'+ dynamic_id +'" name="cost_sq_slab[]" readonly   style="width:70px;" value="0.00"  class="form-control"/></span>     </td> <td>  <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_'+ dynamic_id +'"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>     </td>  <td >  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_'+ dynamic_id +'" name="sales_slab_amt[]"  style="width:70px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>     </td> <td> <input type="text" id="weight_'+ dynamic_id +'" name="weight[]"  class="weight form-control" /> </td>  <td > <input type="text"  id="origin_'+ dynamic_id +'" name="origin[]" class="form-control"/> </td>  <td > <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_'+ dynamic_id +'"     name="total_amt[]"/></span> </td>  <td style="text-align:center;"> <button  class="delete btn btn-danger" type="button" id="delete_'+ dynamic_id +'" value="Delete" ><i class="fa fa-trash"></i></button> </td>  </tr> </tbody> <tfoot> <tr> <td style="text-align:right;" colspan="8"><b>Gross Sq.Ft :</b></td> <td > <input type="text" id="overall_gross_'+ dynamic_id +'" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> </td> <td style="text-align:right;" colspan="3"><b><?php echo display('Net Sq.Ft')?> :</b></td> <td > <input type="text" id="overall_net_'+ dynamic_id +'" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> </td>     <td style="text-align:right;" colspan="4"><b><?php echo display('Weight') ?> :</b></td> <td ><input type="text" id="overall_weight_'+ dynamic_id +'" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  />  </td>  <td style="text-align:right;" colspan="1"><b><?php echo display('TOTAl') ?> :</b></td> <td > <span class="input-symbol-euro">    <input type="text" id="Total_'+ dynamic_id +'" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span> </td><td  style="text-align: center;"> <i id="buddle_'+ dynamic_id +'" class="btn-danger removebundle fa fa-minus" style="font-size:24px;     width: 39px;"  aria-hidden="true" onclick="removebundle(); "></i>  </td> </tr><tr style="border-right:none;border-left:none;border-bottom:none;border-top:none"> <td colspan="20" style="text-align: end; font-size:48px;">    </td>  </tr></foot></table> <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469F;font-size:24px;   " aria-hidden="true" onclick="addbundle(); "></i>  ';  
 
 
 
@@ -2530,6 +2531,8 @@ function discard(){
     $('#myModal3').modal('hide');
     $("#bodyModal1").html(input_hdn);
         $('#myModal1').modal('show');
+
+
     window.setTimeout(function(){
        
 
@@ -2541,10 +2544,15 @@ function discard(){
 
 
 
+
+
+
 $('#insert_product').submit(function (event) {
      event.preventDefault();
-     if($('#product_name').val()!='' &&  $('#product_model').val()!='' &&  $('#sell_price').val()!='' && $('#quantity').val()!='' && $('#supplier_id').val()!='' && $('#product_sub_category').val()!='')
+if($('#product_name').val()!='' && $('#product_model').val()!='' && $('#sell_price').val()!='' && $('#quantity').val()!='' && $('#supplier_id').val()!='' && $('#product_sub_category').val()!='')
 {
+   
+
     var dataString = {
         dataString : $("#insert_product").serialize()
    };
@@ -2568,15 +2576,22 @@ $('#insert_product').submit(function (event) {
        
       $('#myModal1').modal('show');
 
+       $('#insert_product')[0].reset();
+
+
       window.setTimeout(function(){
         $('#product_info').modal('hide');
         $('.modal-backdrop').remove();
        $('#myModal1').modal('hide');
-    }, 2000);
+    }, 2500);
 }
 });
 }
 });
+
+
+
+
 
 
 
@@ -2842,6 +2857,8 @@ $('#instant_customer').submit(function (event) {
       $('#myModal1').modal('show');
       $('#cust_info').modal('hide');
      
+        $('#instant_customer')[0].reset();  
+
     
       window.setTimeout(function(){
        $('#myModal1').modal('hide');

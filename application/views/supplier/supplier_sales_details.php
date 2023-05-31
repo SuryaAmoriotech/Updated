@@ -1,3 +1,11 @@
+
+
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+
+
+
 <!-- Supplier Sales Report Start -->
 <div class="content-wrapper">
 	<section class="content-header">
@@ -5,12 +13,12 @@
 	        <i class="pe-7s-note2"></i>
 	    </div>
 	    <div class="header-title">
-	        <h1><?php echo display('supplier_sales_details') ?></h1>
-	        <small><?php echo display('supplier_sales_details') ?></small>
+	        <h1><?php echo display('vendor_sales_details') ?></h1>
+	        <small><?php echo display('vendor_sales_details') ?></small>
 	        <ol class="breadcrumb">
 	            <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-	            <li><a href="#"><?php echo display('supplier') ?></a></li>
-	            <li class="active"><?php echo display('supplier_sales_details') ?></li>
+	            <li><a href="#"><?php echo display('vendor') ?></a></li>
+	            <li class="active"><?php echo display('vendor_sales_details') ?></li>
 	        </ol>
 	    </div>
 	</section>
@@ -21,11 +29,11 @@
 		<div class="row">
             <div class="col-sm-12">
                 
-                  <a href="<?php echo base_url('Csupplier')?>" class="btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('add_supplier')?> </a>
+                  <a href="<?php echo base_url('Csupplier')?>" class="btn btnclr dropdown-toggle"><i class="ti-plus"> </i> <?php echo display('add_vendor')?> </a>
 
-                  <a href="<?php echo base_url('Csupplier/manage_supplier')?>" class="btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('manage_supplier')?> </a>
+                  <a href="<?php echo base_url('Csupplier/manage_supplier')?>"  class="btn btnclr dropdown-toggle" ><i class="ti-align-justify"> </i>  <?php echo display('manage_vendor')?> </a>
 
-                  <a href="<?php echo base_url('Csupplier/supplier_ledger_report')?>" class="btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('supplier_ledger')?> </a>
+                  <a href="<?php echo base_url('Csupplier/supplier_ledger_report')?>" class="btn btnclr dropdown-toggle"><i class="ti-align-justify"> </i>  <?php echo display('vendor_ledger')?> </a>
 
                
             </div>
@@ -52,7 +60,7 @@
                             <input type="date" name="to_date" class="form-control datepicker" id="to_date" placeholder="<?php echo display('end_date') ?>" value="<?php echo  (!empty($todate)?$todate:date('Y-m-d'))?>">
                         </div>  
 
-                        <button type="submit" id="btn-filter" class="btn btn-success"><?php echo display('find') ?></button>
+                        <button type="submit" id="btn-filter" class="btn btnclr dropdown-toggle"><?php echo display('find') ?></button>
 
                         <?php echo form_close() ?>
                     </div>
@@ -73,7 +81,7 @@
 		            </div>
 		            <div class="panel-body">
 		            	<div class="text-right">
-		                    <a  class="btn btn-warning" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></a>
+		                    <a  class="btn btnclr dropdown-toggle" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></a>
 		                </div>
 		            	<div id="printableArea">
 

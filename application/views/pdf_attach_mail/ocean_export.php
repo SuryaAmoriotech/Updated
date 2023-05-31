@@ -304,7 +304,7 @@ $content .= '<table>
     <tr>                                               
     <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
 
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
+     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
 </tr>
 
 
@@ -386,7 +386,6 @@ $content .= '<table>
 <th style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of arrival").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['eta'].'</span></th>
 
 </tr>
-
 
 <tr>
  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
