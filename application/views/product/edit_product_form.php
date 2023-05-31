@@ -1,9 +1,11 @@
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 <script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery.base64.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>assets/js/html2canvas.js"></script>
  <script type="text/javascript" src="<?php echo base_url()?>assets/js/jspdf.plugin.autotable"></script>
   <script type="text/javascript" src="<?php echo base_url()?>assets/js/jspdf.umd.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="<?php echo base_url() ?>my-assets/js/countrypicker.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
@@ -14,7 +16,19 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
 <script type="text/javascript" src="http://www.bacubacu.com/colresizable/js/colResizable-1.5.min.js"></script> 
 
-<script src="<?php echo base_url() ?>my-assets/js/countrypicker.js" type="text/javascript"></script>
+
+
+
+
+
+<!-- Product Purchase js -->
+<script src="<?php echo base_url()?>my-assets/js/admin_js/json/product_purchase.js.php" ></script>
+<!-- Supplier Js -->
+<script src="<?php echo base_url(); ?>my-assets/js/admin_js/json/supplier.js.php" ></script>
+
+<script src="<?php echo base_url()?>my-assets/js/admin_js/purchase.js" type="text/javascript"></script>
+
+<script src="<?php echo base_url()?>my-assets/js/admin_js/packing.js" type="text/javascript"></script>
 
 
 
@@ -265,10 +279,11 @@
                   
                         <div class="col-sm-6">
                             <div class="form-group row">
+                               
 <label for="product_sub_category" class="col-sm-4 col-form-label"><?php echo display('Product Sub Category')?><i class="text-danger">*</i></label>
 <div class="col-sm-8">
     <select   name="product_sub_category" id="product_sub_category" class=" form-control" placeholder="product_sub_category"  required style="width:100%;">
-     <option value="<?php (!empty($product_sub_category)?$product_sub_category:'') ; ?>"><?php (!empty($product_sub_category)?$product_sub_category:'');  ?></option>
+     <option value="<?php  echo $product_sub_category ; ?>"><?php  echo $product_sub_category;  ?></option>
  <option value="Granite"><?php echo  display('Granite');?></option>
 <option value="Marble"><?php echo  display('Marble');?></option>
 <option value="Quartz"><?php echo  display('Quartz');?></option>
@@ -357,14 +372,14 @@
 
 							 <div class="col-sm-6">
                              <div class="form-group row">
+                             
                                     <label for="country" class="col-sm-4 col-form-label"  required="" ><?php echo  display('country')?><i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
    
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="<?php echo $country;  ?>"
-  name="country" id="country" ></select>   
+                     
 
-
-
+         <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="{country}"
+  name="country" id="country" ></select> 
 
 
                                 </div>
@@ -436,23 +451,23 @@
     <thead>
              <tr>
             
-                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo  display('description'); ?></th>
-                    <th rowspan="2" class="text-center"><?php echo display('Thick ness');?><i class="text-danger">*</i></th>
+                    <th rowspan="2"  class="text-center"><?php echo  display('description'); ?></th>
+                    <th rowspan="2" class="text-center" style="width:50px;"><?php echo display('Thick ness');?><i class="text-danger">*</i></th>
                     <th rowspan="2" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>
 
                     <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th>
-                    <th colspan="2" style="width: max-content;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th>
+                    <th colspan="2"  class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th>
                     <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>
-                    <th rowspan="2" style="width: min-content;" class="text-center"><?php echo display('Bundle No');?><i class="text-danger">*</i></th>
-                    <th rowspan="2" style="width: min-content;" class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th>
-                    <th colspan="2" style="width: max-content;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th>
+                    <th rowspan="2"  class="text-center"><?php echo display('Bundle No');?><i class="text-danger">*</i></th>
+                    <th rowspan="2"  class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th>
+                    <th colspan="2"  class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th>
                     <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th>
-                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th>
-                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('Cost per Slab');?></th>
-                    <th rowspan="2" style="width: max-content;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th>
-                    <th rowspan="2"  class="text-center"><?php echo display('Sales Slab Price');?></th>
-                   <th rowspan="2" class="text-center"><?php echo display('Weight');?></th>
-                    <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>
+                    <th rowspan="2"  class="text-center" style="width:80px;"><?php echo display('Cost per Sq.Ft');?></th>
+                    <th rowspan="2"  class="text-center" style="width:80px;"><?php echo display('Cost per Slab');?></th>
+                    <th rowspan="2"  class="text-center" style="width:80px;"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th>
+                    <th rowspan="2"  class="text-center" style="width:80px;"><?php echo display('Sales Slab Price');?></th>
+                   <th rowspan="2" class="text-center" style="width:30px;"><?php echo display('Weight');?></th>
+                    <th rowspan="2" class="text-center" style="width:50px;"><?php echo display('Origin');?></th>
                    
                     <th rowspan="2" style="width: 100px" class="text-center"><?php  echo  display('total'); ?></th>
                     <th rowspan="2" class="text-center"><?php  echo  display('action'); ?></th>
@@ -484,7 +499,7 @@
              <input type="text" id="description_table_<?php echo $k;  ?>" value=" <?php echo $dps['description_table']; ?>" name="description_table[]" class="form-control" />
                 </td>
               <td >
-                  <input type="text" name="thickness[]" id="thickness_<?php echo $k;  ?>" value=" <?php echo $dps['thickness']; ?>" required="" class="form-control"/>
+                  <input type="text" style="width:50px;" name="thickness[]" id="thickness_<?php echo $k;  ?>" value=" <?php echo $dps['thickness']; ?>" required="" class="form-control"/>
               </td>
               <td>
                   <input type="text" id="supplier_b_no_<?php echo $k;  ?>" name="supplier_block_no[]" value="<?php echo $dps['supplier_block_no']; ?>" required="" class="form-control" />
@@ -501,7 +516,7 @@
               </td>
           
               <td >
-                  <input type="text"   style="width:60px;"id="gross_sq_ft_<?php echo $k;  ?>" value=" <?php echo $dps['gross_sqft'] ?>" name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
+                  <input type="text"   style="width:60px;"id="gross_sq_ft_<?php echo $k;  ?>" value=" <?php echo trim($dps['gross_sqft'])?>" name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
               </td>
               <td>
                   <input type="text" id="bundle_no_<?php echo $k;  ?>" name="bundle_no[]" value="<?php echo $dps['bundle_no'] ?>" required="" class="bundle_no form-control" />
@@ -528,12 +543,12 @@
               <td>
 
 
-<span class="input-symbol-euro"><input type="text" id="cost_sq_ft_<?php echo $k;  ?>"  name="cost_sq_ft[]"  style="width:40px;" value=" <?php echo $dps['cost_sqft'] ?>"  class="cost_sq_ft form-control" ></span>
+<span class="input-symbol-euro"><input type="text" id="cost_sq_ft_<?php echo $k;  ?>"  name="cost_sq_ft[]"  style="width:70px;" value=" <?php echo $dps['cost_sqft'] ?>"  class="cost_sq_ft form-control" ></span>
 
           
               <td >
 
-<span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_<?php echo $k;  ?>" name="cost_sq_slab[]"   style="width:40px;" value="<?php echo $dps['cost_slab'] ?>"  class="form-control"/></span>
+<span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_<?php echo $k;  ?>" name="cost_sq_slab[]"   style="width:70px;" value="<?php echo $dps['cost_slab'] ?>"  class="form-control"/></span>
 
 
 
@@ -541,7 +556,7 @@
               </td>
               <td>
           
-<span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $k;  ?>"  name="sales_amt_sq_ft[]"  style="width:40px;"  value="<?php echo $dps['sales_price_sqft'] ?>" class="sales_amt_sq_ft form-control" /></span>
+<span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $k;  ?>"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="<?php echo $dps['sales_price_sqft'] ?>" class="sales_amt_sq_ft form-control" /></span>
 
 
 
@@ -550,7 +565,7 @@
           
               <td >
       
-<span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $k;  ?>" name="sales_slab_amt[]"  style="width:45px;" value="<?php echo $dps['sales_slab_price'] ?>"  class="sales_slab_amt form-control"/></td> </span>
+<span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $k;  ?>" name="sales_slab_amt[]"  style="width:70px;" value="<?php echo $dps['sales_slab_price'] ?>"  class="sales_slab_amt form-control"/></td> </span>
 
 
 
@@ -561,11 +576,11 @@
               </td>
           
               <td >
-                  <input type="text"  id="origin_<?php echo $k;  ?>" name="origin[]" value="<?php echo $dps['origin'] ?>" class="form-control"/>
+                  <input type="text"  id="origin_<?php echo $k;  ?>" name="origin[]" style="width:50px;" value="<?php echo $dps['origin'] ?>" class="form-control"/>
               </td>
 
               <td >
-              <span class="input-symbol-euro">        <input  type="text" class="total_amt form-control" style="width:80px;"    id="total_amt_1"   value="<?php echo $dps['total_amt'] ?>"   name="total_amt[]"/></span>
+              <span class="input-symbol-euro">        <input  type="text" class="total_amt form-control" style="width:80px;"    id="total_<?php echo $k;  ?>"   value="<?php echo $dps['total_amt'] ?>"   name="total_amt[]"/></span>
               </td>
              
             
@@ -604,7 +619,7 @@
               </td>
           
               <td >
-                  <input type="text"   style="width:60px;"id="gross_sq_ft_<?php echo $k;  ?>" value="" name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
+                  <input type="text"   style="width:60px;"id="gross_sq_ft_<?php echo $k;  ?>" readonly value="" name="gross_sq_ft[]" class="gross_sq_ft form-control"/>
               </td>
               <td>
                   <input type="text" id="bundle_no_<?php echo $k;  ?>" name="bundle_no[]" value="" required="" class="bundle_no form-control" />
@@ -626,7 +641,7 @@
                   <input type="text" id="net_height_<?php echo $k;  ?>" name="net_height[]" value=""   required="" class="net_height form-control" />
               </td>
               <td >
-                  <input type="text"   style="width:60px;"  id="net_sq_ft_<?php echo $k;  ?>" name="net_sq_ft[]" value="" class="net_sq_ft form-control"/>
+                  <input type="text"   style="width:60px;"  id="net_sq_ft_<?php echo $k;  ?>" readonly name="net_sq_ft[]" value="" class="net_sq_ft form-control"/>
               </td>
               <td>
 
@@ -644,7 +659,7 @@
               </td>
               <td>
           
-<span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $k;  ?>"  name="sales_amt_sq_ft[]"  style="width:40px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>
+<span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_<?php echo $k;  ?>"  readonly name="sales_amt_sq_ft[]"  style="width:40px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>
 
 
 
@@ -653,7 +668,7 @@
           
               <td >
       
-<span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $k;  ?>" name="sales_slab_amt[]"  style="width:45px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>
+<span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_<?php echo $k;  ?>" readonly name="sales_slab_amt[]"  style="width:45px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>
 
 
 
@@ -668,7 +683,7 @@
               </td>
 
               <td >
-              <span class="input-symbol-euro">        <input  type="text" class="total_amt form-control" style="width:80px;"    id="total_amt_1"   value="0.00"   name="total_amt[]"/></span>
+              <span class="input-symbol-euro">        <input  type="text" class="total_amt b_total form-control" style="width:80px;"    id="total_<?php echo $k;  ?>"   value="0.00"   name="total_amt[]"/></span>
               </td>
              
             
@@ -1080,6 +1095,7 @@ var prepaid_expense = ['1410 PREPAID – Insurance', '1420 PREPAID – Real Esta
         ddl.options.add(opt);
     }
 $(document).on('keyup', '.cost_sq_ft', function(){
+
 var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
@@ -1102,12 +1118,13 @@ var sales_slab_price=cost_sqft *nresult*x;
 
 console.log(parseInt(cost_sqft) +"*"+parseInt(nresult)+"*"+idt);
 sales_slab_price = isNaN(sales_slab_price) ? 0 : sales_slab_price;
+$('#'+'total_'+id).val(sales_slab_price.toFixed(3));
 $('#'+'sales_slab_amt_'+id).val(sales_slab_price.toFixed(3));
-$(this).closest('tr').find('.total_price').val(sales_slab_price.toFixed(3));
+//$(this).closest('tr').find('.total_price').val(sales_slab_price.toFixed(3));
 sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
 $('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
 var overall_sum=0;
-     $('.table').find('.total_price').each(function() {
+     $('.table').find('.total_amt').each(function() {
 var v=$(this).val();
   overall_sum += parseFloat(v);
  // overall_sum +=parseFloat(v);
@@ -1134,7 +1151,7 @@ var sales_sqft=cost_sqft *nresult;
 var sales_slab_price=cost_sqft *nresult*id;
 console.log(parseInt(cost_sqft) +"*"+parseInt(nresult)+"*"+id);
 $('#'+'sales_slab_amt_'+id).val(sales_slab_price.toFixed(3));
-$('#'+'total_amt_'+id).val(sales_slab_price.toFixed(3));
+$('#'+'total_'+id).val(sales_slab_price.toFixed(3));
 sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
 $('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
 var total_net=0;
@@ -1153,7 +1170,7 @@ var total_net=0;
 $('#overall_net_1').val(total_net.toFixed(3)).trigger('change');
 var total=0;
  $('.table').each(function() {
-    $(this).find('.total_amt').each(function() {
+    $(this).find('.total_price').each(function() {
         var precio = $(this).val();
         if (!isNaN(precio) && precio.length !== 0) {
           total += parseFloat(precio);
@@ -1165,6 +1182,19 @@ var total=0;
 
   });
 $('#Total').val(total.toFixed(3)).trigger('change');
+});
+$(document).on('keyup', '.net_height,.net_width', function(){
+var netheight = $(this).attr('id');
+const indexLastDot = netheight.lastIndexOf('_');
+var id = netheight.slice(indexLastDot + 1);
+var net_width='net_width_'+id;
+var net_height = 'net_height_'+ id;
+var netwidth=$('#'+net_width).val();
+var netheight=$('#'+net_height).val();
+var netresult=parseInt(netwidth) * parseInt(netheight);
+netresult=netresult/144;
+netresult = isNaN(netresult) ? 0 : netresult;
+$('#'+'net_sq_ft_'+id).val(netresult.toFixed(3));
 });
 $(document).on('keyup', '.gross_height,.gross_width', function(){
 
@@ -1429,6 +1459,1059 @@ var v=$(this).val();
 });
  $('#Total').val(overall_sum.toFixed(3)).trigger('change');
   });
+   $(function () {
+    var countries = [
+        {
+            "name": "Afghanistan",
+            "code": "AF"
+    },
+        {
+            "name": "Åland Islands",
+            "code": "AX"
+    },
+        {
+            "name": "Albania",
+            "code": "AL"
+    },
+        {
+            "name": "Algeria",
+            "code": "DZ"
+    },
+        {
+            "name": "American Samoa",
+            "code": "AS"
+    },
+        {
+            "name": "Andorra",
+            "code": "AD"
+    },
+        {
+            "name": "Angola",
+            "code": "AO"
+    },
+        {
+            "name": "Anguilla",
+            "code": "AI"
+    },
+        {
+            "name": "Antarctica",
+            "code": "AQ"
+    },
+        {
+            "name": "Antigua and Barbuda",
+            "code": "AG"
+    },
+        {
+            "name": "Argentina",
+            "code": "AR"
+    },
+        {
+            "name": "Armenia",
+            "code": "AM"
+    },
+        {
+            "name": "Aruba",
+            "code": "AW"
+    },
+        {
+            "name": "Australia",
+            "code": "AU"
+    },
+        {
+            "name": "Austria",
+            "code": "AT"
+    },
+        {
+            "name": "Azerbaijan",
+            "code": "AZ"
+    },
+        {
+            "name": "Bahamas",
+            "code": "BS"
+    },
+        {
+            "name": "Bahrain",
+            "code": "BH"
+    },
+        {
+            "name": "Bangladesh",
+            "code": "BD"
+    },
+        {
+            "name": "Barbados",
+            "code": "BB"
+    },
+        {
+            "name": "Belarus",
+            "code": "BY"
+    },
+        {
+            "name": "Belgium",
+            "code": "BE"
+    },
+        {
+            "name": "Belize",
+            "code": "BZ"
+    },
+        {
+            "name": "Benin",
+            "code": "BJ"
+    },
+        {
+            "name": "Bermuda",
+            "code": "BM"
+    },
+        {
+            "name": "Bhutan",
+            "code": "BT"
+    },
+        {
+            "name": "Bolivia",
+            "code": "BO"
+    },
+        {
+            "name": "Bosnia and Herzegovina",
+            "code": "BA"
+    },
+        {
+            "name": "Botswana",
+            "code": "BW"
+    },
+        {
+            "name": "Bouvet Island",
+            "code": "BV"
+    },
+        {
+            "name": "Brazil",
+            "code": "BR"
+    },
+        {
+            "name": "British Indian Ocean Territory",
+            "code": "IO"
+    },
+        {
+            "name": "Brunei Darussalam",
+            "code": "BN"
+    },
+        {
+            "name": "Bulgaria",
+            "code": "BG"
+    },
+        {
+            "name": "Burkina Faso",
+            "code": "BF"
+    },
+        {
+            "name": "Burundi",
+            "code": "BI"
+    },
+        {
+            "name": "Cambodia",
+            "code": "KH"
+    },
+        {
+            "name": "Cameroon",
+            "code": "CM"
+    },
+        {
+            "name": "Canada",
+            "code": "CA"
+    },
+        {
+            "name": "Cape Verde",
+            "code": "CV"
+    },
+        {
+            "name": "Cayman Islands",
+            "code": "KY"
+    },
+        {
+            "name": "Central African Republic",
+            "code": "CF"
+    },
+        {
+            "name": "Chad",
+            "code": "TD"
+    },
+        {
+            "name": "Chile",
+            "code": "CL"
+    },
+        {
+            "name": "China",
+            "code": "CN"
+    },
+        {
+            "name": "Christmas Island",
+            "code": "CX"
+    },
+        {
+            "name": "Cocos (Keeling) Islands",
+            "code": "CC"
+    },
+        {
+            "name": "Colombia",
+            "code": "CO"
+    },
+        {
+            "name": "Comoros",
+            "code": "KM"
+    },
+        {
+            "name": "Congo",
+            "code": "CG"
+    },
+        {
+            "name": "Congo, The Democratic Republic of the",
+            "code": "CD"
+    },
+        {
+            "name": "Cook Islands",
+            "code": "CK"
+    },
+        {
+            "name": "Costa Rica",
+            "code": "CR"
+    },
+        {
+            "name": "Cote D\"Ivoire",
+            "code": "CI"
+    },
+        {
+            "name": "Croatia",
+            "code": "HR"
+    },
+        {
+            "name": "Cuba",
+            "code": "CU"
+    },
+        {
+            "name": "Cyprus",
+            "code": "CY"
+    },
+        {
+            "name": "Czech Republic",
+            "code": "CZ"
+    },
+        {
+            "name": "Denmark",
+            "code": "DK"
+    },
+        {
+            "name": "Djibouti",
+            "code": "DJ"
+    },
+        {
+            "name": "Dominica",
+            "code": "DM"
+    },
+        {
+            "name": "Dominican Republic",
+            "code": "DO"
+    },
+        {
+            "name": "Ecuador",
+            "code": "EC"
+    },
+        {
+            "name": "Egypt",
+            "code": "EG"
+    },
+        {
+            "name": "El Salvador",
+            "code": "SV"
+    },
+        {
+            "name": "Equatorial Guinea",
+            "code": "GQ"
+    },
+        {
+            "name": "Eritrea",
+            "code": "ER"
+    },
+        {
+            "name": "Estonia",
+            "code": "EE"
+    },
+        {
+            "name": "Ethiopia",
+            "code": "ET"
+    },
+        {
+            "name": "Falkland Islands (Malvinas)",
+            "code": "FK"
+    },
+        {
+            "name": "Faroe Islands",
+            "code": "FO"
+    },
+        {
+            "name": "Fiji",
+            "code": "FJ"
+    },
+        {
+            "name": "Finland",
+            "code": "FI"
+    },
+        {
+            "name": "France",
+            "code": "FR"
+    },
+        {
+            "name": "French Guiana",
+            "code": "GF"
+    },
+        {
+            "name": "French Polynesia",
+            "code": "PF"
+    },
+        {
+            "name": "French Southern Territories",
+            "code": "TF"
+    },
+        {
+            "name": "Gabon",
+            "code": "GA"
+    },
+        {
+            "name": "Gambia",
+            "code": "GM"
+    },
+        {
+            "name": "Georgia",
+            "code": "GE"
+    },
+        {
+            "name": "Germany",
+            "code": "DE"
+    },
+        {
+            "name": "Ghana",
+            "code": "GH"
+    },
+        {
+            "name": "Gibraltar",
+            "code": "GI"
+    },
+        {
+            "name": "Greece",
+            "code": "GR"
+    },
+        {
+            "name": "Greenland",
+            "code": "GL"
+    },
+        {
+            "name": "Grenada",
+            "code": "GD"
+    },
+        {
+            "name": "Guadeloupe",
+            "code": "GP"
+    },
+        {
+            "name": "Guam",
+            "code": "GU"
+    },
+        {
+            "name": "Guatemala",
+            "code": "GT"
+    },
+        {
+            "name": "Guernsey",
+            "code": "GG"
+    },
+        {
+            "name": "Guinea",
+            "code": "GN"
+    },
+        {
+            "name": "Guinea-Bissau",
+            "code": "GW"
+    },
+        {
+            "name": "Guyana",
+            "code": "GY"
+    },
+        {
+            "name": "Haiti",
+            "code": "HT"
+    },
+        {
+            "name": "Heard Island and Mcdonald Islands",
+            "code": "HM"
+    },
+        {
+            "name": "Holy See (Vatican City State)",
+            "code": "VA"
+    },
+        {
+            "name": "Honduras",
+            "code": "HN"
+    },
+        {
+            "name": "Hong Kong",
+            "code": "HK"
+    },
+        {
+            "name": "Hungary",
+            "code": "HU"
+    },
+        {
+            "name": "Iceland",
+            "code": "IS"
+    },
+        {
+            "name": "India",
+            "code": "IN"
+    },
+        {
+            "name": "Indonesia",
+            "code": "ID"
+    },
+        {
+            "name": "Iran, Islamic Republic Of",
+            "code": "IR"
+    },
+        {
+            "name": "Iraq",
+            "code": "IQ"
+    },
+        {
+            "name": "Ireland",
+            "code": "IE"
+    },
+        {
+            "name": "Isle of Man",
+            "code": "IM"
+    },
+        {
+            "name": "Israel",
+            "code": "IL"
+    },
+        {
+            "name": "Italy",
+            "code": "IT"
+    },
+        {
+            "name": "Jamaica",
+            "code": "JM"
+    },
+        {
+            "name": "Japan",
+            "code": "JP"
+    },
+        {
+            "name": "Jersey",
+            "code": "JE"
+    },
+        {
+            "name": "Jordan",
+            "code": "JO"
+    },
+        {
+            "name": "Kazakhstan",
+            "code": "KZ"
+    },
+        {
+            "name": "Kenya",
+            "code": "KE"
+    },
+        {
+            "name": "Kiribati",
+            "code": "KI"
+    },
+        {
+            "name": "Korea, Democratic People\"S Republic of",
+            "code": "KP"
+    },
+        {
+            "name": "Korea, Republic of",
+            "code": "KR"
+    },
+        {
+            "name": "Kuwait",
+            "code": "KW"
+    },
+        {
+            "name": "Kyrgyzstan",
+            "code": "KG"
+    },
+        {
+            "name": "Lao People\"S Democratic Republic",
+            "code": "LA"
+    },
+        {
+            "name": "Latvia",
+            "code": "LV"
+    },
+        {
+            "name": "Lebanon",
+            "code": "LB"
+    },
+        {
+            "name": "Lesotho",
+            "code": "LS"
+    },
+        {
+            "name": "Liberia",
+            "code": "LR"
+    },
+        {
+            "name": "Libyan Arab Jamahiriya",
+            "code": "LY"
+    },
+        {
+            "name": "Liechtenstein",
+            "code": "LI"
+    },
+        {
+            "name": "Lithuania",
+            "code": "LT"
+    },
+        {
+            "name": "Luxembourg",
+            "code": "LU"
+    },
+        {
+            "name": "Macao",
+            "code": "MO"
+    },
+        {
+            "name": "Macedonia, The Former Yugoslav Republic of",
+            "code": "MK"
+    },
+        {
+            "name": "Madagascar",
+            "code": "MG"
+    },
+        {
+            "name": "Malawi",
+            "code": "MW"
+    },
+        {
+            "name": "Malaysia",
+            "code": "MY"
+    },
+        {
+            "name": "Maldives",
+            "code": "MV"
+    },
+        {
+            "name": "Mali",
+            "code": "ML"
+    },
+        {
+            "name": "Malta",
+            "code": "MT"
+    },
+        {
+            "name": "Marshall Islands",
+            "code": "MH"
+    },
+        {
+            "name": "Martinique",
+            "code": "MQ"
+    },
+        {
+            "name": "Mauritania",
+            "code": "MR"
+    },
+        {
+            "name": "Mauritius",
+            "code": "MU"
+    },
+        {
+            "name": "Mayotte",
+            "code": "YT"
+    },
+        {
+            "name": "Mexico",
+            "code": "MX"
+    },
+        {
+            "name": "Micronesia, Federated States of",
+            "code": "FM"
+    },
+        {
+            "name": "Moldova, Republic of",
+            "code": "MD"
+    },
+        {
+            "name": "Monaco",
+            "code": "MC"
+    },
+        {
+            "name": "Mongolia",
+            "code": "MN"
+    },
+        {
+            "name": "Montserrat",
+            "code": "MS"
+    },
+        {
+            "name": "Morocco",
+            "code": "MA"
+    },
+        {
+            "name": "Mozambique",
+            "code": "MZ"
+    },
+        {
+            "name": "Myanmar",
+            "code": "MM"
+    },
+        {
+            "name": "Namibia",
+            "code": "NA"
+    },
+        {
+            "name": "Nauru",
+            "code": "NR"
+    },
+        {
+            "name": "Nepal",
+            "code": "NP"
+    },
+        {
+            "name": "Netherlands",
+            "code": "NL"
+    },
+        {
+            "name": "Netherlands Antilles",
+            "code": "AN"
+    },
+        {
+            "name": "New Caledonia",
+            "code": "NC"
+    },
+        {
+            "name": "New Zealand",
+            "code": "NZ"
+    },
+        {
+            "name": "Nicaragua",
+            "code": "NI"
+    },
+        {
+            "name": "Niger",
+            "code": "NE"
+    },
+        {
+            "name": "Nigeria",
+            "code": "NG"
+    },
+        {
+            "name": "Niue",
+            "code": "NU"
+    },
+        {
+            "name": "Norfolk Island",
+            "code": "NF"
+    },
+        {
+            "name": "Northern Mariana Islands",
+            "code": "MP"
+    },
+        {
+            "name": "Norway",
+            "code": "NO"
+    },
+        {
+            "name": "Oman",
+            "code": "OM"
+    },
+        {
+            "name": "Pakistan",
+            "code": "PK"
+    },
+        {
+            "name": "Palau",
+            "code": "PW"
+    },
+        {
+            "name": "Palestinian Territory, Occupied",
+            "code": "PS"
+    },
+        {
+            "name": "Panama",
+            "code": "PA"
+    },
+        {
+            "name": "Papua New Guinea",
+            "code": "PG"
+    },
+        {
+            "name": "Paraguay",
+            "code": "PY"
+    },
+        {
+            "name": "Peru",
+            "code": "PE"
+    },
+        {
+            "name": "Philippines",
+            "code": "PH"
+    },
+        {
+            "name": "Pitcairn",
+            "code": "PN"
+    },
+        {
+            "name": "Poland",
+            "code": "PL"
+    },
+        {
+            "name": "Portugal",
+            "code": "PT"
+    },
+        {
+            "name": "Puerto Rico",
+            "code": "PR"
+    },
+        {
+            "name": "Qatar",
+            "code": "QA"
+    },
+        {
+            "name": "Reunion",
+            "code": "RE"
+    },
+        {
+            "name": "Romania",
+            "code": "RO"
+    },
+        {
+            "name": "Russian Federation",
+            "code": "RU"
+    },
+        {
+            "name": "RWANDA",
+            "code": "RW"
+    },
+        {
+            "name": "Saint Helena",
+            "code": "SH"
+    },
+        {
+            "name": "Saint Kitts and Nevis",
+            "code": "KN"
+    },
+        {
+            "name": "Saint Lucia",
+            "code": "LC"
+    },
+        {
+            "name": "Saint Pierre and Miquelon",
+            "code": "PM"
+    },
+        {
+            "name": "Saint Vincent and the Grenadines",
+            "code": "VC"
+    },
+        {
+            "name": "Samoa",
+            "code": "WS"
+    },
+        {
+            "name": "San Marino",
+            "code": "SM"
+    },
+        {
+            "name": "Sao Tome and Principe",
+            "code": "ST"
+    },
+        {
+            "name": "Saudi Arabia",
+            "code": "SA"
+    },
+        {
+            "name": "Senegal",
+            "code": "SN"
+    },
+        {
+            "name": "Serbia",
+            "code": "RS"
+    },
+        {
+            "name": "Montenegro",
+            "code": "ME"
+    },
+        {
+            "name": "Seychelles",
+            "code": "SC"
+    },
+        {
+            "name": "Sierra Leone",
+            "code": "SL"
+    },
+        {
+            "name": "Singapore",
+            "code": "SG"
+    },
+        {
+            "name": "Slovakia",
+            "code": "SK"
+    },
+        {
+            "name": "Slovenia",
+            "code": "SI"
+    },
+        {
+            "name": "Solomon Islands",
+            "code": "SB"
+    },
+        {
+            "name": "Somalia",
+            "code": "SO"
+    },
+        {
+            "name": "South Africa",
+            "code": "ZA"
+    },
+        {
+            "name": "South Georgia and the South Sandwich Islands",
+            "code": "GS"
+    },
+        {
+            "name": "Spain",
+            "code": "ES"
+    },
+        {
+            "name": "Sri Lanka",
+            "code": "LK"
+    },
+        {
+            "name": "Sudan",
+            "code": "SD"
+    },
+        {
+            "name": "Suriname",
+            "code": "SR"
+    },
+        {
+            "name": "Svalbard and Jan Mayen",
+            "code": "SJ"
+    },
+        {
+            "name": "Swaziland",
+            "code": "SZ"
+    },
+        {
+            "name": "Sweden",
+            "code": "SE"
+    },
+        {
+            "name": "Switzerland",
+            "code": "CH"
+    },
+        {
+            "name": "Syrian Arab Republic",
+            "code": "SY"
+    },
+        {
+            "name": "Taiwan, Province of China",
+            "code": "TW"
+    },
+        {
+            "name": "Tajikistan",
+            "code": "TJ"
+    },
+        {
+            "name": "Tanzania, United Republic of",
+            "code": "TZ"
+    },
+        {
+            "name": "Thailand",
+            "code": "TH"
+    },
+        {
+            "name": "Timor-Leste",
+            "code": "TL"
+    },
+        {
+            "name": "Togo",
+            "code": "TG"
+    },
+        {
+            "name": "Tokelau",
+            "code": "TK"
+    },
+        {
+            "name": "Tonga",
+            "code": "TO"
+    },
+        {
+            "name": "Trinidad and Tobago",
+            "code": "TT"
+    },
+        {
+            "name": "Tunisia",
+            "code": "TN"
+    },
+        {
+            "name": "Turkey",
+            "code": "TR"
+    },
+        {
+            "name": "Turkmenistan",
+            "code": "TM"
+    },
+        {
+            "name": "Turks and Caicos Islands",
+            "code": "TC"
+    },
+        {
+            "name": "Tuvalu",
+            "code": "TV"
+    },
+        {
+            "name": "Uganda",
+            "code": "UG"
+    },
+        {
+            "name": "Ukraine",
+            "code": "UA"
+    },
+        {
+            "name": "United Arab Emirates",
+            "code": "AE"
+    },
+        {
+            "name": "United Kingdom",
+            "code": "GB"
+    },
+        {
+            "name": "United States",
+            "code": "US"
+    },
+        {
+            "name": "United States Minor Outlying Islands",
+            "code": "UM"
+    },
+        {
+            "name": "Uruguay",
+            "code": "UY"
+    },
+        {
+            "name": "Uzbekistan",
+            "code": "UZ"
+    },
+        {
+            "name": "Vanuatu",
+            "code": "VU"
+    },
+        {
+            "name": "Venezuela",
+            "code": "VE"
+    },
+        {
+            "name": "Viet Nam",
+            "code": "VN"
+    },
+        {
+            "name": "Virgin Islands, British",
+            "code": "VG"
+    },
+        {
+            "name": "Virgin Islands, U.S.",
+            "code": "VI"
+    },
+        {
+            "name": "Wallis and Futuna",
+            "code": "WF"
+    },
+        {
+            "name": "Western Sahara",
+            "code": "EH"
+    },
+        {
+            "name": "Yemen",
+            "code": "YE"
+    },
+        {
+            "name": "Zambia",
+            "code": "ZM"
+    },
+        {
+            "name": "Zimbabwe",
+            "code": "ZW"
+    }
+]
+
+    var countryInput = $(document).find('.countrypicker');
+    var countryList = "";
+
+
+    //set defaults
+    for (i = 0; i < countryInput.length; i++) {
+
+        //check if flag
+        flag = countryInput.eq(i).data('flag');
+        
+        if (flag) {
+            countryList = "";
+            
+            //for each build list with flag
+            $.each(countries, function (index, country) {
+                var flagIcon = "css/flags/" + country.code + ".png";
+                countryList += "<option data-country-code='" + country.code + "' data-tokens='" + country.code + " " + country.name + "' style='padding-left:25px; background-position: 4px 7px; background-image:url(" + flagIcon + ");background-repeat:no-repeat;' value='" + country.code+"-"+country.name + "'>"  + country.code+"-"+ country.name + "</option>";
+            });
+
+            //add flags to button
+            countryInput.eq(i).on('loaded.bs.select', function (e) {
+                var button = $(this).closest('.btn-group').children('.btn');
+                button.hide();
+                var def = $(this).find(':selected').data('country-code');
+                var flagIcon = "css/flags/" + def + ".png";
+                button.css("background-size", '20px');
+                button.css("background-position", '10px 9px');
+                button.css("padding-left", '40px');
+                button.css("background-repeat", 'no-repeat');
+                button.css("background-image", "url('" + flagIcon + "'");
+                button.show();
+            });
+
+            //change flag on select change
+            countryInput.eq(i).on('change', function () {
+                button = $(this).closest('.btn-group').children('.btn');
+                def = $(this).find(':selected').data('country-code');
+                flagIcon = "css/flags/" + def + ".png";
+                button.css("background-size", '20px');
+                button.css("background-position", '10px 9px');
+                button.css("padding-left", '40px');
+                button.css("background-repeat", 'no-repeat');
+                button.css("background-image", "url('" + flagIcon + "'");
+
+            });
+        }else{
+            countryList ="";
+            
+            //for each build list without flag
+            $.each(countries, function (index, country) {
+                countryList += "<option data-country-code='" + country.code + "' data-tokens='" + country.code + " " + country.name + "' value='"  + country.code+"-"+ country.name + "'>"  + country.code+"-"+ country.name + "</option>";
+            });
+            
+            
+        }
+        
+         //append country list
+        countryInput.eq(i).html(countryList);
+
+
+        //check if default
+        def = countryInput.eq(i).data('default');
+        //if there's a default, set it
+        if (def) {
+            countryInput.eq(i).val(def);
+        }
+
+
+    }
+
+
+
+});
 </script>
 
 
