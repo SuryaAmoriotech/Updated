@@ -27,12 +27,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Edit Ocean Export Tracking</h1>
+            <h1><?php echo display('Edit Ocean Export Tracking') ?></h1>
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Sale</a></li>
-                <li class="active" style="color:orange">Edit Ocean Export Tracking</li>
+                <li><a href="#"><?php echo display('Sale') ?></a></li>
+                <li class="active" style="color:orange"><?php echo display('Edit Ocean Export Tracking') ?></li>
             </ol>
         </div>
     </section>
@@ -75,7 +75,7 @@
                              <div id="bloc2" style="float:right;">
                            
 
-                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Cinvoice/manage_ocean_export_tracking') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo "Manage Ocean Export Tracking" ?> </a>
+                    <a style="background-color:#38469f;color:white;" href="<?php echo base_url('Cinvoice/manage_ocean_export_tracking') ?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display ('Manage Ocean Export Tracking') ?> </a>
 
                     
                      </div>    </div>
@@ -90,7 +90,7 @@
                            
                    <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Shipper
+                                    <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Shipper') ?>
                                         <i class="text-danger">*</i>
                                     </label>
                                     <div class="col-sm-8">
@@ -125,7 +125,7 @@
 
                            <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="booking_no" class="col-sm-4 col-form-label">Booking No.
+                                  <label for="booking_no" class="col-sm-4 col-form-label"><?php echo display('Booking No') ?>.
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -144,7 +144,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="date" class="col-sm-4 col-form-label">Invoice Date
+                                  <label for="date" class="col-sm-4 col-form-label"><?php echo display('Invoice Date') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -155,7 +155,7 @@
                           </div>
                           <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Customer / Consignee
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo display('Customer / Consignee') ?>
                                     </label>
                                     <div class="col-sm-8">
                                     <select id="consignee" name="consignee" class="form-control " required=""> 
@@ -180,7 +180,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="etd" class="col-sm-4 col-form-label">Notify Party
+                                  <label for="etd" class="col-sm-4 col-form-label"><?php echo display('Notify Party') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -191,7 +191,7 @@
 
                           <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="eta" class="col-sm-4 col-form-label">Vessel
+                                  <label for="eta" class="col-sm-4 col-form-label"><?php echo display('Vessel') ?>
                                   </label>
                                   <div class="col-sm-8">
                                       <textarea class="form-control" tabindex="4" id="vessel" name="vessel" placeholder="Vessel" rows="1">{vessel}</textarea>
@@ -207,7 +207,7 @@
                        <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="shipping_line" class="col-sm-4 col-form-label">Voyage No.
+                                  <label for="shipping_line" class="col-sm-4 col-form-label"><?php echo display('Voyage No') ?>.
                                       
                                   </label>
                                   <div class="col-sm-8">
@@ -218,7 +218,7 @@
 
                            <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="bl_number" class="col-sm-4 col-form-label">Port of loading
+                                  <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Port of loading') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -235,7 +235,7 @@
                         <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="bl_number" class="col-sm-4 col-form-label">Port of discharge
+                                  <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Port of discharge')  ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -247,7 +247,7 @@
 
                               <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="container_no" class="col-sm-4 col-form-label">Place of Delivery <i class="text-danger">*</i>
+                                  <label for="container_no" class="col-sm-4 col-form-label"><?php echo display('Place of Delivery') ?> <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
                                       <textarea class="form-control" tabindex="4" id="place_of_delivery" name="place_of_delivery" placeholder="Place of Delivery" rows="1" required>{place_of_delivery}</textarea>
@@ -259,7 +259,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="customs_broker_name" class="col-sm-4 col-form-label">Customs Broker Name</label>
+                                  <label for="customs_broker_name" class="col-sm-4 col-form-label"><?php echo display('Customs Broker Name') ?></label>
                                   <div class="col-sm-8">
                                   <input  class="form-control" tabindex="4" id=" customs_broker_name" name="customs_broker_name"  placeholder=" Customs Broker Name" value="{customs_broker_name}" rows="1">
                                   
@@ -268,7 +268,7 @@
                           </div>
                           <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="mbl_no" class="col-sm-4 col-form-label">MBL NO</label>
+                                  <label for="mbl_no" class="col-sm-4 col-form-label"><?php echo display('MBL NO') ?></label>
                                   <div class="col-sm-8">
                                   <input  class="form-control" tabindex="4" id=" mbl_no" name="mbl_no"  placeholder=" MBL NO" value="{mbl_no}" rows="1">
                                   </div>
@@ -279,7 +279,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="hbl_no" class="col-sm-4 col-form-label">HBL NO</label>
+                                  <label for="hbl_no" class="col-sm-4 col-form-label"><?php echo display('HBL NO') ?></label>
                                   <div class="col-sm-8">
                                   <input class="form-control" tabindex="4" id=" hbl_no" name="hbl_no"  placeholder=" HBL NO" value="{hbl_no}" rows="1">
                                   </div>
@@ -287,7 +287,7 @@
                           </div>
                           <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="obl_no" class="col-sm-4 col-form-label">OBL NO</label>
+                                  <label for="obl_no" class="col-sm-4 col-form-label"><?php echo display('OBL NO') ?></label>
                                   <div class="col-sm-8">
                                   <input  class="form-control" tabindex="4" id=" obl_no" name="obl_no"  placeholder=" OBL NO" value="{obl_no}" rows="1">
                                   </div>
@@ -299,7 +299,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="ams_no" class="col-sm-4 col-form-label">AMS NO</label>
+                                  <label for="ams_no" class="col-sm-4 col-form-label"><?php echo display('AMS NO') ?></label>
                                   <div class="col-sm-8">
                                   <input  class="form-control" tabindex="4" id=" ams_no" name="ams_no"  placeholder=" AMS NO" value="{ams_no}" rows="1">
                                   </div>
@@ -307,7 +307,7 @@
                           </div>
                           <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="isf_no" class="col-sm-4 col-form-label">ISF NO</label>
+                                  <label for="isf_no" class="col-sm-4 col-form-label"><?php echo display('ISF NO') ?></label>
                                   <div class="col-sm-8">
                                   <input  class="form-control" tabindex="4" id=" isf_no" name="isf_no"  placeholder=" ISF NO" value="{isf_no}" rows="1">
                                   </div>
@@ -319,7 +319,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="container_no" class="col-sm-4 col-form-label">Container No
+                                  <label for="container_no" class="col-sm-4 col-form-label"><?php echo display('Container No') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -331,7 +331,7 @@
 
                               <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="seal_no" class="col-sm-4 col-form-label">Seal No <i class="text-danger">*</i>
+                                  <label for="seal_no" class="col-sm-4 col-form-label"><?php echo display('Seal No') ?> <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
                                       <textarea class="form-control" tabindex="4" id="seal_no" name="seal_no" placeholder="Seal No" value="{seal_no}" rows="1" required>{seal_no}</textarea>
@@ -343,7 +343,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="Freight forwarder" class="col-sm-4 col-form-label">Freight forwarder
+                                  <label for="Freight forwarder" class="col-sm-4 col-form-label"><?php echo display('Freight forwarder') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -356,7 +356,7 @@
                         
                              <div class="col-sm-6">
                                <div class="form-group row">
-                                    <label for="adress" class="col-sm-4 col-form-label">Attachements
+                                    <label for="adress" class="col-sm-4 col-form-label"><?php echo display('Attachments') ?>
                                     </label>
                                     <div class="col-sm-8">
                                        <input type="file" name="attachments" class="form-control">
@@ -368,7 +368,7 @@
                       <div class="row">
                           <div class="col-sm-6">
                               <div class="form-group row">
-                                  <label for="bl_number" class="col-sm-4 col-form-label">Estimated time of departure
+                                  <label for="bl_number" class="col-sm-4 col-form-label"><?php echo display('Estimated time of departure') ?>
                                       <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
@@ -381,7 +381,7 @@
 
                               <div class="col-sm-6">
                              <div class="form-group row">
-                                  <label for="container_no" class="col-sm-4 col-form-label">Estimated Time of Arrival <i class="text-danger">*</i>
+                                  <label for="container_no" class="col-sm-4 col-form-label"><?php echo display('Estimated Time of Arrival') ?> <i class="text-danger">*</i>
                                   </label>
                                   <div class="col-sm-8">
                                   <?php $date = date('Y-m-d'); ?>
@@ -393,7 +393,7 @@
                       <div class="row">
                           <div class="col-sm-12">
                               <div class="form-group row">
-                                  <label for="particulars" class="col-sm-2 col-form-label">Remarks / Particulars
+                                  <label for="particulars" class="col-sm-2 col-form-label"><?php echo display('Remarks / Particulars') ?>
                                       <i class="text-danger"></i>
                                   </label>
                                   <div class="col-sm-4">
@@ -409,12 +409,12 @@
 
                         <div class="form-group row">
                             <div class="col-sm-6">
-                                <input type="submit" id="add_purchase" class="btn btn-large"  style="color:white;background-color:#38469f;" name="add-ocean-Export" value="Save" />
+                                <input type="submit" id="add_purchase" class="btn btn-large"  style="color:white;background-color:#38469f;" name="add-ocean-Export" value="<?php echo display('Save') ?>" >
                                                        
-                               <a  style="color:white;background-color:#38469f;"  id="final_submit" class='final_submit btn btn-primary'>Submit</a>
+                               <a  style="color:white;background-color:#38469f;"  id="final_submit" class='final_submit btn btn-primary'><?php echo display('Submit') ?></a>
 
-<a id="download" style="color:white;background-color:#38469f;" class='btn btn-primary'>Download</a>  
-<a id="print" style="color:white;background-color:#38469f;" class='btn btn-primary'>Print</a>  
+<a id="download" style="color:white;background-color:#38469f;" class='btn btn-primary'><?php echo display('Download') ?></a>  
+<a id="print" style="color:white;background-color:#38469f;" class='btn btn-primary'><?php echo display('Print') ?></a>  
 
 
                             </div>
@@ -440,7 +440,7 @@
       <div class="modal-content" style="margin-top: 190px;">
        <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sales - Ocean</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Ocean') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -459,18 +459,18 @@
 		<div class="modal-content">
 			 <div class="modal-header" style="color:white;background-color:#38469f;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Confirmation</h4>
+				<h4 class="modal-title"><?php echo display('Confirmation') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p>Your Invoice is not submitted. Would you like to submit or discard
+				<p><?php echo display('Your Invoice is not submitted. Would you like to submit or discard') ?>
 				</p>
 				<p class="text-warning">
-					<small>If you don't submit, your changes will not be saved.</small>
+					<small><?php echo display('If you dont submit your changes will not be saved') ?>.</small>
 				</p>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()">Discard</button>
+				<input type="submit" id="ok" class="btn" style="color:white;background-color:#38469f;" onclick="submit_redirect()"  value="<?php echo display('Submit') ?>"/>
+                <button id="btdelete" type="button" class="btn btn-danger"  onclick="discard()"><?php echo display('Discard') ?></button>
 			
 			</div>
 		</div>

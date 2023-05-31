@@ -20,12 +20,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Create Road Transport</h1>
+            <h1><?php echo display('Create Road Transport') ?></h1>
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Sale</a></li>
-                <li class="active" style="color:orange;">Create Road Transport</li>
+                <li><a href="#"><?php echo display('Sale') ?></a></li>
+                <li class="active" style="color:orange;"><?php echo display('Create Road Transport') ?></li>
             </ol>
         </div>
     </section>
@@ -152,24 +152,12 @@ textarea:focus, input:focus{
                             }else{
                                     $curYear = date('Y'); 
                                 $month = date('m');
-                             //   echo  "sdf";
                             echo $voucher_n = 'T'. $curYear.$month.'-'.'1';
                             } ?>" readonly />
                                  </div>
                                 </div>
                             </div>
 
-                           <!--  <div class="col-sm-6">
-                               <div class="form-group row">
-                                    <label for="supplier_sss" class="col-sm-4 col-form-label">Exporter
-                                        <i class="text-danger">*</i>
-                                    </label>
-                                    <div class="col-sm-6">
-                                               <textarea rows="4" cols="50" name="billing_address" class=" form-control" placeholder='Add Exporter Detail' id=""> </textarea>
-                                    </div>
-                                
-                                </div> 
-                            </div> -->
 
                              <div class="col-sm-6">
                                 <div class="form-group row">
@@ -362,7 +350,7 @@ textarea:focus, input:focus{
                         <table class="table table-bordered table-hover">
                         <tr>
                         <td class="hiden" style="width:50%;border:none;text-align:end;font-weight:bold;">
-                        <?php echo display('Todays Rate') ?> : 
+                        <?php echo display('live rate') ?> : 
                          </td>
                 
                                 <td class="hiden" style="width:180px;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
@@ -556,7 +544,7 @@ textarea:focus, input:focus{
                         
                         <div class="form-group row">
                             <div class="col-sm-6">
-                            <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color:#38469f;" name="add-trucking" value="Save" />
+                            <input type="submit" id="add_trucking" class="btn btn-large" style="color:white;background-color:#38469f;" name="add-trucking" value="<?php echo display('Save') ?>" />
                                 <a  style="color:white;background-color:#38469f;"  id="final_submit" class='final_submit btn'><?php echo display('Submit') ?></a>
 
 <a id="download" style="color:white;background-color:#38469f;" class='btn'><?php echo display('Download') ?></a>
@@ -596,10 +584,10 @@ textarea:focus, input:focus{
       <label for="" class="col-sm-4  col-form-label"><?php echo display('Vendor Type') ?><i class="text-danger">*</i></label>
       <div class="col-sm-8">
                 <select   name="vendor_type" id="vendor_type" class=" form-control" placeholder=''  required="" id="vendor_type" >
-                 <option value=""> Selected Vendor Type</option>
-                 <option value="productsupplier">Product Supplier</option>
-                 <option value="servicevendor"> Service Vendor</option>
-                 <option value="others"> Others</option>
+                 <option value=""> <?php echo display('Selected Vendor Type') ?></option>
+                 <option value="productsupplier"><?php echo display('Product Supplier') ?></option>
+                 <option value="servicevendor"> <?php echo display('Service Vendor') ?></option>
+                 <option value="others"> <?php echo display('Others') ?></option>
                 </select>
                 </div>
                 </div>
@@ -850,9 +838,9 @@ textarea:focus, input:focus{
       <label for="" class="col-sm-4 col-form-label"><?php echo display('Tax Collected') ?><i class="text-danger">*</i></label>
           <div class="col-sm-8">
              <select  style="width: 100%;"  class="form-control"  required="required" name="service_provider">
-             <option value="">Select Tax Collected</option>
-             <option value="1">Yes</option>
-              <option value="0" >No</option>
+             <option value=""><?php echo display('Select Tax Collected') ?></option>
+             <option value="1"><?php echo display('Yes') ?></option>
+              <option value="0" ><?php echo display('No') ?></option>
              </select>
           </div>
         </div>
@@ -875,7 +863,7 @@ textarea:focus, input:focus{
                                     </div>
                         </div>
       <div class="form-group row">
-          <label for="address " class="col-sm-4 col-form-label">Address</label>
+          <label for="address " class="col-sm-4 col-form-label"><?php echo display('Address') ?></label>
           <div class="col-sm-8">
               <textarea class="form-control" name="address" id="address " rows="2" placeholder="Address" ></textarea>
           </div>
@@ -902,7 +890,7 @@ textarea:focus, input:focus{
                     <label for="billing_address" class="col-sm-4  col-form-label"><?php echo display('PaymentTerms') ?> <i class="text-danger">*</i></label>
                     <div class="col-sm-8">
                     <select name="payment_terms"  id="terms"  class="form-control "  placeholder="" style="width:100%;"  required="required" tabindex="1" >
-                                        <option   value="" >Select The Payment Terms</option>
+                                        <option   value="" ><?php echo display('Select The Payment Terms') ?></option>
     <option value="cod">COD</option>
     <option value="30"> 30-Days</option>
     <option value="60"> 60-Days</option>
@@ -950,7 +938,7 @@ textarea:focus, input:focus{
       <div class="modal-content" style="margin-top: 190px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sales - Trucking</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Trucking') ?></h4>
         </div>
         <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">
           
@@ -979,8 +967,8 @@ textarea:focus, input:focus{
 				</p>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" id="ok" class="btn btn-primary final_submit" onclick="submit_redirect()" style="color:white;background-color: #38469f;"  value="Submit"/>
-                <button id="btdelete" type="button" class="btn" style="color:white;background-color: #38469f;" onclick="discard()">Discard</button>
+				<input type="submit" id="ok" class="btn btn-primary final_submit" onclick="submit_redirect()" style="color:white;background-color: #38469f;"  value="<?php echo display('Submit') ?>"/>
+                <button id="btdelete" type="button" class="btn" style="color:white;background-color: #38469f;" onclick="discard()"><?php echo display('Discard') ?></button>
 			
 			</div>
 		</div>

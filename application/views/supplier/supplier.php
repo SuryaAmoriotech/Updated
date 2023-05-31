@@ -32,7 +32,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
         <div class="header-title">
 
-            <h1><?php echo "Manage Supplier"; ?></h1>
+            <h1><?php echo display('Manage Supplier') ?></h1>
 
             <small><?php //echo "Manage Supplier"; ?></small>
 
@@ -42,7 +42,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
                 <li><a href="#"><?php echo display('Supplier') ?></a></li>
 
-                <li class="active" style="color:orange;"><?php echo "Manage Supplier"; ?></li>
+                <li class="active" style="color:orange;"><?php echo display('Manage Supplier') ?></li>
 
             </ol>
 
@@ -130,12 +130,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> Add Supplier </a>
+<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Supplier') ?> </a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> Add Supplier </a>
+<a href="<?php echo base_url('Csupplier') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Supplier') ?> </a>
 
                         <?php  } ?>
 
@@ -150,9 +150,9 @@ if (isset($error_message)) {
 
 
 
-                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btnclr btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i> Supplier Overview </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_ledger_report') ?>" class="btnclr btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i> <?php echo display('Supplier Overview') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btnclr btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  Supplier Sales Detail </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btnclr btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('Supplier Sales Detail') ?> </a>
              <button type="button" class="btnclr btn btn-success m-b-5 m-r-2" data-toggle="modal" data-target="#supplier_modal"  ><?php echo display('csv_upload_supplier')?></button>
                   </div>
                            <div class="col-sm-2">
@@ -160,7 +160,7 @@ if (isset($error_message)) {
                    
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php echo display('Download')?>  
      
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -198,28 +198,28 @@ if (isset($error_message)) {
 
                     <div class="panel-heading">
       <div class="row">
-<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by">Filter By&nbsp;&nbsp;
+<div id="for_filter_by" class="for_filter_by" style="display: inline;"><label for="filter_by"><?php echo display('Filter By') ?>&nbsp;&nbsp;
                    </label><select id="filterby" style="border-radius:5px;height:25px;" >
-                  <option value="1">ID</option>
-<option value="2">Company ID</option>
-<option value="3">Company Name</option>
-<option value="4">Address</option>
-<option value="5">Mobile</option>
-<option value="6">Business Phone</option>
-<option value="7">Primary Email</option>
-<option value="8">City</option>
-<option value="9">Country</option>
-<option value="10">Credit limit</option>
-<option value="11">Vendor Type</option>
-<option value="12">Secondary Email</option>
-<option value="13">Contact Person</option>
-<option value="14">Fax</option>
-<option value="15">Tax Collected</option>
-<option value="16">State</option>
-<option value="17">Zip code</option>
-<option value="18">Supplier Details</option>
-<option value="19">Preferred currency</option>
-<option value="20">Payment Terms</option>
+                  <option value="1"><?php echo display('ID') ?></option>
+<option value="2"><?php echo display('Company ID') ?></option>
+<option value="3"><?php echo display('Company Name') ?></option>
+<option value="4"><?php echo display('Address') ?></option>
+<option value="5"><?php echo display('Mobile') ?></option>
+<option value="6"><?php echo display('Business Phone') ?></option>
+<option value="7"><?php echo display('Primary Email') ?></option>
+<option value="8"><?php echo display('City') ?></option>
+<option value="9"><?php echo display('Country') ?></option>
+<option value="10"><?php echo display('Credit limit') ?></option>
+<option value="11"><?php echo display('Vendor Type') ?></option>
+<option value="12"><?php echo display('Secondary Email') ?></option>
+<option value="13"><?php echo display('Contact Person') ?></option>
+<option value="14"><?php echo display('Fax') ?></option>
+<option value="15"><?php echo display('Tax Collected') ?></option>
+<option value="16"><?php echo display('State') ?></option>
+<option value="17"><?php echo display('Zip code') ?></option>
+<option value="18"><?php echo display('Supplier Details') ?></option>
+<option value="19"><?php echo display('Preferred currency') ?></option>
+<option value="20"><?php echo display('Payment Terms') ?></option>
 
 
 
@@ -235,33 +235,33 @@ if (isset($error_message)) {
   <table class="table table-bordered" cellspacing="0" width="100%" id="ProfarmaInvList">
   <thead class="sortableTable">
       <tr class="sortableTable__header">
-      <th class="1 value" data-control-column="1"   data-col="1" style="width: 80px; height: 40.0114px;" >ID</th>
-            <th class="2 value" data-control-column="2"   data-col="2" style="width: 80px; height: 40.0114px;" >Company ID</th>
-        <th class="3 value" data-control-column="3"  data-col="3"style="height: 45.0114px; width: 234.011px" >Company Name</th>
-        <th class="4 value" data-control-column="4"data-col="4"  style="height: 42.0114px;"   >Address</th>
+      <th class="1 value" data-control-column="1"   data-col="1" style="width: 80px; height: 40.0114px;" ><?php echo display('ID')?></th>
+            <th class="2 value" data-control-column="2"   data-col="2" style="width: 80px; height: 40.0114px;" ><?php echo display('Supplier ID')?></th>
+        <th class="3 value" data-control-column="3"  data-col="3"style="height: 45.0114px; width: 234.011px" ><?php echo display('Company Name')?></th>
+        <th class="4 value" data-control-column="4"data-col="4"  style="height: 42.0114px;"   ><?php echo display('Address')?></th>
     
-        <th class="5 value" data-control-column="5"  data-col="5"  style="width: 198.011px;">Mobile</th>
+        <th class="5 value" data-control-column="5"  data-col="5"  style="width: 198.011px;"><?php echo display('Mobile')?></th>
   
-           <th class="6 value" data-control-column="6" data-col="6"   style="width: 198.011px;" >Business Phone</th>
-		         <th class="7 value" data-control-column="7" data-col="7" style="width: 190.011px; height: 44.0114px;">Primary Email </th>
-				 	         <th class="8 value" data-control-column="8"data-col="8" style="width: 190.011px; height: 44.0114px;">City</th>
-							 	         <th class="9 value" data-control-column="9"data-col="9" style="width: 190.011px; height: 44.0114px;">Country</th>
-										 	         <th class="10 value" data-control-column="10"data-col="10" style="width: 190.011px; height: 44.0114px;">Credit limit</th>
+           <th class="6 value" data-control-column="6" data-col="6"   style="width: 198.011px;" ><?php echo display('Business Phone')?></th>
+		         <th class="7 value" data-control-column="7" data-col="7" style="width: 190.011px; height: 44.0114px;"><?php echo display('Primary Email')?> </th>
+				 	         <th class="8 value" data-control-column="8"data-col="8" style="width: 190.011px; height: 44.0114px;"><?php echo display('City')?></th>
+							 	         <th class="9 value" data-control-column="9"data-col="9" style="width: 190.011px; height: 44.0114px;"><?php echo display('Country')?></th>
+										 	         <th class="10 value" data-control-column="10"data-col="10" style="width: 190.011px; height: 44.0114px;"><?php echo display('Credit limit')?></th>
                                 <!-- <th class="Mobile value" data-control-column="10"  data-col="Mobile"  style="width: 198.011px;">Mobile</th> -->
   
-  <th class="11 value" data-control-column="11" data-col="11"   style="width: 198.011px;" >Vendor Type</th>
-    <th class="12 value" data-control-column="12"data-col="12" style="width: 190.011px; height: 44.0114px;">Secondary Email</th>
-           <th class="13 value" data-control-column="13" data-col="13" style="width: 190.011px; height: 44.0114px;">Contact Person</th>
-                 <th class="14 value" data-control-column="14"data-col="14" style="width: 190.011px; height: 44.0114px;">Fax</th>
-                       <th class="15 value" data-control-column="15"data-col="15" style="width: 190.011px; height: 44.0114px;">Tax Collected</th>
+  <th class="11 value" data-control-column="11" data-col="11"   style="width: 198.011px;" ><?php echo display('Vendor Type')?></th>
+    <th class="12 value" data-control-column="12"data-col="12" style="width: 190.011px; height: 44.0114px;"><?php echo display('Secondary Email')?></th>
+           <th class="13 value" data-control-column="13" data-col="13" style="width: 190.011px; height: 44.0114px;"><?php echo display('Contact Person')?></th>
+                 <th class="14 value" data-control-column="14"data-col="14" style="width: 190.011px; height: 44.0114px;"><?php echo display('Fax')?></th>
+                       <th class="15 value" data-control-column="15"data-col="15" style="width: 190.011px; height: 44.0114px;"><?php echo display('Tax Collected')?></th>
 
-                       <th class="16 value" data-control-column="16" data-col="16"   style="width: 198.011px;" >State</th>
-    <th class="17 value" data-control-column="17" data-col="17" style="width: 190.011px; height: 44.0114px;">Zip code</th>
-           <th class="18 value" data-control-column="18" data-col="18" style="width: 190.011px; height: 44.0114px;">Supplier Details</th>
-                 <th class="19 value" data-control-column="19" data-col="19" style="width: 190.011px; height: 44.0114px;">Preferred currency</th>
-                       <th class="20 value" data-control-column="20" data-col="20" style="width: 190.011px; height: 44.0114px;">Payment Terms</th>
+                       <th class="16 value" data-control-column="16" data-col="16"   style="width: 198.011px;" ><?php echo display('State')?></th>
+    <th class="17 value" data-control-column="17" data-col="17" style="width: 190.011px; height: 44.0114px;"><?php echo display('Zip code')?></th>
+           <th class="18 value" data-control-column="18" data-col="18" style="width: 190.011px; height: 44.0114px;"><?php echo display('Supplier Details')?></th>
+                 <th class="19 value" data-control-column="19" data-col="19" style="width: 190.011px; height: 44.0114px;"><?php echo display('Preferred currency')?></th>
+                       <th class="20 value" data-control-column="20" data-col="20" style="width: 190.011px; height: 44.0114px;"><?php echo display('Payment Terms')?></th>
      <div class="myButtonClass Action"> 
-     <th class="21 text-center" data-column-id="21" data-control-column="21" data-formatter="commands" data-sortable="false" style="width: 190.011px; height: 44.0114px;"   >Action</th>
+     <th class="21 text-center" data-column-id="21" data-control-column="21" data-formatter="commands" data-sortable="false" style="width: 190.011px; height: 44.0114px;"   ><?php echo display('Action')?></th>
         </div>
       </tr>
     </thead>
@@ -398,7 +398,7 @@ $count++;
                         <div class="form-group row">
                             <div class="col-sm-12 text-right">
                                 <input type="submit" style="color:white;background-color:#38469f;" id="add-product" class="btn btn-primary btn-large" name="add-product" value="<?php echo display('submit') ?>" />
-                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close') ?></button>
                                
                             </div>
                         </div>
@@ -421,47 +421,45 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> ID<br>
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/>Company ID<br>
-<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/>Company Name<br>
-    <input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/>Address<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/> <?php echo display('ID') ?><br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Company ID') ?><br>
+<input type="checkbox"  data-control-column="3" checked = "checked" class="3" value="3"/><?php echo display('Company Name') ?><br>
+    <input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/><?php echo display('Address') ?><br>
 
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/>Mobile<br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php echo display('Mobile') ?><br>
 
-<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/>Business Phone<br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php echo display('Business Phone') ?><br>
 
-<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/>Primary Email <br>
+<input type="checkbox"  data-control-column="7" checked = "checked" class="7" value="7"/><?php echo display('Primary Email') ?> <br>
 
-<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/>City<br>
+<input type="checkbox"  data-control-column="8" checked = "checked" class="8" value="8"/><?php echo display('City') ?><br>
 
-<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/>Country<br>
-<input type="checkbox"  data-control-column="10" checked = "checked" class="10" value="10"/>Credit limit<br>
-<input type="checkbox"  data-control-column="11"  class="11" value="11"/>Vendor Type<br>
+<input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/><?php echo display('Country') ?><br>
+<input type="checkbox"  data-control-column="10" checked = "checked" class="10" value="10"/><?php echo display('Credit limit') ?><br>
+<input type="checkbox"  data-control-column="11"  class="11" value="11"/><?php echo display('Vendor Type') ?><br>
         </div>
         </div>
                           
         <div class="col-sm-6">
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="12"  class="12" value="12"/>Secondary Email <br>
+                          <input type="checkbox"  data-control-column="12"  class="12" value="12"/><?php echo display('Secondary Email') ?> <br>
 
-<input type="checkbox"  data-control-column="13"  class="13" value="13"/>Contact Person<br>
+<input type="checkbox"  data-control-column="13"  class="13" value="13"/><?php echo display('Contact Person') ?><br>
 
-<input type="checkbox"  data-control-column="14"  class="14" value="14"/>Fax<br>
-<input type="checkbox"  data-control-column="15"  class="15" value="15"/>Tax Collected<br>
+<input type="checkbox"  data-control-column="14"  class="14" value="14"/><?php echo display('Fax') ?><br>
+<input type="checkbox"  data-control-column="15"  class="15" value="15"/><?php echo display('Tax Collected') ?><br>
 
 
-<input type="checkbox"  data-control-column="16"  class="16" value="16"/>State<br>
+<input type="checkbox"  data-control-column="16"  class="16" value="16"/><?php echo display('State') ?><br>
 
-<input type="checkbox"  data-control-column="17"  class="17" value="17"/>Zip code <br>
+<input type="checkbox"  data-control-column="17"  class="17" value="17"/><?php echo display('Zip code') ?> <br>
 
-<input type="checkbox"  data-control-column="18"  class="18" value="18"/>Supplier Details<br>
+<input type="checkbox"  data-control-column="18"  class="18" value="18"/><?php echo display('Supplier Details') ?><br>
 
-<input type="checkbox"  data-control-column="19"  class="19" value="19"/>Preferred currency<br>
-<input type="checkbox"  data-control-column="20"  class="20" value="20"/>Payment Terms<br>
-   <input type="checkbox"  data-control-column="21" checked = "checked"  class="21" value="21"/>Action<br>
+<input type="checkbox"  data-control-column="19"  class="19" value="19"/><?php echo display('Preferred currency') ?><br>
+<input type="checkbox"  data-control-column="20"  class="20" value="20"/><?php echo display('Payment Terms') ?><br>
+   <input type="checkbox"  data-control-column="21" checked = "checked"  class="21" value="21"/><?php echo display('Action') ?><br>
 
-<!-- <input type="checkbox"  data-control-column="15" checked = "checked" class="opt Action" value="Action"/>Action<br> -->
-    <!--      <input type="submit" value="submit" id="submit"/>-->
                           </div>
         </div>
      

@@ -231,13 +231,13 @@ $today = date('Y-m-d');
 <option value="6"><?php echo display('Container Pickup Date') ?></option>
 <option value="7"><?php echo display('Delivery Date') ?></option>
 <option value="8"><?php echo display('Shipment Company') ?></option>
-<option value="9"><?php echo display('Delivery Time From') ?></option>
-<option value="10"><?php echo display('DeliveryTimeTo') ?></option>
+<option value="9"><?php echo display('From') ?></option>
+<option value="10"><?php echo display('TO') ?></option>
 <option value="11"><?php echo display('Truck No') ?></option>
 <option value="12"><?php echo display('Delivery To') ?></option>
 <option value="13"><?php echo display('Tax Details') ?></option>
 <option value="14"><?php echo display('Total Amount') ?></option>
-<option value="15"><?php echo display('Grand Total(Preferred Currency)') ?></option>
+<option value="15"><?php echo display('Grand Total') ?><?php echo display('Preferred Currency') ?></option>
 <option value="16"><?php echo display('Amount Paid') ?></option>
 <option value="17"><?php echo display('Balance Amount') ?></option>
 <option value="18"><?php echo display('Remarks') ?></option>
@@ -264,14 +264,14 @@ $today = date('Y-m-d');
         <th data-control-column="6" data-col="6 Date"class="6 value" style="width: 220.011px; height: 39.0114px;"  ><?php echo display('Container Pickup Date') ?></th>
         <th data-control-column="7"data-col="7"class="7 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Delivery Date') ?></th>
         <th data-control-column="8"data-col="8" class="8 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Shipment Company') ?></th>
-        <th data-control-column="9" data-col="9"class="9 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Delivery Time From') ?></th>
-        <th data-control-column="10"data-col="10" class="10 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Delivery Time To') ?></th>
+        <th data-control-column="9" data-col="9"class="9 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('From') ?></th>
+        <th data-control-column="10"data-col="10" class="10 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('To') ?></th>
         <th data-control-column="11"data-col="11" class="11 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Truck No') ?></th>
         <th data-control-column="12"data-col="12" class="12 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Delivery To') ?></th>
         
         <th data-control-column="13"data-col="13" class="13 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Tax Details') ?></th>
-        <th  data-control-column="14" data-col="14"class="14 value" style="width: 126.011px;"  >Total Amount</th>
-        <th data-control-column="15"data-col="15" class="15 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Grand Total(Preferred Currency)') ?></th>
+        <th  data-control-column="14" data-col="14"class="14 value" style="width: 126.011px;"  ><?php echo display('Total Amount') ?></th>
+        <th data-control-column="15"data-col="15" class="15 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Grand Total') ?><?php echo display('Preferred Currency') ?></th>
         <th data-control-column="16"data-col="16" class="16 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Amount Paid') ?></th>
         <th data-control-column="17"data-col="17" class="17 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Balance Amount') ?></th>
         <th data-control-column="18"data-col="18" class="18 value" style="width: 141.011px; height: 43.0114px;"  ><?php echo display('Remarks') ?></th>
@@ -382,7 +382,7 @@ $count++;
                 
 } }  else{
     ?>
-     <tr><td colspan="8" style="text-align:center;font-weight:bold;"><?php  echo "No Records Found"  ;?></td></tr>
+     <tr><td colspan="8" style="text-align:center;font-weight:bold;"><?php echo display('No Records Found') ?> ;?></td></tr>
     <?php
           }
 
