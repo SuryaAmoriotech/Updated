@@ -125,12 +125,12 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
       
        ?>
 
-<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?><?php echo display('quotation') ?></a>
+<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?> <?php echo display('quotation') ?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?><?php echo display('quotation') ?></a>
+<a href="<?php echo base_url('Cinvoice/profarma_invoice') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('create') ?> <?php echo display('quotation') ?></a>
 
                         <?php  } ?>
 
@@ -160,7 +160,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
                     <a href="<?php echo base_url('Cinvoice/add_profarma_product_csv') ?>" class="btnclr btn btn-primary m-b-5 m-r-2 text-white"><i class="ti-plus"> </i> &nbsp;  <?php echo display('Add Invoice (CSV)') ?> </a>
       
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                      
                         <?php echo form_open_multipart('Cinvoice/manage_profarma_invoice',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
 
@@ -173,9 +173,9 @@ $today = date('Y-m-d');
 
 ?>
 
-<div class="form-group">
+<div class="form-group"    style="text-align: center;">
 
-    <label class="" for="from_date"><?php echo display('Search By Date Range ') ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range ') ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;" />
     <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?> >

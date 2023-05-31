@@ -23,17 +23,17 @@
 
         <div class="header-title">
 
-            <h1><?php echo display('supplier_edit') ?></h1>
+            <h1><?php echo display('Vendor_edit') ?></h1>
 
-            <small><?php echo display('supplier_edit') ?></small>
+            <small><?php echo display('Vendor_edit') ?></small>
 
             <ol class="breadcrumb">
 
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 
-                <li><a href="#"><?php echo display('supplier') ?></a></li>
+                <li><a href="#"><?php echo display('vendor') ?></a></li>
 
-                <li class="active"><?php echo display('supplier_edit') ?></li>
+                <li class="active"><?php echo display('Vendor_edit') ?></li>
 
             </ol>
 
@@ -107,7 +107,7 @@
 
                         <div class="panel-title">
 
-                            <h4><?php echo display('supplier_edit') ?> </h4>
+                            <h4><?php echo display('vendor_edit') ?> </h4>
 
                         </div>
 

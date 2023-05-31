@@ -26,12 +26,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1><?php echo display('supplier_ledger') ?></h1>
-            <small><?php echo display('manage_supplier_ledger') ?></small>
+            <h1><?php echo display('vendor_ledger') ?></h1>
+            <small><?php echo display('manage_vendor_ledger') ?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#"><?php echo display('supplier') ?></a></li>
-                <li class="active"><?php echo display('supplier_ledger') ?></li>
+                <li><a href="#"><?php echo display('vendor') ?></a></li>
+                <li class="active"><?php echo display('vendor_ledger') ?></li>
             </ol>
         </div>
     </section>
@@ -65,11 +65,11 @@
         <div class="row">
             <div class="col-sm-12">
              
-                    <a href="<?php echo base_url('Csupplier') ?>" class="btn btn-info m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('add_supplier') ?> </a>
+                    <a href="<?php echo base_url('Csupplier') ?>" class="btn btnclr dropdown-toggle" ><i class="ti-plus"> </i> <?php echo display('add_vendor') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/manage_supplier') ?>" class="btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('manage_supplier') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/manage_supplier') ?>" class="btn btnclr dropdown-toggle"><i class="ti-align-justify"> </i>  <?php echo display('manage_vendor') ?> </a>
 
-                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('supplier_sales_details') ?> </a>
+                    <a href="<?php echo base_url('Csupplier/supplier_sales_details_all') ?>" class="btn btnclr dropdown-toggle"><i class="ti-align-justify"> </i>  <?php echo display('vendor_sales_details') ?> </a>
 
                 
             </div>
@@ -85,10 +85,10 @@
                         <?php $today = date('Y-m-d'); ?>
                        <div class="col-sm-4">
                         <div class="form-group row">
-                            <label for="customer_name" class="col-sm-4 col-form-label"><?php echo display('supplier') ?> <i class="text-danger">*</i></label>
+                            <label for="customer_name" class="col-sm-4 col-form-label"><?php echo display('Vendor') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-7">
-                                <select name="supplier_id"  class="form-control" required="">
-                                    <option value=""></option>
+                                <select name="supplier_id"  class="form-control" required="" >
+                                    <option value=""><?php echo display('vendor') ?></option>
                                     <?php if ($supplier) { ?>
                                         {supplier}
                                         <option value="{supplier_id}">{supplier_name} 
@@ -99,23 +99,47 @@
                             </div>
                             </div>
                             </div> 
+
+
                             <div class="col-sm-4">
                         <div class="form-group row">
-                                <label for="from_date " class="col-sm-2 col-form-label"> <?php echo display('from') ?></label>
+                               
+                        <label for="from_date " class="col-sm-2 col-form-label"> <?php echo display('from') ?></label>
                                 <div class="col-sm-3">
                                      <input type="date" name="from_date"  value="<?php echo $today; ?>" class="datepicker form-control" id="from_date"/>
                                 </div>
-                                 <label for="to_date" class="col-sm-2 col-form-label"> <?php echo display('to') ?></label>
+                               
+                                <label for="to_date" class="col-sm-2 col-form-label"> <?php echo display('to') ?></label>
                                 <div class="col-sm-3">
                                    <input type="date" name="to_date" value="<?php echo $today; ?>" class="datepicker form-control" id="to_date"/>
                                 </div>
                           
                         </div>
                     </div>
+<!-- 
+                    <?php
+
+
+
+$today = date('Y-m-d');
+
+?>
+
+<div class="form-group">
+
+    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?></label>
+
+    <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display ('Search'); ?> >
+    
+</div>  -->
+
+
+
 
                        <div class="col-sm-2">
-                                <button type="submit" class="btn btn-success "><i class="fa fa-search-plus" aria-hidden="true"></i> <?php echo display('search') ?></button>
-                                <button type="button" class="btn btn-warning"  onclick="printDiv('printableArea')"><?php echo display('print') ?></button>
+                                <button type="submit" class="btn btnclr dropdown-toggle"><i class="fa fa-search-plus" aria-hidden="true"></i> <?php echo display('search') ?></button>
+                                <button type="button" class="btn btnclr dropdown-toggle"  onclick="printDiv('printableArea')"><?php echo display('print') ?></button>
                                 <a onclick="reload();"  >  <i class="fa fa-refresh" style="font-size:20px;float:right;" aria-hidden="true"></i> </a>
                         
                     </div>
@@ -154,7 +178,7 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo display('supplier_ledger') ?></h4>
+                            <h4><?php echo display('vendor_ledger') ?></h4>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -248,17 +272,17 @@
                     <div class="modal-content_colSwitch">
                           <span class="close_colSwitch">&times;</span>
                          
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="opt Date"  value="date"/> Date<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="opt Date"  value="date"/> <?php echo display('Date') ?><br>
 
-    <input type="checkbox"  data-control-column="2" checked = "checked" class="opt Description"  value="Description"/>Description<br>
+    <input type="checkbox"  data-control-column="2" checked = "checked" class="opt Description"  value="Description"/><?php echo display('Description') ?><br>
  
-    <input type="checkbox"  data-control-column="3" checked = "checked" class="opt Voucher_no"   value="Voucher_no"/>Voucher_no<br>
+    <input type="checkbox"  data-control-column="3" checked = "checked" class="opt Voucher_no"   value="Voucher_no"/><?php echo display('Voucher_no') ?><br>
   
-    <input type="checkbox"  data-control-column="4" checked = "checked" class="opt Debit"   value="Debit"/>Debit<br>
+    <input type="checkbox"  data-control-column="4" checked = "checked" class="opt Debit"   value="Debit"/><?php echo display('Debit') ?><br>
 
-    <input type="checkbox"  data-control-column="5" checked = "checked" class="opt Credit"   value="Credit"/>Credit<br>
+    <input type="checkbox"  data-control-column="5" checked = "checked" class="opt Credit"   value="Credit"/><?php echo display('Credit') ?><br>
     
-    <input type="checkbox"  data-control-column="6" checked = "checked" class="opt Balance"  value="Balance"/>Balance<br>
+    <input type="checkbox"  data-control-column="6" checked = "checked" class="opt Balance"  value="Balance"/><?php echo display('Balance') ?><br>
 
                <!--      <input type="submit" value="submit" id="submit"/>-->
                     </div>

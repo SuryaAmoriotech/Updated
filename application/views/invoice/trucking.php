@@ -992,30 +992,30 @@ textarea:focus, input:focus{
 
 <div class="form-group row">
 
-        <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
+<label for="date" style="text-align:end;" class="col-sm-3 col-form-label">  <?php echo display('Payment Date') ?> <i class="text-danger">*</i></label>
 
-        <div class="col-sm-5">
+<div class="col-sm-5">
 
-            <input class=" form-control" type="date"  name="payment_date" id="payment_date" required value="<?php echo html_escape($date); ?>" tabindex="4" />
+    <input class=" form-control" type="date"  name="payment_date" id="payment_date" required value="<?php echo html_escape($date); ?>" tabindex="4" />
 
-        </div>
-
-    </div>
-<input type="hidden" id="cutomer_name" name="cutomer_name"/>
-<input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id"/>
- <div class="form-group row">
-
-        <label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
-
-        <div class="col-sm-5">
-        <input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
 </div>
- </div> 
-    <div class="form-group row">
-      <label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
+
+</div>
+<input type="hidden" id="cutomer_name" name="cutomer_name"/>
+<input type="hidden"  value="<?php echo $payment_id; ?>"  name="payment_id" id="payment_id"/>
+<div class="form-group row">
+
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Reference No') ?><i class="text-danger">*</i></label>
+
+<div class="col-sm-5">
+<input class=" form-control" type="text"  name="ref_no" id="ref_no" required   />
+</div>
+</div> 
+<div class="form-group row">
+<label for="bank" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Select Bank') ?>:<i class="text-danger">*</i></label>
 <a data-toggle="modal" href="#add_bank_info"  style="color:white;background-color:#38469f;" class="btn btn-primary"><i class="fa fa-university"></i></a>
-      <div class="col-sm-5">
-  <select name="bank" id="bank"  class="form-control bankpayment" >
+<div class="col-sm-5">
+<select name="bank" id="bank"  class="form-control bankpayment" >
 <option value="Axis Bank Ltd.">Axis Bank Ltd.</option>
 <option value="Bandhan Bank Ltd.">Bandhan Bank Ltd.</option>
 <option value="Bank of Baroda">Bank of Baroda</option>
@@ -1050,38 +1050,38 @@ textarea:focus, input:focus{
 <option value="Union Bank of India">Union Bank of India</option>
 <option value="YES Bank Ltd.">YES Bank Ltd.</option>
 <?php foreach($bank_list as $b){ ?>
-  <option value="<?=$b['bank_name']; ?>"><?=$b['bank_name']; ?></option>
+<option value="<?=$b['bank_name']; ?>"><?=$b['bank_name']; ?></option>
 <?php } ?>
 </select>
 </div>
-      </div>
-      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
-      <input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
-      <div class="form-group row">
+</div>
+<input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+<input class=" form-control" type="hidden"  readonly name="customer_name_modal" id="customer_name_modal" required   />    
+<div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount to be paid ') ?>: </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Amount to be paid') ?> : </label>
 
 <div class="col-sm-5">
 <table border="0">
-      <tr>
-        <td class="cus" name="cus"></td>
-        <td><input  type="text"  readonly name="amount_to_pay" id="amount_to_pay"   style="width:120%;" class="form-control" required   /></td>
+<tr>
+<td class="cus" name="cus"></td>
+<td><input  type="text"  readonly name="amount_to_pay" id="amount_to_pay"    class="form-control" required   /></td>
 
-    </tr>
-   </table>
+</tr>
+</table>
 
 
 </div>
 </div> 
-      <div class="form-group row" style="display:none;">
+<div class="form-group row" style="display:none;">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Amount Received') ?> : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Amount Received ') ?>: </label>
 
 <div class="col-sm-5">
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"  readonly name="amount_received" id="amount_received" class="form-control"required   /></td>
+        <td><input  type="text"  readonly name="amount_received" value="0.00"   id="amount_received" class="form-control"required   /></td>
      </tr>
    </table>
 
@@ -1091,27 +1091,27 @@ textarea:focus, input:focus{
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php echo display('Balance') ?> : </label>
+<label for="billing_address" style="text-align:end;"    class="col-sm-3 col-form-label"><?php echo display ('Balance ') ?> : </label>
 
 <div class="col-sm-5">
 
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"   readonly name="balance_modal"  style="width:120%;" id="balance_modal" class="form-control" required  /></td>
+        <td><input  type="text"   readonly name="balance_modal"    id="balance_modal" class="form-control" required  /></td>
      </tr>
    </table>
 </div>
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Payment Amount') ?>: <i class="text-danger">*</i></label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Balance ') ?>: <i class="text-danger">*</i></label>
 
 <div class="col-sm-5">
 <table border="0">
       <tr>
         <td class="cus" name="cus"></td>
-        <td><input  type="text"   name="payment" id="payment_from_modal"  style="width:120%;" class="form-control"required   /></td>
+        <td><input  type="text"   name="payment" id="payment_from_modal"      class="form-control"required   /></td>
      </tr>
    </table>
 
@@ -1121,7 +1121,7 @@ textarea:focus, input:focus{
 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Additional Information') ?> : </label>
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Additional Information') ?>  : </label>
 
 <div class="col-sm-5">
 <input class=" form-control" type="text"  name="details" id="details"/>
@@ -1129,8 +1129,7 @@ textarea:focus, input:focus{
 </div> 
 <div class="form-group row">
 
-<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display('Attachments ') ?>: </label>
-
+<label for="billing_address" style="text-align:end;" class="col-sm-3 col-form-label"><?php echo display ('Attachments ') ?> : </label>
 <div class="col-sm-5">
 <input class=" form-control" type="file"  name="attachement" id="attachement" />
 </div>
@@ -1225,7 +1224,7 @@ textarea:focus, input:focus{
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -1392,7 +1391,7 @@ textarea:focus, input:focus{
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option selected value="USD">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>
