@@ -745,12 +745,12 @@ if($_SESSION['u_type']==2)
           
 
 
-
+<!-- 
                               
             <li class="treeview  ">
 
              <a href="fa fa-asl-interpreting">
-                    <i class="ti-user"></i><span>Manage Invoice Template</span>
+                    <i class="ti-user"></i><span>Manage Invoice 43646 Template</span>
                  
                 </a>
 
@@ -771,7 +771,7 @@ if($_SESSION['u_type']==2)
        
           
             </li>
-             
+              -->
 
 
 
@@ -797,7 +797,7 @@ if($_SESSION['u_type']==2)
                 <li class="treeview  ">
 
 <a href="fa fa-asl-interpreting">
-       <i class="ti-user"></i><span>Manage Invoice Template</span>
+       <i class="ti-user"></i><span><?php echo display('Manage Invoice Template') ?></span>
     
    </a>
 
@@ -827,7 +827,7 @@ if($_SESSION['u_type']==2)
                       <li class="treeview  ">
                 <a href="">
                   
-               <i class="fa-solid fa-list"></i> <span>Template Content</span>
+               <i class="fa-solid fa-list"></i> <span><?php echo display('Template Content') ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -835,7 +835,7 @@ if($_SESSION['u_type']==2)
 
                 <ul class="treeview-menu">
                 
-                        <li class="treeview"><a href="">Email Template</a></li>
+                        <li class="treeview"><a href=""><?php echo display('Email Template') ?></a></li>
 
 
                    
@@ -843,7 +843,7 @@ if($_SESSION['u_type']==2)
 
                         <li class="treeview  ">
                 <a href="#">
-                    <i class=" "></i> <span>Alerts Template</span>
+                    <i class=" "></i> <span><?php echo display('Alerts Template') ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -854,7 +854,7 @@ if($_SESSION['u_type']==2)
                     
                 <li class="treeview  ">
                 <a href="#">
-                    <i class=""></i> <span>Sale Template</span>
+                    <i class=""></i> <span><?php echo display('Sale Template') ?></span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -1676,27 +1676,6 @@ break;
              
 
 
-<!-- 
-
-                        
-            <li  class="treeview  ">
-                <a href="#">
-                    <i class="fa fa-asl-interpreting"></i><span>Service</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                                        <li class="treeview  "><a href="<?php echo base_url(); ?>/Cservice">Add Service</a></li>
-                                                     <li class="treeview  "><a href="<?php echo base_url(); ?>/Cservice/manage_service">Manage Service</a></li>
-                                                                    <li class="treeview  "><a href="<?php echo base_url(); ?>/Cservice/service_invoice_form">Service Invoice</a></li>
-                                                                      <li class="treeview  "><a href="<?php echo base_url(); ?>/Cservice/manage_service_invoice">Manage Service Invoice</a></li>
-                                       </ul>
-            </li>
-         -->
-
-
-      
 
            
 

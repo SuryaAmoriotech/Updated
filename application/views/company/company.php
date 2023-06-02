@@ -17,7 +17,7 @@
 	    </div>
 	    <div class="header-title">
 	        <h1><?php echo display('manage_company') ?></h1>
-	        <small><?php echo display('manage_company') ?></small>
+	        <small></small>
 	        <ol class="breadcrumb">
 	            <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 	            <li><a href="#"><?php echo display('web_settings') ?></a></li>
@@ -61,7 +61,7 @@
 		                <div class="panel-title">
 		                   <!-- <a href="<?php echo base_url('User/manage_user'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> Add Company </a> -->
 		               
-						   <a href="<?php echo base_url('company_setup/company_branch'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> Add Company  </a>
+						   <a href="<?php echo base_url('company_setup/company_branch'); ?>" class="btnclr btn m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('Add Company') ?>  </a>
 </div>
 		            </div>
 		            <div class="panel-body">
@@ -104,7 +104,7 @@
 										$i =2;
 
 										foreach($company_admin_info as $list){
-											echo $list["create_by"];
+											// echo $list["create_by"];
 											echo "<tr><td>".$i."</td><td>".$list["company_name"]."</td><td>".$list["address"]."</td><td>".$list["mobile"]."</td><td>".$list["website"]."</td>";
 								
 

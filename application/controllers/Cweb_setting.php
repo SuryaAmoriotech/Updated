@@ -19,16 +19,7 @@ class Cweb_setting extends CI_Controller {
 
       
     }
-    // public function sendemail()
-    // {
-    //     $CI = & get_instance();
-    //     $CI->load->library('phpmailer_lib');
-    //     $data = array(
-    //         'title' => display('Compose')
-    //     );
-    //     $content = $CI->parser->parse('web_setting/email_sendcus.php', $data, true);
-    //     $this->template->full_admin_html_view($content);
-    // }
+
     function invoice_design()
 {
    $content = $this->lweb_setting->invoice_design();
@@ -258,6 +249,9 @@ public function insert_email() {
         $content = $this->lweb_setting->invoice_setting();
         $this->template->full_admin_html_view($content);
     }
+
+
+    
       public function expense_invoice_template() {
         $content = $this->lweb_setting->expense_invoice_setting();
         $this->template->full_admin_html_view($content);

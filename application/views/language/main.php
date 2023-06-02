@@ -7,12 +7,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Manage Language</h1>
+            <h1><?php echo display('Manage Language') ?></h1>
             <small></small>
             <ol class="breadcrumb">
-                <li><a href="index.html"><i class="pe-7s-home"></i> Home</a></li>
-                <li><a href="#">Language</a></li>
-                <li class="active" style="color:orange">Manage Language</li>
+                <li><a href="index.html"><i class="pe-7s-home"></i> <?php echo display('Home') ?></a></li>
+                <li><a href="#"><?php echo display('Language') ?></a></li>
+                <li class="active" style="color:orange"><?php echo display('Manage Language') ?></li>
             </ol>
         </div>
     </section>
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-sm-12"> 
                 <?php if($this->permission1->method('add_language','create')->access()){?>
-                <a href="<?php echo  base_url('Language/phrase') ?>" class="btn btn-info">Add Phrase</a>
+                <a href="<?php echo  base_url('Language/phrase') ?>" class="btn btn-info"><?php echo display('Add Phrase') ?></a>
             <?php }?>
             </div>
         </div>
@@ -60,17 +60,17 @@
                                         <td colspan="3" style="text-align:center;">
                                             <?php echo  form_open('language/addlanguage', ' class="form-inline" ') ?> 
                                                 <div class="form-group" >
-                                                    <label class="sr-only" for="addLanguage"> Language Name</label>
-                                                    <input name="language" type="text" class="form-control" id="addLanguage" placeholder="Language Name">
+                                                    <label class="sr-only" for="addLanguage"> <?php echo display('Language Name') ?></label>
+                                                    <input name="language" type="text" class="form-control" id="addLanguage" placeholder=" <?php echo display('Language Name') ?>">
                                                 </div>
                                                   
-                                                <button type="submit" class="btn btnclr" style="background-color:#38469f;color:white;">Save</button>
+                                                <button type="submit" class="btn btnclr" style="background-color:#38469f;color:white;"> <?php echo display('Save') ?></button>
                                             <?php echo  form_close(); ?>
                                         </td>
                                     </tr>
                                     <tr style="background-color: #337AB7;border-color: #2E6DA4;color:white;">
                                         <th><i class="fa fa-th-list"></i></th>
-                                        <th>Language</th>
+                                        <th><?php echo display('Language') ?></th>
                                         <th><i class="fa fa-cogs"></i></th>
                                     </tr>
                                 </thead>

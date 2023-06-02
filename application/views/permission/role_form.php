@@ -15,7 +15,7 @@
         </div>
         <div class="header-title">
             <h1><?php echo $title ?></h1>
-            <small><?php echo $title ?></small>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('permission') ?></a></li>
@@ -57,7 +57,6 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo $title ?> </h4>
                         </div>
                     </div>
                      <?php echo form_open("Permission/create/") ?>
@@ -77,10 +76,10 @@
                 
                     
                     <tr>                     <td><?php echo display($value['name']);?></td>
-                       <td><input type="checkbox" name="<?php echo display($value['name']);?>_read">Read </td>
-                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_create">Create</td> 
-                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_delete">Delete</td> 
-                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_update">Update</td> 
+                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_read"><?php echo display('Read') ?> </td>
+                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_create"><?php echo display('Create') ?></td> 
+                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_delete"><?php echo display('Delete') ?></td> 
+                      <td><input type="checkbox" name="<?php echo display($value['name']);?>_update"><?php echo display('Update') ?></td> 
 
                    </tr>
                         
@@ -93,8 +92,8 @@
                 <?php $m++; } ?>
                 </table>
                 <div class="form-group text-right">
-                <button type="reset" class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #3991F4;"><?php echo display('reset') ?></button>
-                <button type="submit"  class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #3991F4;"><?php echo display('save') ?></button>
+                <button type="reset" class="btnclr btn btn-success" style="color:white;background-color: #3991F4;"><?php echo display('reset') ?></button>
+                <button type="submit"  class="btnclr btn btn-success" style="color:white;background-color: #3991F4;"><?php echo display('save') ?></button>
 
                
 

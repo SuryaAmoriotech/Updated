@@ -14,8 +14,8 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1><?php echo $title ?></h1>
-            <small><?php echo $title ?></small>
+            <h1><?php echo display('Role List') ?></h1>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('permission') ?></a></li>
@@ -56,7 +56,6 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo $title ?> </h4>
                         </div>
                     </div>
                    
@@ -66,7 +65,7 @@
                     <table id="" class="table table-bordered table-striped table-hover">
                         <thead>
                         <tr>
-                            <th><?php echo display('sl') ?></th>
+                            <th><?php echo display('S.No') ?></th>
                             <th><?php echo display('role_name') ?></th>
                           
                              <th width="130"><?php echo display('action') ?></th>

@@ -101,7 +101,7 @@
 
 
                         <div class="form-group row">
-<label for="description" class="col-sm-3 col-form-label">Description <i class="text-danger">*</i></label>
+<label for="description" class="col-sm-3 col-form-label"><?php echo display('Description') ?><i class="text-danger">*</i></label>
 <div class="col-sm-6">
 
 <input type="text" class="form-control" name="description" id="description" required="" placeholder="<?php echo display('description') ?>" value="<?php echo html_escape($description)?>"/>
@@ -114,7 +114,7 @@
 
 <div class="form-group row">
 
-<label for="tax_agency" class="col-sm-3 col-form-label">Tax Agency <i class="text-danger">*</i></label>
+<label for="tax_agency" class="col-sm-3 col-form-label"><?php echo display('Tax Agency')?> <i class="text-danger">*</i></label>
 
 <div class="col-sm-6">
 
@@ -122,12 +122,12 @@
 
 <option value="<?php echo html_escape($tax_agency)?>"><?php echo html_escape($tax_agency)?></option>
  
-<option value="">GST</option>
-<option value="VAT" rel="">VAT</option>
-<option value="Service Tax" rel="" >Service Tax</option>
-<option value="Swachh Bharat Cess" rel="">Swachh Bharat Cess</option>
-<option value="Krishi Kalyan Cess" rel="">Krishi Kalyan Cess</option>
-<option value="CST" rel="">CST</option>
+<option value=""><?php echo display('GST') ?></option>
+<option value="VAT" rel=""><?php echo display('VAT') ?></option>
+<option value="Service Tax" rel="" ><?php echo display('Service Tax') ?></option>
+<option value="Swachh Bharat Cess" rel=""><?php echo display('Swachh Bharat Cess') ?></option>
+<option value="Krishi Kalyan Cess" rel=""><?php echo display('Krishi Kalyan Cess') ?></option>
+<option value="CST" rel=""><?php echo display('CST') ?></option>
 </select>
 
    </div>
@@ -151,7 +151,7 @@
     <input type="checkbox" name="is_show"  checked id="sales_tax" class="form-control" value="1">
 </div>
 
-<label for="isshow" class="col-sm-1 col-form-label"   >Sales</label>
+<label for="isshow" class="col-sm-1 col-form-label"   ><?php echo display('Sales') ?></label>
 
 
 
@@ -180,7 +180,7 @@
 
 
 <div class="form-group row">
-<label for="sale_rate" class="col-sm-3 col-form-label">Sales Rate<i class="text-danger">*</i></label>
+<label for="sale_rate" class="col-sm-3 col-form-label"><?php echo display('Sales Rate')?><i class="text-danger">*</i></label>
 <div class="col-sm-6">
 <input type="text" name="sale_rate" id="sale_rate" placeholder="<?php echo display('sale_rate') ?>" value="<?php echo html_escape($sale_rate)?>"  style="width:100%;"   class="form-control">
 </div>
@@ -189,28 +189,28 @@
 
 
 <div class="form-group row">
-<label for="account" class="col-sm-3 col-form-label">Account<i class="text-danger">*</i></label>
+<label for="account" class="col-sm-3 col-form-label"><?php echo display('Account') ?><i class="text-danger">*</i></label>
 <div class="col-sm-6">
 <select name="account" class="form-control">
 
          <option value="<?php echo html_escape($account)?>"><?php echo html_escape($account)?></option>
 
-         <option>Liability</option>
-         <option>Expense</option>
+         <option><?php echo display('Liability') ?></option>
+         <option><?php echo display('Expense') ?></option>
 </select>
 </div>
 </div>
 
 
 <div class="form-group row">
-<label for="show_taxonreturn" class="col-sm-3 col-form-label">Show Tax On Return Line <i class="text-danger">*</i></label>
+<label for="show_taxonreturn" class="col-sm-3 col-form-label"><?php echo display('Show Tax On Return Line') ?> <i class="text-danger">*</i></label>
 <div class="col-sm-6">
 <select name="show_taxonreturn" class="form-control">
 <option value="<?php echo html_escape($show_taxonreturn)?>"><?php echo html_escape($show_taxonreturn)?></option>
 
-          <option>Output-Service Tax</option>
-          <option>Output-Education Tax</option>
-          <option>Output-Higher Education Tax</option>
+<option><?php echo display('Output-Service Tax') ?></option>
+                                      <option><?php echo display('Output-Education Tax') ?></option>
+                                      <option><?php echo display('Output-Higher Education Tax') ?></option>
 </select>
 </div>
 </div>

@@ -21,7 +21,7 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Invoice Setting
+            <h1><?php echo display('Invoice Setting') ?>
 </h1>
             <small></small>
             <ol class="breadcrumb">
@@ -65,7 +65,7 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4>Update Sales & Quote </h4>
+                            <h4><?php echo display('Update Sales & Quote') ?> </h4>
                         </div>
                     </div>
                     <?php echo form_open_multipart('Cweb_setting/web_Invoice',array('class' => 'form-vertical', 'id' => 'form1','name' => 'form1'))?>
@@ -78,23 +78,16 @@
                          
 
                         <div class="form-group row">
-                            <label for="logo" class="col-sm-3 col-form-label">Account details/Additional Information<i class="text-danger">*</i></label>
+                            <label for="logo" class="col-sm-3 col-form-label"><?php echo display('Account details/Additional Information') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
-                               <!-- <textarea rows="4" cols="50" required name="acc" ></textarea> -->
                                <textarea required class="form-control" rows="4" cols="50" name ="acc" id="acc" type="text" tabindex="2"></textarea>
 
                             </div>
                         </div>
 
-                        <!-- <div class="form-group row">
-                            <label for="logo" class="col-sm-3 col-form-label"></label>
-                            <div class="col-sm-6">
-                             
-                            </div>
-                        </div> -->
 
                         <div class="form-group row">
-                            <label for="invoice_logo" class="col-sm-3 col-form-label">Remarks/Conditions <i class="text-danger">*</i></label>
+                            <label for="invoice_logo" class="col-sm-3 col-form-label"><?php echo display('Remarks/Conditions') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <textarea required class="form-control" rows="4" cols="50" name ="remarks" id="remarks" type="text" tabindex="2"></textarea>
                             </div>
@@ -124,47 +117,13 @@
 
         
 
-<!-- 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-bd lobidrag">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h4>Update Packing List Invoice </h4>
-                        </div>
-                    </div>
-                    <?php //echo form_open_multipart('Cweb_setting/web_Invoice',array('class' => 'form-vertical', 'id' => 'form2','name' => 'form2'))?>
-                 
-          
-                    <div class="panel-body">
-
-                         <input name ="form_type" type="hidden" value="packing_List">
- <div class="form-group row">
-                            <label for="invoice_logo" class="col-sm-3 col-form-label">Remarks/Conditions<i class="text-danger">*</i></label>
-                            <div class="col-sm-6">
-                                <textarea required class="form-control" rows="4" cols="50" name ="company_address" id="company_address" type="text" tabindex="2"></textarea>
-                            </div>
-                        </div>
-  <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label"></label>
-                            <div class="col-sm-6">
-                                <input type="submit"  id="add-customer" class="btn btn-success btn-large" name="add-customer"  style="color:white;background-color: #337ab7;border-color: #2e6da4;"  value="<?php echo display('save_changes') ?>" tabindex="13"/>
-                                <input type="hidden" name="uid" value="<?php //echo $_SESSION['user_id']; ?>">
-                                <?php// echo form_close()?>
-                            </div>
-                        </div>
-  
-                </div>
-            </div>
-        </div> -->
-
 
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4>Update Ocean Export Tracking Invoice </h4>
+                            <h4><?php echo display('Update Ocean Export Tracking Invoice') ?> </h4>
                         </div>
                     </div>
                     <?php echo form_open_multipart('Cweb_setting/web_Invoice',array('class' => 'form-vertical', 'id' => 'form3','name' => 'form3'))?>
@@ -176,7 +135,7 @@
                          
 
                        <div class="form-group row">
-                            <label for="invoice_logo" class="col-sm-3 col-form-label">Remarks/Conditions<i class="text-danger">*</i></label>
+                            <label for="invoice_logo" class="col-sm-3 col-form-label"><?php echo display('Remarks/Conditions') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" rows="4" required cols="50" name ="remarks" required id="remarks" type="text" tabindex="2"></textarea>
                             </div>
@@ -209,7 +168,7 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4>Update Road Transport Invoice </h4>
+                            <h4><?php echo display('Update Road Transport Invoice') ?> </h4>
                         </div>
                     </div>
                     <?php echo form_open_multipart('Cweb_setting/web_Invoice',array('class' => 'form-vertical', 'id' => 'form4','name' => 'form4'))?>
@@ -224,7 +183,7 @@
                         
 
                          <div class="form-group row">
-                            <label for="invoice_logo" class="col-sm-3 col-form-label">Remarks/Conditions<i class="text-danger">*</i></label>
+                            <label for="invoice_logo" class="col-sm-3 col-form-label"><?php echo display('Remarks/Conditions') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" required rows="4" cols="50" name ="remarks" id="remarks" type="text" tabindex="2"></textarea>
                             </div>
@@ -252,7 +211,6 @@
 
     </section>
 </div>
-<!-- Add new customer end -->
 
 
 

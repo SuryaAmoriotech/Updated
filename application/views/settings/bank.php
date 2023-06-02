@@ -1,3 +1,15 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
+
+
+
+
+
+
+
 <!-- Bank List Start -->
 <div class="content-wrapper">
 	<section class="content-header">
@@ -6,7 +18,7 @@
 	    </div>
 	    <div class="header-title">
 	        <h1><?php echo display('bank_list') ?></h1>
-	        <small><?php echo display('bank_list') ?></small>
+	        <small><?php echo display('') ?></small>
 	        <ol class="breadcrumb">
 	            <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 	            <li><a href="#"><?php echo display('settings') ?></a></li>
@@ -64,7 +76,6 @@
 		        <div class="panel panel-bd lobidrag">
 		            <div class="panel-heading">
 		                <div class="panel-title">
-		                    <h4><?php echo display('bank_list') ?> </h4>
 		                </div>
 		            </div>
 		            <div class="panel-body">
@@ -98,9 +109,9 @@
 										<img src="{signature_pic}" class="img img-responsive center-block" height="80" width="100"></td>
 										<td>
 										<?php echo form_open()?>
-										 <?php if($this->permission1->method('bank_list','update')->access()){ ?>
-											<a href="<?php echo base_url().'Csettings/edit_bank/{bank_id}'; ?>" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="" data-original-title="<?php echo display('update') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-										<?php }?>
+										 <?php //if($this->permission1->method('bank_list','update')->access()){ ?>
+											<a href="<?php echo base_url().'Csettings/edit_bank/{bank_id}'; ?>" class="btnclr btn m-b-5 m-r-2" data-toggle="tooltip" data-placement="left" title="" data-original-title="<?php echo display('update') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+										<?php// }?>
 										<?php echo form_close()?>
 										</td>
 									</tr>

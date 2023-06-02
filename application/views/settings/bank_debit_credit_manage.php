@@ -1,3 +1,13 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
+
+
+
+
+
 <!-- Bank debit credit manage -->
 <style>
             input {
@@ -20,7 +30,7 @@ textarea:focus, input:focus{
         </div>
         <div class="header-title">
             <h1><?php echo display('bank_transaction') ?></h1>
-            <small><?php echo display('bank_transaction') ?></small>
+            <small><?php echo display('') ?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('bank') ?></a></li>
@@ -72,7 +82,6 @@ textarea:focus, input:focus{
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo display('bank_transaction') ?> </h4>
                         </div>
                     </div>
                    <?php echo form_open_multipart('Csettings/bank_debit_credit_manage_add',array('class' => 'form-vertical','id' => 'validate' ))?>
@@ -134,8 +143,8 @@ textarea:focus, input:focus{
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-4 col-form-label"></label>
                             <div class="col-sm-6">
-                                <input type="reset" class="btn btn-danger" value="<?php echo display('reset') ?>" tabindex="6"/>
-                                <input type="submit" id="add-deposit" class="btn btn-success" name="add-deposit" value="<?php echo display('save') ?>" tabindex="7"/>
+                                <input type="reset" class="btnclr btn m-b-5 m-r-2" value="<?php echo display('reset') ?>" tabindex="6"/>
+                                <input type="submit" id="add-deposit" class="btnclr btn m-b-5 m-r-2" name="add-deposit" value="<?php echo display('save') ?>" tabindex="7"/>
                             </div>
                         </div>
                     </div>

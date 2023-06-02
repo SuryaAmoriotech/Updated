@@ -1,4 +1,16 @@
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>my-assets/css/css.css" />
+
+
+
+
+
+
+
+
 <!-- Stock List Supplier Wise Start -->
 <div class="content-wrapper">
 	<section class="content-header">
@@ -7,7 +19,7 @@
 	    </div>
 	    <div class="header-title">
 	        <h1><?php echo display('bank_ledger') ?></h1>
-	        <small><?php echo display('bank_ledger') ?></small>
+	        <small><?php echo display('') ?></small>
 	        <ol class="breadcrumb">
 	            <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 	            <li><a href="#"><?php echo display('bank') ?></a></li>
@@ -51,8 +63,8 @@
                         <input type="text" name="from_date"  value="<?php echo $today; ?>" class="datepicker form-control"/>
                         <label class="select"><?php echo display('to') ?></label>
                         <input type="text" name="to_date" class="datepicker form-control" value="<?php echo $today; ?>"/>
-                        <button type="submit" class="btn btn-success"><?php echo display('search') ?></button>
-                        <a  class="btn btn-warning" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></a>
+                        <button type="submit"  class="btnclr btn m-b-5 m-r-2" ><?php echo display('search') ?></button>
+                        <a class="btnclr btn m-b-5 m-r-2" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></a>
                         <?php echo form_close() ?>		            
                     </div>
                 </div>
@@ -64,13 +76,12 @@
 		        <div class="panel panel-bd lobidrag">
 		            <div class="panel-heading">
 		                <div class="panel-title">
-		                    <h4><?php echo display('bank_ledger') ?></h4>
 		                </div>
 		            </div>
 		            <div class="panel-body">
 		            
 			            <div class="text-right">
-			            	<button  class="btn btn-warning text-right" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></button>
+			            	<button  class="btnclr btn m-b-5 m-r-2" href="#" onclick="printDiv('printableArea')"><?php echo display('print') ?></button>
 			            </div>
 		            	
 						<div id="printableArea">

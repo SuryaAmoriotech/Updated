@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <?php 
 echo base_url() ;
 
@@ -80,8 +88,8 @@ border: 1px solid orange;
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>invoice design</h1>
-            
+            <h1><?php echo display('Invoice Design') ?></h1>
+<small><?php echo display('') ?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('ads') ?></a></li>
@@ -127,11 +135,11 @@ border: 1px solid orange;
                           <div class="row">
                               <div class="col-sm-4  "> <div class="panel panel-default">
 
-                                <label>Invoice Header</label>
+                                <label><?php echo display('Invoice Header') ?></label>
 
     <div class="panel-body"> <input type="text" onblur="header(this.value)" name="header" id='header'>
         <br>
-        <img src="<?php echo base_url().'assets/images/templatelogo.png'; ?>" id='template' style='width: 17%;'>  Dive in with template
+        <img src="<?php echo base_url().'assets/images/templatelogo.png'; ?>" id='template' style='width: 17%;'>  <?php echo display('Dive in with Template' )?>
         <br><br>
 
             <table id="templateformart">
@@ -149,7 +157,7 @@ border: 1px solid orange;
 <br>
 
           
-             <img src="<?php echo base_url().'assets/images/coloricon.png'; ?>" id='templatecolor' style='width: 15%;'>  Template Color
+             <img src="<?php echo base_url().'assets/images/coloricon.png'; ?>" id='templatecolor' style='width: 15%;'>  <?php echo display('Template Color')?>
         <br><br>
         <?php
         $colors = array("CadetBlue"=>"5F9EA0",
@@ -256,10 +264,10 @@ foreach ($colors as $key => $value)
         
               <div class="col-sm-3" id='company_info'>
                   
-                  Company name:<?php echo $cname; ?><br>
-                  Address:<?php echo $address; ?><br>
-                  Email:<?php echo $email; ?><br>
-                  Contact:<?php echo $mobile; ?><br>
+                  <?php echo display('Company name') ?>:<?php echo $cname; ?><br>
+                  <?php echo display('Address') ?>:<?php echo $address; ?><br>
+                  <?php echo display('Email') ?>:<?php echo $email; ?><br>
+                  <?php echo display('Contact') ?>:<?php echo $mobile; ?><br>
               </div>
             <div class="col-sm-6 text-center"><h3><?php echo $header; ?></h3></div>
             <div class="col-sm-3"><img src="<?php echo  base_url().$logo; ?>" style='width: 40%;'></div>
@@ -347,10 +355,10 @@ Preview
             <div class="col-sm-6 text-center"><h3><?php echo $header; ?></h3></div>
            <div class="col-sm-4" id='company_info'>
                   
-                  Company name:<?php echo $cname; ?><br>
-                  Address:<?php echo $address; ?><br>
-                  Email:<?php echo $email; ?><br>
-                  Contact:<?php echo $mobile; ?><br>
+                   <?php echo display('Company name') ?>:<?php echo $cname; ?><br>
+                  <?php echo display('Address') ?>:<?php echo $address; ?><br>
+                  <?php echo display('Email') ?>:<?php echo $email; ?><br>
+                  <?php echo display('Contact') ?>:<?php echo $mobile; ?><br>
               </div>
         </div>
 
@@ -441,11 +449,17 @@ Preview
 
             <div class="col-sm-6"><img src="<?php echo  base_url().$logo; ?>" style='width: 40%;float: right;;'>              </div>
 
-            <div class="col-sm-4 " id="">Company namea:<?php echo $cname; ?><br>
-                  Address:<?php echo $address; ?><br>
-                  Email:<?php echo $email; ?><br>
-                  Contact:<?php echo $mobile; ?><br>
-              </div>
+            <!-- <div class="col-sm-4 " id="">Company namea:<?php //echo $cname; ?><br>
+                  Address:<?php// echo $address; ?><br>
+                  Email:<?php //echo $email; ?><br>
+                  Contact:<?php //echo $mobile; ?><br> -->
+
+                  <?php echo display('Company name') ?>:<?php echo $cname; ?><br>
+                  <?php echo display('Address') ?>:<?php echo $address; ?><br>
+                  <?php echo display('Email') ?>:<?php echo $email; ?><br>
+                  <?php echo display('Contact') ?>:<?php echo $mobile; ?><br>
+
+              <!-- </div> -->
 
            <div class="col-sm-4" id='company_info'>
                   
@@ -458,7 +472,7 @@ Preview
         <div class="row">
             <div class="col-sm-8"><table width="348" height="79" border="1" style="color: #000;">
   <tr>
-    <td width="204" height="30" style="background-color:#<?php echo $color; ?>;"><b>BILL TO </b> </td>
+    <td width="204" height="30" style="background-color:#<?php echo $color; ?>;"><b><?php echo display('BILL TO') ?> </b> </td>
   </tr>
   <tr>
     <td>Amorio</td>
@@ -478,8 +492,6 @@ Preview
     <td>Commercial</td>
     <td>Date</td>
     <td>Total Due</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
     <td>enclosed</td>
   </tr>
   <tr>
@@ -487,8 +499,7 @@ Preview
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    
   </tr>
 </table>
 <br>

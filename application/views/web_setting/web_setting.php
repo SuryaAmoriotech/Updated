@@ -105,7 +105,7 @@
                         <div class="form-group row">
                             <label for="currency" class="col-sm-3 col-form-label"><?php echo display('Notification_Setting');  ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
-                            <span style="padding-left:10px;font-size:20px;">Sales Setting</span>   <span class="open-modal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x"  aria-hidden="true" id="sale" data-toggle="modal" data-target="#basicModal"></span></i>
+                            <span style="padding-left:10px;font-size:20px;"><?php echo display('Sales Setting') ?></span>   <span class="open-modal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x"  aria-hidden="true" id="sale" data-toggle="modal" data-target="#basicModal"></span></i>
                             <span style="padding-left:10px;font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expense Setting</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-cog fa-2x" aria-hidden="true" id="expense" data-toggle="modal" data-target="#expensemodel"></i>
                             </div>
                         </div>
@@ -283,138 +283,138 @@ th{
             <div class="modal-header" style="color:white;background-color:#38469f;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                 <h4 class="modal-title" id="myModalLabel">SALES SETTING</h4>
+                 <h4 class="modal-title" id="myModalLabel"><?php echo display('SALES SETTING') ?></h4>
 
             </div>
             <div class="modal-body">
                 <table class="table table-bordered" id="table" >
                     <thead style="text-align:center;">
                         <tr>
-                        <th><input type="checkbox"  onClick="toggle(this)"/>&nbsp;SELECTALL </th>
+                        <th><input type="checkbox"  onClick="toggle(this)"/>&nbsp;<?php echo display('SELECTALL') ?> </th>
                             
-                            <th>DATES</th>
-                            <th>TIME</th>
-                            <th>SOURCE</th>
+                            <th><?php echo display('DATES') ?></th>
+                            <th><?php echo display('TIME') ?></th>
+                            <th><?php echo display('SOURCE') ?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td> <input type="checkbox" id="eta" name="checkbox" /></td>
-                           <td><span id="bold">NEW SALE</span> - ETD</td>
+                           <td><span id="bold"><?php echo display('NEW SALE') ?></span> - ETD</td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="etd" name="checkbox"/></td>
-                        <td><span id="bold">NEW SALE</span> - ETA</td>
+                        <td><span id="bold"><?php echo display('NEW SALE') ?></span> - <?php echo display('ETA') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="pay" name="checkbox"/></td>
-                           <td><span id="bold">NEW SALE</span> - PAYMENT DUE DATE</td>
+                           <td><span id="bold"><?php echo display('NEW SALE') ?></span> - <?php echo display('PAYMENT DUE DATE') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox"/></td>
-                           <td><span id="bold">OCEAN EXPORT TRACKING</span> - ETD</td>
+                           <td><span id="bold"><?php echo display('OCEAN EXPORT TRACKING') ?></span> - <?php echo display('ETD') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox"/></td>
-                           <td><span id="bold">OCEAN EXPORT TRACKING</span> - ETA</td>
+                           <td><span id="bold"><?php echo display('OCEAN EXPORT TRACKING') ?></span> - <?php echo display('ETA') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox"/></td>
-                           <td><span id="bold">TRUCKING</span> - CONTAINER PICKUP DATE</td>
+                           <td><span id="bold"><?php echo display('TRUCKING') ?></span> - <?php echo display('CONTAINER PICKUP DATE') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox"/></td>
-                           <td><span id="bold">TRUCKING</span> - DELIVERY DATE</td>
+                           <td><span id="bold"><?php echo display('TRUCKING') ?></span> - <?php echo display('DELIVERY DATE') ?></td>
                            <td>
                             <select class="when"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL">  <select class="where"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                     </tbody>
@@ -422,8 +422,8 @@ th{
             </div>
             <div class="modal-footer">
             <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color:#1c2350;"><span aria-hidden="true">&times;</span></button> -->
-                <button type="button" class="btn btn-primary" style="background-color:#1c2350;">Save</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color:#1c2350;">Close</button>
+                <button type="button" class="btn btn-primary" style="background-color:#1c2350;"><?php echo display('Save') ?></button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color:#1c2350;"><?php echo display('Close') ?></button>
             </div>
         </div>
     </div>
@@ -529,121 +529,121 @@ function toggle(source) {
        <div class="modal-header" style="color:white;background-color:#38469f;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                 <h4 class="modal-title" id="myModalLabel_exp">EXPENSE SETTING</h4>
+                 <h4 class="modal-title" id="myModalLabel_exp"><?php echo display('EXPENSE SETTING') ?></h4>
 
             </div>
             <div class="modal-body">
                 <table class="table table-bordered" >
                     <thead style="text-align:center;">
                         <tr>
-                            <th><input type="checkbox"  onClick="toggle_exp(this)"/>&nbsp;SELECTALL </th>
+                            <th><input type="checkbox"  onClick="toggle_exp(this)"/>&nbsp;<?php echo display('SELECTALL') ?> </th>
                   
-                            <th>DATES</th>
-                            <th>TIME</th>
-                            <th>SOURCE</th>
+                            <th><?php echo display('DATES') ?></th>
+                            <th><?php echo display('TIME') ?></th>
+                            <th><?php echo display('SOURCE') ?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td> <input type="checkbox" id="exp_etd" name="checkbox_exp" /></td>
-                           <td><span id="bold">NEW EXPENSE</span> - PAYMENT DUE DATE</td>
+                           <td><span id="bold"><?php echo display('NEW EXPENSE') ?></span> - <?php echo display('PAYMENT DUE DATE') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="etd" name="checkbox_exp"/></td>
-                           <td><span id="bold">PURCHASE ORDER</span> - EST.SHIPMENT DATE</td>
+                           <td><span id="bold"><?php echo display('PURCHASE ORDER') ?></span> - <?php echo display('EST SHIPMENT DATE') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="pay" name="checkbox_exp"/></td>
-                           <td><span id="bold">OCEAN IMPORT TRACKING</span> - ETA</td>
+                           <td><span id="bold"><?php echo display('OCEAN IMPORT TRACKING') ?></span> - <?php echo display('ETA') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Date">Select Preferred Date</option>
+                            <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox_exp"/></td>
-                        <td><span id="bold">OCEAN IMPORT TRACKING</span> - ETD</td>
+                        <td><span id="bold"><?php echo display('OCEAN IMPORT TRACKING') ?></span> - <?php echo display('ETD') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox_exp"/></td>
-                        <td><span id="bold">TRUCKING</span> - CONTAINER/GOODS PICKUP DATE</td>
+                        <td><span id="bold"><?php echo display('TRUCKING') ?></span> - <?php echo display('CONTAINER / GOODS PICKUP DATE') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                         <tr>
                         <td><input type="checkbox" id="delivery" name="checkbox_exp"/></td>
-                        <td><span id="bold">TRUCKING</span> - DELIVERY DATE</td>
+                        <td><span id="bold"><?php echo display('TRUCKING') ?></span> - <?php echo display('DELIVERY DATE') ?></td>
                            <td>
                             <select class="when_exp"  style="width: -webkit-fill-available;">
-                           <option value="Select Preferred Date">Select Preferred Date</option>
+                           <option value="Select Preferred Date"><?php echo display('Select Preferred Date') ?></option>
                           </select>
                             </td>
                             <td>
                             <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Source">Select Preferred Source</option>
+                            <option value="Select Preferred Source"><?php echo display('Select Preferred Source') ?></option>
                           </select>
                             </td>
                             <td class="EMAIL_exp">  <select class="where_exp"  style="width: -webkit-fill-available;">
-                            <option value="Select Preferred Email">Select Preferred Email</option>
+                            <option value="Select Preferred Email"><?php echo display('Select Preferred Email') ?></option>
                           </select></td>
                         </tr>
                     </tbody>
@@ -651,8 +651,8 @@ function toggle(source) {
             </div>
             <div class="modal-footer">
             <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> -->
-                <button type="button" class="btn btn-primary" style="background-color:#1c2350;">Save</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color:#1c2350;">Close</button>
+                <button type="button" class="btn btn-primary" style="background-color:#1c2350;"><?php echo display('Save') ?></button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color:#1c2350;"><?php echo display('Close') ?></button>
             </div>
         </div>
     </div>

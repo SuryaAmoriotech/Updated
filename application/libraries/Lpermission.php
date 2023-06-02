@@ -21,26 +21,6 @@ class Lpermission {
 	}
 
 
-	// public function assign_form(){
-
-	// 	$CI=& get_instance();
-	// 	$CI->load->model('Permission_model');
-	// 	$user=$CI->Permission_model->user();
-     
-	// 	$user_list=$CI->Permission_model->user_list();
-    //     $assign_list=$CI->Permission_model->assign_list();
-
-        
-    //     // exit;
-	// 	$data = array(
-    //       'title'     => 'User assign role',
-    //       'user'      => $user,
-    //       'user_list' => $user_list,
-    //       'assign_list' => $assign_list,
-	// 	);
-	// 	$account = $CI->parser->parse('permission/assign_form',$data,true);
-	// 	return $account;
-	// }
 
     public function assign_form(){
 

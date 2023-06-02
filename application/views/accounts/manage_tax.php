@@ -96,12 +96,12 @@
       
        ?>
 
-<a href="<?php  echo base_url(); ?>/Caccounts/add_taxes " class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #337ab7;border-color: #2e6da4;">Create Tax</a>
+<a href="<?php  echo base_url(); ?>/Caccounts/add_taxes " class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #337ab7;border-color: #2e6da4;"><?php echo display('Create Tax') ?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php  echo base_url(); ?>/Caccounts/add_taxes " class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #337ab7;border-color: #2e6da4;">Create Tax</a>
+<a href="<?php  echo base_url(); ?>/Caccounts/add_taxes " class="btnclr btn m-b-5 m-r-2" style="color:white;background-color: #337ab7;border-color: #2e6da4;"><?php echo display('Create Tax') ?></a>
 
                         <?php  } ?>
 
@@ -145,7 +145,7 @@
                    
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
                     <button class="btn btnclr dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-       <span class="glyphicon glyphicon-th-list"></span> Download
+       <span class="glyphicon glyphicon-th-list"></span> <?php echo display('Download') ?>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">          
       <li><a href="#" id="cmd"> <img src="<?php echo base_url()?>assets/images/pdf.png" width="24px"> PDF</a></li>
@@ -173,17 +173,17 @@
 
 
             <div class="panel-title" >
-               <div id="for_filter_by" class="for_filter_by" style="display: inline;text-align:right;"><label for="filter_by">Filter By&nbsp;&nbsp;
+               <div id="for_filter_by" class="for_filter_by" style="display: inline;text-align:right;"><label for="filter_by"><?php echo display('Filter By') ?>&nbsp;&nbsp;
                 
                    </label><select id="filterby" style="border-radius:5px;height:25px;">
-                    <option value="1">S.No</option>
-                  <option value="2">Tax</option>
-<option value="3">Tax ID</option>
-<option value="4">Description</option>
-<option value="5">Tax Agency</option>
-<option value="6">Sale Rate</option>
-<option value="7">Account</option>
-<option value="8">Show Tax On Return</option>
+                    <option value="1"><?php echo display('S.No') ?></option>
+                  <option value="2"><?php echo display('Tax') ?></option>
+<option value="3"><?php echo display('Tax ID') ?></option>
+<option value="4"><?php echo display('Description') ?></option>
+<option value="5"><?php echo display('Tax Agency') ?></option>
+<option value="6"><?php echo display('Sale Rate') ?></option>
+<option value="7"><?php echo display('Account') ?></option>
+<option value="8"><?php echo display('Show Tax On Return') ?></option>
 
                   </select> <input id="filterinput" style="border-radius:5px;height:25px;" type="text">
 				 
@@ -246,17 +246,17 @@
 									<tr>
 									 
 
-		 <th class="1 value"  data-col="1"    style="width: 100px; height: 40.0114px;" >SL No</th>
-         <th class="2 value"  data-col="2"    style="height: 45.0114px; width: 274.011px" >Tax</th>
-         <th class="3 value"  data-col="3"     >Tax ID</th>
-         <th class="4 value"  data-col="4"    style="width: 278.011px;"        >Description</th>
-         <th class="5 value"  data-col="5"    style="width: 298.011px;"       >Tax Agency</th>
-		 <th class="6 value" data-col="6"    style="width: 248.011px;"       >Sale Rate </th>
-         <th class="7 value" data-col="7"    style="width: 198.011px;"       >Account</th>
-         <th class="8 value" data-col="8"    style="width: 598.011px;"       >Show Tax on Return Line</th>
+		 <th class="1 value"  data-col="1"    style="width: 100px; height: 40.0114px;" ><?php echo display('S.No') ?></th>
+         <th class="2 value"  data-col="2"    style="height: 45.0114px; width: 274.011px" ><?php echo display('Tax') ?></th>
+         <th class="3 value"  data-col="3"     ><?php echo display('Tax ID') ?></th>
+         <th class="4 value"  data-col="4"    style="width: 278.011px;"        ><?php echo display('Description') ?></th>
+         <th class="5 value"  data-col="5"    style="width: 298.011px;"       ><?php echo display('Tax Agency') ?></th>
+		 <th class="6 value" data-col="6"    style="width: 248.011px;"       ><?php echo display('Sale Rate') ?> </th>
+         <th class="7 value" data-col="7"    style="width: 198.011px;"       ><?php echo display('Account') ?></th>
+         <th class="8 value" data-col="8"    style="width: 598.011px;"       ><?php echo display('Show Tax On Return Line') ?></th>
 
          <div class="myButtonClass Action">
-		<th class="9 value" data-col="9" data-resizable-column-id="6"    style="width: 198.011px;"       >Action</th>
+		<th class="9 value" data-col="9" data-resizable-column-id="6"    style="width: 198.011px;"       ><?php echo display('Action') ?></th>
         </div>
 
 
@@ -388,15 +388,15 @@
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1"  value="1"/>SL.NO<br>
-<input type="checkbox"  data-control-column="2" checked = "checked" class="2"  value="2"/>Tax<br>
-<input type="checkbox"  data-control-column="3" checked = "checked" class="3"   value="3"/>Tax ID<br>
-<input type="checkbox"  data-control-column="4" checked = "checked" class="4"   value="4"/>Description <br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5"   value="5"/>Tax Agency <br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="6"   value="6"/>Sale Rate <br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="7"   value="7"/>Account <br>
-<input type="checkbox"  data-control-column="5" checked = "checked" class="8"   value="8"/>Show Tax on Return Line<br>
-<input type="checkbox"  data-control-column="6" checked = "checked" class="9"   value="9"/>Action<br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1"  value="1"/><?php echo display('S.No') ?><br>
+<input type="checkbox"  data-control-column="2" checked = "checked" class="2"  value="2"/><?php echo display('Tax') ?><br>
+<input type="checkbox"  data-control-column="3" checked = "checked" class="3"   value="3"/><?php echo display('Tax ID') ?><br>
+<input type="checkbox"  data-control-column="4" checked = "checked" class="4"   value="4"/><?php echo display('Description') ?> <br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5"   value="5"/><?php echo display('Tax Agency') ?> <br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="6"   value="6"/><?php echo display('Sale Rate') ?> <br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="7"   value="7"/><?php echo display('Account') ?> <br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="8"   value="8"/><?php echo display('Show Tax on Return Line') ?><br>
+<input type="checkbox"  data-control-column="6" checked = "checked" class="9"   value="9"/><?php echo display('Action') ?><br>
 
 
 

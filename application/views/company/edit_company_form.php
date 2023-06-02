@@ -20,7 +20,7 @@
         </div>
         <div class="header-title">
             <h1><?php echo display('company_edit') ?></h1>
-            <small><?php echo display('edit_your_company_information') ?></small>
+            <small></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('web_settings') ?></a></li>
@@ -36,14 +36,14 @@
                 <div class="panel panel-bd lobidrag">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h4><?php echo display('company_edit') ?> </h4>
+                            <!-- <h4><?php //echo display('company_edit') ?> </h4> -->
                         </div>
                     </div>
                     <?php echo form_open_multipart('Company_setup/company_update',array('class' => 'form-vertical', 'id' => 'insert_customer'))?>
                     <div class="panel-body">
 
                         <div class="form-group row">
-                        <label class="col-sm-3 col-form-label">CompanyName<i class="text-danger">*</i></label>
+                        <label class="col-sm-3 col-form-label"><?php echo display('CompanyName') ?><i class="text-danger">*</i></label>
                             <div class="col-sm-6">
                                 <input type="text" tabindex="2" class="form-control" name="company_name" value="{company_name}"  placeholder="<?php echo display('company_name') ?>" required tabindex="1"/>
                             </div>

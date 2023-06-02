@@ -13,7 +13,7 @@
 
         <div class="header-title">
 
-            <h1>Help Content</h1>
+            <h1><?php echo display('Help Content') ?></h1>
 
             <small></small>
 
@@ -21,9 +21,9 @@
 
                 <li><a href=""><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
 
-                <li><a href="#">Help Desk</a></li>
+                <li><a href="#"><?php echo display('Help Desk') ?></a></li>
 
-                <li class="active" style="color:orange;">Manage Desk</li>
+                <li class="active" style="color:orange;"><?php echo display('Manage Desk') ?></li>
 
             </ol>
 
@@ -141,11 +141,11 @@
 
                                         <th class="text-center"><?php echo display('sl') ?></th>
 
-                                        <th class="text-center">Title</th>
+                                        <th class="text-center"><?php echo display('Title') ?></th>
 
                                        
 
-                                         <th class="text-center"><?php echo display('description') ?></th>
+                                         <th class="text-center"><?php echo display('Description') ?></th>
 
                                       
 
@@ -279,7 +279,7 @@
 
                                 <input type="submit" id="add-product" class="btn btn-primary btn-large" name="add-product" value="<?php echo display('submit') ?>" />
 
-                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal"><?php echo display('Close' )?></button>
 
                                
 

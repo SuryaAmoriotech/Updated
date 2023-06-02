@@ -25,12 +25,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Add Admin User</h1>
+            <h1><?php echo display('Add Admin User') ?></h1>
             <small></small>
             <ol class="breadcrumb">
                 <li><a href="index.html"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#"><?php echo display('web_settings') ?></a></li>
-                <li class="active" style="color:orange;">Add User</li>
+                <li class="active" style="color:orange;"><?php echo display('Add Admin User') ?></li>
             </ol>
         </div>
     </section>
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <?php if($this->permission1->method('manage_user','read')->access()){?>
-                  <a href="<?php echo base_url('User/manage_user')?>" class="btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>Manage User</a>
+                  <a href="<?php echo base_url('User/manage_user')?>" class="btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i><?php echo display('Manage User') ?></a>
                 <?php }?>
             </div>
         </div>
@@ -89,39 +89,40 @@
                     <?php echo form_open_multipart('User/insert_users');?>
                         
                         <div class="form-group">
-                            <label>first name</label>
+                            <label><?php echo display('First Name') ?></label>
                             <input type="" name="fname" re class="form-control" style="width:30%" required>
                         </div>
                         <div class="form-group">
-                            <label>last name</label>
+                            <label><?php echo display('Last Name') ?></label>
                             <input type="" name="lname" class="form-control"  style="width:30%" required>
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label><?php echo display('Phone') ?></label>
                             <input type="number" name="email" class="form-control"  style="width:30%" required>
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
+                            <label><?php echo display('Email') ?></label>
                             <input type="email" name="phone" class="form-control" style="width:30%" required>
                         </div>
                             <div class="form-group">
-                            <label>Gender</label>
+                            <label><?php echo display('Gender') ?>
+                            </label>
                             <select class="form-control" name="gender" style="width:30%" required>
-                                <option value="">Select Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">FeMale</option>
+                                <option value=""><?php echo display('Select Gender')?></option>
+                                <option value="male"><?php echo display('Male') ?></option>
+                                <option value="female"><?php echo display('FeMale') ?></option>
                             </select>
                         </div>
                           <div class="form-group">
-                            <label>Dob</label>
+                            <label><?php echo display('DOB') ?></label>
                             <input type="date" name="Date" class="form-control" required style="width: 30%;">
                         </div>
                         <div class="form-group">
-                            <label>username</label>
+                            <label><?php echo display('username') ?></label>
                             <input type="text" name="username" class="form-control" required style="width: 30%;">
                         </div>
                          <div class="form-group">
-                            <label>Password</label>
+                            <label><?php echo display('Password') ?></label>
                             <input type="text" name="password" class="form-control" required style="width: 30%;">
                         </div>
                         <div class="form-group">
