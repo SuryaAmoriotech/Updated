@@ -97,7 +97,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                     <table id="one" >
 <tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
 <tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Container / Goods Pick up date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
 <tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
 <tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>
@@ -235,7 +235,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
                     <table id="one" >
                     <tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
 <tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Container / Goods Pick up date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
 <tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
 <tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>
@@ -384,7 +384,7 @@ elseif($template==3)
                     <table id="one" >
                     <tr><td  class="key"> <?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo$invoice_no;  ?></td></tr>
 <tr><td  class="key"><?php echo display('Customer Name') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $customer_name; ?></td></tr>
-<tr><td  class="key"><?php echo display('Container/Goods Pick Up Date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
+<tr><td  class="key"><?php echo display('Container / Goods Pick up date') ?></td><td style="width:10px;">:</td><td calss="value">{container_pickup_date}</td></tr>
 <tr><td  class="key"><?php echo display('Delivery to') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $delivery_to; ?></td></tr>
 <tr><td  class="key"><?php echo display('Truck No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo  $truck_no; ?></td></tr>
 </table>

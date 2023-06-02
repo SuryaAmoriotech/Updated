@@ -80,97 +80,96 @@ if(1==1)
 
     <table>
       <tr>                                               
-          <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
 
-           <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
-      </tr>
-      
-
-      <tr>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
-
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
-
-      </tr>
-      
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Vessel").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['vessel'].'</span></td>
-
-      </tr>
-     
-
-      <tr>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
-
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port Of Loading").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_loading'].'</span></td>
-
-      </tr>
-     
-
-      <tr>
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port of Discharge").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_discharge'].'</span></td>
-
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Place of Delivery").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['place_of_delivery'].'</span></td>
-
-      </tr>
-     
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customs Broker").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['customs_broker_name'].'</span></td>
-
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("MBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['mbl_no'].'</span></td>
-
-    </tr>
-
-
-
-
-
-
-    <tr>
-    <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
-    
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
-
-    </tr>
-
-
-    <tr>
-    <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
-    
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
-
-    </tr>
-   
-
-
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Container No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['container_no'].'</span></td>
-      
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Seal No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['seal_no'].'</span></td>
-
-      </tr>
-     
-
-
-      <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
-
-      <th style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of arrival").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['eta'].'</span></th>
-
-      </tr>
-      
-
-      <tr>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
-
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
-
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
+ </tr>
+ 
+ 
+ <tr>
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
+ 
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
+ 
+ </tr>
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
+ 
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Vessel").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['vessel'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ <tr>
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
+ 
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port Of Loading").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_loading'].'</span></td>
+ 
+ </tr>
+ 
+ <tr>
+   <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port of Discharge").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_discharge'].'</span></td>
+ 
+   <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Place of Delivery").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['place_of_delivery'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customs Broker").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['customs_broker_name'].'</span></td>
+ 
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("MBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['mbl_no'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
+ 
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
+ 
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ 
+ 
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Container No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['container_no'].'</span></td>
+ 
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Seal No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['seal_no'].'</span></td>
+ 
+ </tr>
+ 
+ 
+ 
+ <tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
+ 
+ <th style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of arrival").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['eta'].'</span></th>
+ 
+ </tr>
+ 
+ 
+ <tr>
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
+ 
+  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
+ 
       </tr>
       
     </table>';
@@ -190,21 +189,21 @@ $content .= '<table>
 
     <table>
     <tr>                                               
-    <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
+    <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
 
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
+     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
 </tr>
 
 
 <tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
 
 </tr>
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
 
 <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Vessel").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['vessel'].'</span></td>
 
@@ -212,7 +211,7 @@ $content .= '<table>
 
 
 <tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
 
  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port Of Loading").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_loading'].'</span></td>
 
@@ -241,17 +240,17 @@ $content .= '<table>
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
 
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
 
 </tr>
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
 
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
 
 </tr>
 
@@ -269,7 +268,7 @@ $content .= '<table>
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
 
 <th style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of arrival").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['eta'].'</span></th>
 
@@ -277,9 +276,9 @@ $content .= '<table>
 
 
 <tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
 
 </tr>
     </table>';
@@ -302,21 +301,21 @@ $content .= '<table>
 
     <table>
     <tr>                                               
-    <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
+    <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Shipper").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$supplier_info[0]['supplier_name'].'</span></td>
 
-     <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
+    <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Booking No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['booking_no'].'</span></td>
 </tr>
 
 
 <tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Invoive Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['invoice_date'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Customer / Consignee").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$customername[0]['customer_name'].'</span></td>
 
 </tr>
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Notify Party").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['notify_party'].'</span></td>
 
 <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Vessel").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['vessel'].'</span></td>
 
@@ -324,17 +323,18 @@ $content .= '<table>
 
 
 <tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Voyage No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['voyage_no'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port Of Loading").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_loading'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port Of Loading").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_loading'].'</span></td>
 
 </tr>
 
 
-<tr>
-  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port of Discharge").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_discharge'].'</span></td>
 
-  <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Place of Delivery").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['place_of_delivery'].'</span></td>
+<tr>
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Port of Discharge").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['port_of_discharge'].'</span></td>
+
+ <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Place of Delivery").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['place_of_delivery'].'</span></td>
 
 </tr>
 
@@ -353,17 +353,17 @@ $content .= '<table>
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("HBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['hbl_no'].'</span></td>
 
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("OBL NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['obl_no'].'</span></td>
 
 </tr>
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("AMS NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['ams_no'].'</span></td>
 
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("ISF NO").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['isf_no'].'</span></td>
 
 </tr>
 
@@ -374,23 +374,24 @@ $content .= '<table>
 <tr>
 <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Container No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['container_no'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Seal No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['seal_no'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Seal No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['seal_no'].'</span></td>
 
 </tr>
 
 
 
 <tr>
-<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Freight Forwarder").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['freight_forwarder'].'</span></td>
 
 <th style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of arrival").'</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['eta'].'</span></th>
 
 </tr>
 
-<tr>
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
 
- <td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
+<tr>
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Estimate time of depature").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['etd'].'</span></td>
+
+<td style="border: none; font-weight: normal; line-height: 20px;"><b> '.display("Particulars").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$ocean[0]['particular'].'</span></td>
 
 </tr>
       

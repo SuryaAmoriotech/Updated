@@ -65,7 +65,7 @@
      <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
      
      <div class="col-sm-4" style="color:white;font-weight:bold;" id='company_info'>          
-          <b> <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
+          <b>  <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
           <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
           <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
           <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
@@ -81,10 +81,10 @@
                 <table id="one" >
     <tr><td  class="key"><?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
     <tr><td  class="key"><?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
     <tr><td  class="key"><?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> <br> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
@@ -92,10 +92,9 @@
                 <div class="col-6">
                 <table id="two">
 <tr><td  class="key"><?php echo display('Buyer/Customer') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Country of final destination') ?> </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-   
+    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>  
     <tr><td class="key"><?php echo display('Port of discharge') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
     
  
@@ -180,12 +179,12 @@ if($a==$m){
                     <tfoot>
                                     <tr>
                                  
-             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq. Ft') ?>  :</b></td>
+             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq.Ft') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="font-size: 9px;border:none;width: 60px"   readonly="readonly"  /> 
             </td>
 
-                                        <td style="font-size: 9px;text-align:right;" colspan="2"><b><?php echo display('TOTAL') ?>  :</b></td>
+                                        <td style="font-size: 9px;text-align:right;" colspan="2"><b><?php echo display('TOTAL') ?> :</b></td>
                  <td style="text-align:left;">
             <input type="text" id="Total_<?php echo $m; ?>" name="total[]"   class="b_total"   style=" font-size: 9px;border:none;width: 80px"    readonly="readonly"  />
             </td>                                      
@@ -198,15 +197,15 @@ if($a==$m){
 <table border="0" class="overall table table-hover">
    
 <tr>
-<td colspan="3" style="text-align:left;border:none;"><b><?php echo display('Overall TOTAL') ?>  :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $purchase_info[0]['total']; ?> </td>
+<td colspan="3" style="text-align:left;border:none;"><b><?php echo display('Overall TOTAL') ?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $purchase_info[0]['total']; ?> </td>
      <td style="text-align:right;border:none;" colspan="10"><b><?php echo  "Tax (".$tax_des;  ?></b></td>
                    
                            <td style='border:none;'><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
 </tr>
  </tr>
                                     <tr>
-                                    <td colspan="3"  style="vertical-align:top;text-align:left;border:none;"><b><?php echo display('Overall Net Sq.Ft') ?>  :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_info[0]['total_net'];   ?></td>
-                                         <td style="text-align:right;border:none;" colspan="8"><b><?php echo display('GRAND TOTAL') ?>  :</b></td>
+                                    <td colspan="3"  style="vertical-align:top;text-align:left;border:none;"><b><?php echo display('Overall Net Sq.Ft') ?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_info[0]['total_net'];   ?></td>
+                                         <td style="text-align:right;border:none;" colspan="8"><b><?php echo display('GRAND TOTAL') ?> :</b></td>
                                     <td style='border:none;'>
              <?php  echo $currency; ?><?php echo $purchase_info[0]['gtotal']; ?></span>
     </td>
@@ -219,7 +218,7 @@ if($a==$m){
                                         
                                     
                                     
-                                    <td style="text-align:right;border:none;"  colspan="14"><b><?php echo display('GRAND TOTAL') ?>  :</b><br/><b><?php echo display('Preferred Currency') ?> </b></td>
+                                    <td style="text-align:right;border:none;"  colspan="14"><b><?php echo display('GRAND TOTAL') ?> :</b><br/><b><?php echo display('Preferred Currency') ?></b></td>
                                     <td style='border:none;'>
           <table border="0">
       <tr>
@@ -280,7 +279,7 @@ elseif($template==1)
 
 <div class="col-sm-4" style="color:white;font-weight:bold;" id='company_info'>
    
-          <b> <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
+ <b>  <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
           <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
           <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
           <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
@@ -308,12 +307,12 @@ elseif($template==1)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-                <tr><td  class="key"><?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
+        <tr><td  class="key"><?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
     <tr><td  class="key"><?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
     <tr><td  class="key"><?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> <br> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
@@ -321,10 +320,9 @@ elseif($template==1)
                 <div class="col-6">
                 <table id="two">
 <tr><td  class="key"><?php echo display('Buyer/Customer') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Country of final destination') ?> </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-   
+    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>  
     <tr><td class="key"><?php echo display('Port of discharge') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
     
  
@@ -410,7 +408,7 @@ if($a==$m){
                     <tfoot>
                                     <tr>
                                  
-             <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq. Ft') ?> :</b></td>
+                <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq.Ft') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="font-size: 9px;border:none;width: 60px"   readonly="readonly"  /> 
             </td>
@@ -475,7 +473,7 @@ if($a==$m){
                                               
                                                 </tr> 
                                                 <tr id="bal">
-                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount ') ?>:</b></td>
+                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount') ?>:</b></td>
                                                 <td style='border:none;'>
                                                
                                               <?php echo $customer_currency." ".$purchase_info[0]['bal_amt'];?>
@@ -512,7 +510,7 @@ elseif($template==3)
     
      <div class="col-sm-6" style="color:white;font-weight:bold ;text-align: end;" id='company_info'>
            
-     <b> <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
+    <b>  <?php echo display('Company name') ?> : </b><?php echo $business_name; ?><br>
           <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
           <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
           <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
@@ -523,12 +521,13 @@ elseif($template==3)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-                <tr><td  class="key"><?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
+  
+     <tr><td  class="key"><?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
     <tr><td  class="key"><?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
     <tr><td  class="key"><?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?> <br> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
@@ -538,11 +537,9 @@ elseif($template==3)
 <tr><td  class="key"><?php echo display('Buyer/Customer') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
     <tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Country of final destination') ?> </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-   
+    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>  
     <tr><td class="key"><?php echo display('Port of discharge') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
     
- 
 </table>
     </div>
             </div>
@@ -625,7 +622,7 @@ if($a==$m){
                     <tfoot>
                                     <tr>
                                  
-                                    <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq. Ft') ?> :</b></td>
+                 <td style="text-align:right;font-size: 9px;" colspan="7"><b><?php echo display('Net Sq.Ft') ?> :</b></td>
                                         <td >
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="font-size: 9px;border:none;width: 60px"   readonly="readonly"  /> 
             </td>
@@ -690,7 +687,7 @@ if($a==$m){
                                               
                                                 </tr> 
                                                 <tr id="bal">
-                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount ') ?>:</b></td>
+                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount') ?>:</b></td>
                                                 <td style='border:none;'>
                                                
                                               <?php echo $customer_currency." ".$purchase_info[0]['bal_amt'];?>
@@ -724,13 +721,13 @@ if($a==$m){
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title"><?php echo display('Sales - Profarma Invoice') ?> </h4>
+          <h4 class="modal-title"><?php echo display('Sales - Profarma Invoice') ?></h4>
         </div>
         <div class="content">
 
         <div class="modal-body" style="text-align:center;font-weight:bold;">
           
-          <h4><?php echo display('Profarma Invoice Downloaded Successfully') ?> </h4>
+          <h4><?php echo display('Profarma Invoice Downloaded Successfully') ?></h4>
      
         </div>
         <div class="modal-footer">
