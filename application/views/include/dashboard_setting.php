@@ -14,10 +14,10 @@
         </div>
         <div class="header-title">
             <h1><?php echo display('dashboard').' Setting'; ?></h1>
-            <small><?php echo display('home') ?></small>
+            <small><?php //echo display('home') ?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li class="active"><?php echo display('dashboard').' Setting'; ?></li>
+                <li class="active" style="color:orange"><?php echo display('dashboard').' Setting'; ?></li>
             </ol>
         </div>
     </section>
@@ -29,7 +29,7 @@
         $message = $this->session->userdata('message');
         if (isset($message)) {
             ?>
-            <div class="alert alert-info alert-dismissable">
+            <div class="alert alert-info alert-dismissable" style="color:white;background-color:#38469f;font-weight:bold;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <?php echo $message ?>                    
             </div>
@@ -39,7 +39,7 @@
         $error_message = $this->session->userdata('error_message');
         if (isset($error_message)) {
             ?>
-            <div class="alert alert-danger alert-dismissable">
+            <div class="alert alert-danger alert-dismissable" style="color:white;background-color:#38469f;font-weight:bold;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <?php echo $error_message ?>                    
             </div>
@@ -54,7 +54,7 @@
                     <div class="panel panel-bd">
                         <div class="panel-heading">
                             <div class="panel-title">
-                                <h4 class="charttitle"><?php echo display('dashboard').' Setting'; ?></h4>
+                                <h4 class="charttitle"><?php //echo display('dashboard').' Setting'; ?></h4>
                             </div>
                         </div>
                         <div class="panel-body">

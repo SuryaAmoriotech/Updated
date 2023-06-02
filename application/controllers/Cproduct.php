@@ -859,7 +859,7 @@ if(!empty($insert_csv['category_id']) && $insert_csv['category_id']!="Category N
                                         ->row();
                     if (empty($result)){
                         $this->db->insert('product_information',$data);
-                        echo $this->db->last_query();
+                       // echo $this->db->last_query();
                         $product_id = $product_id;
                          }else {
                     $product_id = $result->product_id;      
@@ -878,7 +878,7 @@ if(!empty($insert_csv['category_id']) && $insert_csv['category_id']!="Category N
                      );
                    $this->db->where('product_id',$result->product_id);
                    $this->db->update('product_information',$udata);
-                         echo $this->db->last_query();
+                      //   echo $this->db->last_query();
                     }
 
                      $supp_prd = array(

@@ -1,5 +1,6 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <?php
-
+// $conn = mysqli_connect('localhost', 'root', '', 'stonemart');
 $mail = $this->phpmailer_lib->load();
     if(isset($_POST['submit_btn'])){
 
@@ -8,8 +9,9 @@ $mail = $this->phpmailer_lib->load();
         $subject = $_POST['subject'];
         $message = $_POST['message'];
         $created = $this->session->userdata('user_id');
+        $random_id = rand(10,100);
 
-            // print_r($created); die();
+            // print_r($random_id); die();
 
         // echo '<pre>';
         // print_r($_POST); die;
@@ -20,9 +22,14 @@ $mail = $this->phpmailer_lib->load();
             // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
             $mail->isSMTP();                                           
             $mail->Host       = 'smtp.gmail.com';                     
-            $mail->SMTPAuth   = true;                                  
-            $mail->Username   = 'absolutegranitestones@gmail.com';              
-            $mail->Password   = 'qpiwamptiigcpodl';                            
+            $mail->SMTPAuth   = true; 
+            foreach ($mail_set as $key => $value) {
+                $stm_user = $value->smtp_user;
+                $stm_pass = $value->smtp_pass;
+                // print_r($value);
+            }                                 
+            $mail->Username   = $stm_user;              
+            $mail->Password   = $stm_pass;                            
             $mail->SMTPSecure = 'tls';            
             $mail->Port       = 587;                                   
             $mail->setFrom($to, 'Mailer');
@@ -36,19 +43,48 @@ $mail = $this->phpmailer_lib->load();
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
+
+
             // echo 'Message has been sent';
-            echo "<script>alert('Email Send Successfull')</script>";
-            $conn = mysqli_connect('localhost', 'root', '', 'stockeaic_test');
-            $sql = "INSERT INTO `email_data`(`to_email`, `cc_email`, `subject`, `message`, `created_by`) VALUES ('".$to."', '".$cc."', '".$subject."', '".$message."', '".$created."')";
-            $result = mysqli_query($conn, $sql);    
-                // if($result){
-                //    echo "<script>alert('Inserted Success')</script>";
-                // }else{
-                //     echo "<script>alert('Inserted Failed !!!')</script>";
-                // }
-            // echo "<script>window.location.href='select_quote.html'</script>";
+            echo "<script>
+                swal({
+                title: 'Email',
+                text: 'Email Send Success',
+                icon: 'success',
+                button: 'Ok',
+            });
+            </script>";
+
+            // echo file_put_contents("assets/Email/sendemail.txt", $to.'|'.$cc.'|'.$subject.'|'.$subject);
+            file_put_contents("assets/Email/sendemail.txt", ("\n".$random_id.'|'.$to.'|'.$cc.'|'.$subject.'|'.$message.'|'),FILE_APPEND);
+
+            $data = array(
+                'to_email' => $to,
+                'cc_email' => $cc,
+                'subject' => $subject,
+                'message' => $message,
+                'created_by' => $this->session->userdata('user_id')
+            );
+
+            $this->db->insert('email_data', $data);
+            // echo $this->db->last_query(); die();
+
+            // $sql = "INSERT INTO `email_data`(`to_email`, `cc_email`, `subject`, `message`, `created_by`) VALUES ('".$to."', '".$cc."', '".$subject."', '".$message."', '".$created."')";
+
+            // // echo $sql; die();
+
+            // $result = mysqli_query($conn, $sql);    
+
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+             echo "<script>
+                swal({
+                title: 'Email',
+                text: 'Message could not be sent. Mailer Error: {$mail->ErrorInfo}',
+                icon: 'error',
+                button: 'Ok',
+            });
+            </script>";
+            // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
        
     }
@@ -57,4 +93,4 @@ $mail = $this->phpmailer_lib->load();
 
 <script type="text/javascript">
    history.back();
-</script>  
+</script>

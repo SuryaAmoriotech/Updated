@@ -1176,7 +1176,7 @@
     <option value="UAH">UAH - Ukrainian Hryvnia - ₴</option>
     <option value="AED">AED - United Arab Emirates Dirham - إ.د</option>
     <option value="UYU">UYU - Uruguayan Peso - $</option>
-    <option value="USD">USD - US Dollar - $</option>
+    <option value="USD" >USD - US Dollar - $</option>
     <option value="UZS">UZS - Uzbekistan Som - лв</option>
     <option value="VUV">VUV - Vanuatu Vatu - VT</option>
     <option value="VEF">VEF - Venezuelan BolÃvar - Bs</option>
@@ -1517,19 +1517,7 @@ $.ajax({
 });
 event.preventDefault();
 });
-// $('#add_purchase').on('click', function (e) {
-    
-//     $('#myModal1').modal('show');
-//     window.setTimeout(function(){
-//         $('.modal').modal('hide');
-       
-// $('.modal-backdrop').remove();
-//  },2500);
 
-// $('#final_submit').show();
-// $('#download').show();
-//  $("#print").show();
-// });
 function discard(){
    $.get(
     "<?php echo base_url(); ?>Cpurchase/delete_ocean_import/", 
@@ -1597,6 +1585,4 @@ window.onbeforeunload = function(){
 }
     </script>
  
-<!-- script for currency selector -->
 
-<!-- style for currency list   -->

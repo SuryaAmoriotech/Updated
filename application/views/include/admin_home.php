@@ -169,6 +169,7 @@ form {
         }
         ?>
           <div class="">
+   
           <div style="<?php if($sale_setting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
 
                         <!-- Earnings (Monthly) Card Example -->
@@ -452,7 +453,7 @@ echo html_escape($currency).$string;
 
 
                    
-                    <div style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+                    <div style="<?php  if($no_of_vendor=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
 
 <div class="col-xl-4 col-md-6 mb-4" style="height:100px;  width :550px;">
 <div class="card border-left-primary shadow h-100 py-2">
@@ -536,7 +537,7 @@ echo html_escape($currency).$string;
                     </style>
         <!-- First Counter -->
 	    <?php //best_sales_product   if ($this->session->userdata('user_type') == '1') { ?>
-	             <div class="row" style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">
+	             <div class="row" style="<?php  if($bestofProduct=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">
                <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
@@ -581,7 +582,7 @@ $searchdate =(!empty($s)?$s:$dat2);
                 <!-- Total Report -->
                 
 
-    <div style="<?php if($best_sales_product=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
+    <div style="<?php if($best_sales_product1=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>" >
 
                    <!-- This today transaction progress -->
                 <div class="col-sm-12 col-md-12" style="<?php //if($todays_sales_reportsetting=='disable'){ echo "display: none;"; }else{ echo "display: block;"; } ?>">

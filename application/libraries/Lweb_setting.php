@@ -694,19 +694,16 @@ class Lweb_setting {
     }
 
 
-
-    public function email_setting() {
-
+public function email_setting($view_email, $email_con, $del_email) {
         $CI = & get_instance();
-
         $CI->load->model('Web_settings');
-
-        $data = array();
-
+        $data = array(
+            'view_email' => $view_email,
+            'email_config' => $email_con,
+            'del_email' => $del_email
+        );
         $setting = $CI->parser->parse('web_setting/email_setting', $data, true);
-
         return $setting;
-
     }
 
     public function email_template()

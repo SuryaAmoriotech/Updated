@@ -121,6 +121,7 @@ class Ccpurchase extends CI_Controller {
         $CI = & get_instance();
         $CI->load->model('Purchases');
         $truck = $CI->Purchases->expense_trucking($date);
+      //     $supplier_name = $CI->db->select('*')->from('supplier_information')->where('supplier_id',$truck['rows']['shipment_company'])->get()->result_array();
         $currency_details = $CI->Web_settings->retrieve_setting_editdata();
         $data = array(
             'currency' =>$currency_details[0]['currency'],

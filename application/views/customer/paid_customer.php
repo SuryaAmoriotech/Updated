@@ -60,6 +60,7 @@
 
         <div class="row">
             <div class="col-sm-12">
+                     <div class="col-sm-6">
                     <?php
                     if($this->permission1->method('add_customer','create')->access()) { ?>
                         <a   style="background-color:#38469f;color:white;"  href="<?php echo base_url('Ccustomer')?>" class="btn  m-b-5 m-r-2"><i class="ti-plus"> </i> <?php echo display('add_customer')?> </a>
@@ -75,10 +76,14 @@
                         <a  style="background-color:#38469f;color:white;" href="<?php echo base_url('Ccustomer/credit_customer')?>" class="btn  m-b-5 m-r-2"><i class="ti-align-justify"> </i>  <?php echo display('credit_customer')?> </a>
                     <?php } ?>
 
-                   
+                                    </div> 
+<div class="col-sm-4">   </div> 
+
+                         <div class="col-sm-2">
+                             <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i>
                     <div class="dropdown bootcol" id="drop" style="float:right;padding-right:20px;padding-bottom:10px;">
     
-                    <i class="fa fa-cog"  aria-hidden="true" id="myBtn" style="font-size:25px;" onClick="columnSwitchMODAL()"></i>
+                  
 
     
                     <button class="btnclr btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -99,12 +104,8 @@
     </ul>
   </div>
 
-        </div>
-        <div class="row"> 
-
-        </div>
-
-        </div>
+    </div></div></div>
+    
 
             
 

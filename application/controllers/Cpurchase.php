@@ -21,7 +21,15 @@ class Cpurchase extends CI_Controller {
     $content = $CI->lpurchase->servicepro_details_data($serviceprovider_id);
     $this->template->full_admin_html_view($content);
 }
-
+    public function servicepro_details_data_print($serviceprovider_id) {
+    $CI = & get_instance();
+    $CI->auth->check_admin_auth();
+    $CI->load->library('lpurchase');
+    $data=array();
+    $this->load->model('Purchases');
+    $content = $CI->lpurchase->servicepro_details_data_print($serviceprovider_id);
+    $this->template->full_admin_html_view($content);
+}
 
 
 

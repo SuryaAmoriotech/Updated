@@ -27,12 +27,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1>Ocean Import Tracking</h1>
-            <small>Edit Ocean Import Tracking</small>
+            <h1><?php   echo  display('Create Ocean Import Tracking')?></h1>
+         
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#">Ocean Import Tracking</a></li>
-                <li class="active">Edit Ocean Import Tracking</li>
+                <li><a href="#"><?php  echo  display('purchase'); ?></a></li>
+                <li class="active" style="color:orange;"><?php   echo  display('Ocean Import Tracking')?></li>
             </ol>
         </div>
     </section>
@@ -70,7 +70,7 @@
                          <div class="panel-title">
 <div id="block_container">
                                 <div id="bloc1" style="float:left;">
-                          <h4><?php echo "Create Ocean Import Tracking" ?></h4>
+                        
                                </div> 
                              <div id="bloc2" style="float:right;">
                            
@@ -420,7 +420,7 @@
         }
         </style>
       
-            <input type="text" id="remarks" class="form-control"  name="remark" value="<?php echo $remarks; ?>" placeholder="Remarks / Details" />
+           
        
     </div> 
 
