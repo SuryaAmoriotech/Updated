@@ -980,7 +980,8 @@ $query = '';
      }
     
         $query = $this->db->get();
-   //    echo $this->db->last_query();
+    // echo $this->db->last_query();
+ 
     // $result = $this->db->query($query); 
     $result = $query->result_array();
     foreach($result as $row)
@@ -2232,7 +2233,7 @@ if($records_per_page != -1)
 $query .= " LIMIT " . $start_from . ", " . $records_per_page;
 }
   $query = $this->db->get();
-  // echo $this->db->last_query();
+  //echo $this->db->last_query();
 $result = $this->db->query($query);
 $result = $query->result_array();
 foreach($result as $row)

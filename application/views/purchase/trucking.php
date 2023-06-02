@@ -782,13 +782,13 @@ textarea:focus, input:focus{
   <div class="form-group row">
           <label for="state" class="col-sm-4 col-form-label"><?php  echo display('state'); ?> <i class="text-danger">*</i></label>
           <div class="col-sm-8">
-              <input class="form-control" name="state" id="state" type="text"  placeholder="State"  >
+              <input class="form-control" name="state" id="state" type="text"  required placeholder="State"  >
           </div>
       </div>
        <div class="form-group row">
           <label for="zip" class="col-sm-4 col-form-label"><?php echo display('zip'); ?> <i class="text-danger">*</i></label>
           <div class="col-sm-8">
-              <input class="form-control" name="zip" id="zip" type="text" placeholder="<?php echo display('zip') ?>"  >
+              <input class="form-control" name="zip" id="zip" type="text" required placeholder="<?php echo display('zip') ?>"  >
           </div>
       </div>
       <div class="form-group row">
@@ -825,7 +825,7 @@ textarea:focus, input:focus{
                     <label for="billing_address" class="col-sm-4  col-form-label"><?php echo  display('Payment Terms');?> <i class="text-danger">*</i></label>
                     <div class="col-sm-8">
                     <select name="payment_terms"  id="terms"  class="form-control "  placeholder="" style="width:100%;"  required="" tabindex="1" >
-                                        <option value="Select the Product" selected><?php echo  display('Select the payment terms');?></option>
+                                        <option value=""><?php echo  display('Select the payment terms');?></option>
      <option value="cod">COD</option>
     <option value="30"> 30-<?php echo  display('Days');?></option>
     <option value="60"> 60-<?php echo  display('Days');?></option>
@@ -1181,7 +1181,7 @@ textarea:focus, input:focus{
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -1348,7 +1348,7 @@ textarea:focus, input:focus{
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option value="USD" selected="selected">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>
@@ -1415,7 +1415,7 @@ if (isNaN(value)) {
    $('#bal').hide();
        });
    $('#paypls').on('click', function (e) {
-   $('#amount_to_pay').val($('#customer_gtotal').val());
+   $('#amount_to_pay').val($('#balance').val());
        $('#payment_modal').modal('show');
      e.preventDefault();
    
@@ -1445,7 +1445,7 @@ if (isNaN(value)) {
        $('#payment_modal').modal('hide');
        $("#bodyModal1").html("<?php echo display('Payment Successfully Completed');?>");
           $('#myModal1').modal('show');
-       
+       $('#add_payment_info')[0].reset();
        window.setTimeout(function(){
            $('#myModal1').modal('hide');
    },2500);
@@ -1689,7 +1689,11 @@ var arr=[];
 var tid=$(this).closest('table').attr('id');
 localStorage.setItem("delete_table",tid);
 console.log(localStorage.getItem("delete_table"));
+var rowCount = $(this).closest('tbody').find('tr').length;
+
+if(rowCount>1){
 $(this).closest('tr').remove();
+}
    var sum=0;
     $('#'+localStorage.getItem("delete_table")).find('.total_price').each(function() {
 var v=$(this).val();
@@ -1715,6 +1719,7 @@ $('#'+total).val(result);
 gt();
 });
 $(document).on("input change", ".productrate", function(e){ 
+
 var total=$(this).closest('tr').find('.total_price').attr('id');
 
 var quantity=$(this).closest('tr').find('.quantity').attr('id');
@@ -1730,6 +1735,7 @@ $('#'+total).val(result);
 gt();
 });
 function gt(){
+    debugger;
     var sum=0;
     $('.total_price').each(function() {
     sum += parseFloat($(this).val());
@@ -1758,6 +1764,8 @@ var amt=parseInt(answer)+parseInt(first);
  var value=parseInt(num*custo_amt);
  var custo_final = isNaN(parseInt(value)) ? 0 : parseInt(value)
 $('#customer_gtotal').val(custo_final);
+var bal_amt=custo_final-$('#amount_paid').val();
+$('#balance').val(bal_amt);
 }  
 }
 function calculate(){
@@ -1782,7 +1790,9 @@ var custo_amt=$('#custocurrency_rate').val();
 console.log(num +"-"+custo_amt);
 var value=parseInt(num*custo_amt);
 var custo_final = isNaN(parseInt(value)) ? 0 : parseInt(value)
-$('#customer_gtotal').val(custo_final);  
+$('#customer_gtotal').val(custo_final); 
+var bal_amt=custo_final-$('#amount_paid').val();
+$('#balance').val(bal_amt); 
 }
 
 

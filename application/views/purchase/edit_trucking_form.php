@@ -406,7 +406,7 @@ preg_match('#\((.*?)\)#', $d, $match);
    </table></td>
                                       
 
-                                            <input type="hidden" id="final_gtotal"  name="final_gtotal" />
+                                            <input type="text" id="final_gtotal"  name="final_gtotal" />
 
                                             <input type="hidden" name="baseUrl" class="baseUrl" value="<?php echo base_url();?>"/></td>
                                     </tr> 
@@ -1521,7 +1521,7 @@ gt();
 $(document).on("input change", ".productrate", function(e){
 
 
-  
+
   
 var total=$(this).closest('tr').find('.total_price').attr('id');
 
@@ -1611,6 +1611,7 @@ function(data) {
 
 });
 $('#product_tax').on('change', function (e) {
+    
     var optionSelected = $("option:selected", this);
     var valueSelected = this.value;
     var total=$('#Total').val();
@@ -1634,7 +1635,10 @@ var arr=[];
 var tid=$(this).closest('table').attr('id');
 localStorage.setItem("delete_table",tid);
 console.log(localStorage.getItem("delete_table"));
+var rowCount = $(this).closest('tbody').find('tr').length;
+if(rowCount>1){
 $(this).closest('tr').remove();
+}
    var sum=0;
     $('#'+localStorage.getItem("delete_table")).find('.total_price').each(function() {
 var v=$(this).val();
@@ -1645,13 +1649,14 @@ var v=$(this).val();
 calculate();
 });
 function gt(){
+debugger;
     var sum=0;
     $('.total_price').each(function() {
     sum += parseFloat($(this).val());
 });
 $('#Total').val(sum);
 var final_g= $('#final_gtotal').val();
-if(final_g !=''){
+
 var first=$("#Total").val();
     var tax= $('#product_tax').val();
 
@@ -1678,10 +1683,10 @@ var v_g_t=$('#customer_gtotal').val();
    var bal= parseInt(v_g_t-amount_paid);
    console.log("Bal :");
    $('#balance').val(bal);
-}  
+  
 }
 function calculate(){
-  
+      debugger;
   var first=$("#Total").val();
   var tax= $('#product_tax').val();
 var field = tax.split('-');

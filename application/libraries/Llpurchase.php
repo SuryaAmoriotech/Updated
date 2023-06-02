@@ -1232,7 +1232,7 @@ print_r($purchase_detail);
         $CI->load->model('Web_settings');
         $CI->load->library('occational');
         $purchase_detail = $CI->Ppurchases->trucking_details_data($purchase_id);
-       //  print_r($purchase_detail); die();
+      
         if (!empty($purchase_detail)) {
             $i = 0;
             foreach ($purchase_detail as $k => $v) {
@@ -1245,7 +1245,9 @@ print_r($purchase_detail);
         }
         $currency_details = $CI->Web_settings->retrieve_setting_editdata();
         $curn_info_default = $CI->db->select('*')->from('currency_tbl')->where('icon',$currency_details[0]['currency'])->get()->result_array();
-        $shipment_currency = $CI->db->select('*')->from('supplier_information')->where('supplier_name',$purchase_detail[0]['shipment_company'])->get()->result_array();
+        $shipment_currency = $CI->db->select('*')->from('supplier_information')->where('supplier_id',$purchase_detail[0]['shipment_company'])->get()->result_array();
+
+    
         $CII = & get_instance();
         $CC = & get_instance();
         $company_info = $CI->Ppurchases->retrieve_company();
@@ -1344,7 +1346,7 @@ print_r($purchase_detail);
         }
         $currency_details = $CI->Web_settings->retrieve_setting_editdata();
         $curn_info_default = $CI->db->select('*')->from('currency_tbl')->where('icon',$currency_details[0]['currency'])->get()->result_array();
-        $shipment_currency = $CI->db->select('*')->from('supplier_information')->where('supplier_name',$purchase_detail[0]['shipment_company'])->get()->result_array();
+        $shipment_currency = $CI->db->select('*')->from('supplier_information')->where('supplier_id',$purchase_detail[0]['shipment_company'])->get()->result_array();
         $CII = & get_instance();
         $CC = & get_instance();
         $company_info = $CI->Ppurchases->retrieve_company();

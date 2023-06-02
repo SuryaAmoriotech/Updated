@@ -127,7 +127,7 @@ if($a==$m){
                 <?php   } ?>
 
             </table>
-              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+             <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
@@ -237,7 +237,8 @@ if($a==$m){
                 <?php   } ?>
 
             </table>
-              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"><?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+             <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
@@ -249,29 +250,32 @@ if($a==$m){
 elseif($template==3)
 {
 ?>
-<div class="brand-section">
+<div class="brand-section" style="background-color:<?php echo $color; ?>">
 <div class="row">
        
-       <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+       <div class="col-sm-3"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
           
          </div>
-       <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
+       <div class="col-sm-3 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     
-   </div>
-        </div>
 
-         <b> Company name : </b><?php echo $company_info[0]['company_name'];  ?><br>
+  
+
+       <div class="col-sm-6" style="color:white;font-weight:bold ;text-align: end;" id='company_info'>
+ <b> Company name : </b><?php echo $company_info[0]['company_name'];  ?><br>
           <b>   Address : </b><?php echo $company_info[0]['address']; ?><br>
           <b>   Email : </b><?php echo $company_info[0]['email']; ?><br>
           <b>   Contact : </b><?php echo $company_info[0]['mobile']; ?><br>
-       </div>
- </div>
+</div>
+      </div>
+        
         </div>
-       
-        <div class="body-section">
+
+    
+             <div class="body-section">
             <div class="row">
                 <div class="col-6">
-               <table id="one" >
+                  <table id="one" >
     <tr><td  class="key"><?php echo display('Packing List NO')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['chalan_no'];  ?></td></tr>
     <tr><td  class="key"><?php echo display('Gross Weight')?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_all_data[0]['total_gross']; ?></td></tr>
 </table>
@@ -283,14 +287,15 @@ elseif($template==3)
    </table> </div> 
             </div>
         </div>
-        <div class="body-section">
+         <div class="body-section">
         <?php 
 
 
 for($m=1;$m<count($purchase_all_data);$m++){ 
+  //  echo "sdfsd";
     ?>
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
-            <thead>
+            <thead style="background-color:<?php echo $color; ?>">
                     <tr>                
                            <th rowspan="1" class="absorbing-column text-center ">Product Name</th>
                            <th rowspan="1" class="text-center ">Descrip<br/>tion</th>
@@ -324,7 +329,7 @@ if($a==$m){
                                 ?>
                    <tr>
 
-                     <td style="font-size: 12px;"><?php echo $inv['product_name']."-".$inv['product_model']; ?></td>
+                      <td style="font-size: 12px;"><?php echo $inv['product_name']."-".$inv['product_model']; ?></td>
                        <td style="font-size: 12px;"><?php echo $inv['description']; ?></td>
                        <td style="font-size: 12px;"><?php echo $inv['thickness']; ?></td>
 
@@ -344,18 +349,18 @@ if($a==$m){
                     </tr>
                     <?php $n++;}}  ?>
                      </tbody>
-                 
+ 
+               
                 <?php   } ?>
 
             </table>
-              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+           <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
 
 
         <?php   } ?>
-
     </div>
 
 </div>
