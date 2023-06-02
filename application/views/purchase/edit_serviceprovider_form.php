@@ -23,11 +23,11 @@
            
 
 
-            <small>Edit Service Provider</small>
+        
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
                 <li><a href="#">Service Provider</a></li>
-                <li class="active">Edit Service Provider</li>
+                <li class="active" style="color:orange">Edit Service Provider</li>
             </ol>
         </div>
        
@@ -66,18 +66,7 @@
                     <div class="panel-heading">
                          <div class="panel-title">
 <div id="block_container">
-                                <!-- <div id="bloc1" style="float:left;">
-                          <h4><?php echo "Edit New Trucking Invoice" ?></h4>
-                               </div>  -->
-                             <!-- <div id="bloc2" style="float:right;">
-                           
-
-
-
-                             </div> -->
-        
-        <!-- <div > -->
-
+                      
 
 
             <form id="serviceprovider" method="post">
@@ -250,14 +239,7 @@
                return current.replace(/\d+$/, num);
                
            }).end().appendTo('#servic_pro');
-         
-        // $.each($('#normalinvoice_'+id  +  '> tbody > tr'), function (index, el) {
-        //            $(this).find(".slab_no").val(index + 1); // Simply couse the first "prototype" is not counted in the list                
-        //        })
-       
-       
-       
-               });
+           });
     
     $(document).on('keyup','.serviceprovider tbody tr:last',function (e) {
     
@@ -276,7 +258,7 @@
          $('.table').find('.total_price').each(function() {
     var v=$(this).val();
       overall_sum += parseFloat(v);
-     // overall_sum +=parseFloat(v);
+   
     });
     $('#Total').val(overall_sum).trigger('change');
     });

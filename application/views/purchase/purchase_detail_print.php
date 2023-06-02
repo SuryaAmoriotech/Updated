@@ -61,6 +61,7 @@
 <tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
 <?php  if(!empty($isf_filling)) { ?>
 <tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
 <?php   }  ?>
 
 </table>
@@ -71,7 +72,7 @@
         <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
 <tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
 <tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
+
 <tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
 <tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
@@ -104,11 +105,11 @@ for($m=1;$m<count($purchase_all_data);$m++){
                         <th rowspan="1" class="text-center "style="width:5px;">Bun<br/>dle <br/>No</th>
                          <th rowspan="1" class="text-center "style="width:3px;">Slab No</th>
                          <th colspan="2" class="text-center "style="width:4px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                           <th rowspan="1" class="text-center "style="width:4px;">Net <br/>Sq.<br/> Ft</th>
-                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq. Ft</th>
+                            <th rowspan="1" class="text-center "style="width:6px;">Net Sq.Ft</th>
+                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq.Ft</th>
                             <th rowspan="1" class="text-center"style="width:5px;">Cost <br/>per <br/>Slab</th>
                         <th rowspan="1"  class="text-center "style="width:2px;">Ori<br/>gin </th>
-                          <th rowspan="1" style="width:100px;"  class="text-center ">Total</th>
+                          <th rowspan="1" style="width:80px;"  class="text-center ">Total</th>
                     </tr> 
 <tr>
 
@@ -248,16 +249,19 @@ elseif($template==1)
         <div class="body-section">
     <div class="row">
         <div class="col-6">
-        <table id="one" style="border:none;">
-<tr><td  class="key">Vendor</td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
-<tr><td  class="key">Vendor Type</td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
-<tr><td  class="key">Invoice No</td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-<tr><td  class="key">Payment Due Date</td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-<tr><td  class="key">Payment Type</td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
-<tr><td  class="key">ETD</td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
+             <table id="one" style="border:none;">
+<tr><td  class="key"><?php echo display('Vendor');?></td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Type');?></td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('invoice_no');  ?></td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Due Date');?></td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+<tr><td  class="key"><?php
+        echo display('payment_type');
+        ?></td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
 <?php  if(!empty($isf_filling)) { ?>
-<tr><td  class="key">ISF NO</td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+<tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
 <?php   }  ?>
 
 </table>
@@ -265,12 +269,12 @@ elseif($template==1)
         </div>
         <div class="col-6">
         <table id="two">
-        <tr><td  class="key">Vendor Address</td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
-<tr><td  class="key">Expenses /Bill Date</td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
-<tr><td  class="key">Container Number</td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key">B/L No</td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
-<tr><td  class="key">ETA</td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
-<tr><td  class="key">Port of Discharge</td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
+        <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+
+<tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
 
 
@@ -301,11 +305,11 @@ for($m=1;$m<count($purchase_all_data);$m++){
                         <th rowspan="1" class="text-center "style="width:5px;">Bun<br/>dle <br/>No</th>
                          <th rowspan="1" class="text-center "style="width:3px;">Slab No</th>
                          <th colspan="2" class="text-center "style="width:4px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                           <th rowspan="1" class="text-center "style="width:4px;">Net <br/>Sq.<br/> Ft</th>
-                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq. Ft</th>
+                           <th rowspan="1" class="text-center "style="width:6px;">Net Sq.Ft</th>
+                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq.Ft</th>
                             <th rowspan="1" class="text-center"style="width:5px;">Cost <br/>per <br/>Slab</th>
                         <th rowspan="1"  class="text-center "style="width:2px;">Ori<br/>gin </th>
-                          <th rowspan="1" style="width:100px;"  class="text-center ">Total</th>
+                          <th rowspan="1" style="width:80px;"  class="text-center ">Total</th>
                     </tr> 
 <tr>
 
@@ -438,16 +442,19 @@ elseif($template==3)
         <div class="body-section">
     <div class="row">
         <div class="col-6">
-        <table id="one" style="border:none;">
-<tr><td  class="key">Vendor</td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
-<tr><td  class="key">Vendor Type</td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
-<tr><td  class="key">Invoice No</td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-<tr><td  class="key">Payment Due Date</td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
-<tr><td  class="key">Payment Terms</td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-<tr><td  class="key">Payment Type</td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
-<tr><td  class="key">ETD</td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
+              <table id="one" style="border:none;">
+<tr><td  class="key"><?php echo display('Vendor');?></td><td >:</td><td calss="value"><?php echo $supplier_nam;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Vendor Type');?></td><td >:</td><td calss="value"><?php echo $vendor_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('invoice_no');  ?></td><td >:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Due Date');?></td><td >:</td><td calss="value"><?php echo $payment_due_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
+<tr><td  class="key"><?php
+        echo display('payment_type');
+        ?></td><td >:</td><td calss="value"><?php echo $payment_type;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Estimated Time Of Depature');?></td><td >:</td><td calss="value"><?php echo $etd;  ?></td></tr>
 <?php  if(!empty($isf_filling)) { ?>
-<tr><td  class="key">ISF NO</td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+<tr><td  class="key"><?php echo display('ISF NO');?></td><td >:</td><td calss="value"><?php echo $isf_filling;  ?></td></tr>
+<tr><td  class="key"><?php echo display('B/L No');?></td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
 <?php   }  ?>
 
 </table>
@@ -455,16 +462,17 @@ elseif($template==3)
         </div>
         <div class="col-6">
         <table id="two">
-        <tr><td  class="key">Vendor Address</td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
-<tr><td  class="key">Expenses /Bill Date</td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
-<tr><td  class="key">Container Number</td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
-<tr><td  class="key">B/L No</td><td >:</td><td calss="value"><?php echo $bl_number;  ?></td></tr>
-<tr><td  class="key">ETA</td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
-<tr><td  class="key">Port of Discharge</td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
+        <tr><td  class="key"><?php echo display('Vendor Address');?></td><td >:</td><td calss="value"><?php echo $address."-".$city ."<br/>".$state."-".$zip."-".$country ."<br/>".$primaryemail."-".$mobile ; ?></td></tr>
+<tr><td  class="key"><?php echo display('Expenses / Bill date');?></td><td >:</td><td calss="value"><?php echo $final_date;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Container Number');?></td><td>:</td><td calss="value"><?php echo $container_no;  ?></td></tr>
+
+<tr><td  class="key"><?php echo display('Estimated Time Of Arrival');?></td><td >:</td><td calss="value"><?php echo $eta;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Port Of Discharge');?></td><td>:</td><td calss="value"><?php echo $Port_of_discharge;  ?></td></tr>
 <!-- <tr><td  class="key">Attachments</td><td style="width:10px;">:</td><td calss="value"><?php  ?></td></tr> -->
 
 
-</table> </div> 
+</table> 
+ </div> 
     </div>
 </div>
 <div class="body-section" >
@@ -491,11 +499,11 @@ for($m=1;$m<count($purchase_all_data);$m++){
                         <th rowspan="1" class="text-center "style="width:5px;">Bun<br/>dle <br/>No</th>
                          <th rowspan="1" class="text-center "style="width:3px;">Slab No</th>
                          <th colspan="2" class="text-center "style="width:4px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                           <th rowspan="1" class="text-center "style="width:4px;">Net <br/>Sq.<br/> Ft</th>
-                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq. Ft</th>
+                           <th rowspan="1" class="text-center "style="width:6px;">Net Sq.Ft</th>
+                            <th rowspan="1"  class="text-center "style="width:4px;">Cost<br/>per Sq.Ft</th>
                             <th rowspan="1" class="text-center"style="width:5px;">Cost <br/>per <br/>Slab</th>
                         <th rowspan="1"  class="text-center "style="width:2px;">Ori<br/>gin </th>
-                          <th rowspan="1" style="width:100px;"  class="text-center ">Total</th>
+                          <th rowspan="1" style="width:80px;"  class="text-center ">Total</th>
                     </tr> 
 <tr>
 

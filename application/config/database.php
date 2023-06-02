@@ -11,7 +11,9 @@ $db['default'] = array(
     'hostname' => 'localhost',
       'username' => 'root',
     'password' => '',
+
     'database' => 'stockeaic_testupdate17',
+
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
