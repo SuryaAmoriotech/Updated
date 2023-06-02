@@ -2510,7 +2510,7 @@ $('#total_net').val(total_net.toFixed(3)).trigger('change');
  });
 
 $('#total_gross').val(overall_gs).trigger('change');
-
+debugger;
 var t_price=0;
  $('.table').each(function() {
      $(this).find('.total_price').each(function() {
@@ -3285,13 +3285,8 @@ $('#vendor_gtotal').val(custo_final);
 
 var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
 var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
-<<<<<<< HEAD
- $("body").on('change select', '.product_name', function(){
-debugger;
-=======
 $(document).on('change input select', '.product_name', function(){
 //debugger;
->>>>>>> master
  var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
@@ -3855,7 +3850,7 @@ var v=$(this).val();
  $(this).closest('table').find('.b_total').val(sum.toFixed(3)).trigger('change');
   });
     $(document).on('keyup','.sales_slab_amt', function (e) {
-     
+         debugger;
   var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id_num = netheight.slice(indexLastDot + 1);
