@@ -88,15 +88,8 @@
                 </div>
                 <div class="col-6">
                 <table id="two" cellspacing="0" cellpadding="0">
-<tr><td  class="key"><?php echo display('Buyer/Customer') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Country of final destination') ?></td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?> </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-    <tr><td class="key"><?php echo display('Port of discharge') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
-    
- 
-<tr><td  class="key"><?php echo display('Buyer/Customer ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Buyer/Customer') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Receipt') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Country of final destination') ?>  </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
     <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
    
@@ -279,10 +272,6 @@ elseif($template==1)
                  <b> <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
                  <b> <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
                  <b> <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
-     <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
-          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
-          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
-          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
         </div>
   </div>
         </div>
@@ -616,7 +605,7 @@ if($a==$m){
                                         
                                     
                                     
-                                    <td style="text-align:right;border:none;"  colspan="14"><b>GRAND TOTAL :</b><br/><b>(Preferred Currency)</b></td>
+                                    <td style="text-align:right;border:none;"  colspan="14"><b><?php echo display('GRAND TOTAL')?> :</b><br/><b><?php echo display('Preferred Currency') ?></b></td>
                                     <td style='border:none;'>
           <table border="0">
       <tr>
@@ -642,7 +631,7 @@ if($a==$m){
                                               
                                                 </tr> 
                                                 <tr id="bal">
-                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo "Balance Amount " ?>:</b></td>
+                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount')?>:</b></td>
                                                 <td style='border:none;'>
                                                
                                               <?php echo $customer_currency." ".$purchase_info[0]['bal_amt'];?>
@@ -898,7 +887,7 @@ table th, table td {
        
     </style>
     
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
@@ -965,4 +954,4 @@ function printDiv(elementId) {
     window.frames["print_frame"].window.print();
 }
 
-   </script> -->
+   </script> 
