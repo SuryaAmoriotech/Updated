@@ -157,7 +157,7 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
     <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display ('Search'); ?> >

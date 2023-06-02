@@ -23,12 +23,12 @@
             <i class="pe-7s-note2"></i>
         </div>
         <div class="header-title">
-            <h1><?php echo display('Trucking Invoice') ?></h1>
+            <h1><?php echo display('Manage Road Transport') ?></h1>
             <small></small>
             <ol class="breadcrumb">
             <li><a href="<?php   echo base_url(); ?>"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#"><?php echo display('Trucking') ?></a></li>
-                <li class="active" style="color:orange;"><?php echo display('Manage Trucking Invoice') ?></li>
+                <li><a href="#"><?php echo display('Sale') ?></a></li>
+                <li class="active" style="color:orange;"><?php echo display('Trucking Invoice') ?></li>
             </ol>
         </div>
     </section>
@@ -110,12 +110,12 @@ if (isset($error_message)) {
       
        ?>
 
-<a href="<?php echo base_url('Cinvoice/trucking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create Trucking Invoice')?></a>
+<a href="<?php echo base_url('Cinvoice/trucking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create Road Transport')?></a>
                     
                     <?php break;}} 
                     if($_SESSION['u_type'] ==2){ ?>
 
-<a href="<?php echo base_url('Cinvoice/trucking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create Trucking Invoice') ?></a>
+<a href="<?php echo base_url('Cinvoice/trucking') ?>" class="btnclr btn btn-info m-b-5 m-r-2"><?php echo display('Create Road Transport') ?></a>
 
                         <?php  } ?>
 
@@ -152,10 +152,10 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo display('Search By Date Range') ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range') ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?>/>
+    <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?> >
 
 </div> 
 <?php echo form_close() ?>
@@ -427,7 +427,7 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                             <div class="form-group row">
-                            <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/><?php echo display(' ID') ?><br>
+                            <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1"/><?php echo display('ID') ?><br>
 
 <input type="checkbox"  data-control-column="2" class="2" checked = "checked" value="2"/><?php echo display('Invoice No') ?><br>
 
@@ -442,8 +442,8 @@ $count++;
 <input type="checkbox"  data-control-column="7" class="7" checked = "checked" value="7"/><?php echo display('Delivery Date') ?><br>
 <input type="checkbox"  data-control-column="8" class="8" checked = "checked" value="8"/><?php echo display('Shipment Company') ?><br>
 
-<input type="checkbox"  data-control-column="9" class="9" checked = "checked" value="9"/><?php echo display('Delivery Time From') ?><br>
-<input type="checkbox"  data-control-column="10" class="10" checked = "checked" value="10"/><?php echo display('Delivery Time To') ?><br>
+<input type="checkbox"  data-control-column="9" class="9" checked = "checked" value="9"/><?php echo display('From') ?><br>
+<input type="checkbox"  data-control-column="10" class="10" checked = "checked" value="10"/><?php echo display('To') ?><br>
 <input type="checkbox"  data-control-column="11" class="11" checked = "checked" value="11"/><?php echo display('Truck No') ?><br>
 
 <input type="checkbox"  data-control-column="12" class="12" checked = "checked" value="12"/><?php echo display('Delivery to') ?><br>
@@ -463,7 +463,7 @@ $count++;
 <input type="checkbox"  data-control-column="16" class="opt Pro No / Reference"  name="Pro No / Reference"/>Pro No / Reference<br> -->
 <input type="checkbox"  data-control-column="13"  class="13" value="13"/><?php echo display('Tax Details') ?><br>
 <input type="checkbox"  data-control-column="14"  class="14" value="14"/><?php echo display('Grand Total') ?><br>
-<input type="checkbox"  data-control-column="15"  class="15" value="15"/><?php echo display('Grand Total(Preferred Currency)') ?><br>
+<input type="checkbox"  data-control-column="15"  class="15" value="15"/><?php echo display('Grand Total') ?><?php echo display('Preferred Currency') ?><br>
 <input type="checkbox"  data-control-column="16"  class="16" value="16"/><?php echo display('Amount Paid') ?><br>
 <input type="checkbox"  data-control-column="17"  class="17" value="17"/><?php echo display('Balance Amount') ?><br>
 <input type="checkbox"  data-control-column="18" class="18" value="18"/><?php echo display('Remarks') ?><br> 

@@ -144,7 +144,7 @@ $today = date('Y-m-d');
 
 <div class="form-group">
 
-    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?></label>
+    <label class="" for="from_date"><?php echo display('Search By Date Range'); ?>:</label>
 
     <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
     <input type="submit" id="btn-filter" class="btnclr btn btn-success" value=<?php echo display('Search') ?> >
@@ -439,7 +439,7 @@ $count++;
                           <span class="close_colSwitch">&times;</span>
                           <div class="col-sm-6"><br><br>
                           <div class="form-group row">
-                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1" /><?php echo display(' ID') ?><br>
+                          <input type="checkbox"  data-control-column="1" checked = "checked" class="1" value="1" /><?php echo display('ID') ?><br>
 
 <input type="checkbox"  data-control-column="2" checked = "checked" class="2" value="2"/><?php echo display('Booking Number') ?><br>
 
@@ -447,7 +447,7 @@ $count++;
 
 <input type="checkbox"  data-control-column="4" checked = "checked" class="4" value="4"/><?php echo display('Seal Number') ?><br>
 
-<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php echo display('Ocean Import ID') ?><br>
+<input type="checkbox"  data-control-column="5" checked = "checked" class="5" value="5"/><?php echo display('Ocean Export ID') ?><br>
 
 <input type="checkbox"  data-control-column="6" checked = "checked" class="6" value="6"/><?php echo display('Shipper') ?><br>
 
@@ -457,7 +457,7 @@ $count++;
 
 <input type="checkbox"  data-control-column="9" checked = "checked" class="9" value="9"/><?php echo display('Notify Party') ?><br>
 <input type="checkbox"  data-control-column="10" checked = "checked" class="10" value="10"/><?php echo display('Vessel') ?><br>
-<input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/><?php echo display('Voyage No.') ?><br>
+<input type="checkbox"  data-control-column="11" checked = "checked" class="11" value="11"/><?php echo display('Voyage No') ?><br>
 <input type="checkbox"  data-control-column="12" checked = "checked" class="12 " value="12 " /> <?php echo display('Freight forwarder ') ?><br>
 <input type="checkbox"  data-control-column="13" checked = "checked" class="13" value="13"/><?php echo display('HBL NO') ?><br>
 <input type="checkbox"  data-control-column="14" checked = "checked" class="14" value="14"/><?php echo display('OBL NO') ?><br>

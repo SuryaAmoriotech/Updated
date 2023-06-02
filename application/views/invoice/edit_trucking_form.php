@@ -1081,7 +1081,7 @@ preg_match('#\((.*?)\)#', $d, $match);
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -1248,7 +1248,7 @@ preg_match('#\((.*?)\)#', $d, $match);
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option selected value="USD">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>

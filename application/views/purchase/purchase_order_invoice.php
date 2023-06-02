@@ -107,7 +107,7 @@ for($m=1;$m<count($purchase_detail);$m++){
                                            
                                             <th rowspan="1" style="width:8px;" class="text-center"style="width:2px;">Slab </br>No</th>
                                             <th colspan="2" class="text-center text-white"style="width:5px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                                            <th rowspan="1" class="text-center"style="width:2px;">Net </br>Sq.</br>Ft</th>
+                                            <th rowspan="1" class="text-center"style="width:2px;">Net Sq.Ft</th>
                                             <th rowspan="1"  class="text-center"style="width:3px;">Cost per Sq.</br>Ft</th>
                                             <th rowspan="1"   class="text-center"style="width:3px;">Cost per Slab</th>
                                            
@@ -356,7 +356,7 @@ for($m=1;$m<count($purchase_detail);$m++){
                                            
                                             <th rowspan="1" style="width:8px;" class="text-center"style="width:2px;">Slab </br>No</th>
                                             <th colspan="2" class="text-center text-white"style="width:5px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                                            <th rowspan="1" class="text-center"style="width:2px;">Net </br>Sq.</br>Ft</th>
+                                         <th rowspan="1" class="text-center"style="width:2px;">Net Sq.Ft</th>
                                             <th rowspan="1"  class="text-center"style="width:3px;">Cost per Sq.</br>Ft</th>
                                             <th rowspan="1"   class="text-center"style="width:3px;">Cost per Slab</th>
                                            
@@ -593,7 +593,7 @@ for($m=1;$m<count($purchase_detail);$m++){
                                            
                                             <th rowspan="1" style="width:8px;" class="text-center"style="width:2px;">Slab </br>No</th>
                                             <th colspan="2" class="text-center text-white"style="width:5px;">Net<br/> Mea<br/>sure<br/>Wth&#9474;Hght</th>
-                                            <th rowspan="1" class="text-center"style="width:2px;">Net </br>Sq.</br>Ft</th>
+                                          <th rowspan="1" class="text-center"style="width:2px;">Net Sq.Ft</th>
                                             <th rowspan="1"  class="text-center"style="width:3px;">Cost per Sq.</br>Ft</th>
                                             <th rowspan="1"   class="text-center"style="width:3px;">Cost per Slab</th>
                                            

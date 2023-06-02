@@ -4844,6 +4844,14 @@ $sql='select * from sale_trucking where trucking_id='.$invoiceid;
 $content = $this->load->view('pdf_attach_mail/trucking', $data, true);
   }
 
+
+
+
+
+
+
+
+
  public function trucking_with_attachment_cus($invoiceid)
   {
     $CA = & get_instance();
@@ -4851,17 +4859,33 @@ $content = $this->load->view('pdf_attach_mail/trucking', $data, true);
     $CA->load->model('invoice_design');
     $CI->load->model('Web_settings');
     $dataw = $CA->invoice_design->retrieve_data($this->session->userdata('user_id'));
+
+
+
+
     $currency_details = $CI->Web_settings->retrieve_setting_editdata();
     $curn_info_default = $CI->db->select('*')->from('currency_tbl')->where('icon',$currency_details[0]['currency'])->get()->result_array();
-   $sql='select c.* from user_login  u
+  
+    $sql='select c.* from user_login  u
     join
     company_information c
     on c.company_id=u.cid
+
      where u.user_id='.$_SESSION['user_id'];
+
+
     $query=$this->db->query($sql);
+   
+    // echo $sql;
+
     $data['head']=$dataw;
     $data['company_info']=$query->result_array();
+
      $this->session->set_userdata('image_email', base_url().$data['company_info'][0]['logo']);
+
+
+    //  echo $data['company_info'][0]['logo'];  die();
+
    $sql=' SELECT * FROM `sale_trucking` a join customer_information b on b.customer_id=a.bill_to where trucking_id='.$invoiceid;
     $query=$this->db->query($sql);
     $data['customer_info']=$query->result_array();
@@ -4869,8 +4893,13 @@ $content = $this->load->view('pdf_attach_mail/trucking', $data, true);
     $query=$this->db->query($sql);
     $data['sale_trucking_details']=$query->result_array();
     // print_r($data['sale_trucking_details']);
-   $sql='select * from sale_trucking where trucking_id='.$invoiceid;
+
+    $sql='select * from sale_trucking where trucking_id='.$invoiceid;
     $query=$this->db->query($sql);
+
+    //    echo $this->db->last_query(); die();
+ 
+
     $data['sale_trucking']=$query->result_array();
     $sql='select * from invoice_email where uid='.$_SESSION['user_id'];;
     $query=$this->db->query($sql);
@@ -4879,7 +4908,7 @@ $content = $this->load->view('pdf_attach_mail/trucking', $data, true);
     $data['curn_info_default'] = $curn_info_default[0]['currency_name'];
     $data['currency'] = $currency_details;
 
-
+    // image_email
     $sql='select * from invoice_content ';
     $query=$this->db->query($sql);
     // $company_content

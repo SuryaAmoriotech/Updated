@@ -220,9 +220,33 @@ public function serviceprovider_update_form($serviceprovider_id) {
         $content = $CI->lpurchase->servprovider_edit_data($serviceprovider_id);
         $this->template->full_admin_html_view($content);
     }
+     public function manage_purchase_dummmy() {
+        // $this->session->unset_userdata('newexpenseid');
+        $date = $this->input->post("daterange");
+        $menu= $this->input->post("options");
+        $CI = & get_instance();
+        $CI->load->model('Purchases');
+        $result='';
+if($menu=='Expense'){
+  
+ $result = $CI->Purchases->newexpense($date);
+}else if($menu=='Service'){
+     
+$result = $CI->Purchases->servicepro($date) ;
+
+}
+
+        $data1 = array(
+           'result'=>$result
+        );
+   
+        $content = $this->load->view('purchase/purchase', $data1, true);
+        $this->template->full_admin_html_view($content);
+     }
  public function manage_purchase() {
          $this->session->unset_userdata('newexpenseid');
         $date = $this->input->post("daterange");
+        $menu= $this->input->post("options");
         $CI = & get_instance();
         $CI->load->model('Purchases');
         $this->load->library('lpurchase');
@@ -230,29 +254,27 @@ public function serviceprovider_update_form($serviceprovider_id) {
         $expense = $CI->Purchases->newexpense($date);
         $servpro = $CI->Purchases->servicepro($date) ;
 
-        // print_r($servpro);die();
-
 $out = array();
 foreach ($expense as $key => $value){
     $out[] = (object)array_merge((array)$servpro[$key], (array)$value);
 }
-// print_r($out);
+
 $array = json_decode(json_encode($out), true);
         $currency_details = $CI->Web_settings->retrieve_setting_editdata();
-      //  $result = array_merge_recursive($expense, $servpro);
+  
  $result  = array_merge($expense, $servpro);
         $data = array(
             'currency' =>$currency_details[0]['currency'],
             'invoice'         =>  $content1,
             'expense' => $expense,
-             'servpro'         =>  $servpro,
-             'service_provider_name' =>$servpro,
+              'servpro'         =>  $servpro,
+              'service_provider_name' =>$servpro,
                'allinfo' => $array
         );
-    //   print_r($result);die();
+   
         $content = $this->load->view('purchase/purchase', $data, true);
         $this->template->full_admin_html_view($content);
-      //  $this->template->full_admin_html_view($content);
+
     }
 
      public function manage_purchase_order() {

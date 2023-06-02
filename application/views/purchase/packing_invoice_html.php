@@ -70,19 +70,19 @@ for($m=1;$m<count($purchase_all_data);$m++){
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
             <thead style="background-color:<?php echo $color; ?>">
                     <tr>                
-                           <th rowspan="1" class="absorbing-column text-center text-white">Product Name</th>
-                           <th rowspan="1" class="text-center text-white">Descrip<br/>tion</th>
-                           <th rowspan="1" class="text-center text-white">Thick<br/>ness</th>
+                           <th rowspan="1" class="absorbing-column text-center ">Product Name</th>
+                           <th rowspan="1" class="text-center ">Descrip<br/>tion</th>
+                           <th rowspan="1" class="text-center ">Thick<br/>ness</th>
 
 
                         
 
-                           <th rowspan="1" class="text-center text-white">Bundle No</th>
-                           <th rowspan="1" class="text-center text-white">Slab No</th>
-                           <th colspan="2" class="text-center text-white">Net<br/> Measure<br/>Width&#9475;Height</th>
+                           <th rowspan="1" class="text-center ">Bundle No</th>
+                           <th rowspan="1" class="text-center ">Slab No</th>
+                           <th colspan="2" class="text-center ">Net<br/> Measure<br/>Width&#9475;Height</th>
 
-                           <th rowspan="1" class="text-center text-white">Net <br/>Sq. Ft</th>                        
-                           <th rowspan="1"  class="text-center text-white">sales_slab_price </th>
+                           <th rowspan="1" class="text-center ">Net <br/>Sq. Ft</th>                        
+                           <th rowspan="1"  class="text-center ">sales_slab_price </th>
 
 
                     </tr> 
@@ -125,7 +125,7 @@ if($a==$m){
                      <tfoot>
 <tr>
     <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
-                                            <td >
+                                            <td style="text-align:center;">
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
                                    </tr>
@@ -133,7 +133,7 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-               <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.Ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+               <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
@@ -193,19 +193,19 @@ for($m=1;$m<count($purchase_all_data);$m++){
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
             <thead style="background-color:<?php echo $color; ?>">
                     <tr>                
-                           <th rowspan="1" class="absorbing-column text-center text-white">Product Name</th>
-                           <th rowspan="1" class="text-center text-white">Descrip<br/>tion</th>
-                           <th rowspan="1" class="text-center text-white">Thick<br/>ness</th>
+                           <th rowspan="1" class="absorbing-column text-center ">Product Name</th>
+                           <th rowspan="1" class="text-center ">Descrip<br/>tion</th>
+                           <th rowspan="1" class="text-center ">Thick<br/>ness</th>
 
 
                         
 
-                           <th rowspan="1" class="text-center text-white">Bundle No</th>
-                           <th rowspan="1" class="text-center text-white">Slab No</th>
-                           <th colspan="2" class="text-center text-white">Net<br/> Measure<br/>Width&#9475;Height</th>
+                           <th rowspan="1" class="text-center ">Bundle No</th>
+                           <th rowspan="1" class="text-center ">Slab No</th>
+                           <th colspan="2" class="text-center ">Net<br/> Measure<br/>Width&#9475;Height</th>
 
-                           <th rowspan="1" class="text-center text-white">Net <br/>Sq. Ft</th>                        
-                           <th rowspan="1"  class="text-center text-white">sales_slab_price </th>
+                           <th rowspan="1" class="text-center ">Net <br/>Sq. Ft</th>                        
+                           <th rowspan="1"  class="text-center ">sales_slab_price </th>
 
 
                     </tr> 
@@ -248,7 +248,7 @@ if($a==$m){
                      <tfoot>
 <tr>
     <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
-                                            <td >
+                                            <td  style="text-align:center;">
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
                                    </tr>
@@ -256,7 +256,7 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-              <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+             <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>
@@ -271,22 +271,25 @@ elseif($template==3)
 <div class="brand-section" style="background-color:<?php echo $color; ?>">
 <div class="row">
        
-       <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+       <div class="col-sm-3"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
           
          </div>
-       <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
+       <div class="col-sm-3 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
     
-   </div>
-        </div>
+  
+  
 
-       
-         <b> Company name : </b><?php echo $company_info[0]['company_name'];  ?><br>
+       <div class="col-sm-6" style="color:white;font-weight:bold ;text-align: end;" id='company_info'>
+ <b> Company name : </b><?php echo $company_info[0]['company_name'];  ?><br>
           <b>   Address : </b><?php echo $company_info[0]['address']; ?><br>
           <b>   Email : </b><?php echo $company_info[0]['email']; ?><br>
           <b>   Contact : </b><?php echo $company_info[0]['mobile']; ?><br>
-       </div>
- </div>
-        </div>
+</div>
+      </div>
+        
+      </div>
+
+    
              <div class="body-section">
             <div class="row">
                 <div class="col-6">
@@ -312,19 +315,19 @@ for($m=1;$m<count($purchase_all_data);$m++){
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
             <thead style="background-color:<?php echo $color; ?>">
                     <tr>                
-                           <th rowspan="1" class="absorbing-column text-center text-white">Product Name</th>
-                           <th rowspan="1" class="text-center text-white">Descrip<br/>tion</th>
-                           <th rowspan="1" class="text-center text-white">Thick<br/>ness</th>
+                           <th rowspan="1" class="absorbing-column text-center ">Product Name</th>
+                           <th rowspan="1" class="text-center ">Descrip<br/>tion</th>
+                           <th rowspan="1" class="text-center ">Thick<br/>ness</th>
 
 
                         
 
-                           <th rowspan="1" class="text-center text-white">Bundle No</th>
-                           <th rowspan="1" class="text-center text-white">Slab No</th>
-                           <th colspan="2" class="text-center text-white">Net<br/> Measure<br/>Width&#9475;Height</th>
+                           <th rowspan="1" class="text-center ">Bundle No</th>
+                           <th rowspan="1" class="text-center ">Slab No</th>
+                           <th colspan="2" class="text-center ">Net<br/> Measure<br/>Width&#9475;Height</th>
 
-                           <th rowspan="1" class="text-center text-white">Net <br/>Sq. Ft</th>                        
-                           <th rowspan="1"  class="text-center text-white">sales_slab_price </th>
+                           <th rowspan="1" class="text-center ">Net <br/>Sq. Ft</th>                        
+                           <th rowspan="1"  class="text-center ">sales_slab_price </th>
 
 
                     </tr> 
@@ -367,7 +370,7 @@ if($a==$m){
                      <tfoot>
 <tr>
     <td colspan="7" style="font-size: 12px;text-align:right;font-weight:bold;"><?php echo  display('Net Sq.ft')?>:</td>
-                                            <td >
+                                            <td  style="text-align:center;">
              <input type="text" id="overall_net_<?php echo $m; ?>" name="overall_net[]"  class="overall_net"  style="border:none;width: 60px;font-size: 10px;"   readonly="readonly"  /> 
             </td>
                                    </tr>
@@ -375,7 +378,7 @@ if($a==$m){
                 <?php   } ?>
 </tfoot>
             </table>
-            <table><tr><td style="width: 150px;text-align: end;font-weight: bold;"> <?php echo  display('Overall Net Sq.ft')?> :</td><td><?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
+            <table><tr><td style="text-align: end;font-weight: bold;">  <?php echo  display('Overall Net Sq.ft')?> :<?php echo $purchase_all_data[0]['total_net']; ?></td></tr></table>
             <br>
           <h4><?php echo display('Remarks')?> :</h4><?php echo $purchase_all_data[0]['remarks']; ?><br><br><br>
         </div>

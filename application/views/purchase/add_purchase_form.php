@@ -64,7 +64,7 @@
 
 
  .removebundle, .addbundle{
-        padding:5px;
+    padding: 10px 12px 10px 12px;
         border-radius:5px;
     }
 .dropzone,
@@ -111,18 +111,7 @@
 <!-- Add New Purchase Start -->
 <div class="content-wrapper" >
     <section class="content-header">
-        <!-- <div class="header-icon">
-            <i class="pe-7s-note2"></i>
-        </div> -->
-        <!-- <div class="header-title">
-            <h1><?php echo display('add_purchase') ?></h1>
-            <small><?php echo display('add_new_purchase') ?></small>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home') ?></a></li>
-                <li><a href="#"><?php echo display('purchase') ?></a></li>
-                <li class="active"><?php echo display('add_purchase') ?></li>
-            </ol>
-        </div> -->
+      
     </section>
     <?php    $payment_id=rand(); ?>
      <form id="histroy" style="display:none;" method="post" >
@@ -187,15 +176,7 @@
                     <div class="panel-body">
                        
       <div class="with_po">
-<!-- <section class="content-header">
-<div class="header-icon">
-    <i class="pe-7s-note2"></i>
-</div>
-<div class="header-title">
-    <h1><?php echo "Create Service Provider" ?></h1>
-    <small><?php echo "Generate Service Provider" ?></small>
-</div>
-</section> -->
+
            <div class="panel-body">
                 <form id="serviceprovider"  method="post">
                     <div class="row">
@@ -254,7 +235,8 @@
                         <div class="col-sm-6">
                            <div class="form-group row">
                            <label for="due_date" class="col-sm-4 col-form-label"><?php  echo  display('Due Date');?>
-                                </label>
+                              <i class="text-danger">*</i>    
+                          </label>
                                                                     <div class="col-sm-8">
                                                                     <input type="date" tabindex="2" class="form-control" name="due_date"  id="due_date"  required/>
                                 </div>
@@ -276,7 +258,7 @@
                             <tbody id="servic_pro">
                                 <tr>
                                     <td class="span3 supplier">
-                                     <input type="text" required tabindex="2" class="form-control " name="account_category_name[]"  id="account_category_name_1"/>
+                                     <input type="text" required tabindex="2" class="acc_name form-control " name="account_category_name[]"  id="account_category_name_1"/>
                                     </td>
                                     <td class="wt">
                                         <input type="text" name="account_category[]" id="account_category_1" required="" min="0" class="form-control text-right store_cal_1"   placeholder="" value=""  tabindex="6"/>
@@ -288,7 +270,7 @@
                                     <input type="text" name="description_service[]" id="description_1" required="" min="0" class="form-control text-right store_cal_1"   placeholder="" value=""  tabindex="6"/>
                                    </td>
                                    <td>
-                                  <span class="input-symbol-euro"> <input class="total_price form-control" type="text"   name="total_price[]" id="total_price_1" value=""  /></span>
+                                  <span class="input-symbol-euro"> <input class="total_price form-control" type="text"   name="total_price[]" id="total_price_1"  placeholder="0.00"  /></span>
                                    </td>
                                             <td style="text-align:center;">
                                             <button  class='delete btn btn-danger' type='button' value='Delete'><i class="fa fa-trash"></i></button>
@@ -299,7 +281,7 @@
  <tr style="height:50px;">
    <td style="text-align:right;" colspan="4" ><b><?php echo display('total') ?>:</b></td>
    <td style="text-align:left;">
-<span class="input-symbol-euro"><input type="text" id="Total" class="form-control text-right"  min="0"    name="total" value="<?php echo $total; ?>" /> </span>
+<span class="input-symbol-euro"><input type="text" id="Total" class="form-control text-right" placeholder="0.00"  min="0"    name="total" value="<?php echo $total; ?>" /> </span>
  </td>
 </tr>
 </tfoot>
@@ -393,9 +375,10 @@
     </div>
     <input type="hidden" id="hidden_weight" name="hidden_weight"/>
 <div class="form-group row">
-    <label for="billing_address" class="col-sm-4     col-form-label"><?php echo display('Payment Terms');?></label>
+    <label for="billing_address" class="col-sm-4     col-form-label"><?php echo display('Payment Terms');?>
+    <i class="text-danger">*</i></label>
     <div class="col-sm-7">
-        <select   name="payment_terms" id="payment_terms" style="width:100%;" class=" form-control" placeholder='Payment Terms' id="payment_terms">
+        <select   name="payment_terms" id="payment_terms" style="width:100%;" class=" form-control" required placeholder='Payment Terms' id="payment_terms">
          <option value=""><?php echo display('Select Payment Terms');?></option>
         <option value="CAD">CAD</option>
         <option value="COD">COD</option>
@@ -475,26 +458,21 @@
 </div>
 <div class="form-group row">
 <label for="invoice_no" class="col-sm-4 col-form-label"><?php echo display('Estimated Time Of Arrival');?>
-                                        <i class="text-danger"></i>
+                                      
                                     </label>
                                        <div class="col-sm-8">
-                                        <input type="date" required tabindex="2" class="form-control datepicker" name="eta" value="<?php echo $date1; ?>" id="date1"  />
+                                        <input type="date"  tabindex="2" class="form-control datepicker" name="eta" value="<?php echo $date1; ?>" id="date1"  />
                                     </div>
 </div>
   <div class="form-group row">
     <label for="supplier_sss" class="col-sm-4 col-form-label"><?php echo display('Estimated Time Of Depature');?>
-                                        <i class="text-danger">*</i>
+                                      
                                     </label>
                                         <div class="col-sm-8">
-                                        <input type="date" required tabindex="2" class="form-control datepicker" name="etd" value="<?php echo $date; ?>" id="date"  />
+                                        <input type="date"  tabindex="2" class="form-control datepicker" name="etd" value="<?php echo $date; ?>" id="date"  />
                                     </div>
 </div>
-<div class="form-group row">
-<label for="ETA" class="col-sm-4 col-form-label"><?php echo display('Attachments');?></label>
-<div class="col-sm-8">
-    <input type="file" name="file" class="form-control">
-</div>
-</div>
+
 </div>
 </div>
 <br>
@@ -578,25 +556,18 @@ td {
                                         <td>
                                             <input type="hidden" name="tableid[]" id="tableid_1"/>
                                          
-                                            
-
-                                        <!-- <select name="prodt[]" id="prodt_1" style="width:160px;"  class="form-control product_name" >
-                                        <option value="Select the Product" selected>Select the Product</option> -->
-                                    
-
-
+                               
 
                            <input list="magicHouses" name="prodt[]" id="prodt_1"  class="form-control product_name"  placeholder="Search Product" />
 	<datalist id="magicHouses">                    
-                                        <!-- <select name="prodt[]" id="prodt_1" style="width:160px;"  class="form-control product_name" >
-                                        <option value="Select the Product" selected>Select the Product</option> -->
+                                      
                                             <?php 
                                        
                                             foreach($product_list as $tx){?>
                                        
                                                 <option value="<?php echo $tx['product_name'].'-'.$tx['product_model'];?>">  <?php echo $tx['product_name'].'-'.$tx['product_model'];  ?></option>
                                            <?php } ?>
-                                        <!-- </select> -->
+                                      
 
 </datalist>
 
@@ -684,7 +655,7 @@ td {
                                             </td>
 
                                             <td >
-                                               <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_1"     name="total_amt[]"/></span>
+                                               <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly  value="0.00"  id="total_amt_1"     name="total_amt[]"/></span>
                                             </td>
                                           
                                             <td style="text-align:center;">
@@ -718,12 +689,13 @@ td {
                         
                                            
                                     </tr>
-                                   
+                                
 
                                             </tfoot>
-                      
+
                             </table>
-                             <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php  echo  display('Bundle');?></i>    
+                          <i id="buddle_1" class="addbundle fa fa-plus" style=" padding: 10px 12px 10px 12px;margin-right: 18px;float:right;color:white;background-color:#38469f;"   onclick="addbundle(); "aria-hidden="true"></i>
+                               
                          </div>
                              <table class="taxtab table table-bordered table-hover">
                         <tr>
@@ -731,20 +703,7 @@ td {
                             <?php  echo display("Live Rate");?> : 
                          </td>
                 
-                               <!-- <td class="hiden" style="text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
-                                 = <input style="width: 50px;text-align:center;color:black;padding:5px;" type="text" class="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
-                    <td style="border:none;text-align:right;font-weight:bold;">Tax : 
-                                 </td>
-                                <td style="width:20%">
-<select name="tx"  id="product_tax" class="form-control" >
-<option value="Select the Tax" selected="selected">Select the Tax</option>
-<?php foreach($tax as $tx){?>
-  
-    <option value="<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';?>">  <?php echo $tx['tax_id'].'-'.$tx['tax'].'%';  ?></option>
-<?php } ?>
-</select>
-</td>
-</tr> -->
+
 <td class="hiden" style="width:12%;text-align-last: center;padding:5px;background-color: #38469f;border:none;font-weight:bold;color:white;">1 <?php  echo $curn_info_default;  ?>
                                  = <input style="width: 80px;text-align:center;color:black;padding:5px;" type="text" class="custocurrency_rate"/>&nbsp;<label for="custocurrency" style="color:white;background-color: #38469f;"></label></td>
                     <td style="border:none;text-align:right;font-weight:bold;"><?php  echo display('Tax');?> : 
@@ -1330,9 +1289,7 @@ td {
   </div>
 
 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
-<!-- <div class="form-group row">
-            <label for="previous_balance" class="col-sm-4 col-form-label"><?php //echo  display('currency');?> ?></label> -->
-            
+
   <div class="form-group row">
                                     <label for="adress" class="col-sm-4 col-form-label"><?php echo  display('Attachments');?>
                                     </label>
@@ -1385,8 +1342,10 @@ td {
                          <div class="form-group row">
                              <label for="barcode_or_qrcode" class="col-sm-4 col-form-label"><?php echo display('barcode_or_qrcode') ?> <i class="text-danger"></i></label>
                              <div class="col-sm-8">
-    <input type="text" tabindex="3" class="form-control"  style="width: 100%;" name="product_id" value="<?php if(!empty($voucher_no[0]['voucher']))
-                      ?>"
+                              <?php  $product_id = rand();  ?>
+                                <input type="text" tabindex="3" class="form-control"  style="width: 100%;" name="barcode"
+                      placeholder="Barcode/QR-code" id="barcode"  />
+    <input type="hidden" tabindex="3" class="form-control"  style="width: 100%;" name="product_id" value="<?php echo  $product_id; ?>"
                       placeholder="Barcode/QR-code" id="product_id"  />
                              </div>
                          
@@ -1532,7 +1491,7 @@ td {
                      <div class="form-group row">
 <label for="product_sub_category" class="col-sm-4 col-form-label"><?php echo  display('Product Sub Category');?><i class="text-danger">*</i></label>
 <div class="col-sm-8">
-<select   name="product_sub_category" id="product_sub_category" class=" form-control" placeholder="product_sub_category" style="width:100%;">
+<select   name="product_sub_category" id="product_sub_category" class=" form-control" required placeholder="product_sub_category" style="width:100%;">
 <option value=""><?php echo  display('Select the Product Sub Category');?></option>
 <option value="Granite"><?php echo  display('Granite');?></option>
 <option value="Marble"><?php echo  display('Marble');?></option>
@@ -1555,7 +1514,6 @@ td {
                      <div class="form-group row">
                              <label for="sub_category"  class="col-sm-4 col-form-label"><?php echo  display('Account Sub Category');?></label>
                              <div class="col-sm-8">
-                             <!-- <input class="form-control" name ="sub_category" id="sub_category" type="text" placeholder=" Account Sub Category"  tabindex="1" > -->
                              <select class="form-control" name="sub_category" id="ddl2">
                          <option value="Select Sub Category"><?php echo  display('Select Sub Category');?></option>
             </select>
@@ -1619,8 +1577,7 @@ td {
 <div class="form-group row">
                              <label for="country" class="col-sm-4 col-form-label"><?php echo display('country'); ?></label>
                              <div class="col-sm-8">
-                             <!-- <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="US-United States"
-name="country" id="country" ></select> -->
+
 
               <select class="selectpicker countpicker form-control"  data-live-search="true" data-default="US-United States"
   name="country" id="country" ></select>  
@@ -1668,28 +1625,7 @@ name="country" id="country" ></select> -->
    </div><!-- /.modal -->
    </form>
    
-   
-<!--<div class="modal fade" id="exampleModalLong" >-->
-<!--    <div class="modal-dialog">-->
-    
-      <!-- Modal content-->
-<!--      <div class="modal-content" style="    margin-top: 190px;">-->
-<!--        <div class="modal-header" style="color:white;background-color:#38469f;">-->
-<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--          <h4 class="modal-title">Expenses</h4>-->
-<!--        </div>-->
-<!--        <div class="modal-body" id="bodyModal1" style="font-weight:bold;text-align:center;">-->
-          
-       
-     
-<!--        </div>-->
-<!--        <div class="modal-footer">-->
-          
-<!--        </div>-->
-<!--      </div>-->
-      
-<!--    </div>-->
-<!--  </div>-->
+
 
 
   <div id="myModal3" class="modal fade">
@@ -1736,7 +1672,9 @@ name="country" id="country" ></select> -->
         <label for="date" style="text-align:end;" class="col-sm-3 col-form-label"><?php  echo  display('payment_date'); ?> <i class="text-danger">*</i></label>
 
         <div class="col-sm-5">
-
+ <?php
+                                        $date = date('Y-m-d');
+                                        ?>
             <input class=" form-control" type="date"  name="payment_date" id="payment_date" required value="<?php echo html_escape($date); ?>" tabindex="4" />
 
         </div>
@@ -1966,7 +1904,7 @@ name="country" id="country" ></select> -->
                                         <i class="text-danger"></i>
                                     </label>
                                     <div class="col-sm-6">
-                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="Select the Country"  name="country" id="country" style="width:100%"></select>
+                                    <select class="selectpicker countrypicker form-control"  data-live-search="true" data-default="United States"  name="country" id="country" style="width:100%"></select>
                                  
                                     </div>
 
@@ -1975,7 +1913,7 @@ name="country" id="country" ></select> -->
             <label for="previous_balance" class="col-sm-4 col-form-label"><?php echo display('currency'); ?></label>
             <div class="col-sm-6">
             <select  class="form-control" id="currency" name="currency1"  style="width: 100%;" required=""  style="max-width: -webkit-fill-available;">
-    <option><?php echo display('Select currency'); ?></option>
+
     <option value="AFN">AFN - Afghan Afghani</option>
     <option value="ALL">ALL - Albanian Lek</option>
     <option value="DZD">DZD - Algerian Dinar</option>
@@ -2133,7 +2071,7 @@ name="country" id="country" ></select> -->
     <option value="UAH">UAH - Ukrainian Hryvnia</option>
     <option value="AED">AED - United Arab Emirates Dirham</option>
     <option value="UYU">UYU - Uruguayan Peso</option>
-    <option value="USD">USD - US Dollar</option>
+    <option value="USD" selected="selected">USD - US Dollar</option>
     <option value="UZS">UZS - Uzbekistan Som</option>
     <option value="VUV">VUV - Vanuatu Vatu</option>
     <option value="VEF">VEF - Venezuelan BolÃ­var</option>
@@ -2165,7 +2103,6 @@ name="country" id="country" ></select> -->
 <div class="col-sm-4">
           <a href="#" class="btn" style="color:white;background-color:#38469f;" data-dismiss="modal"><?php echo display('Close'); ?></a>
      <input type="submit" id="addBank"  style="color:white;background-color:#38469f;"  class="btn btn-primary" name="addBank" value="<?php echo display('save') ?>"/>
-     <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
 
   </div>
   </div>  </div>
@@ -2351,25 +2288,15 @@ $('#insert_product').submit(function (event) {
         for (var i in data1) {
            $("<option/>").html(data1[i].product_name +'-'+ data1[i].product_model).appendTo("#magicHouses");
         }
-        // Trigger a refresh of the rendered datalist
-        // Workaround using focus()
+ 
        $("#magicHouses").focus();
 
 
-
-      //       $.each(data1, function (i, item) {
-      //      result = '<option value=' + data1[i].product_name +'-'+ data1[i].product_model + '>' + data1[i].product_name +'-'+ data1[i].product_model + '</option>';
-      //  });
-      //  $('.product_name').selectmenu();
-      //  $('.product_name').append(result).selectmenu('refresh',true);
-      // $('.product_name').show();
       $("#bodyModal1").html("<?php echo display('Product Added Successfully');?>");
        
       $('#myModal1').modal('show');
-//  $('.product_name').css("display", "block");
-//      $('.product_name').attr("display","block");
-    //   $('#payment_type').modal('hide');
-    //    $('#myModal1').modal('show');
+       $('#insert_product')[0].reset();
+
       window.setTimeout(function(){
         $('#product_info').modal('hide');
         $('.modal-backdrop').remove();
@@ -2398,20 +2325,20 @@ $('#add_pay_type').submit(function(e){
           url:'<?php echo base_url();?>Cinvoice/add_payment_type',
           success: function(data1, statut) {
           var $select = $('select#paytype_drop');
-   
+     
             $select.empty();
-            console.log(data);
+    
               for(var i = 0; i < data1.length; i++) {
         var option = $('<option/>').attr('value', data1[i].payment_type).text(data1[i].payment_type);
         $select.append(option); // append new options
-    }
+              }
       $('#new_payment_type').val('');
 
        $('#paytype_drop').show();
       $("#bodyModal1").html("<?php echo display('Payment Type Added Successfully');?>");
       $('#payment_type').modal('hide');
       
-      
+      $('#add_pay_type')[0].reset();
        $('#myModal1').modal('show');
       window.setTimeout(function(){
         $('#payment_type').modal('hide');
@@ -2427,13 +2354,6 @@ $('#add_pay_type').submit(function(e){
   });
 
 
-
-
-
-
-//   New terms
-// new_payment_terms-------------------------------
-
 $('#add_pay_terms').submit(function(e){
     e.preventDefault();
       var data = {
@@ -2446,18 +2366,22 @@ $('#add_pay_terms').submit(function(e){
          dataType:"json",
           url:'<?php echo base_url();?>Cpurchase/add_payment_terms',
           success: function(data1, statut) {
-       var $select = $('select#payment_terms');
+      
+    var $select = $('select#payment_terms');
             $select.empty();
-       
+    
               for(var i = 0; i < data1.length; i++) {
         var option = $('<option/>').attr('value', data1[i].payment_terms).text(data1[i].payment_terms);
         $select.append(option); // append new options
     }
+
+
     $('#new_payment_terms').val('');
       $("#bodyModal1").html("<?php echo display('Payment Terms Added Successfully');?>");
       $('#payment_type').modal('hide');
       $('#payment_terms').show();
        $('#myModal1').modal('show');
+       $('#add_pay_terms')[0].reset();
       window.setTimeout(function(){
         $('#payment_type_new').modal('hide');
        $('#myModal1').modal('hide');
@@ -2476,14 +2400,11 @@ var tid=$(this).closest('table').attr('id');
 const indexLast = tid.lastIndexOf('_');
 var id = tid.slice(indexLast + 1);
   var $last = $('#servic_pro  tr:last');
-   // var num = id+"_"+$last.index() + 2;
     var num = id+($last.index()+1);
     $('#servic_pro tr:last').clone().find('input').attr('id', function(i, current) {
         return current.replace(/\d+$/, num);
     }).end().appendTo('#servic_pro');
- // $.each($('#normalinvoice_'+id  +  '> tbody > tr'), function (index, el) {
- //            $(this).find(".slab_no").val(index + 1); // Simply couse the first "prototype" is not counted in the list
- //        })
+
         });
 $(document).on('input','.total_price',function (e) {
 var sum = 0;
@@ -2500,12 +2421,12 @@ var sum = 0;
 		$("#Total").val(sum.toFixed(2));
 });
 $(document).on('click', '.delete', function(){
-
+debugger;
 
 var tid=$(this).closest('table').attr('id');
 localStorage.setItem("delete_table",tid);
 console.log(localStorage.getItem("delete_table"));
- var netheight = $('#'+localStorage.getItem("delete_table")).find('.net_height').attr('id');
+ var netheight = $('#'+localStorage.getItem("delete_table")).find('.acc_name').attr('id');
  const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
 var rowCount = $(this).closest('tbody').find('tr').length;
@@ -2513,34 +2434,34 @@ var rowCount = $(this).closest('tbody').find('tr').length;
 if(rowCount>1){
 $(this).closest('tr').remove();
 }
-   var sum=0;
+   var sump=0;
     $('#'+localStorage.getItem("delete_table")).find('.total_price').each(function() {
 var v=$(this).val();
-  sum += parseFloat(v);
+ if (!isNaN(v) && v.length !== 0) {
+  sump += parseFloat(v);
+ }
 });
-  $('#'+localStorage.getItem("delete_table")).find('.b_total').val(sum).trigger('change');
+  $('#'+localStorage.getItem("delete_table")).find('.b_total').val(sump).trigger('change');
    var sumnet=0;
- // var overall_sum=0;
+
    $('#'+localStorage.getItem("delete_table")).find('.net_sq_ft').each(function() {
 var v=$(this).val();
  if (!isNaN(v) && v.length !== 0) {
           sumnet += parseFloat(v);
         }
-//  sumnet += parseFloat(v);
- // overall_sum +=parseFloat(v);
+
 });
   $('#'+localStorage.getItem("delete_table")).find('.overall_net').val(sumnet.toFixed(3));
 
 
     var sumgross=0;
- // var overall_sum=0;
+
     $('#'+localStorage.getItem("delete_table")).find('.gross_sq_ft').each(function() {
 var v=$(this).val();
  if (!isNaN(v) && v.length !== 0) {
           sumgross += parseFloat(v);
         }
-//  sumnet += parseFloat(v);
- // overall_sum +=parseFloat(v);
+
 });
   $('#'+localStorage.getItem("delete_table")).find('.overall_gross').val(sumgross.toFixed(3));
     var sum_w=0;
@@ -2574,7 +2495,7 @@ var total_net=0;
       });
 
      
- //   });
+
 
   });
 $('#total_net').val(total_net.toFixed(3)).trigger('change');
@@ -2599,7 +2520,7 @@ console.log(vv);
   t_price += parseInt(vv);
  }
   console.log("t_price :"+t_price);
- // overall_sum +=parseFloat(v);
+
 });
 });
  $('#Over_all_Total').val(t_price).trigger('change');
@@ -2608,7 +2529,7 @@ console.log(vv);
 
 
 
-//$('#total_net').val(overall_net.toFixed(3));
+
 
 gt(id);
 
@@ -2752,67 +2673,7 @@ $('#isf_dropdown1').on('change', function() {
   else
     $("#isf_no1").hide();
 }).trigger("change");
-/*
-$('#po').on('change', function (e) {
- //   $('#add_purchase').show();
-    $('#purchaseTable1 tbody').empty();
-   // $('##purchaseTable1').html("");
-    if($('#po').val() !=="Not Available"){
-        $
-        $('.with_po').show();
-        $('.without_po').hide();
-    var data = {
-       po:$('#po').val()
-     
-  
-    };
-    data[csrfName] = csrfHash;
 
-    $.ajax({
-        type:'POST',
-        data: data, 
-     dataType:"json",
-        url:'<?php //echo base_url();?>Cpurchase/get_po_details',
-        success: function(result, statut) {
-            console.log(result);
-$('#s_id').val(result[0]['supplier_name']);
-$('#Total').val(result[0]['grand_total_amount']);
-$('#s_hidden_id').val(result[0]['supplier_id']);
-            $.each(result, function (index, value) {
-
-                
-    var c=index+1;
-          $("#purchaseTable1 tbody").append('<tr><td><input type="text" name="product_id[]" id="product_id_'+c+'"   value="'+value.product_id+'" /></td><td><input type="text" name="description[]"    value="'+value.product_id+'" /></td><td>'+
-         ' <input type="text" class="qnty" id="cartoon_'+c+'" name="product_quantity[]" value="'+value.quantity+'" onkeyup="calculate_store('+c+');" onchange="calculate_store('+c+')" /></td>'+
-    '<td><input type="text" readonly="" name="product_rate[]" required="" onkeyup="calculate_store('+c+');" onchange="calculate_store('+c+');" id="product_rate_'+c+'" class="product_rate_'+c+'" class="rate"  value="'+value.rate+'" /></td>'+
-    '<td><input type="text" name="total_price[]" id="total_price_'+c+'"   value="'+value.total_amount+'" /></td>'+
- '</tr>');
-        //c++;
-   });
-   $("#tax_append tbody").append('<td style="width:40%"><select name="tx"  id="product_tax" class="form-control" >'+
-'<option value="'+result[0]['tax_details']+'" selected>'+result[0]['tax_details']+'</option>'+
-'<?php foreach($tax as $tx){?> <option value="<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';?>"> '+
-    '<?php echo $tx['tax_id'].'-'.$tx['tax'].'%';  ?></option><?php } ?></select></td>');
-   $("#purchaseTable1 tbody").append('<tr>  <td style="text-align:right;" colspan="4"><b><?php echo display('total');?>:</b></td>'+
- '<td style="text-align:left;"> <table border="0"> <tr> <td><input type="text" id="Total" value="'+result[0]['total']+'" style="padding:5px;" alue="0.00" class="text-right" name="total" readonly="readonly"></td> <td>'+
-
- '  </tr> </table> </td>   </tr>  <tr>  <td style="text-align:right;" colspan="4"><b>Tax Details :</b></td> '+
- '<td style="text-align:left;"> <table border="0"> <tr> <td></td> <td>    '+
- ' <input type="text" id="tax_details" style="padding:5px;" class="text-right" value="'+result[0]['tax_details']+'" name="tax_details"  readonly="readonly" />'+
- ' </td> </tr> </table> </td>   </tr> <tr> <td style="text-align:right;" colspan="4"><b><?php echo "Grand Total" ?>:</b></td> '+
- '<td> <input type="text" id="gtotal" style="padding:5px;" name="gtotal" onchange="" value="<?php  echo $currency." ";  ?>'+result[0]['grand_total_amount']+'" readonly="readonly">  </td> </tr>'+
-  '<tr><td style="border:none;text-align:right;font-weight:bold;" colspan="4"><b><?php echo "Grand Total" ?>:</b><?php echo "Preferred Currency" ?>:</td> <td>  <input type="text" style="padding:5px;"  id="vendor_gtotal"  name="vendor_gtotal" value="<?php  echo $currency." ";  ?>'+result[0]['gtotal_preferred_currency']+'" readonly="readonly" /> </td>   <input type="hidden" id="final_gtotal"  name="final_gtotal" />  <input type="hidden" name="baseUrl" class="baseUrl" value="<?php echo base_url();?>"/></td> </tr> <tr id="amt">  <td style="text-align:right;"  colspan="4"><b><?php echo "Amount Paid" ?>:</b></td>  <td> <table border="0"> <tr> <td class="cus" name="cus"></td> <td>         <input type="text" id="amount_paid"  style="padding:5px;" value="0.00" name="amount_paid"  readonly="readonly" /> </td> </tr> </table>   </td> </tr> <tr id="bal"> <td style="text-align:right;"  colspan="4"><b><?php echo "Balance Amount " ?>:</b></td> <td> <table border="0"> <tr> <td class="cus" name="cus"></td> <td>         <input type="text" id="balance"  style="padding:5px;" value="0.00" name="balance"  readonly="readonly" /> </td> </tr> </table> </td> </tr> <tr style="border-right:none;border-left:none;border-bottom:none;border-top:none">  <td colspan="6" style="text-align: end;"> <input type="button" value="Make Payment" class="btn btn-primary btn-large" id="paypls"/> </td> </tr>');
-      
-            console.log(result);
-        }
-    });
-    }else{
-        $('.without_po').show();
-        $('.with_po').hide();
-    }
-
-});
-*/
 
 //Total
         $(document).ready(function(){
@@ -2871,36 +2732,7 @@ $('#add_payment_info').submit(function (event) {
  	(amtpd /t_rate ).toFixed(2);
     document.getElementById("bal_convert").value=
  	(bal /t_rate ).toFixed(2);
-//             var resultFrom='<?php //echo $curn_info_default ;?>';
-// var resultTo=$('.cus').html();
-// var searchValue_bal=parseInt(bal);
-// var searchValue_paid=parseInt(amtpd);
-// const api = "https://api.exchangerate-api.com/v4/latest/USD";
-// 	fetch(`${api}`)
-// 		.then(currency => {
-// 			return currency.json();
-// 		}).then(convert_paid);
-// 	fetch(`${api}`)
-// 		.then(currency => {
-// 			return currency.json();
-// 		}).then(convert_bal);
-//     function convert_paid(currency) {
 
-// 	let fromRate = currency.rates[resultFrom];
-// 	let toRate = currency.rates[resultTo];
-//    console.log("PAID : FRom : "+fromRate +", To :"+toRate+', Search :'+searchValue_bal +",Total"+((toRate / fromRate) * searchValue_bal).toFixed(2));
-// document.getElementById("paid_convert").value=
-// 	((toRate / fromRate) * searchValue_paid).toFixed(2);
-
-// }
-// function convert_bal(currency) {
-// 	let fromRate = currency.rates[resultFrom];
-// 	let toRate = currency.rates[resultTo];
-//   console.log("BAL :FRom : "+fromRate +", To :"+toRate+', Search :'+searchValue_bal +",Total"+((toRate / fromRate) * searchValue_bal).toFixed(2));
-// document.getElementById("bal_convert").value=
-// 	((toRate / fromRate) * searchValue_bal).toFixed(2);
-
-// }
       }
     });
       $('#add_payment_info')[0].reset();
@@ -2973,6 +2805,7 @@ $('#amount_to_pay').val($('#vendor_gtotal').val()-$('#amount_paid').val());
        url:"<?php echo base_url(); ?>Csettings/add_new_bank",
        data:$("#add_bank").serialize(),
        success: function (data) {
+        
         $.each(data, function (i, item) {
             result = '<option value=' + data[i].bank_name + '>' + data[i].bank_name + '</option>';
         });
@@ -2981,9 +2814,8 @@ $('#amount_to_pay').val($('#vendor_gtotal').val()-$('#amount_paid').val());
        $("#bodyModal1").html("<?php echo display('Bank Added Successfully');?>");
        $('#myModal1').modal('show');
        $('#add_bank_info').modal('hide');
-    //    $('.bank').(show);
        $('#bank').show();
-        // .bank(show);
+      $('#add_bank')[0].reset();
        window.setTimeout(function(){
         $('#myModal1').modal('hide');
      }, 2000);
@@ -3045,37 +2877,6 @@ var pdt=$('#product_name_'+id).val();
 
   
 }
-//   $(document).on('change','#supplier_id', function (e) {
-
-
-//   var data = {
-//       value: $('#supplier_id').val()
-//    };
-//   data[csrfName] = csrfHash;
-//   $.ajax({
-//       type:'POST',
-//       data: data,
-//       //dataType tells jQuery to expect JSON response
-//       dataType:"json",
-//       url:'<?php echo base_url();?>Cinvoice/getvendor_products',
-//       success: function(data) {
-      
-   
-//         // empty your dropdown 
-//         console.log(data);
-//         $('.normalinvoice .product_name').empty();
-//           $(".normalinvoice").find(".product_name").append($('<option></option>').val(0).html('Select a Product'));
-//          $.each(data, function($index, $value) {
-//              $(".normalinvoice").find(".product_name").append($("<option></option>").val($value.product_name+'-'+$value.product_model).html($value.product_name+'-'+$value.product_model));
-//         });
-
-           
-             
-        
-//       }
-
-// });
-// });
 
     $('#insert_supplier').submit(function (event) {
     var dataString = {
@@ -3116,7 +2917,7 @@ console.log(result);
             }
         $('#vendor_add').val(result[0]['address']+'\n'+result[0]['city']+'\n'+result[0]['state']+"-"+result[0]['zip']+"-"+result[0]['country']+'\n'+result[0]['primaryemail']+"-"+result[0]['businessphone']       );
             $('#vendor_type_details').val(result[0]['vendor_type'])
-            // vendor_type_details
+          
            $(".cus").html(result[0]['currency_type']);
         $("label[for='custocurrency']").html(result[0]['currency_type']);
        console.log('https://open.er-api.com/v6/latest/<?php echo $curn_info_default; ?>');
@@ -3138,7 +2939,7 @@ function(data) {
       $("#bodyModal1").html("<?php echo display('New Vendor Added Successfully');?>");
       
        $('#myModal1').modal('show');
-  
+  $('#insert_supplier')[0].reset();
       
      
        window.setTimeout(function(){
@@ -3173,14 +2974,13 @@ $('#supplier_id').on('change', function (e) {
       url:'<?php echo base_url();?>Cinvoice/getvendor',
       success: function(result, statut) {
           if(result.csrfName){
-             //assign the new csrfName/Hash
+  
              csrfName = result.csrfName;
              csrfHash = result.csrfHash;
           }
-         // var parsedData = JSON.parse(result);
-        //  alert(result[0].p_quantity);
+      
         console.log(result[0]['currency_type']);
-     // $("#vendor_gtotal").val(result[0]['currency_type']);
+   
       $(".cus").html(result[0]['currency_type']);
         $("label[for='custocurrency']").html(result[0]['currency_type']);
        console.log('https://open.er-api.com/v6/latest/<?php echo $curn_info_default; ?>');
@@ -3230,9 +3030,7 @@ var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
                   csrfHash = result.csrfHash;
                }
                console.log(result[0]['label']);
-              // $('#name_email').val(result[0]['label']);
-              // $('#subject_email').val(result[0]['subject']);
-             //  $('#message_email').html(result[0]['message']);
+   
            }
        });
    });
@@ -3360,8 +3158,7 @@ $('.modal-backdrop').remove();
 
 window.onbeforeunload = function(){
     if(!window.btn_clicked ){
-       // window.btn_clicked = true; 
-     //   $('#myModal3').modal('show');
+
        return false;
     }
 }
@@ -3389,9 +3186,9 @@ if(selected_option=='Invoice'){
 
 });
 $('#po').on('change', function (e) {
- //   $('#add_purchase').show();
+
     $('#purchaseTable1 tbody').empty();
-   // $('##purchaseTable1').html("");
+
     if($('#po').val() !=="Not Available"){
         $
         $('.with_po').show();
@@ -3404,14 +3201,8 @@ $('#po').on('change', function (e) {
         $('.with_po').hide();
     }
 });
-//Total
-//         $(document).ready(function(){
-//              $('.without_po').show();
-//             $('.with_po').hide();
-// });
 
 $(document).ready(function(){
-   // $('#payment_modal').modal("show");
      $('#product_tax').on('change', function (e) {
     
   var total=$('#Over_all_Total').val();
@@ -3449,55 +3240,6 @@ $(document).ready(function(){
 
 
 
-// $(document).on('keyup', '.net_height,.net_width', function(){
-
-//  var netheight = $(this).attr('id');
-// const indexLastDot = netheight.lastIndexOf('_');
-// var id = netheight.slice(indexLastDot + 1);
-// var net_width='net_width_'+id;
-// var net_height = 'net_height_'+ id;
-// var netwidth=$('#'+net_width).val();
-// var netheight=$('#'+net_height).val();
-// var netresult=parseInt(netwidth) * parseInt(netheight);
-// netresult=netresult/144;
-// netresult = isNaN(netresult) ? 0 : netresult;
-// $('#'+'net_sq_ft_'+id).val(netresult.toFixed(3));
-// var nresult=netresult.toFixed(3);
-// var cost_sqft=$('#cost_sq_ft_'+id).val();
-
-// var sales_sqft=cost_sqft *nresult;
-// var x = $('#slab_no_'+id).val();
-
-// var sales_slab_price=cost_sqft *nresult*x;
-// console.log(parseInt(cost_sqft) +"*"+parseInt(nresult)+"*"+id);
-// $('#'+'sales_slab_amt_'+id).val(sales_slab_price.toFixed(3));
-// sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
-// $('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
-//       var sum_total=0;
-//      $('.btotal').each(function() {
-// var v=$(this).val();
-//   sum_total += parseFloat(v);
-// });
-// $('#Over_all_Total').val(sum_total);
-// });
-// $(document).on('keyup', '.gross_height,.gross_width', function(){
-
-//  var netheight = $(this).attr('id');
-// const indexLastDot = netheight.lastIndexOf('_');
-// var id = netheight.slice(indexLastDot + 1);
-// var net_width='gross_width_'+id;
-// var net_height = 'gross_height_'+ id;
-// var netwidth=$('#'+net_width).val();
-// var netheight=$('#'+net_height).val();
-// var netresult=parseInt(netwidth) * parseInt(netheight);
-// netresult=netresult/144;
-// netresult = isNaN(netresult) ? 0 : netresult;
-// var nresult=netresult.toFixed(3);
-
-// $('#'+'gross_sq_ft_'+id).val(netresult.toFixed(3));
-
-
-// });
 $('.custocurrency_rate').on('change textInput input', function (e) {
     calculate();
 });
@@ -3507,9 +3249,7 @@ $('.common_qnt').on('change textInput input', function (e) {
 });
 $('.btotal').on('change textInput input', function (e) {
       var sum=0;
-//       var tid=$(this).closest('table').attr('id');
-// const indexLast = tid.lastIndexOf('_');
-// var idt = tid.slice(indexLast + 1);
+
      $('.btotal').each(function() {
 var v=$(this).val();
   sum += parseFloat(v);
@@ -3545,8 +3285,13 @@ $('#vendor_gtotal').val(custo_final);
 
 var csrfName = '<?php echo $this->security->get_csrf_token_name();?>';
 var csrfHash = '<?php echo $this->security->get_csrf_hash();?>';
+<<<<<<< HEAD
  $("body").on('change select', '.product_name', function(){
 debugger;
+=======
+$(document).on('change input select', '.product_name', function(){
+//debugger;
+>>>>>>> master
  var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
@@ -3565,8 +3310,7 @@ var cost_sqft=$('#cost_sq_ft_'+id).val();
 
 
 var sales_sqft=cost_sqft *nresult;
-// var x = $("#normalinvoice_"+id "> tbody > tr").length;
-// console.log("X here : "+x);
+
 var x = $('#slab_no_'+id).val();
  var serial =parseInt( $(this).closest('tr').find('td:nth-child(10)').html());
 
@@ -3670,7 +3414,7 @@ $('#balance').val(bal_amt);
    let dynamic_id=2;
     function addbundle(){
          $(this).closest('table').find('.addbundle').css("display","none");
-      $(this).closest('table').find('.removebundle').css("display","block");
+      $(this).closest('table').find('.removebundle').css("display","inline-block;");
 
 var newdiv = document.createElement('div');
 var tabin="crate_wrap_"+dynamic_id;
@@ -3678,7 +3422,7 @@ var tabin="crate_wrap_"+dynamic_id;
 newdiv = document.createElement("div");
 
 
- newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover" id="normalinvoice_'+ dynamic_id +'"> <thead> <tr> <th rowspan="2" class="text-center" style="width: 180px;" ><?php echo display('product_name'); ?><i class="text-danger">*</i></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Bundle No');?><i class="text-danger">*</i></th> <th rowspan="2"  class="text-center"><?php echo  display('description'); ?></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Thick ness');?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>  <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th> <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>  <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th> <th rowspan="2"  style="width:100px;" class="text-center"><?php echo display('Cost per Slab');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Sales Slab Price');?></th> <th rowspan="2" class="text-center"><?php echo display('Weight');?></th> <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>  <th rowspan="2" style="width: 110px" class="text-center"><?php  echo  display('total'); ?></th> <th rowspan="2" class="text-center"><?php  echo  display('action'); ?></th> </tr>  <tr> <th class="text-center"><?php echo display('Width');?></th> <th class="text-center"><?php echo display('Height');?></th> <th class="text-center"><?php echo display('Width');?></th> <th class="text-center"><?php echo display('Height');?></th> </tr>  </thead> <tbody id="addPurchaseItem_'+ dynamic_id +'"> <tr> <input type="hidden" name="tableid[]" id="tableid_'+ dynamic_id +'"/> <td> <input list="magicHouses" name="prodt[]" id="prodt_'+ dynamic_id +'"  class="form-control product_name" placeholder="Search Product" >  <datalist id="magicHouses"> <?php  foreach($product_list as $tx){?>  <option value="<?php echo $tx["product_name"]."-".$tx["product_model"];?>">  <?php echo $tx["product_name"]."-".$tx["product_model"];  ?></option> <?php } ?> </datalist> <input type="hidden" class="common_product autocomplete_hidden_value  product_id_'+ dynamic_id +'" name="product_id[]" id="SchoolHiddenId_'+ dynamic_id +'" /> </td> <td> <input type="text" id="bundle_no__'+ dynamic_id +'" name="bundle_no[]" required="" class="bundle_no form-control" /> </td> <td> <input type="text" id="description_'+ dynamic_id +'" name="description[]" class="form-control" /> </td>  <td > <input type="text" name="thickness[]" id="thickness_'+ dynamic_id +'" required="" class="form-control"/> </td> <td> <input type="text" id="supplier_b_no_'+ dynamic_id +'" name="supplier_block_no[]" required="" class="form-control" /> </td>  <td > <input type="text"  id="supplier_s_no_'+ dynamic_id +'" name="supplier_slab_no[]" required="" class="form-control"/> </td> <td> <input type="text" id="gross_width_'+ dynamic_id +'" name="gross_width[]" required="" class="gross_width  form-control" /> </td> <td> <input type="text" id="gross_height_'+ dynamic_id +'" name="gross_height[]"  required="" class="gross_height form-control" /> </td>  <td > <input type="text"   style="width:60px;" readonly id="gross_sq_ft_'+ dynamic_id +'" name="gross_sq_ft[]" class="gross_sq_ft form-control"/> </td>   <td style="text-align:center;" >  <input type="text"   style="width:20px;" value="1" class="slab_no" id="slab_no_'+ dynamic_id +'" name="slab_no[]"   readonly  required=""/>  </td> <td> <input type="text" id="net_width_'+ dynamic_id +'" name="net_width[]" required="" class="net_width form-control" /> </td> <td> <input type="text" id="net_height_'+ dynamic_id +'" name="net_height[]"    required="" class="net_height form-control" /> </td> <td > <input type="text"   style="width:60px;" readonly id="net_sq_ft_'+ dynamic_id +'" name="net_sq_ft[]" class="net_sq_ft form-control"/> </td> <td>   <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_'+ dynamic_id +'"  name="cost_sq_ft[]" readonly  style="width:70px;" value="0.00"  class="cost_sq_ft form-control" ></span>   <td >  <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_'+ dynamic_id +'" name="cost_sq_slab[]" readonly   style="width:70px;" value="0.00"  class="form-control"/></span>     </td> <td>  <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_'+ dynamic_id +'"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>     </td>  <td >  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_'+ dynamic_id +'" name="sales_slab_amt[]"  style="width:70px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>     </td> <td> <input type="text" id="weight_'+ dynamic_id +'" name="weight[]"  class="weight form-control" /> </td>  <td > <input type="text"  id="origin_'+ dynamic_id +'" name="origin[]" class="form-control"/> </td>  <td > <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_'+ dynamic_id +'"     name="total_amt[]"/></span> </td>  <td style="text-align:center;"> <button  class="delete btn btn-danger" id="delete_'+ dynamic_id +'" type="button" value="Delete" ><i class="fa fa-trash"></i></button> </td>  </tr> </tbody> <tfoot> <tr> <td style="text-align:right;" colspan="8"><b>Gross weight :</b></td> <td > <input type="text" id="overall_gross_'+ dynamic_id +'" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> </td> <td style="text-align:right;" colspan="3"><b>Net weight :</b></td> <td > <input type="text" id="overall_net_'+ dynamic_id +'" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> </td>  <td style="text-align:right;" colspan="4"><b>Weight :</b></td> <td ><input type="text" id="overall_weight_'+ dynamic_id +'" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  />  </td> <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td> <td > <span class="input-symbol-euro">    <input type="text" id="Total_'+ dynamic_id +'" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span> </td><td  style="text-align: end;"> <i id="buddle_'+ dynamic_id +'" class="btn-danger removebundle fa fa-minus"  aria-hidden="true" onclick="removebundle(); "><?php  echo  display('Bundle');?></i>  </td> </tr><tr style="border-right:none;border-left:none;border-bottom:none;border-top:none"> <td colspan="20" style="text-align: end;">    </td>  </tr></foot></table> <i id="buddle_1" class="addbundle fa fa-plus" style="float:right;color:white;background-color: #38469f;" aria-hidden="true" onclick="addbundle(); "><?php  echo  display('Bundle');?></i>    ';  
+ newdiv.innerHTML ='<table class="table normalinvoice table-bordered table-hover" id="normalinvoice_'+ dynamic_id +'"> <thead> <tr> <th rowspan="2" class="text-center" style="width: 180px;" ><?php echo display('product_name'); ?><i class="text-danger">*</i></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Bundle No');?><i class="text-danger">*</i></th> <th rowspan="2"  class="text-center"><?php echo  display('description'); ?></th> <th rowspan="2" style="width:60px;" class="text-center"><?php echo display('Thick ness');?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Supplier Block No');?><i class="text-danger">*</i></th>  <th rowspan="2" class="text-center" ><?php echo display('Supplier Slab No');?><i class="text-danger">*</i> </th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Gross Measurement');?><i class="text-danger">*</i> </th> <th rowspan="2" class="text-center"><?php echo display('Gross Sq.Ft');?></th>  <th rowspan="2" style="width:40px;" class="text-center"><?php echo display('Slab No');?><i class="text-danger">*</i></th> <th colspan="2" style="width:150px;" class="text-center"><?php echo display('Net Measure');?><i class="text-danger">*</i></th> <th rowspan="2" class="text-center"><?php echo display('Net Sq.Ft');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Cost per Sq.Ft');?></th> <th rowspan="2"  style="width:100px;" class="text-center"><?php echo display('Cost per Slab');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('sales'); ?><br/><?php echo display('Price per Sq.Ft');?></th> <th rowspan="2"  style="width:90px;" class="text-center"><?php echo display('Sales Slab Price');?></th> <th rowspan="2" class="text-center"><?php echo display('Weight');?></th> <th rowspan="2" class="text-center"><?php echo display('Origin');?></th>  <th rowspan="2" style="width: 110px" class="text-center"><?php  echo  display('total'); ?></th> <th rowspan="2" class="text-center"><?php  echo  display('action'); ?></th> </tr>  <tr> <th class="text-center"><?php echo display('Width');?></th> <th class="text-center"><?php echo display('Height');?></th> <th class="text-center"><?php echo display('Width');?></th> <th class="text-center"><?php echo display('Height');?></th> </tr>  </thead> <tbody id="addPurchaseItem_'+ dynamic_id +'"> <tr> <input type="hidden" name="tableid[]" id="tableid_'+ dynamic_id +'"/> <td> <input list="magicHouses" name="prodt[]" id="prodt_'+ dynamic_id +'"  class="form-control product_name" placeholder="Search Product" >  <datalist id="magicHouses"> <?php  foreach($product_list as $tx){?>  <option value="<?php echo $tx["product_name"]."-".$tx["product_model"];?>">  <?php echo $tx["product_name"]."-".$tx["product_model"];  ?></option> <?php } ?> </datalist> <input type="hidden" class="common_product autocomplete_hidden_value  product_id_'+ dynamic_id +'" name="product_id[]" id="SchoolHiddenId_'+ dynamic_id +'" /> </td> <td> <input type="text" id="bundle_no__'+ dynamic_id +'" name="bundle_no[]" required="" class="bundle_no form-control" /> </td> <td> <input type="text" id="description_'+ dynamic_id +'" name="description[]" class="form-control" /> </td>  <td > <input type="text" name="thickness[]" id="thickness_'+ dynamic_id +'" required="" class="form-control"/> </td> <td> <input type="text" id="supplier_b_no_'+ dynamic_id +'" name="supplier_block_no[]" required="" class="form-control" /> </td>  <td > <input type="text"  id="supplier_s_no_'+ dynamic_id +'" name="supplier_slab_no[]" required="" class="form-control"/> </td> <td> <input type="text" id="gross_width_'+ dynamic_id +'" name="gross_width[]" required="" class="gross_width  form-control" /> </td> <td> <input type="text" id="gross_height_'+ dynamic_id +'" name="gross_height[]"  required="" class="gross_height form-control" /> </td>  <td > <input type="text"   style="width:60px;" readonly id="gross_sq_ft_'+ dynamic_id +'" name="gross_sq_ft[]" class="gross_sq_ft form-control"/> </td>   <td style="text-align:center;" >  <input type="text"   style="width:20px;" value="1" class="slab_no" id="slab_no_'+ dynamic_id +'" name="slab_no[]"   readonly  required=""/>  </td> <td> <input type="text" id="net_width_'+ dynamic_id +'" name="net_width[]" required="" class="net_width form-control" /> </td> <td> <input type="text" id="net_height_'+ dynamic_id +'" name="net_height[]"    required="" class="net_height form-control" /> </td> <td > <input type="text"   style="width:60px;" readonly id="net_sq_ft_'+ dynamic_id +'" name="net_sq_ft[]" class="net_sq_ft form-control"/> </td> <td>   <span class="input-symbol-euro"><input type="text" id="cost_sq_ft_'+ dynamic_id +'"  name="cost_sq_ft[]" readonly  style="width:70px;" value="0.00"  class="cost_sq_ft form-control" ></span>   <td >  <span class="input-symbol-euro"> <input type="text"  id="cost_sq_slab_'+ dynamic_id +'" name="cost_sq_slab[]" readonly   style="width:70px;" value="0.00"  class="form-control"/></span>     </td> <td>  <span class="input-symbol-euro">  <input type="text" id="sales_amt_sq_ft_'+ dynamic_id +'"  name="sales_amt_sq_ft[]"  style="width:70px;"  value="0.00" class="sales_amt_sq_ft form-control" /></span>     </td>  <td >  <span class="input-symbol-euro">   <input type="text"  id="sales_slab_amt_'+ dynamic_id +'" name="sales_slab_amt[]"  style="width:70px;" value="0.00"  class="sales_slab_amt form-control"/></td> </span>     </td> <td> <input type="text" id="weight_'+ dynamic_id +'" name="weight[]"  class="weight form-control" /> </td>  <td > <input type="text"  id="origin_'+ dynamic_id +'" name="origin[]" class="form-control"/> </td>  <td > <span class="input-symbol-euro"><input  type="text" class="total_price form-control" style="width:80px;" readonly value="0.00"  id="total_amt_'+ dynamic_id +'"     name="total_amt[]"/></span> </td>  <td style="text-align:center;"> <button  class="delete btn btn-danger" id="delete_'+ dynamic_id +'" type="button" value="Delete" ><i class="fa fa-trash"></i></button> </td>  </tr> </tbody> <tfoot> <tr> <td style="text-align:right;" colspan="8"><b>Gross weight :</b></td> <td > <input type="text" id="overall_gross_'+ dynamic_id +'" name="overall_gross[]"   class="overall_gross form-control" style="width: 60px"  readonly="readonly"  /> </td> <td style="text-align:right;" colspan="3"><b>Net weight :</b></td> <td > <input type="text" id="overall_net_'+ dynamic_id +'" name="overall_net[]"  class="overall_net form-control"  style="width: 60px"  readonly="readonly"  /> </td>  <td style="text-align:right;" colspan="4"><b>Weight :</b></td> <td ><input type="text" id="overall_weight_'+ dynamic_id +'" name="overall_weight[]"  class="overall_weight form-control"  style="width: 70px"  readonly="readonly"  />  </td> <td style="text-align:right;" colspan="1"><b>TOTAL :</b></td> <td > <span class="input-symbol-euro">    <input type="text" id="Total_'+ dynamic_id +'" name="total[]"   class="b_total form-control"  style="width: 80px" value="0.00"  readonly="readonly"  /> </span> </td>  <td  style="text-align:center;"><i id="buddle_'+ dynamic_id +'" onclick="removebundle(); " class="btn-danger removebundle fa fa-minus" aria-hidden="true"></i></td>   </tr> </foot></table> <i id="buddle_1"  style="margin-right: 18px;float:right;color:white;background-color:#38469f;"   onclick="addbundle(); " class="addbundle fa fa-plus" aria-hidden="true"></i>';  
 
 document.getElementById('content').appendChild(newdiv);
 
@@ -3689,7 +3433,7 @@ dynamic_id++;
 }
 $(document).on('click', '.addbundle', function(){
          $(this).css("display","none");
-      $(this).closest('table').find('.removebundle').css("display","block");
+      $(this).closest('table').find('.removebundle').css("display","inline-block;");
  });
   $(document).on('keyup','.normalinvoice tbody tr:last',function (e) {
    
@@ -3715,7 +3459,7 @@ var id = tid.slice(indexLast + 1);
 
 
 $(document).on('click', '.removebundle', function(){
-
+debugger;
  var tid=$(this).closest('table').attr('id');
 localStorage.setItem("delete_table",tid);
 console.log(localStorage.getItem("delete_table"));
@@ -3795,16 +3539,17 @@ $('#total_weight').val(total_w.toFixed(3)).trigger('change');
 var overall_sum=0;
      $('.table').find('.total_price').each(function() {
 var v=$(this).val();
+ if (!isNaN(v) && v.length !== 0) {
   overall_sum += parseFloat(v);
- // overall_sum +=parseFloat(v);
+ }
 });
- $('#Over_all_Total').val(overall_sum.toFixed(3)).trigger('change');
+ $('#Over_all_Total').val(overall_sum).trigger('change');
 localStorage.removeItem("delete_table");
 
 
 
  });
-//$('#total_net').val(overall_net.toFixed(3));
+
 
 
 $(document).on('keyup', '.weight', function(){
@@ -3859,14 +3604,13 @@ $(this).closest('tr').find('.total_price').val(sales_slab_price.toFixed(3));
 sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
 $('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
  var sumnet=0;
- // var overall_sum=0;
+
      $(this).closest('table').find('.net_sq_ft').each(function() {
 var v=$(this).val();
  if (!isNaN(v) && v.length !== 0) {
           sumnet += parseFloat(v);
         }
-//  sumnet += parseFloat(v);
- // overall_sum +=parseFloat(v);
+
 });
 $('#overall_net_'+idt).val(sumnet.toFixed(3));
 var total_net=0;
@@ -3886,11 +3630,11 @@ $('#total_net').val(total_net.toFixed(3)).trigger('change');
 
 
   var sum=0;
- // var overall_sum=0;
+
      $(this).closest('table').find('.total_price').each(function() {
 var v=$(this).val();
   sum += parseFloat(v);
- // overall_sum +=parseFloat(v);
+
 });
 
 var overall_sum=0;
@@ -3934,14 +3678,13 @@ var nresult=netresult.toFixed(3);
 $('#'+'gross_sq_ft_'+id).val(netresult.toFixed(3));
 
     var sumgross=0;
- // var overall_sum=0;
+
      $(this).closest('table').find('.gross_sq_ft').each(function() {
 var v=$(this).val();
  if (!isNaN(v) && v.length !== 0) {
           sumgross += parseFloat(v);
         }
-//  sumnet += parseFloat(v);
- // overall_sum +=parseFloat(v);
+
 });
 $('#overall_gross_'+idt).val(sumgross.toFixed(3));
    
@@ -3961,7 +3704,7 @@ $('#total_gross').val(overall_gs).trigger('change');
 gt(id);
 
 });
-$(document).on('change select','.product_name', function (e) {
+$(document).on('change input select','.product_name', function (e) {
 var netheight = $(this).attr('id');
 const indexLastDot = netheight.lastIndexOf('_');
 var id = netheight.slice(indexLastDot + 1);
@@ -3988,7 +3731,6 @@ $(this).closest('tr').find('.total_price').val(sales_slab_price.toFixed(3));
 sales_sqft = isNaN(sales_sqft) ? 0 : sales_sqft;
 $('#'+'sales_amt_sq_ft_'+id).val(sales_sqft.toFixed(3));
  var sumnet=0;
- // var overall_sum=0;
      $(this).closest('table').find('.net_sq_ft').each(function() {
 var v=$(this).val();
  if (!isNaN(v) && v.length !== 0) {
@@ -4014,8 +3756,6 @@ var total_net=0;
         }
       });
 
-     
- //   });
 
   });
 $('#total_net').val(total_net.toFixed(3)).trigger('change');
@@ -4041,8 +3781,6 @@ var overall_sum=0;
         }
       });
 
-     
- //   });
 
   });
 
