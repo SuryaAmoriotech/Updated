@@ -93,7 +93,7 @@ if(1==1)
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
            
-      <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
+        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
 
 
         </tr>
@@ -102,7 +102,7 @@ if(1==1)
 
     <table>
       <tr>                                                      
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
       </tr>
@@ -156,13 +156,13 @@ if(1==1)
     <br><br>
     <table>
       <tr class="table_view" >
-        <th style="color: #fff; text-align: center">S.No</th>
-        <th style="color: #fff; text-align: center">Date</th>
-        <th style="color: #fff; text-align: center">Quantity</th>
-             <th style="color: #fff; text-align: center">Description</th>
-        <th style="color: #fff; text-align: center">Rate</th>
-        <th style="color: #fff; text-align: center">Pro no/Reference</th>
-        <th style="color: #fff; text-align: center">Total</th>
+      <th style="color: #fff; text-align: center">'.display("S.No").'</th>
+      <th style="color: #fff; text-align: center">'.display("Date").'</th>
+      <th style="color: #fff; text-align: center">'.display("Quantity").'</th>
+           <th style="color: #fff; text-align: center">'.display("Description").'</th>
+      <th style="color: #fff; text-align: center">'.display("Rate").'</th>
+      <th style="color: #fff; text-align: center">'.display("Pro No / Reference").'</th>
+      <th style="color: #fff; text-align: center">'.display("Total").'</th>
       </tr>';
 
       if ($sale_trucking_details) {
@@ -244,7 +244,7 @@ if(1==1)
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
            
-        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").' : '.$company_content[0]['email'].'<br>'.display("Mobile").' : '.$company_content[0]['phone'].'<br>'.display("Address").' : '.$company_content[0]['address'].'</td>
+        <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
 
         </tr>
     </table>
@@ -252,7 +252,7 @@ if(1==1)
 
     <table>
       <tr>
-      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+      <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
       </tr>
@@ -307,13 +307,23 @@ if(1==1)
     <br><br>
     <table>
       <tr class="table_view"  >
-        <th style="color: #fff; text-align: center">S.No</th>
-        <th style="color: #fff; text-align: center">Date</th>
-        <th style="color: #fff; text-align: center">Quantity</th>
-             <th style="color: #fff; text-align: center">Description</th>
-        <th style="color: #fff; text-align: center">Rate</th>
-        <th style="color: #fff; text-align: center">Pro no/Reference</th>
-        <th style="color: #fff; text-align: center">Total</th>
+        <th style="color: #fff; text-align: center">'.display("S.No").'</th>
+        <th style="color: #fff; text-align: center">'.display("Date").'</th>
+        <th style="color: #fff; text-align: center">'.display("Quantity").'</th>
+             <th style="color: #fff; text-align: center">'.display("Description").'</th>
+        <th style="color: #fff; text-align: center">'.display("Rate").'</th>
+        <th style="color: #fff; text-align: center">'.display("Pro No / Reference").'</th>
+        <th style="color: #fff; text-align: center">'.display("Total").'</th>
+
+
+
+        
+
+
+
+
+
+
       </tr>';
 
       if ($sale_trucking_details) {
@@ -397,7 +407,7 @@ if(1==1)
         </td>
         <td style="border: none; text-align: center; color: white">'. $head[0]['header'].'</td>
            
-      <td style="border: none; text-align: right; color: white">Company Name: '.$company_content[0]['business_name'].'<br>Email: '.$company_content[0]['email'].'<br>Mobile: '.$company_content[0]['phone'].'<br>Address: '.$company_content[0]['address'].'</td>
+      <td style="border: none; text-align: right; color: white">'.display("Company Name").': '.$company_content[0]['business_name'].'<br>'.display("Email").': '.$company_content[0]['email'].'<br>'.display("Mobile").': '.$company_content[0]['phone'].'<br>'.display("Address").': '.$company_content[0]['address'].'</td>
 
 
       </tr>
@@ -410,9 +420,9 @@ if(1==1)
 
         <table>
         <tr>
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['trucking_id'].'</span></td>
 
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Invoice Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['invoice_date'].'</span></td>
         </tr>
         
   
@@ -431,7 +441,7 @@ if(1==1)
         <tr>
         <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Container / Goods pickup date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['container_pickup_date'].'</span></td>
   
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Time").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Time").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_time_from'].'--'.$sale_trucking[0]['delivery_time_from'].'</span></td>
   
         </tr>
   
@@ -441,14 +451,14 @@ if(1==1)
   
   
         <tr>
-       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery to").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
-         <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
+       <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery to").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_to'].'</span></td>
+         <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Delivery Date").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['delivery_date'].'</span></td>
   
         </tr>
   
   
         <tr>
-        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Truck No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
+        <td style="border: none; font-weight: normal; line-height: 20px;"><b>'.display("Truck No").'</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;: &nbsp;'.$sale_trucking[0]['truck_no'].'</span></td>
   
   
         </tr>
@@ -464,13 +474,13 @@ if(1==1)
       <br><br>
       <table>
         <tr class="table_view" >
-          <th style="color: #fff; text-align: center">S.No</th>
-          <th style="color: #fff; text-align: center">Date</th>
-          <th style="color: #fff; text-align: center">Quantity</th>
-               <th style="color: #fff; text-align: center">Description</th>
-          <th style="color: #fff; text-align: center">Rate</th>
-          <th style="color: #fff; text-align: center">Pro no/Reference</th>
-          <th style="color: #fff; text-align: center">Total</th>
+        <th style="color: #fff; text-align: center">'.display("S.No").'</th>
+        <th style="color: #fff; text-align: center">'.display("Date").'</th>
+        <th style="color: #fff; text-align: center">'.display("Quantity").'</th>
+             <th style="color: #fff; text-align: center">'.display("Description").'</th>
+        <th style="color: #fff; text-align: center">'.display("Rate").'</th>
+        <th style="color: #fff; text-align: center">'.display("Pro No / Reference").'</th>
+        <th style="color: #fff; text-align: center">'.display("Total").'</th>
         </tr>';
   
         if ($sale_trucking_details) {

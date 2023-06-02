@@ -65,9 +65,9 @@
     <div class="col-sm-4" style="color:white;font-weight:bold;" id='company_info'>
            
           <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
-          <b> <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
-          <b> <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
-          <b> <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
+          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
        </div>
  </div>
         </div>
@@ -76,18 +76,25 @@
             <div class="row">
                 <div class="col-6">
                 <table id="one" cellspacing="0" cellpadding="0">
-    <tr><td  class="key"> <?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
-    <tr><td  class="key"> <?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?></td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Country of origin of goods') ?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two" cellspacing="0" cellpadding="0">
+<tr><td  class="key"><?php echo display('Buyer/Customer') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Receipt') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Country of final destination') ?></td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
+    <tr><td  class="key"><?php echo display('Description of goods') ?> </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
+    <tr><td class="key"><?php echo display('Port of discharge') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
+    
+ 
 <tr><td  class="key"><?php echo display('Buyer/Customer ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
     <tr><td  class="key"><?php echo display('Place of Receipt ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
     <tr><td  class="key"><?php echo display('Country of final destination') ?>  </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
@@ -183,12 +190,15 @@ if($a==$m){
    
 <tr>
 <td colspan="3" style="text-align:left;border:none;"><b><?php echo display('Overall TOTAL') ?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $purchase_info[0]['total']; ?> </td>
+<td colspan="3" style="text-align:left;border:none;"><b><?php echo display('Overall TOTAL') ?> :</b></td><td style="border:none;"> <?php  echo $currency; ?><?php echo $purchase_info[0]['total']; ?> </td>
      <td style="text-align:right;border:none;" colspan="10"><b><?php echo  "Tax (".$tax_des;  ?></b></td>
                    
                            <td style='border:none;'><?php  echo $currency; ?><?php echo $tax_amt;  ?></td>
 </tr>
  </tr>
                                     <tr>
+                                    <td colspan="3"  style="vertical-align:top;text-align:left;border:none;"><b><?php echo display('Overall Net Sq.Ft') ?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_info[0]['total_net'];   ?></td>
+                                         <td style="text-align:right;border:none;" colspan="8"><b><?php echo display('GRAND TOTAL') ?> :</b></td>
                                     <td colspan="3"  style="vertical-align:top;text-align:left;border:none;"><b><?php echo display('Overall Net Sq.Ft') ?> :</b></td><td style="border:none;" colspan="3"><?php echo  $purchase_info[0]['total_net'];   ?></td>
                                          <td style="text-align:right;border:none;" colspan="8"><b><?php echo display('GRAND TOTAL') ?> :</b></td>
                                     <td style='border:none;'>
@@ -243,7 +253,7 @@ if($a==$m){
     
             <h4><?php echo display('Account Details/Additional Information') ?> : </h4><?php  echo  $ac_details ; ?><br><br>
 
-<h4><?php echo display('Remarks/Conditions') ?> : </h4><?php  echo  $remarks; ?><br><br>
+<h4><?php echo display('Remarks/Conditions') ?>: </h4><?php  echo  $remarks; ?><br><br>
         
             
         </div>
@@ -269,6 +279,10 @@ elseif($template==1)
                  <b> <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
                  <b> <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
                  <b> <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
+     <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
+          <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+          <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+          <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
         </div>
   </div>
         </div>
@@ -276,24 +290,23 @@ elseif($template==1)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-                <tr><td  class="key"> <?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
-    <tr><td  class="key"> <?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+                <tr><td  class="key"><?php echo display('Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?></td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Country of origin of goods') ?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two" cellspacing="0" cellpadding="0">
-<tr><td  class="key"><?php echo display('Buyer/Customer ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Country of final destination') ?>  </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-   
-    <tr><td class="key"><?php echo display('Port of discharge') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Buyer/Customer') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Receipt') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Country of final destination') ?></td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
+    <tr><td  class="key"><?php echo display('Description of goods') ?> </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
+    <tr><td class="key"><?php echo display('Port of discharge') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
     
  
 </table>
@@ -443,7 +456,7 @@ if($a==$m){
     
             <h4><?php echo display('Account Details/Additional Information') ?> : </h4><?php  echo  $ac_details ; ?><br><br>
 
-<h4><?php echo display('Remarks/Conditions') ?> : </h4><?php  echo  $remarks; ?><br><br>
+<h4><?php echo display('Remarks/Conditions') ?>: </h4><?php  echo  $remarks; ?><br><br>
         
             
         </div>
@@ -466,11 +479,10 @@ elseif($template==3)
        <div class="col-sm-4" id='company_info' style="color:white;">
             
             <b> <?php echo display('Company name') ?> : </b><?php echo $cname; ?><br>
-                 <b> <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
-                 <b> <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
-                 <b> <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
+                 <b>   <?php echo display('Address') ?> : </b><?php echo $address; ?><br>
+                 <b>   <?php echo display('Email') ?> : </b><?php echo $email; ?><br>
+                 <b>   <?php echo display('Contact') ?> : </b><?php echo $phone; ?><br>
                </div>
-         </div>
    </div>
         </div>
 
@@ -478,24 +490,23 @@ elseif($template==3)
             <div class="row">
                 <div class="col-6">
                 <table id="one" >
-                <tr><td  class="key"> <?php echo display('Date') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Invoice No') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Pre Carriage By') ?> </td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
-    <tr><td  class="key"> <?php echo display('Country of origin of goods') ?> </td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Port of loading') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
-    <tr><td  class="key"> <?php echo display('Terms of payment and delivery') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
+                <tr><td  class="key"><?php echo display('Date') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $purchase_date; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Invoice No') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $chalan_no;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Pre Carriage') ?></td><td style="width:10px;">:</td><td calss="value">{pre_carriage}</td></tr>
+    <tr><td  class="key"><?php echo display('Country of origin of goods') ?></td><td style="width:10px;">:</td><td calss="value"> <?php echo $country_goods;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Port of loading') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $loading;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Terms of payment and delivery') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $terms_payment;  ?></td></tr>
  
 </table>
 
                 </div>
                 <div class="col-6">
                 <table id="two" cellspacing="0" cellpadding="0">
-<tr><td  class="key"><?php echo display('Buyer/Customer ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
-    <tr><td  class="key"><?php echo display('Place of Receipt ') ?> </td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
-    <tr><td  class="key"><?php echo display('Country of final destination') ?>  </td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
-    <tr><td  class="key"><?php echo display('Description of goods') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
-   
-    <tr><td class="key"><?php echo display('Port of discharge') ?>  </td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
+<tr><td  class="key"><?php echo display('Buyer/Customer') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $customer_name; ?></td></tr>
+    <tr><td  class="key"><?php echo display('Place of Receipt') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $receipt;  ?></td></tr>
+    <tr><td  class="key"><?php echo display('Country of final destination') ?></td><td style="width:10px;">:</td><td calss="value">{country_destination}</td></tr>
+    <tr><td  class="key"><?php echo display('Description of goods') ?> </td><td style="width:10px;">:</td><td calss="value"><?php  echo  $description_goods ; ?></td></tr>
+    <tr><td class="key"><?php echo display('Port of discharge') ?></td><td style="width:10px;">:</td><td calss="value"><?php echo $discharge;  ?></td></tr>
     
  
 </table>
@@ -605,7 +616,7 @@ if($a==$m){
                                         
                                     
                                     
-                                    <td style="text-align:right;border:none;"  colspan="14"><b><?php echo display('GRAND TOTAL')?> :</b><br/><b><?php echo display('Preferred Currency') ?></b></td>
+                                    <td style="text-align:right;border:none;"  colspan="14"><b>GRAND TOTAL :</b><br/><b>(Preferred Currency)</b></td>
                                     <td style='border:none;'>
           <table border="0">
       <tr>
@@ -631,7 +642,7 @@ if($a==$m){
                                               
                                                 </tr> 
                                                 <tr id="bal">
-                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo display('Balance Amount')?>:</b></td>
+                                                <td style="border:none;text-align:right;"  colspan="14"><b><?php echo "Balance Amount " ?>:</b></td>
                                                 <td style='border:none;'>
                                                
                                               <?php echo $customer_currency." ".$purchase_info[0]['bal_amt'];?>
@@ -645,7 +656,7 @@ if($a==$m){
     
             <h4><?php echo display('Account Details/Additional Information') ?> : </h4><?php  echo  $ac_details ; ?><br><br>
 
-<h4><?php echo display('Remarks/Conditions') ?> : </h4><?php  echo  $remarks; ?><br><br>
+<h4><?php echo display('Remarks/Conditions') ?>: </h4><?php  echo  $remarks; ?><br><br>
         
             
         </div>
@@ -665,13 +676,13 @@ if($a==$m){
       <div class="modal-content" style="width: 500px;height:100px;text-align:center;margin-bottom: 300px;">
         <div class="modal-header" style="color:white;background-color:#38469f;">
       
-          <h4 class="modal-title">Sales - Profarma Invoice</h4>
+          <h4 class="modal-title"><?php echo display('Sales - Profarma Invoice') ?></h4>
         </div>
         <div class="content">
 
         <div class="modal-body" style="text-align:center;font-weight:bold;">
           
-          <h4>Profarma Invoice Downloaded Successfully</h4>
+          <h4><?php echo display('Profarma Invoice Downloaded Successfully') ?></h4>
      
         </div>
         <div class="modal-footer">
