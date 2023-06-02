@@ -7,13 +7,11 @@ $query_builder = TRUE;
 $active_record = TRUE;//ci version 2.x
 
 $db['default'] = array(
-    'dsn'   => '',
-    'hostname' => 'localhost',
+      'dsn'   => '',
+      'hostname' => 'localhost',
       'username' => 'root',
-    'password' => '',
-
+      'password' => '',
     'database' => 'stockeaic_testupdate17',
-
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
