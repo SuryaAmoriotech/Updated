@@ -74,6 +74,59 @@ class Lpurchase {
         return $purchaseForm;
 
     }
+        public function servicepro_details_data_print($serviceprovider_id) {
+    $CI = & get_instance();
+    $CI->load->model('Purchases');
+    $CI->load->model('Products');
+    $CI->load->library('occational');
+    // $CI->load->library('Products');
+      $service_detail = $CI->Purchases->service_provider_details($serviceprovider_id);
+//    print_r($service_detail); die();
+    // $Products = $CI->Products->get_invoice_product($purchase_id);
+    $get_invoice_design = $CI->Purchases->get_invoice_design();
+    $CI->load->model('invoice_design');
+    if (!empty($service_detail)) {
+        $i = 0;
+        foreach ($service_detail as $k => $v) {
+            $i++;
+            $service_detail[$k]['sl'] = $i;
+        }
+    }
+    $currency_details = $CI->Web_settings->retrieve_setting_editdata();
+    $company_info = $CI->Purchases->ret_company_info();
+    $curn_info_default = $CI->db->select('*')->from('currency_tbl')->where('icon',$currency_details[0]['currency'])->get()->result_array();
+    $dataw = $CI->invoice_design->retrieve_data();
+    $serviceprovider =$CI->Purchases->serpro_info($service_detail[0]['serviceprovider_id']);
+  //  print_r($serviceprovider);
+ $data = array(
+        'header'=> $dataw[0]['header'],
+        'logo'=> $dataw[0]['logo'],
+        'color'=> $dataw[0]['color'],
+        'template'=> $dataw[0]['template'],
+        'curn_info_default' =>$curn_info_default[0]['currency_name'],
+        'icon' =>$curn_info_default[0]['icon'],
+        'title'            => display('purchase_details'),
+        'service_provider_name'                    =>    $serviceprovider[0]['service_provider_name'],
+         'sp_address'                    =>    $serviceprovider[0]['sp_address'],
+         'payment_terms'                    =>    $serviceprovider[0]['payment_terms'],
+         'bill_number'                    =>    $serviceprovider[0]['bill_number'],
+         'bill_date'                    =>    $serviceprovider[0]['bill_date'],
+         'due_date'                    =>    $serviceprovider[0]['due_date'],
+         'total'                    =>    $serviceprovider[0]['total'],
+         'memo_details'                    =>    $serviceprovider[0]['memo_details'],
+         'id'      =>    $serviceprovider[0]['id'],
+         'account_name'                    =>    $service_detail[0]['account_name'],
+         'account_category'                    =>    $service_detail[0]['account_category'],
+         'acc_sub_category'                    =>    $service_detail[0]['acc_sub_category'],
+         'description'                    =>    $service_detail[0]['description'],
+         'total_price'                    =>    $service_detail[0]['total_price'],
+         'service_detail'      =>    $service_detail,
+         'company_info'      =>                        $company_info
+        );
+  echo $dataw[0]['color'];
+        $chapterList = $CI->parser->parse('purchase/servicepro_detail_print', $data, true);
+        return $chapterList;
+    }
     public function servicepro_details_data($serviceprovider_id) {
     $CI = & get_instance();
     $CI->load->model('Purchases');
@@ -123,7 +176,7 @@ class Lpurchase {
          'service_detail'      =>    $service_detail,
          'company_info'      =>                        $company_info
         );
-       //print_r($data);
+  echo $dataw[0]['color'];
         $chapterList = $CI->parser->parse('purchase/servicepro_detail_html', $data, true);
         return $chapterList;
     }
@@ -1065,7 +1118,7 @@ $products = $CI->Products->get_all_products();
             //  'remarks'       => $purchase_detail[0]['remarks'],
             'products'  => $products
         );
-      //  print_r($products);
+    //  print_r($purchase_detail[0]['g_height']);
         $chapterList = $CI->parser->parse('purchase/edit_purchase_order_form', $data, true);
         return $chapterList;
     }

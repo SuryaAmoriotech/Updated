@@ -122,7 +122,7 @@ https://cdn.jsdelivr.net/npm/jquery-base64-js@1.0.1/jquery.base64.min.js
 
                     <div class="panel-heading" style="height: 60px;">
             <div class="col-sm-12">
-   <div class="col-sm-8">
+   <div class="col-sm-10">
 
 
 

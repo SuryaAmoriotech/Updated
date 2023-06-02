@@ -205,11 +205,32 @@
                         <div class="col-sm-6">
                             <div class="form-group row">
                                 <label for="payment_terms" class="col-sm-4 col-form-label"><?php  echo  display('Payment Terms');?><i class="text-danger">*</i></label>
-                                <div class="col-sm-8">
-                                <input type="text" required tabindex="2" class="form-control " name="pay_terms" id="payment_terms" required="" />
+                                <div class="col-sm-7">
+                                   <select   name="pay_terms" id="payment_terms" style="width:100%;" class=" form-control" required placeholder='Payment Terms' id="payment_terms">
+         <option value=""><?php echo display('Select Payment Terms');?></option>
+        <option value="CAD">CAD</option>
+        <option value="COD">COD</option>
+        <option value="ADVANCE"><?php echo display('ADVANCE');?></option>
+        <option value="7DAYS">7<?php echo display('DAYS');?></option>
+        <option value="15DAYS">15<?php echo display('DAYS');?></option>
+        <option value="30DAYS">30<?php echo display('DAYS');?></option>
+        <option value="45DAYS">45<?php echo display('DAYS');?></option>
+        <option value="60DAYS">60<?php echo display('DAYS');?></option>
+        <option value="75DAYS">75<?php echo display('DAYS');?></option>
+        <option value="90DAYS">90<?php echo display('DAYS');?></option>
+        <option value="180DAYS">180<?php echo display('DAYS');?></option>
+        <?php foreach($payment_terms as $inv){ ?>
+          <option value="<?php echo $inv['payment_terms'] ; ?>"><?php echo $inv['payment_terms'] ; ?></option>
+                               <?php    }?>
+        </select>
+         </div>
+    <div class="col-sm-1">
+        <a href="#" class="client-add-btn btn " aria-hidden="true" style="color:white;background-color:#38469f;"  data-toggle="modal" data-target="#payment_type_new" ><i class="fa fa-plus"></i></a>
+    </div>
+
                             </div>
                             </div>
-                        </div>
+                        
                         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
                         <div class="col-sm-6">
                            <div class="form-group row">
@@ -293,9 +314,17 @@
                             <textarea rows="4" cols="50" name="memo_details" class=" form-control" placeholder="Memo/Details" id=""></textarea>
                         </div>
                     </div>
+        
+
+                   
                     <td>
-                          <input type="submit" id="add-supplier-from-expense" name="add-supplier-from-expense"  style="color:white;background-color:#38469f;"  class="btn" value="<?php echo display('submit') ?>">
-                            </td>
+        <input type="submit" id="add-supplier-from-expense" name="add-supplier-from-expense"  style="color:white;background-color:#38469f;"  class="btn" value="<?php echo display('save') ?>">
+    <a   style="color:white;background-color:#38469f;" id="final_submit_provider" class='final_submit__provider btn btn-primary'><?php echo display('submit'); ?></a>
+<a id="download_provider"        style="color:white;background-color:#38469f;" class='btn btn-primary'><?php  echo  display('download'); ?></a>
+<a id="print_provider"        style="color:white;background-color:#38469f;" class='btn btn-primary'><?php  echo  display('print'); ?></a>                   
+      </td>
+
+
                                    </form>
 </div>
 </div>
@@ -889,7 +918,7 @@ td {
 
 
 
-<input type="hidden" id="invoice_hdn"/> <input type="hidden" id="invoice_hdn1"/>
+<input type="hidden" id="invoice_hdn"/> <input type="hidden" id="invoice_hdn1"/><input type="hidden" id="servic_id_hidden"/>
                     </div>
                 </div>
 
@@ -1402,7 +1431,7 @@ td {
                              <label for="" class="col-sm-4 col-form-label"><?php echo display('Supplier') ?> <i class="text-danger">*</i> </label>
                              <div class="col-sm-7">
                              <select name="supplier_id" id="supplier_id" class="form-control " style="width:118%;" required="" tabindex="1">
-                                     <option value=" "><?php echo  display('Select supplier');  ?></option>
+                                     <option value=""><?php echo  display('Select supplier');  ?></option>
                                      {all_supplier}
                                      <option value="{supplier_id}">{supplier_name}</option>
                                      {/all_supplier}
@@ -2547,11 +2576,14 @@ $('#serviceprovider').submit(function (event) {
         url:"<?php echo base_url(); ?>Cpurchase/insert_service_provider",
         data:$("#serviceprovider").serialize(),
         success:function (data) {
+
+          $('#download_provider').show();
+           $('#final_submit_provider').show();
+            $('#print_provider').show();
         console.log(data);
-            var split = data.split("/");
-            $('#invoice_hdn1').val(split[0]);
-         console.log(split[0]+"---"+split[1]);
-            $('#invoice_hdn').val(split[1]);
+        
+            $('#servic_id_hidden').val(data);
+        
             $("#bodyModal1").html('<?php echo display('Service Provider created Successfully');?>');
 $('.button_hide').show();
     $('#myModal1').modal('show');
@@ -2677,6 +2709,9 @@ $('#isf_dropdown1').on('change', function() {
 
 //Total
         $(document).ready(function(){
+            $('#download_provider').hide();
+           $('#final_submit_provider').hide();
+            $('#print_provider').hide();
              $('.without_po').hide();
             $('.with_po').hide();
 
@@ -3086,8 +3121,20 @@ console.log(result);
 
 
 
+$('#download_provider').on('click', function (e) {
 
-    
+ var popout = window.open("<?php  echo base_url(); ?>Cpurchase/servicepro_details_data/"+$('#servic_id_hidden').val());
+ 
+      e.preventDefault();
+
+}); 
+   $('#print_provider').on('click', function (e) {
+
+ var popout = window.open("<?php  echo base_url(); ?>Cpurchase/servicepro_details_data_print/"+$('#servic_id_hidden').val());
+ 
+      e.preventDefault();
+
+});  
 
 
 $('.download').on('click', function (e) {
@@ -3155,7 +3202,27 @@ $('.modal-backdrop').remove();
       }, 2500);
        
 });
+$('#final_submit_provider').on('click', function (e) {
 
+    window.btn_clicked = true;      //set btn_clicked to true
+  var input_hdn="<?php echo  display('Supplier ID')." :";?>"+$('#servic_id_hidden').val()+"<?php echo  " ".display('has been saved Successfully');?>";
+  
+    console.log(input_hdn);
+   
+    $("#bodyModal1").html(input_hdn);
+    $('#myModal1').modal('show');
+    window.setTimeout(function(){
+        $('.modal').modal('hide');
+       
+$('.modal-backdrop').remove();
+ },2500);
+    window.setTimeout(function(){
+       
+
+        window.location = "<?php  echo base_url(); ?>Cpurchase/manage_purchase";
+      }, 2500);
+       
+});
 window.onbeforeunload = function(){
     if(!window.btn_clicked ){
 

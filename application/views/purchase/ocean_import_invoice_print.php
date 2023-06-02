@@ -182,17 +182,11 @@ elseif($template==3)
 <div class="brand-section">
 <div class="row">
        
-       <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+       <div class="col-sm-3"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
           
          </div>
-       <div class="col-sm-6 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
-    
-   </div>
-        </div>
-        <div class="body-section">
-        <div class="row">
-        <div class="col-sm-6 "></div>
-            <div class="col-sm-6 " style="width:50%;">
+       <div class="col-sm-3 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
+             <div class="col-sm-6 ">
              <table>
           
         <tr>  <td style="100px;font-weight:bold;"> Company name </td><td style="width:10px;">:</td><td> <?php echo $company; ?></td></tr>
@@ -202,8 +196,11 @@ elseif($template==3)
 </tr>        
              
 </table>
-            </div></div>
-              <div class="row"> <div class="col-sm-12 ">&nbsp;</div></div>
+            </div>
+   </div>
+        </div>
+        <div class="body-section">
+       
               <div class="row">
                 <div class="col-6">
                <table id="one" >

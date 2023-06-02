@@ -20,6 +20,94 @@ class Cweb_setting extends CI_Controller {
       
     }
 
+    public function inbox_delete()
+    {
+        // $id = $this->input->post('id');
+        // $Getfiles = file_get_contents("assets/Email/inbox.txt");
+        // $files = file("assets/Email/inbox.txt");
+        // $split = explode("\n",$Getfiles);
+        // foreach ($split as $key => $value) {
+        // $inbox_split = explode("|",$value);
+        //   if(trim($inbox_split[0] == trim($id))){
+        //     // echo $value;
+        //     unset($value);
+        //   }
+        // }
+        // file_put_contents("inbox.txt", implode("\n", $files));
+        // echo json_encode("Successfully Deleted!");
+        $file = 'assets/Email/inbox.txt';  // Replace with your file path
+        $specificWord = $this->input->post('id');  // The specific word to search for (change as needed)
+        // Open the original file in read mode
+        $handle = fopen($file, 'r');
+        if ($handle) {
+            $lines = [];
+            // Read the original file line by line
+            while (($line = fgets($handle)) !== false) {
+                // If the line doesn't contain the specific word, store it in the array
+                if (strpos($line, $specificWord) === false) {
+                    $lines[] = $line;
+                }
+            }
+            // Close the file handle
+            fclose($handle);
+            // Open the file in write mode to overwrite its contents
+            $handle = fopen($file, 'w');
+            // Write the lines from the array to the file
+            foreach ($lines as $line) {
+                fwrite($handle, $line);
+            }
+            // Close the file handle
+            fclose($handle);
+            echo "Lines containing '$specificWord' have been unset from the file.";
+        } else {
+            echo "Unable to open the file.";
+        }
+    }
+    public function trash_email()
+    {
+        $id = $this->input->post('Trashid');
+        $this->db->where('id', $id);
+        $delete = $this->db->delete('email_data');
+        // echo $this->db->last_query();
+        return $delete;
+    }
+    public function delete_email()
+    {
+        $CI = & get_instance();
+        $CI->auth->check_admin_auth();
+        $CI->load->model('Web_settings');
+        $pad_id = $this->input->post('id');
+        $data_email = array(
+          'is_deleted' => 1,
+        );
+        $this->db->where('pad_id', $pad_id);
+       $this->db->update('email_data', $data_email);
+        echo $this->db->last_query(); die();
+    }
+    public function update_email()
+	{
+		$pad_id = $this->input->post('pad_id');
+        $email = $this->input->post('email');
+        $message = $this->input->post('message');
+	    $data = array(
+	      'pad_id' => $pad_id,
+	    );
+        $this->db->where('to_email',$email);
+        $this->db->where('message',$message);
+        $this->db->update('email_data', $data);
+        $this->template->full_admin_html_view($mail_setting);
+	}
+    // public function sendemail()
+    // {
+    //     $CI = & get_instance();
+    //     $CI->load->library('phpmailer_lib');
+    //     $data = array(
+    //         'title' => display('Compose')
+    //     );
+    //     $content = $CI->parser->parse('web_setting/email_sendcus.php', $data, true);
+    //     $this->template->full_admin_html_view($content);
+    // }
+>>>>>>> surya
     function invoice_design()
 {
    $content = $this->lweb_setting->invoice_design();
@@ -238,9 +326,16 @@ public function insert_email() {
 
 }
 
-     public function email_setting() {
-        $content = $this->lweb_setting->email_setting();
+    public function email_setting() {
+        $CI = & get_instance();
+        $id = $this->session->userdata('user_id');
+        $view_email = $this->db->select('*')->from('email_data')->where('is_deleted', 0)->get()->result();
+        $email_con = $this->db->select('*')->from('email_config')->get()->result();
+        $del_email = $this->db->select('*')->from('email_data')->where('is_deleted', 1)->get()->result();
+        // print_r($email_con); die();
+        $content = $this->lweb_setting->email_setting($view_email, $email_con, $del_email);
         $this->template->full_admin_html_view($content);
+        // return $content;
     }
 
     

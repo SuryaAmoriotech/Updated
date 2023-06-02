@@ -170,7 +170,7 @@ if (isset($error_message)) {
                  
                           <div class="col-sm-4">
                        
-                          <?php echo form_open_multipart('Cpurchase/manage_purchase',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
+                          <!-- <?php //echo form_open_multipart('Cpurchase/manage_purchase',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
   
   
   <?php
@@ -183,17 +183,17 @@ if (isset($error_message)) {
   
   <div class="form-group">
   
-      <label class="" for="from_date"><?php  echo  display('Search By Date Range');?> :</label>
+      <label class="" for="from_date"><?php  //echo  display('Search By Date Range');?> :</label>
   
       <input type="text" name="daterange" style="padding: 5px;width: 180px;border-radius: 8px;"/>
-      <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="<?php  echo  display('search')?>"/>
+      <input type="submit" id="btn-filter" class="btnclr btn btn-success" value="<?php // echo  display('search')?>"/>
   </div> 
-  <?php echo form_close() ?>
+  <?php //echo form_close() ?> -->
                       </div>
 
                       <div class="col-sm-3">
                        
-                       <?php echo form_open_multipart('Cpurchase/manage_purchase',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
+                       <!-- <?php //echo form_open_multipart('Cpurchase/manage_purchase',array('class' => 'form-vertical', 'id' => 'insert_sale','name' => 'insert_sale'))?>
 
 
 <?php
@@ -210,10 +210,10 @@ $today = date('Y-m-d');
     border-radius: 30px;" >
  <i class="fa fa-refresh" style="font-size:20px;float:right;" aria-hidden="true"></i> 
 </button>
-  <!-- <i class="fa fa-refresh" style="font-size:20px;float:right;" aria-hidden="true"><input type="submit" id="btn-All" class="btnclr btn btn-success" value="All"/></i> -->
+
 
 </div>  
-<?php echo form_close() ?>
+<?php// echo form_close() ?> -->
                    </div>
 
 

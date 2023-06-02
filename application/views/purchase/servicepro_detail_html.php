@@ -22,18 +22,18 @@
 
      <div class="container" id="content">
         <?php
-    
+    $m=1;
      if($template==2)
             {
             ?>
-        <div class="brand-section">
+        <div class="brand-section" style="background-color:<?php echo $color; ?>">
         <div class="row" >
      
-     <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+     <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 30%;float:right;'>
         
        </div>
       <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
-     <div class="col-sm-5" style="color:white;font-weight:bold;" id='company_info'>
+     <div class="col-sm-5" style="color:white;font-weight:bold ;text-align: end;" id='company_info'>
            
           <b> Company name : </b><?php echo $company_info[0]['company_name']; ?><br>
           <b>   Address : </b><?php echo $company_info[0]['address']; ?><br>
@@ -48,9 +48,9 @@
                 <div class="col-6">
                 <table id="one" style="border:none;">
 
-    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td class="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td class="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td class="value"><?php echo $bill_date;  ?></td></tr>
 
    
 </table>
@@ -59,11 +59,11 @@
                 <div class="col-6">
                 <table id="two">
 
-                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td class="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td class="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td class="value"><?php echo $due_date;  ?></td></tr>
 </table> </div> 
 
 
@@ -81,12 +81,12 @@
     ?>
     <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
             <thead>
-                    <tr>
-                         <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
+                  <tr style="font-weight:bold;height:40px;font-size:12px;background-color:<?php echo $color; ?>">
+                      <th rowspan="1" class="absorbing-column text-center text-white" style=" font-size:12px;width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:15px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:10px;"><?php echo display('amount'); ?></th> 
                      </tr> 
 
             </thead>
@@ -113,8 +113,8 @@
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
-                        <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
+                           <td colspan="4" style="text-align:right;font-weight:bold;"><?php echo display('total'); ?>:</td>
+                        <td style="font-size: 16px;"><?php echo $icon; ?><?php echo $total;  ?></td>
                     </tr>
                     </tfoot>
                     </table> 
@@ -129,18 +129,18 @@
 <?php 
 
 }
-elseif($template==1)
+elseif($template==3)
 {
 ?>
 
-    <div class="brand-section">
+    <div class="brand-section" style="background-color:<?php echo $color; ?>">
     <div class="row" >
- 
- <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+   <div class="col-sm-4 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
+ <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 30%;float:right;'>
     
    </div>
-  <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
- <div class="col-sm-5" style="color:white;font-weight:bold;" id='company_info'>
+
+ <div class="col-sm-6" style="color:white;font-weight:bold ;text-align: end;"  id='company_info'>
        
       <b> Company name : </b><?php echo $company_info[0]['company_name']; ?><br>
       <b>   Address : </b><?php echo $company_info[0]['address']; ?><br>
@@ -155,9 +155,9 @@ elseif($template==1)
             <div class="col-6">
                         <table id="one" style="border:none;">
 
-    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td class="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td class="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td class="value"><?php echo $bill_date;  ?></td></tr>
 
    
 </table>
@@ -166,11 +166,11 @@ elseif($template==1)
                 <div class="col-6">
                 <table id="two">
 
-                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td class="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td class="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td class="value"><?php echo $due_date;  ?></td></tr>
 </table></div> 
 
 
@@ -187,13 +187,13 @@ elseif($template==1)
 
 ?>
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
-        <thead>
-                <tr>
-                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
+        <thead >
+                 <tr style="font-weight:bold;height:40px;font-size:12px;background-color:<?php echo $color; ?>">
+                   <th rowspan="1" class="absorbing-column text-center text-white" style=" font-size:12px;width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:15px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:10px;"><?php echo display('amount'); ?></th> 
                  </tr> 
 
         </thead>
@@ -220,8 +220,8 @@ elseif($template==1)
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
-                        <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
+                          <td colspan="4" style="text-align:right;font-weight:bold;"><?php echo display('total'); ?>:</td>
+                        <td style="font-size: 16px;"><?php echo $icon; ?><?php echo $total;  ?></td>
                 </tr>
                 </tfoot>
                 </table> 
@@ -243,7 +243,7 @@ elseif($template==1)
 elseif($template==1)
 {
 ?>     
-    <div class="brand-section">
+    <div class="brand-section" style="background-color:<?php echo $color; ?>">
     <div class="row" >
  
 
@@ -251,7 +251,7 @@ elseif($template==1)
 
 
 
- <div class="col-sm-5" id='company_info' style="color:white;">
+ <div class="col-sm-5" id='company_info' style="color:white;font-weight:bold ;text-align: end;">
             
             <b>  Company name : </b><?php echo $company_info[0]['company_name']; ?><br>
             <b> Address : </b><?php echo $company_info[0]['address']; ?><br>
@@ -261,7 +261,7 @@ elseif($template==1)
         
           <div class="col-sm-5 text-center" style="color:white;"><h3><?php echo $header; ?></h3></div>
           
-          <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 100%;'>
+          <div class="col-sm-2"><img src="<?php echo  base_url().'assets/'.$logo; ?>" style='width: 30%;float:right;'>
            
            </div>
 
@@ -278,9 +278,9 @@ elseif($template==1)
             <div class="col-6">
                        <table id="one" style="border:none;">
 
-    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td calss="value"><?php echo $service_provider_name;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td calss="value"><?php echo $payment_terms;  ?></td></tr>
-    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td calss="value"><?php echo $bill_date;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Service Provider Name');?></td><td >:</td><td class="value"><?php echo $service_provider_name;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Payment Terms');?></td><td >:</td><td class="value"><?php echo $payment_terms;  ?></td></tr>
+    <tr><td  class="key"><?php  echo  display('Bill Date');?></td><td >:</td><td class="value"><?php echo $bill_date;  ?></td></tr>
 
    
 </table>
@@ -289,11 +289,11 @@ elseif($template==1)
                 <div class="col-6">
                 <table id="two">
 
-                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td calss="value"><?php echo $sp_address; ?></td></tr>
+                <tr><td  class="key"><?php  echo  display('Service Provider complete address');?></td><td >:</td><td class="value"><?php echo $sp_address; ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td calss="value"><?php echo $bill_number;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Bill Number');?></td><td >:</td><td class="value"><?php echo $bill_number;  ?></td></tr>
 
-<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td calss="value"><?php echo $due_date;  ?></td></tr>
+<tr><td  class="key"><?php  echo  display('Due Date');?></td><td>:</td><td class="value"><?php echo $due_date;  ?></td></tr>
 </table></div> 
 
 
@@ -311,12 +311,12 @@ elseif($template==1)
 ?>
 <table class="table table-bordered normalinvoice table-hover" id="normalinvoice_<?php  echo $m; ?>" >
         <thead>
-                <tr>
-                    <th rowspan="1" class="absorbing-column text-center text-white" style="width:13px;"><?php  echo  display('Account Category Name');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Category'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php  echo  display('Account Sub category');?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('description'); ?></th>
-                    <th rowspan="1" class="text-center text-white"style="width:13px;"><?php echo display('amount'); ?></th> 
+              <tr style="font-weight:bold;height:40px;font-size:12px;background-color:<?php echo $color; ?>">
+                    <th rowspan="1" class="absorbing-column text-center text-white" style=" font-size:12px;width:13px;"><?php  echo  display('Account Category Name');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Category'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:13px;"><?php  echo  display('Account Sub category');?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:15px;"><?php echo display('description'); ?></th>
+                    <th rowspan="1" class="text-center text-white"style=" font-size:12px;width:10px;"><?php echo display('amount'); ?></th> 
                  
                  </tr> 
 
@@ -344,8 +344,8 @@ elseif($template==1)
 
                             <tfoot>
                     <tr>
-                        <td colspan="4" style="text-align:right;"><?php echo display('total'); ?>:</td>
-                        <td style="font-size: 16px;"><?php echo $curn_info_default; ?><?php echo $total;  ?></td>
+                        <td colspan="4" style="text-align:right;font-weight:bold;"><?php echo display('total'); ?>:</td>
+                        <td style="font-size: 16px;"><?php echo $icon; ?><?php echo $total;  ?></td>
                 </tr>
                 </tfoot>
                 </table> 
@@ -370,7 +370,6 @@ elseif($template==1)
 
 
     </section> 
-<!-- </div>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
@@ -382,7 +381,7 @@ elseif($template==1)
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
 <script>
 
@@ -426,7 +425,7 @@ $( '.close' ).click(function() {
   $( '#myModal_ex' ).removeClass( 'open' );
   $( '.cont' ).removeClass( 'blur' );
 });
-}, 2500 );
+}, 3000 );
 }
 function third(){
     setTimeout( function(){
@@ -529,7 +528,7 @@ table{
 
 table thead tr{
     border: 1px solid #111;
-    background-color: #5961b3;
+  
     
 }
 .table-bordered td{
@@ -542,13 +541,10 @@ table td {
 }
 th{
     text-align:center;
-    color:white;
+   
 }
 
-table th, table td {
-    /* padding-top: 08px;
-    padding-bottom: 08px; */
-}
+
 .table-bordered{
     box-shadow: 0px 0px 5px 0.5px gray !important;
 }

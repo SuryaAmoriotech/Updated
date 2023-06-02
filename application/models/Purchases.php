@@ -604,9 +604,10 @@ $query = '';
       $current_page_number = 1;
      }
      $start_from = ($current_page_number - 1) * $records_per_page;
-     $this->db->select('a.*,b.customer_name');
+     $this->db->select('a.*,b.customer_name,c.supplier_name');
      $this->db->from('expense_trucking a');
     $this->db->join('customer_information b', 'b.customer_id = a.bill_to','left');
+        $this->db->join('supplier_information c', 'c.supplier_id = a.shipment_company','left');
    $this->db->where('a.create_by',$this->session->userdata('user_id'));
 
    
@@ -2418,7 +2419,8 @@ $chalan_no =$this->input->post('chalan_no',TRUE);
         'message_invoice'    => $this->input->post('message_invoice',TRUE),
         'tax_details'    => $this->input->post('tax_details',TRUE),
          'chalan_no'    => $this->input->post('chalan_no',TRUE),
-        // 'etd'   => $this->input->post('etd',TRUE),
+         'payment_terms'   => $this->input->post('payment_terms',TRUE),
+         'payment_type' =>$this->input->post('paytype_drop',TRUE),
         // 'eta'   => $this->input->post('eta',TRUE),
         // 'shipping_line'   => $this->input->post('shipping_line',TRUE),
         // 'container_no'   => $this->input->post('container_no',TRUE),
@@ -2704,11 +2706,11 @@ echo "<img src='$path' />";
             $this->db->delete('ocean_import_tracking');
           //  echo $this->db->last_query();
             $this->db->insert('ocean_import_tracking', $data);
-          // echo $this->db->last_query();
+      //    echo $this->db->last_query();
         }   
         else{
         $this->db->insert('ocean_import_tracking', $data);
-       // echo $this->db->last_query();
+     //  echo $this->db->last_query();
         }
     
            

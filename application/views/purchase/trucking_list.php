@@ -172,7 +172,7 @@ $today = date('Y-m-d');
 
 ?>
 
-<<button type="submit"  style="border: none;
+<button type="submit"  style="border: none;
     color: black;
     border-radius: 30px;" >
  <i class="fa fa-refresh" style="font-size:20px;float:right;" aria-hidden="true"></i> 
@@ -273,7 +273,7 @@ $today = date('Y-m-d');
         <th data-col="14"data-control-column="14" class="14 value" name="BalanceAmount"style="width: 209.011px; height: 44.0114px;"><?php echo display('balance_ammount');  ?></th>
          <!-- <th data-col="Remarks" data-control-column="16"class="Remarks value" style="width: 126.011px; height: 45.0114px;">Remarks</th> -->
          
-         <th data-control-column="15"class="15"  data-column-id="action" data-formatter="commands"name="Action" data-sortable="false" style="width: 134.011px;"><?php echo display('amount');  ?></th>
+         <th data-control-column="15"class="15"  data-column-id="action" data-formatter="commands"name="Action" data-sortable="false" style="width: 134.011px;"><?php echo display('action');  ?></th>
 
 
 
@@ -293,7 +293,7 @@ $today = date('Y-m-d');
  <td data-col="2" class="2"><?php   echo $arr['trucking_id'];  ?></td>
    <td data-col="3" class="3"><?php   echo $arr['container_pickup_date'];  ?></td>
    <td data-col="4" class="4"><?php   echo $arr['delivery_date'];  ?></td>
-<td data-col="5" class="5"><?php   echo $arr['shipment_company'];  ?></td>
+<td data-col="5" class="5"><?php   echo $arr['supplier_name'];  ?></td>
   <td data-col="6" class="6"><?php   echo $arr['customer_name'];  ?></td>
   <td data-col="7" class="7"><?php   echo $arr['invoice_date'];  ?></td>
   <!-- <td data-col="Total Amount"><?php  // echo $currency." ".$arr['grand_total_amount'];  ?></td> -->

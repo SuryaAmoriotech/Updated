@@ -1636,6 +1636,7 @@ var tid=$(this).closest('table').attr('id');
 localStorage.setItem("delete_table",tid);
 console.log(localStorage.getItem("delete_table"));
 var rowCount = $(this).closest('tbody').find('tr').length;
+
 if(rowCount>1){
 $(this).closest('tr').remove();
 }
@@ -1646,7 +1647,7 @@ var v=$(this).val();
 });
   $('#'+localStorage.getItem("delete_table")).find('#Total').val(sum).trigger('change');
  
-calculate();
+gt();
 });
 function gt(){
 debugger;

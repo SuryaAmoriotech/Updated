@@ -290,6 +290,7 @@ elseif($template==3)
 <style>
 
 .key{
+    width: 200px;
     text-align:left;
 font-weight:bold;
 
@@ -518,13 +519,13 @@ $( '.close' ).click(function() {
   $( '#myModal_oceanimport' ).removeClass( 'open' );
   $( '.cont' ).removeClass( 'blur' );
 });
-}, 3000 );
+}, 3500 );
 }
 function third(){
     setTimeout( function(){
         window.location='<?php  echo base_url();   ?>'+'Ccpurchase/manage_ocean_import_tracking';
         window.close();
-    }, 3500 );
+    }, 4000 );
 }
 first(second,third);
 });
